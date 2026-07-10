@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "ThirtyDayPrep",
+    "slug": "thirtydayprep",
+    "scheme": "thirtydayprep",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0F172A",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thirtydayprep.app"
+    },
+    "android": {
+      "package": "com.thirtydayprep.app"
+    },
+    "plugins": ["expo-router"]
+  }
+}
