@@ -71,7 +71,7 @@ export default function Plan() {
       <FlatList
         data={days}
         keyExtractor={(d) => d.id}
-        numColumns={3}
+        numColumns={2}
         contentContainerStyle={styles.grid}
         renderItem={({ item }) => (
           <View style={styles.cell}>
@@ -91,6 +91,6 @@ const styles = StyleSheet.create({
   title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
   subtitle: { fontSize: 13, color: colors.textMuted },
   hint: { fontSize: 12, color: colors.textMuted, marginTop: 8 },
-  grid: { paddingHorizontal: 20, paddingBottom: 24 },
-  cell: { flex: 1, padding: 4 },
+  grid: { paddingHorizontal: 16, paddingBottom: 24 },
+  cell: { flex: 1, padding: 8 },
 });

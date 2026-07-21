@@ -48,6 +48,21 @@ export async function fetchPlanDay(dayId: string): Promise<StudyPlanDay | null> 
   return data as StudyPlanDay | null;
 }
 
+export interface AttemptRecord {
+  attempted_at: string;
+  is_correct: boolean;
+}
+
+export async function fetchAttempts(userId: string): Promise<AttemptRecord[]> {
+  const { data, error } = await supabase
+    .from("question_attempts")
+    .select("attempted_at, is_correct")
+    .eq("user_id", userId)
+    .order("attempted_at", { ascending: true });
+  if (error) throw error;
+  return (data ?? []) as AttemptRecord[];
+}
+
 export async function fetchSkillStats(userId: string): Promise<UserSkillStat[]> {
   const { data, error } = await supabase
     .from("user_skill_stats")
