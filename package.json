@@ -16,5 +16,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
     "firebase-admin": "^12.5.0"
+  },
+  "overrides": {
+    "react-dom": "19.1.0"
   }
 }
