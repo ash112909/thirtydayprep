@@ -26,7 +26,7 @@ function RootNavigation() {
       return;
     }
 
-    if (inAuthGroup || inOnboarding || segments.length === 0) {
+    if (inAuthGroup || inOnboarding || !segments[0]) {
       router.replace("/(tabs)/home");
     }
   }, [loading, session, profile, segments]);
