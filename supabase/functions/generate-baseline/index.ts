@@ -77,7 +77,7 @@ serve(async (req) => {
     const { data: full, error: fullErr } = await admin
       .from("questions")
       .select(
-        "id, category_id, subcategory_id, difficulty, passage, stem, choices, avg_seconds, question_type, calculator_allowed",
+        "id, category_id, subcategory_id, difficulty, passage, stem, choices, avg_seconds, question_type, calculator_allowed, passage_underline_start, passage_underline_end",
       )
       .in(
         "id",

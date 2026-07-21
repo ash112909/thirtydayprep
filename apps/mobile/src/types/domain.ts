@@ -41,6 +41,11 @@ export interface SessionQuestion {
   question_type: QuestionType;
   calculator_allowed?: boolean | null;
   passage: string | null;
+  // Character offsets into `passage` marking the text the question refers
+  // to as "underlined" — null when no such span could be detected (see
+  // scripts/export-firestore-questions.mjs).
+  passage_underline_start?: number | null;
+  passage_underline_end?: number | null;
   stem: string;
   choices: Choice[] | null; // null for grid_in questions
   avg_seconds: number;

@@ -49,6 +49,12 @@ jobs:
             echo "::error::questions.question_type column not found (HTTP $qtype_status). Run supabase/migrations/0004_grid_in_questions.sql in the Supabase SQL editor first."
             exit 1
           fi
+          underline_status=$(curl -s -o /dev/null -w "%{http_code}" "$SUPABASE_URL/rest/v1/questions?select=passage_underline_start&limit=1" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY")
+          if [ "$underline_status" != "200" ]; then
+            echo "::error::questions.passage_underline_start column not found (HTTP $underline_status). Run supabase/migrations/0005_underline_span.sql in the Supabase SQL editor first."
+            exit 1
+          fi
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}

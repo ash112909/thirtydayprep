@@ -8,7 +8,8 @@
 // Expected columns/fields per question (see README for the full contract):
 //   external_id, category, subcategory, difficulty, skill_tag,
 //   passage, stem, question_type, choice_a, choice_b, choice_c, choice_d,
-//   correct_choice, correct_value, calculator_allowed, explanation, avg_seconds
+//   correct_choice, correct_value, calculator_allowed, explanation, avg_seconds,
+//   passage_underline_start, passage_underline_end
 //
 // JSON input may instead provide `choices` directly as
 // [{ "key": "A", "text": "..." }, ...] instead of choice_a..choice_d.
@@ -184,6 +185,14 @@ async function main() {
           : r.calculator_allowed === true || r.calculator_allowed === "true",
       explanation: r.explanation || null,
       avg_seconds: r.avg_seconds ? Number(r.avg_seconds) : 75,
+      passage_underline_start:
+        r.passage_underline_start === undefined || r.passage_underline_start === null || r.passage_underline_start === ""
+          ? null
+          : Number(r.passage_underline_start),
+      passage_underline_end:
+        r.passage_underline_end === undefined || r.passage_underline_end === null || r.passage_underline_end === ""
+          ? null
+          : Number(r.passage_underline_end),
     });
   }
 

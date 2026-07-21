@@ -142,6 +142,7 @@ these fields and run the same command against it:
 | `calculator_allowed` | no | boolean, Math questions only |
 | `explanation` | no | shown after answering |
 | `avg_seconds` | no | expected time to answer; defaults to 75 |
+| `passage_underline_start` / `passage_underline_end` | no | character offsets into `passage` marking the span a question refers to as "the underlined portion" — rendered with an actual underline in the app. Omit if not applicable. |
 
 The import is idempotent on `external_id` — re-running with an updated file
 updates existing rows instead of duplicating them.

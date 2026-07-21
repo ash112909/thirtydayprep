@@ -111,6 +111,8 @@ export default function Session() {
       {question.question_type === "grid_in" ? (
         <GridInAnswer
           passage={question.passage}
+          underlineStart={question.passage_underline_start}
+          underlineEnd={question.passage_underline_end}
           stem={question.stem}
           value={answerValue}
           correctAnswer={revealed?.correctAnswer ?? null}
@@ -120,6 +122,8 @@ export default function Session() {
       ) : (
         <QuestionCard
           passage={question.passage}
+          underlineStart={question.passage_underline_start}
+          underlineEnd={question.passage_underline_end}
           stem={question.stem}
           choices={question.choices ?? []}
           selected={answerValue || null}

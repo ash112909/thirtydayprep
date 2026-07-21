@@ -1,8 +1,11 @@
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput } from "react-native";
+import { PassageText } from "@/components/PassageText";
 import { colors } from "@/theme";
 
 interface Props {
   passage: string | null;
+  underlineStart?: number | null;
+  underlineEnd?: number | null;
   stem: string;
   value: string;
   correctAnswer?: string | null; // when set, review mode
@@ -10,17 +13,22 @@ interface Props {
   disabled?: boolean;
 }
 
-export function GridInAnswer({ passage, stem, value, correctAnswer, onChange, disabled }: Props) {
+export function GridInAnswer({
+  passage,
+  underlineStart,
+  underlineEnd,
+  stem,
+  value,
+  correctAnswer,
+  onChange,
+  disabled,
+}: Props) {
   const showResult = correctAnswer != null;
   const isCorrect = showResult && normalize(value) === normalize(correctAnswer!);
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      {passage && (
-        <View style={styles.passageBox}>
-          <Text style={styles.passageText}>{passage}</Text>
-        </View>
-      )}
+      {passage && <PassageText passage={passage} underlineStart={underlineStart} underlineEnd={underlineEnd} />}
       <Text style={styles.stem}>{stem}</Text>
       <Text style={styles.hint}>Enter your answer (numbers, fractions, or symbols like π are fine)</Text>
       <TextInput
@@ -50,15 +58,6 @@ function normalize(v: string): string {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   content: { paddingBottom: 24 },
-  passageBox: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  passageText: { color: colors.textMuted, fontSize: 15, lineHeight: 22 },
   stem: { color: colors.text, fontSize: 17, fontWeight: "600", marginBottom: 8, lineHeight: 24 },
   hint: { color: colors.textMuted, fontSize: 12, marginBottom: 16 },
   input: {

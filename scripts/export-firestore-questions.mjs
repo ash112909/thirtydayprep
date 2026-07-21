@@ -128,6 +128,52 @@ function bucketDifficulty(raw) {
   return "hard";
 }
 
+// Many questions reference "the underlined portion" of the passage, but the
+// source data never actually marks which text that is (verified: zero
+// documents contain any underline markup). This recovers it only where
+// there's real evidence: Grammar/Punctuation/Sentence Boundaries questions
+// give 4 answer choices that are variants of the *same underlying text*, so
+// whichever one appears verbatim (modulo punctuation) in the passage must be
+// the current/underlined version — that's checkable, not guessed.
+//
+// An earlier version of this also special-cased Add/Delete/Revise questions
+// by assuming the underlined sentence is always the passage's last sentence.
+// That produced a span every time, but cross-checking against the
+// explanation text showed the assumption is often wrong (the real sentence
+// varies unpredictably) — positional guessing isn't evidence, so it was
+// dropped rather than ship a confidently-wrong underline. Those questions
+// (like word-choice "Precision" questions, which have the same problem)
+// are left without a detected span.
+function fuzzyFindSpan(passage, option) {
+  const words = option
+    .trim()
+    .split(/\s+/)
+    .map((w) => w.replace(/^[^a-zA-Z0-9']+|[^a-zA-Z0-9']+$/g, "")) // strip punctuation stuck to each word
+    .filter((w) => w.length > 0)
+    .map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  if (words.length === 0) return null;
+  const pattern = words.join('[\\s,;:."\'-]*');
+  const match = passage.match(new RegExp(pattern, "i"));
+  if (!match) return null;
+  return { start: match.index, end: match.index + match[0].length };
+}
+
+function detectUnderlineSpan(passage, stem, options) {
+  if (!passage) return null;
+  // Only attempt detection when the question actually references an
+  // underline — otherwise an answer choice that merely echoes passage
+  // wording (very common in ordinary reading-comprehension questions) gets
+  // mistaken for the referenced span. Confirmed against real data: without
+  // this gate, ~1,400 unrelated Inference/Craft questions got a bogus
+  // "detected" span just because a choice happened to quote the passage.
+  if (!/underline/i.test(stem)) return null;
+  for (const option of options ?? []) {
+    const span = fuzzyFindSpan(passage, option);
+    if (span) return span;
+  }
+  return null;
+}
+
 async function main() {
   const args = parseArgs();
   const serviceAccount = JSON.parse(readFileSync(args.key, "utf-8"));
@@ -141,6 +187,8 @@ async function main() {
   const out = [];
   const skipped = [];
   let missingDifficultyCount = 0;
+  let underlineMentioned = 0;
+  let underlineDetected = 0;
   const unmappedTopics = new Set();
 
   snap.forEach((doc) => {
@@ -180,6 +228,12 @@ async function main() {
     const questionType = d.type === "student_produced_response" ? "grid_in" : "multiple_choice";
     const { passage, stem } = splitPassageAndStem(d.question_text);
 
+    const underlineSpan = detectUnderlineSpan(passage, stem, d.options);
+    if (/underlined|underline/i.test(d.question_text)) {
+      underlineMentioned++;
+      if (underlineSpan) underlineDetected++;
+    }
+
     const record = {
       external_id: id,
       subcategory,
@@ -191,6 +245,8 @@ async function main() {
       explanation: d.explanation ?? null,
       avg_seconds: d.time_expected_sec ? Math.max(10, Number(d.time_expected_sec)) : 75,
       calculator_allowed: typeof d.calculator_allowed === "boolean" ? d.calculator_allowed : null,
+      passage_underline_start: underlineSpan?.start ?? null,
+      passage_underline_end: underlineSpan?.end ?? null,
     };
 
     if (questionType === "multiple_choice") {
@@ -212,6 +268,11 @@ async function main() {
   console.log(`Skipped ${skipped.length} documents.`);
   if (missingDifficultyCount) {
     console.log(`${missingDifficultyCount} documents had no difficulty and defaulted to "medium".`);
+  }
+  if (underlineMentioned) {
+    console.log(
+      `${underlineDetected}/${underlineMentioned} questions referencing "the underlined ..." got a detected span.`,
+    );
   }
   if (unmappedTopics.size) {
     console.log("Unmapped topics (extend TOPIC_TO_SUBCATEGORY in this script and re-run):", [...unmappedTopics]);

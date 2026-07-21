@@ -1,9 +1,12 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { PassageText } from "@/components/PassageText";
 import { colors } from "@/theme";
 import type { Choice } from "@/types/domain";
 
 interface Props {
   passage: string | null;
+  underlineStart?: number | null;
+  underlineEnd?: number | null;
   stem: string;
   choices: Choice[];
   selected: string | null;
@@ -12,14 +15,20 @@ interface Props {
   disabled?: boolean;
 }
 
-export function QuestionCard({ passage, stem, choices, selected, correctChoice, onSelect, disabled }: Props) {
+export function QuestionCard({
+  passage,
+  underlineStart,
+  underlineEnd,
+  stem,
+  choices,
+  selected,
+  correctChoice,
+  onSelect,
+  disabled,
+}: Props) {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      {passage && (
-        <View style={styles.passageBox}>
-          <Text style={styles.passageText}>{passage}</Text>
-        </View>
-      )}
+      {passage && <PassageText passage={passage} underlineStart={underlineStart} underlineEnd={underlineEnd} />}
       <Text style={styles.stem}>{stem}</Text>
       <View style={styles.choices}>
         {choices.map((choice) => {
@@ -53,15 +62,6 @@ export function QuestionCard({ passage, stem, choices, selected, correctChoice, 
 const styles = StyleSheet.create({
   container: { flex: 1 },
   content: { paddingBottom: 24 },
-  passageBox: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  passageText: { color: colors.textMuted, fontSize: 15, lineHeight: 22 },
   stem: { color: colors.text, fontSize: 17, fontWeight: "600", marginBottom: 20, lineHeight: 24 },
   choices: { gap: 12 },
   choice: {
