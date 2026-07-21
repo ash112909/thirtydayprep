@@ -106,10 +106,19 @@ export interface StudyPlan {
   status: "active" | "completed" | "abandoned";
 }
 
+export interface DayTarget {
+  subcategory_id: string;
+  difficulty: Difficulty;
+  count: number;
+}
+
 export interface StudyPlanDay {
   id: string;
   day_number: number;
   date: string;
   status: "locked" | "available" | "completed" | "skipped";
   completed_at: string | null;
+  target_minutes: number;
+  targets: DayTarget[];
+  materialized: boolean;
 }

@@ -31,7 +31,7 @@ export async function hasCompletedBaseline(userId: string): Promise<boolean> {
 export async function fetchPlanDays(planId: string): Promise<StudyPlanDay[]> {
   const { data, error } = await supabase
     .from("study_plan_days")
-    .select("id, day_number, date, status, completed_at")
+    .select("id, day_number, date, status, completed_at, target_minutes, targets, materialized")
     .eq("study_plan_id", planId)
     .order("day_number", { ascending: true });
   if (error) throw error;

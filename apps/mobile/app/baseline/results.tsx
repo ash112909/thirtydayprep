@@ -54,7 +54,10 @@ export default function BaselineResults() {
         </ScrollView>
       )}
 
-      <PrimaryButton title="Start Day 1" onPress={() => router.replace("/(tabs)/home")} />
+      <View style={styles.buttons}>
+        <PrimaryButton title="View your full plan" variant="secondary" onPress={() => router.replace("/(tabs)/plan")} />
+        <PrimaryButton title="Start Day 1" onPress={() => router.replace("/(tabs)/home")} />
+      </View>
     </View>
   );
 }
@@ -77,4 +80,5 @@ const styles = StyleSheet.create({
   rowValue: { color: colors.textMuted, fontSize: 13 },
   barTrack: { height: 8, borderRadius: 4, backgroundColor: colors.surface, overflow: "hidden" },
   barFill: { height: 8, borderRadius: 4 },
+  buttons: { gap: 12 },
 });
