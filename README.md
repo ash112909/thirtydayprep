@@ -113,11 +113,14 @@ these fields and run the same command against it:
 | `external_id` | recommended | stable ID from your source bank; enables safe re-imports |
 | `subcategory` | yes | slug or name, e.g. `algebra` or `Algebra` |
 | `difficulty` | yes | `easy`, `medium`, or `hard` |
+| `question_type` | no | `multiple_choice` (default) or `grid_in` (free-response, e.g. SAT grid-in math) |
 | `skill_tag` | no | fine-grained tag within the subcategory |
 | `passage` | no | stimulus text (Reading & Writing) |
 | `stem` | yes | the question text |
-| `choice_a`..`choice_d` (CSV) or `choices` (JSON array of `{key, text}`) | yes | answer options |
-| `correct_choice` | yes | e.g. `A` |
+| `choice_a`..`choice_d` (CSV) or `choices` (JSON array of `{key, text}`) | `multiple_choice` only | answer options |
+| `correct_choice` | `multiple_choice` only | e.g. `A` |
+| `correct_value` | `grid_in` only | the expected answer, graded as normalized exact-text match (handles symbolic/multi-part answers) |
+| `calculator_allowed` | no | boolean, Math questions only |
 | `explanation` | no | shown after answering |
 | `avg_seconds` | no | expected time to answer; defaults to 75 |
 

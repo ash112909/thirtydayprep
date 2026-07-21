@@ -12,7 +12,7 @@ import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
 import { addDays, computeDayTargets, daysBetween, scoreBaseline } from "../_shared/planEngine.ts";
 import { selectQuestionsForTargets } from "../_shared/questionSelection.ts";
-import type { Difficulty } from "../_shared/types.ts";
+import { isCorrectAnswer, type Difficulty } from "../_shared/types.ts";
 
 interface AnswerInput {
   question_id: string;
@@ -56,7 +56,7 @@ serve(async (req) => {
 
     const { data: questionRows, error: qErr } = await admin
       .from("questions")
-      .select("id, subcategory_id, difficulty, correct_choice")
+      .select("id, subcategory_id, difficulty, question_type, correct_choice, correct_value")
       .in(
         "id",
         btQuestions.map((q) => q.question_id),
@@ -73,7 +73,7 @@ serve(async (req) => {
       const q = questionById.get(ans.question_id);
       const btqId = btqByQuestionId.get(ans.question_id);
       if (!q || !btqId) continue;
-      const isCorrect = ans.selected_choice === q.correct_choice;
+      const isCorrect = isCorrectAnswer(q, ans.selected_choice);
       scored.push({ subcategory_id: q.subcategory_id, difficulty: q.difficulty as Difficulty, is_correct: isCorrect });
       btqUpdates.push({
         id: btqId,

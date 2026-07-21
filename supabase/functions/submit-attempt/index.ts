@@ -12,7 +12,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
 import { computeDayTargets, updateMastery } from "../_shared/planEngine.ts";
-import type { Difficulty, MasterySnapshot } from "../_shared/types.ts";
+import { isCorrectAnswer, type Difficulty, type MasterySnapshot } from "../_shared/types.ts";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -41,12 +41,12 @@ serve(async (req) => {
 
     const { data: question, error: qErr } = await admin
       .from("questions")
-      .select("id, subcategory_id, difficulty, correct_choice, explanation")
+      .select("id, subcategory_id, difficulty, question_type, correct_choice, correct_value, explanation")
       .eq("id", dq.question_id)
       .single();
     if (qErr) throw qErr;
 
-    const isCorrect = selected_choice === question.correct_choice;
+    const isCorrect = isCorrectAnswer(question, selected_choice);
 
     const { error: updErr } = await supabase
       .from("study_plan_day_questions")
@@ -131,7 +131,7 @@ serve(async (req) => {
 
     return jsonResponse({
       is_correct: isCorrect,
-      correct_choice: question.correct_choice,
+      correct_answer: question.question_type === "grid_in" ? question.correct_value : question.correct_choice,
       explanation: question.explanation,
       day_completed: dayCompleted,
     });

@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { getTodaySession, submitAttempt } from "@/api/studyFunctions";
 import { QuestionCard } from "@/components/QuestionCard";
+import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
 import type { SessionQuestion } from "@/types/domain";
@@ -12,8 +13,8 @@ export default function Session() {
   const [questions, setQuestions] = useState<SessionQuestion[]>([]);
   const [dayNumber, setDayNumber] = useState<number | null>(null);
   const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [revealed, setRevealed] = useState<{ correctChoice: string; explanation: string | null } | null>(null);
+  const [answerValue, setAnswerValue] = useState("");
+  const [revealed, setRevealed] = useState<{ correctAnswer: string; explanation: string | null } | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -70,19 +71,15 @@ export default function Session() {
   }
 
   const alreadyAnswered = question.answered ?? false;
-
-  async function handleSelect(key: string) {
-    if (revealed || alreadyAnswered) return;
-    setSelected(key);
-  }
+  const canSubmit = answerValue.trim().length > 0;
 
   async function handleSubmitAnswer() {
-    if (!selected || !question.study_plan_day_question_id) return;
+    if (!canSubmit || !question.study_plan_day_question_id) return;
     const timeSpent = Math.max(1, Math.round((Date.now() - questionStartedAt.current) / 1000));
     setSubmitting(true);
     try {
-      const result = await submitAttempt(question.study_plan_day_question_id, selected, timeSpent);
-      setRevealed({ correctChoice: result.correct_choice, explanation: result.explanation });
+      const result = await submitAttempt(question.study_plan_day_question_id, answerValue, timeSpent);
+      setRevealed({ correctAnswer: result.correct_answer, explanation: result.explanation });
       if (result.day_completed) setDayCompleted(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
@@ -92,11 +89,13 @@ export default function Session() {
   }
 
   function handleNext() {
-    setSelected(null);
+    setAnswerValue("");
     setRevealed(null);
     setIndex((i) => i + 1);
     questionStartedAt.current = Date.now();
   }
+
+  const disabled = !!revealed || alreadyAnswered;
 
   return (
     <View style={styles.container}>
@@ -109,22 +108,33 @@ export default function Session() {
         </View>
       </View>
 
-      <QuestionCard
-        passage={question.passage}
-        stem={question.stem}
-        choices={question.choices}
-        selected={selected}
-        correctChoice={revealed?.correctChoice ?? null}
-        onSelect={handleSelect}
-        disabled={!!revealed || alreadyAnswered}
-      />
+      {question.question_type === "grid_in" ? (
+        <GridInAnswer
+          passage={question.passage}
+          stem={question.stem}
+          value={answerValue}
+          correctAnswer={revealed?.correctAnswer ?? null}
+          onChange={setAnswerValue}
+          disabled={disabled}
+        />
+      ) : (
+        <QuestionCard
+          passage={question.passage}
+          stem={question.stem}
+          choices={question.choices ?? []}
+          selected={answerValue || null}
+          correctChoice={revealed?.correctAnswer ?? null}
+          onSelect={setAnswerValue}
+          disabled={disabled}
+        />
+      )}
 
       {revealed?.explanation && <Text style={styles.explanation}>{revealed.explanation}</Text>}
 
       {revealed ? (
         <PrimaryButton title={index + 1 === questions.length ? "Finish" : "Next question"} onPress={handleNext} />
       ) : (
-        <PrimaryButton title="Submit answer" onPress={handleSubmitAnswer} disabled={!selected} loading={submitting} />
+        <PrimaryButton title="Submit answer" onPress={handleSubmitAnswer} disabled={!canSubmit} loading={submitting} />
       )}
     </View>
   );

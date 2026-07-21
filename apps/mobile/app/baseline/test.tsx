@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { generateBaseline, submitBaseline } from "@/api/studyFunctions";
 import { QuestionCard } from "@/components/QuestionCard";
+import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
 import type { BaselineQuestion } from "@/types/domain";
@@ -18,7 +19,7 @@ export default function BaselineTest() {
   const [baselineTestId, setBaselineTestId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<BaselineQuestion[]>([]);
   const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [answerValue, setAnswerValue] = useState("");
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -55,15 +56,17 @@ export default function BaselineTest() {
   const question = questions[index];
   if (!question) return null;
 
+  const canSubmit = answerValue.trim().length > 0;
+
   async function handleNext() {
-    if (!selected) return;
+    if (!canSubmit) return;
     const timeSpent = Math.max(1, Math.round((Date.now() - questionStartedAt.current) / 1000));
     const nextAnswers = [
       ...answers,
-      { question_id: question.id!, selected_choice: selected, time_spent_seconds: timeSpent },
+      { question_id: question.id!, selected_choice: answerValue, time_spent_seconds: timeSpent },
     ];
     setAnswers(nextAnswers);
-    setSelected(null);
+    setAnswerValue("");
 
     if (index + 1 < questions.length) {
       setIndex(index + 1);
@@ -96,18 +99,27 @@ export default function BaselineTest() {
         </View>
       </View>
 
-      <QuestionCard
-        passage={question.passage}
-        stem={question.stem}
-        choices={question.choices}
-        selected={selected}
-        onSelect={setSelected}
-      />
+      {question.question_type === "grid_in" ? (
+        <GridInAnswer
+          passage={question.passage}
+          stem={question.stem}
+          value={answerValue}
+          onChange={setAnswerValue}
+        />
+      ) : (
+        <QuestionCard
+          passage={question.passage}
+          stem={question.stem}
+          choices={question.choices ?? []}
+          selected={answerValue || null}
+          onSelect={setAnswerValue}
+        />
+      )}
 
       <PrimaryButton
         title={index + 1 === questions.length ? "Finish baseline test" : "Next question"}
         onPress={handleNext}
-        disabled={!selected}
+        disabled={!canSubmit}
         loading={submitting}
       />
     </View>

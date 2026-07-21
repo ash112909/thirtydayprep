@@ -2,6 +2,7 @@
 // the Expo app and the Deno edge functions don't share a build pipeline.
 
 export type Difficulty = "easy" | "medium" | "hard";
+export type QuestionType = "multiple_choice" | "grid_in";
 
 export interface Choice {
   key: string;
@@ -37,9 +38,11 @@ export interface SessionQuestion {
   category_id: string;
   subcategory_id: string;
   difficulty: Difficulty;
+  question_type: QuestionType;
+  calculator_allowed?: boolean | null;
   passage: string | null;
   stem: string;
-  choices: Choice[];
+  choices: Choice[] | null; // null for grid_in questions
   avg_seconds: number;
   answered?: boolean;
   selected_choice?: string | null;
@@ -77,7 +80,7 @@ export interface SubmitBaselineResponse {
 
 export interface SubmitAttemptResponse {
   is_correct: boolean;
-  correct_choice: string;
+  correct_answer: string;
   explanation: string | null;
   day_completed: boolean;
 }

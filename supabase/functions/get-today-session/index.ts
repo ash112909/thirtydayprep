@@ -84,7 +84,9 @@ serve(async (req) => {
 
     const { data: questionDetails, error: qdErr } = await admin
       .from("questions")
-      .select("id, category_id, subcategory_id, difficulty, passage, stem, choices, avg_seconds")
+      .select(
+        "id, category_id, subcategory_id, difficulty, passage, stem, choices, avg_seconds, question_type, calculator_allowed",
+      )
       .in(
         "id",
         (dayQuestions ?? []).map((q) => q.question_id),

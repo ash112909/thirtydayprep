@@ -7,11 +7,16 @@
 //
 // Expected columns/fields per question (see README for the full contract):
 //   external_id, category, subcategory, difficulty, skill_tag,
-//   passage, stem, choice_a, choice_b, choice_c, choice_d,
-//   correct_choice, explanation, avg_seconds
+//   passage, stem, question_type, choice_a, choice_b, choice_c, choice_d,
+//   correct_choice, correct_value, calculator_allowed, explanation, avg_seconds
 //
 // JSON input may instead provide `choices` directly as
 // [{ "key": "A", "text": "..." }, ...] instead of choice_a..choice_d.
+//
+// question_type is "multiple_choice" (default) or "grid_in" (free-response,
+// e.g. SAT-style grid-in math questions). multiple_choice rows need
+// choices + correct_choice; grid_in rows need correct_value instead and no
+// choices at all.
 //
 // Rows are upserted keyed on external_id, so re-running the import with an
 // updated file is safe and idempotent.
@@ -136,14 +141,29 @@ async function main() {
       skipped.push({ row: i, reason: `Invalid difficulty "${r.difficulty}"` });
       continue;
     }
-    const choices = toChoices(r);
-    if (!choices.length) {
-      skipped.push({ row: i, reason: "No answer choices found" });
-      continue;
-    }
-    if (!r.correct_choice) {
-      skipped.push({ row: i, reason: "Missing correct_choice" });
-      continue;
+    const questionType = r.question_type === "grid_in" ? "grid_in" : "multiple_choice";
+
+    let choices = null;
+    let correctChoice = null;
+    let correctValue = null;
+
+    if (questionType === "grid_in") {
+      if (r.correct_value === undefined || r.correct_value === null || r.correct_value === "") {
+        skipped.push({ row: i, reason: "grid_in row missing correct_value" });
+        continue;
+      }
+      correctValue = String(r.correct_value);
+    } else {
+      choices = toChoices(r);
+      if (!choices.length) {
+        skipped.push({ row: i, reason: "No answer choices found" });
+        continue;
+      }
+      if (!r.correct_choice) {
+        skipped.push({ row: i, reason: "Missing correct_choice" });
+        continue;
+      }
+      correctChoice = String(r.correct_choice).toUpperCase();
     }
 
     rowsToUpsert.push({
@@ -151,11 +171,17 @@ async function main() {
       category_id: subcategory.category_id,
       subcategory_id: subcategory.id,
       difficulty,
+      question_type: questionType,
       skill_tag: r.skill_tag || null,
       passage: r.passage || null,
       stem: r.stem,
       choices,
-      correct_choice: String(r.correct_choice).toUpperCase(),
+      correct_choice: correctChoice,
+      correct_value: correctValue,
+      calculator_allowed:
+        r.calculator_allowed === undefined || r.calculator_allowed === ""
+          ? null
+          : r.calculator_allowed === true || r.calculator_allowed === "true",
       explanation: r.explanation || null,
       avg_seconds: r.avg_seconds ? Number(r.avg_seconds) : 75,
     });
