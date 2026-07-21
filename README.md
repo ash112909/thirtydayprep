@@ -95,6 +95,25 @@ everything.
 4. In Auth settings, enable email/password sign-in (and disable email
    confirmation for faster local testing, if you like).
 
+#### No local terminal? Use the GitHub Action instead
+
+`.github/workflows/backend-sync.yml` runs the question-bank import and/or
+edge function deployment on GitHub's own runners — useful if you don't want
+to run these commands from a local machine. After running the migrations in
+the SQL editor (step 2 above), add these repo secrets under **Settings ->
+Secrets and variables -> Actions**:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `SUPABASE_ACCESS_TOKEN` — a personal access token from
+  [supabase.com/dashboard/account/tokens](https://supabase.com/dashboard/account/tokens)
+  (only needed to deploy edge functions)
+
+Then run the workflow from the **Actions** tab (or ask Claude to trigger it).
+It checks that the migrations were applied before importing anything, so a
+missing migration fails fast with a clear message instead of partially
+importing.
+
 ### 2. Question bank
 
 Seed with the sample dataset to get every flow working end-to-end:

@@ -1,0 +1,86 @@
+name: Backend Sync
+
+# Manually-triggered workflow that imports the question bank into Supabase
+# and/or deploys the edge functions. Runs on GitHub's runners so it isn't
+# subject to any sandbox network restrictions — this is how the app's
+# backend gets synced to Supabase without anyone needing a local terminal.
+#
+# Required repo secrets (Settings -> Secrets and variables -> Actions):
+#   SUPABASE_URL              e.g. https://xxxx.supabase.co
+#   SUPABASE_SERVICE_ROLE_KEY the project's secret/service_role API key
+#   SUPABASE_ACCESS_TOKEN     a personal access token from
+#                              https://supabase.com/dashboard/account/tokens
+#                              (only needed for the deploy-functions job)
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_import:
+        description: "Import the question bank into Supabase"
+        type: boolean
+        default: true
+      run_deploy:
+        description: "Deploy edge functions to Supabase"
+        type: boolean
+        default: true
+
+jobs:
+  import-questions:
+    if: ${{ inputs.run_import }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Preflight - confirm migrations have been applied
+        run: |
+          set -e
+          cat_count=$(curl -s "$SUPABASE_URL/rest/v1/categories?select=id" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" | jq 'length')
+          sub_count=$(curl -s "$SUPABASE_URL/rest/v1/subcategories?select=id" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" | jq 'length')
+          echo "categories: $cat_count, subcategories: $sub_count"
+          if [ "$cat_count" -lt 1 ] || [ "$sub_count" -lt 8 ]; then
+            echo "::error::Expected 2 categories and 8 subcategories - migrations 0001-0003 don't look applied yet. Run them in the Supabase SQL editor first."
+            exit 1
+          fi
+          qtype_status=$(curl -s -o /dev/null -w "%{http_code}" "$SUPABASE_URL/rest/v1/questions?select=question_type&limit=1" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY")
+          if [ "$qtype_status" != "200" ]; then
+            echo "::error::questions.question_type column not found (HTTP $qtype_status). Run supabase/migrations/0004_grid_in_questions.sql in the Supabase SQL editor first."
+            exit 1
+          fi
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - run: node scripts/import-questions.mjs --file=supabase/seed/firestore_questions.json
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+  deploy-functions:
+    if: ${{ inputs.run_deploy }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy edge functions
+        run: |
+          set -e
+          for fn in generate-baseline submit-baseline get-today-session submit-attempt; do
+            echo "Deploying $fn..."
+            supabase functions deploy "$fn" --project-ref "$SUPABASE_PROJECT_REF"
+          done
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_REF: wxmakoeentobsafvqbew
