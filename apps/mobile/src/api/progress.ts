@@ -38,6 +38,16 @@ export async function fetchPlanDays(planId: string): Promise<StudyPlanDay[]> {
   return (data ?? []) as StudyPlanDay[];
 }
 
+export async function fetchPlanDay(dayId: string): Promise<StudyPlanDay | null> {
+  const { data, error } = await supabase
+    .from("study_plan_days")
+    .select("id, day_number, date, status, completed_at, target_minutes, targets, materialized")
+    .eq("id", dayId)
+    .maybeSingle();
+  if (error) throw error;
+  return data as StudyPlanDay | null;
+}
+
 export async function fetchSkillStats(userId: string): Promise<UserSkillStat[]> {
   const { data, error } = await supabase
     .from("user_skill_stats")
