@@ -1,3 +1,4 @@
+import { FunctionsHttpError } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
 import type {
   GenerateBaselineResponse,
@@ -7,8 +8,33 @@ import type {
 } from "@/types/domain";
 
 async function invoke<T>(name: string, body?: Record<string, unknown>): Promise<T> {
-  const { data, error } = await supabase.functions.invoke(name, { body });
-  if (error) throw new Error(error.message);
+  // supabase-js's functions client does not reliably auto-attach the
+  // signed-in user's JWT, so it's passed explicitly on every call — without
+  // it, edge functions that call getUserIdOrThrow() reject the request at
+  // the gateway before the function code (and its logs) ever run.
+  const { data: sessionData } = await supabase.auth.getSession();
+  const accessToken = sessionData.session?.access_token;
+
+  const { data, error } = await supabase.functions.invoke(name, {
+    body,
+    headers: accessToken ? { Authorization: `Bearer ${accessToken}` } : undefined,
+  });
+  if (error) {
+    // The generic error.message ("Edge Function returned a non-2xx status
+    // code") hides the actual reason; the real message is in the response
+    // body our functions return via errorResponse().
+    if (error instanceof FunctionsHttpError) {
+      let message = `${error.context.status}: ${error.message}`;
+      try {
+        const body = await error.context.json();
+        if (body?.error) message = body.error;
+      } catch {
+        // response body wasn't JSON; keep the generic fallback above
+      }
+      throw new Error(message);
+    }
+    throw new Error(error.message);
+  }
   if (data?.error) throw new Error(data.error);
   return data as T;
 }
