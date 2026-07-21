@@ -5,6 +5,7 @@ import { generateBaseline, submitBaseline } from "@/api/studyFunctions";
 import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { useAuth } from "@/hooks/useAuth";
 import { colors } from "@/theme";
 import type { BaselineQuestion } from "@/types/domain";
 
@@ -16,6 +17,7 @@ interface Answer {
 
 export default function BaselineTest() {
   const router = useRouter();
+  const { refreshProfile } = useAuth();
   const [baselineTestId, setBaselineTestId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<BaselineQuestion[]>([]);
   const [index, setIndex] = useState(0);
@@ -78,6 +80,7 @@ export default function BaselineTest() {
     setSubmitting(true);
     try {
       const result = await submitBaseline(baselineTestId, nextAnswers);
+      await refreshProfile();
       router.replace({
         pathname: "/baseline/results",
         params: { mastery: JSON.stringify(result.mastery), totalDays: String(result.total_days) },

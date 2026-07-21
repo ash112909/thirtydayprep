@@ -29,6 +29,7 @@ export default function Home() {
       setSession(res);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Couldn't load today's session");
+      setSession(null);
     } finally {
       setLoading(false);
       setRefreshing(false);
@@ -45,6 +46,7 @@ export default function Home() {
   const answeredCount = session?.questions?.filter((q) => q.answered).length ?? 0;
   const totalCount = session?.questions?.length ?? 0;
   const allAnswered = totalCount > 0 && answeredCount === totalCount;
+  const needsBaseline = !!error?.toLowerCase().includes("baseline test");
 
   return (
     <ScrollView
@@ -61,6 +63,14 @@ export default function Home() {
 
       {loading ? (
         <ActivityIndicator color={colors.primary} style={{ marginTop: 40 }} />
+      ) : needsBaseline ? (
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>Take your baseline test</Text>
+          <Text style={styles.cardBody}>
+            We need a quick 24-question diagnostic to build your study plan.
+          </Text>
+          <PrimaryButton title="Start baseline test" onPress={() => router.push("/baseline/intro")} />
+        </View>
       ) : error ? (
         <Text style={styles.error}>{error}</Text>
       ) : session?.plan_complete ? (

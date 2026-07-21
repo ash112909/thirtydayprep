@@ -14,6 +14,20 @@ export async function fetchActivePlan(userId: string): Promise<StudyPlan | null>
   return data as StudyPlan | null;
 }
 
+// Whether the user has ever finished a baseline test — checked against
+// baseline_tests directly (rather than study_plans.status='active') so a
+// student who's completed their whole plan isn't mistaken for one who
+// never took the baseline.
+export async function hasCompletedBaseline(userId: string): Promise<boolean> {
+  const { count, error } = await supabase
+    .from("baseline_tests")
+    .select("id", { count: "exact", head: true })
+    .eq("user_id", userId)
+    .not("completed_at", "is", null);
+  if (error) throw error;
+  return (count ?? 0) > 0;
+}
+
 export async function fetchPlanDays(planId: string): Promise<StudyPlanDay[]> {
   const { data, error } = await supabase
     .from("study_plan_days")

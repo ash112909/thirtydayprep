@@ -5,14 +5,13 @@ import { StatusBar } from "expo-status-bar";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 
 function RootNavigation() {
-  const { session, profile, loading } = useAuth();
+  const { session, profile, hasCompletedBaseline, loading } = useAuth();
   const segments = useSegments();
   const router = useRouter();
 
   useEffect(() => {
     if (loading) return;
     const inAuthGroup = segments[0] === "(auth)";
-    const inTabsGroup = segments[0] === "(tabs)";
     const inOnboarding = segments[0] === "onboarding";
     const inBaseline = segments[0] === "baseline";
 
@@ -26,10 +25,19 @@ function RootNavigation() {
       return;
     }
 
+    // Still resolving whether a baseline test has been completed — wait
+    // rather than risk a wrong redirect before this settles.
+    if (hasCompletedBaseline === null) return;
+
+    if (!hasCompletedBaseline) {
+      if (!inBaseline) router.replace("/baseline/intro");
+      return;
+    }
+
     if (inAuthGroup || inOnboarding || !segments[0]) {
       router.replace("/(tabs)/home");
     }
-  }, [loading, session, profile, segments]);
+  }, [loading, session, profile, hasCompletedBaseline, segments]);
 
   if (loading) {
     return (

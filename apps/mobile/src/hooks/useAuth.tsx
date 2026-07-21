@@ -1,11 +1,15 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
+import { hasCompletedBaseline } from "@/api/progress";
 import type { Profile } from "@/types/domain";
 
 interface AuthContextValue {
   session: Session | null;
   profile: Profile | null;
+  // null while unknown/loading, so the root layout can wait rather than
+  // flash a wrong redirect before this resolves.
+  hasCompletedBaseline: boolean | null;
   loading: boolean;
   refreshProfile: () => Promise<void>;
   signOut: () => Promise<void>;
@@ -16,11 +20,16 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
+  const [baselineDone, setBaselineDone] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
 
   async function loadProfile(userId: string) {
-    const { data } = await supabase.from("profiles").select("*").eq("id", userId).maybeSingle();
+    const [{ data }, baselineComplete] = await Promise.all([
+      supabase.from("profiles").select("*").eq("id", userId).maybeSingle(),
+      hasCompletedBaseline(userId).catch(() => false),
+    ]);
     setProfile(data as Profile | null);
+    setBaselineDone(baselineComplete);
   }
 
   useEffect(() => {
@@ -36,6 +45,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await loadProfile(newSession.user.id);
       } else {
         setProfile(null);
+        setBaselineDone(null);
       }
     });
 
@@ -51,7 +61,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ session, profile, loading, refreshProfile, signOut }}>
+    <AuthContext.Provider
+      value={{ session, profile, hasCompletedBaseline: baselineDone, loading, refreshProfile, signOut }}
+    >
       {children}
     </AuthContext.Provider>
   );
