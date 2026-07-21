@@ -96,8 +96,16 @@ function slugify(text) {
     .replace(/(^-|-$)/g, "");
 }
 
+// Strips markdown-style **bold**/*italic* emphasis, keeping the wrapped
+// text. Only strips *paired* asterisks — a lone "*" (used as a
+// multiplication sign in ~2 Math questions across the whole bank) is left
+// alone, since it never appears paired the way emphasis markup does.
+function stripMarkdownEmphasis(text) {
+  return text.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\*([^*]+)\*/g, "$1");
+}
+
 function stripHtml(html) {
-  return html
+  return stripMarkdownEmphasis(html)
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/p>\s*<p>/gi, "\n\n")
     .replace(/<[^>]+>/g, "")
@@ -242,7 +250,7 @@ async function main() {
       skill_tag: slugify(String(d.topic)),
       passage,
       stem,
-      explanation: d.explanation ?? null,
+      explanation: d.explanation ? stripMarkdownEmphasis(d.explanation) : null,
       avg_seconds: d.time_expected_sec ? Math.max(10, Number(d.time_expected_sec)) : 75,
       calculator_allowed: typeof d.calculator_allowed === "boolean" ? d.calculator_allowed : null,
       passage_underline_start: underlineSpan?.start ?? null,
@@ -252,7 +260,7 @@ async function main() {
     if (questionType === "multiple_choice") {
       record.choices = (d.options ?? []).map((text, i) => ({
         key: String.fromCharCode(65 + i),
-        text,
+        text: stripMarkdownEmphasis(text),
       }));
       record.correct_choice = String(d.answer).toUpperCase();
     } else {
