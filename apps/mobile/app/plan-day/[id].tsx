@@ -1,9 +1,10 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchPlanDay, fetchSkillStats, fetchSubcategories } from "@/api/progress";
+import { skipDay } from "@/api/studyFunctions";
 import { buildDayNarrative } from "@/lib/planNarrative";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
@@ -26,6 +27,7 @@ export default function PlanDayDetail() {
   const [day, setDay] = useState<StudyPlanDay | null>(null);
   const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
   const [mastery, setMastery] = useState<MasterySnapshot>({});
+  const [skipping, setSkipping] = useState(false);
 
   useFocusEffect(
     useCallback(() => {
@@ -81,6 +83,31 @@ export default function PlanDayDetail() {
   const totalQuestions = day.targets.reduce((sum, t) => sum + t.count, 0);
   const isAvailable = day.status === "available";
   const isCompleted = day.status === "completed";
+  const isSkipped = day.status === "skipped";
+
+  function confirmSkip() {
+    Alert.alert(
+      "Skip this day?",
+      "The next day unlocks right away, but you won't get credit for these questions.",
+      [
+        { text: "Cancel", style: "cancel" },
+        { text: "Skip day", style: "destructive", onPress: handleSkip },
+      ],
+    );
+  }
+
+  async function handleSkip() {
+    if (!day) return;
+    setSkipping(true);
+    try {
+      await skipDay(day.id);
+      router.replace("/(tabs)/plan");
+    } catch (e) {
+      Alert.alert("Couldn't skip", e instanceof Error ? e.message : "Something went wrong.");
+    } finally {
+      setSkipping(false);
+    }
+  }
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
@@ -110,10 +137,16 @@ export default function PlanDayDetail() {
       </View>
 
       {isAvailable && (
-        <PrimaryButton title="Start today's session" onPress={() => router.push("/session")} />
+        <>
+          <PrimaryButton title="Start today's session" onPress={() => router.push("/session")} />
+          <View style={styles.secondaryActionSpacer}>
+            <PrimaryButton title="Skip this day" variant="secondary" onPress={confirmSkip} loading={skipping} />
+          </View>
+        </>
       )}
       {isCompleted && <Text style={styles.doneNote}>You've already completed this day. Nice work.</Text>}
-      {!isAvailable && !isCompleted && (
+      {isSkipped && <Text style={styles.lockedNote}>You skipped this day.</Text>}
+      {!isAvailable && !isCompleted && !isSkipped && (
         <Text style={styles.lockedNote}>This day unlocks once you finish the ones before it.</Text>
       )}
     </ScrollView>
@@ -146,6 +179,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
   },
   chipText: { color: colors.textMuted, fontSize: 12, fontWeight: "600" },
+  secondaryActionSpacer: { marginTop: 10 },
   doneNote: { color: colors.success, fontSize: 13, textAlign: "center" },
   lockedNote: { color: colors.textMuted, fontSize: 13, textAlign: "center" },
 });

@@ -18,7 +18,7 @@ export default function Session() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [dayCompleted, setDayCompleted] = useState(false);
+  const [completedDayId, setCompletedDayId] = useState<string | null>(null);
   const questionStartedAt = useRef(Date.now());
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function Session() {
 
   const question = questions[index];
 
-  if (!question || dayCompleted) {
+  if (!question) {
     return (
       <View style={styles.center}>
         <Text style={styles.doneTitle}>Nice work! 🎉</Text>
@@ -80,7 +80,9 @@ export default function Session() {
     try {
       const result = await submitAttempt(question.study_plan_day_question_id, answerValue, timeSpent);
       setRevealed({ correctAnswer: result.correct_answer, explanation: result.explanation });
-      if (result.day_completed) setDayCompleted(true);
+      if (result.day_completed && result.study_plan_day_id) {
+        setCompletedDayId(result.study_plan_day_id);
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
     } finally {
@@ -89,6 +91,10 @@ export default function Session() {
   }
 
   function handleNext() {
+    if (completedDayId) {
+      router.replace(`/session-recap/${completedDayId}`);
+      return;
+    }
     setAnswerValue("");
     setRevealed(null);
     setIndex((i) => i + 1);

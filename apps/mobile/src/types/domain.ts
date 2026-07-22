@@ -88,6 +88,7 @@ export interface SubmitAttemptResponse {
   correct_answer: string;
   explanation: string | null;
   day_completed: boolean;
+  study_plan_day_id?: string;
 }
 
 export interface UserSkillStat {
@@ -95,6 +96,7 @@ export interface UserSkillStat {
   questions_attempted: number;
   questions_correct: number;
   mastery_score: number;
+  avg_time_seconds: number | null;
 }
 
 export interface StudyPlan {

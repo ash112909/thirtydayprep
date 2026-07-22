@@ -68,3 +68,15 @@ export function submitAttempt(
     time_spent_seconds: timeSpentSeconds,
   });
 }
+
+export function submitReviewAttempt(questionId: string, selectedChoice: string, timeSpentSeconds: number) {
+  return invoke<SubmitAttemptResponse>("submit-review-attempt", {
+    question_id: questionId,
+    selected_choice: selectedChoice,
+    time_spent_seconds: timeSpentSeconds,
+  });
+}
+
+export function skipDay(studyPlanDayId: string) {
+  return invoke<{ skipped: boolean }>("skip-day", { study_plan_day_id: studyPlanDayId });
+}

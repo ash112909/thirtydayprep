@@ -14,3 +14,14 @@ export async function completeOnboarding(userId: string, satDate: string, dailyM
     .eq("id", userId);
   if (error) throw error;
 }
+
+// Updates just the goal fields after onboarding — doesn't touch or resize
+// an already-generated study plan, so changing daily minutes here affects
+// future adaptive rebalancing but not the plan's existing day count.
+export async function updateStudyGoals(userId: string, satDate: string, dailyMinutes: number) {
+  const { error } = await supabase
+    .from("profiles")
+    .update({ sat_date: satDate, daily_minutes: dailyMinutes })
+    .eq("id", userId);
+  if (error) throw error;
+}

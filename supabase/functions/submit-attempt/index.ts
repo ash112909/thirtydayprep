@@ -11,8 +11,9 @@ import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
-import { computeDayTargets, updateMastery } from "../_shared/planEngine.ts";
-import { isCorrectAnswer, type Difficulty, type MasterySnapshot } from "../_shared/types.ts";
+import { computeDayTargets } from "../_shared/planEngine.ts";
+import { recordMasteryUpdate } from "../_shared/mastery.ts";
+import { isCorrectAnswer, type MasterySnapshot } from "../_shared/types.ts";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -78,30 +79,13 @@ serve(async (req) => {
     if (attemptErr) throw attemptErr;
 
     // --- Update rolling mastery for this subcategory --------------------
-    const { data: priorStat } = await supabase
-      .from("user_skill_stats")
-      .select("mastery_score, questions_attempted, questions_correct, avg_time_seconds")
-      .eq("user_id", userId)
-      .eq("subcategory_id", question.subcategory_id)
-      .maybeSingle();
-
-    const priorMastery = priorStat?.mastery_score ?? 50;
-    const priorAttempts = priorStat?.questions_attempted ?? 0;
-    const newMastery = updateMastery(priorMastery, priorAttempts, isCorrect, question.difficulty as Difficulty);
-    const priorAvgTime = priorStat?.avg_time_seconds ?? time_spent_seconds;
-    const newAvgTime = (priorAvgTime * priorAttempts + time_spent_seconds) / (priorAttempts + 1);
-
-    await supabase.from("user_skill_stats").upsert(
-      {
-        user_id: userId,
-        subcategory_id: question.subcategory_id,
-        questions_attempted: priorAttempts + 1,
-        questions_correct: (priorStat?.questions_correct ?? 0) + (isCorrect ? 1 : 0),
-        mastery_score: newMastery,
-        avg_time_seconds: Math.round(newAvgTime * 10) / 10,
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: "user_id,subcategory_id" },
+    await recordMasteryUpdate(
+      supabase,
+      userId,
+      question.subcategory_id,
+      isCorrect,
+      question.difficulty,
+      time_spent_seconds,
     );
 
     // --- Check if the day is now complete --------------------------------
@@ -134,6 +118,7 @@ serve(async (req) => {
       correct_answer: question.question_type === "grid_in" ? question.correct_value : question.correct_choice,
       explanation: question.explanation,
       day_completed: dayCompleted,
+      study_plan_day_id: dq.study_plan_day_id,
     });
   } catch (err) {
     console.error(err);

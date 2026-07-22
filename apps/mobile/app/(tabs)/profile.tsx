@@ -1,7 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { useCallback, useState } from "react";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
+import { updateStudyGoals } from "@/api/profile";
+import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
+import { computeAchievements, type Achievement } from "@/lib/achievements";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
+import type { StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
 
 function daysUntil(dateStr: string | null): number | null {
   if (!dateStr) return null;
@@ -10,29 +16,142 @@ function daysUntil(dateStr: string | null): number | null {
 }
 
 export default function ProfileScreen() {
-  const { session, profile, signOut } = useAuth();
+  const { session, profile, refreshProfile, signOut } = useAuth();
   const remaining = daysUntil(profile?.sat_date ?? null);
 
+  const [editing, setEditing] = useState(false);
+  const [satDate, setSatDate] = useState(profile?.sat_date ?? "");
+  const [dailyMinutes, setDailyMinutes] = useState(String(profile?.daily_minutes ?? ""));
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  const [plan, setPlan] = useState<StudyPlan | null>(null);
+  const [days, setDays] = useState<StudyPlanDay[]>([]);
+  const [stats, setStats] = useState<UserSkillStat[]>([]);
+  const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      if (!session) return;
+      let cancelled = false;
+      Promise.all([
+        fetchActivePlan(session.user.id),
+        fetchSkillStats(session.user.id),
+        fetchSubcategories(),
+      ]).then(async ([activePlan, skillStats, subs]) => {
+        if (cancelled) return;
+        setPlan(activePlan);
+        setStats(skillStats);
+        setSubcategories(subs);
+        if (activePlan) setDays(await fetchPlanDays(activePlan.id));
+      });
+      return () => {
+        cancelled = true;
+      };
+    }, [session]),
+  );
+
+  function startEditing() {
+    setSatDate(profile?.sat_date ?? "");
+    setDailyMinutes(String(profile?.daily_minutes ?? ""));
+    setSaveError(null);
+    setEditing(true);
+  }
+
+  async function handleSave() {
+    if (!session) return;
+    setSaveError(null);
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!dateRegex.test(satDate)) {
+      setSaveError("Enter your SAT date as YYYY-MM-DD.");
+      return;
+    }
+    const minutes = parseInt(dailyMinutes, 10);
+    if (!minutes || minutes < 10) {
+      setSaveError("Enter at least 10 minutes a day.");
+      return;
+    }
+    setSaving(true);
+    try {
+      await updateStudyGoals(session.user.id, satDate, minutes);
+      await refreshProfile();
+      setEditing(false);
+    } catch (e) {
+      setSaveError(e instanceof Error ? e.message : "Something went wrong.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const achievements: Achievement[] = computeAchievements(plan, days, stats, subcategories);
+  const achievedCount = achievements.filter((a) => a.achieved).length;
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Text style={styles.title}>Profile</Text>
 
-      <View style={styles.card}>
-        <Row label="Name" value={profile?.full_name ?? "—"} />
-        <Row label="Email" value={session?.user.email ?? "—"} />
-        <Row label="SAT date" value={profile?.sat_date ?? "Not set"} />
-        <Row label="Days remaining" value={remaining != null ? String(remaining) : "—"} />
-        <Row label="Daily study time" value={profile?.daily_minutes ? `${profile.daily_minutes} min` : "—"} />
+      {editing ? (
+        <View style={styles.card}>
+          <Text style={styles.label}>When is your SAT?</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="YYYY-MM-DD"
+            placeholderTextColor={colors.textMuted}
+            value={satDate}
+            onChangeText={setSatDate}
+          />
+          <Text style={styles.label}>Minutes you can study per day</Text>
+          <TextInput
+            style={styles.input}
+            keyboardType="number-pad"
+            value={dailyMinutes}
+            onChangeText={setDailyMinutes}
+          />
+          {saveError && <Text style={styles.error}>{saveError}</Text>}
+          <PrimaryButton title="Save" onPress={handleSave} loading={saving} />
+          <View style={styles.cancelSpacer}>
+            <PrimaryButton title="Cancel" variant="secondary" onPress={() => setEditing(false)} />
+          </View>
+        </View>
+      ) : (
+        <View style={styles.card}>
+          <Row label="Name" value={profile?.full_name ?? "—"} />
+          <Row label="Email" value={session?.user.email ?? "—"} />
+          <Row label="SAT date" value={profile?.sat_date ?? "Not set"} />
+          <Row label="Days remaining" value={remaining != null ? String(remaining) : "—"} />
+          <Row label="Daily study time" value={profile?.daily_minutes ? `${profile.daily_minutes} min` : "—"} last />
+          <View style={styles.editButtonSpacer}>
+            <PrimaryButton title="Edit goals" variant="secondary" onPress={startEditing} />
+          </View>
+        </View>
+      )}
+
+      <View style={styles.achievementsHeader}>
+        <Text style={styles.sectionTitle}>Achievements</Text>
+        <Text style={styles.achievementsCount}>
+          {achievedCount}/{achievements.length}
+        </Text>
+      </View>
+      <View style={styles.achievementsGrid}>
+        {achievements.map((a) => (
+          <View key={a.id} style={[styles.badge, !a.achieved && styles.badgeLocked]}>
+            <Text style={styles.badgeIcon}>{a.icon}</Text>
+            <Text style={styles.badgeTitle}>{a.title}</Text>
+            <Text style={styles.badgeDescription}>{a.description}</Text>
+          </View>
+        ))}
       </View>
 
-      <PrimaryButton title="Log out" onPress={signOut} variant="secondary" />
-    </View>
+      <View style={styles.logoutSpacer}>
+        <PrimaryButton title="Log out" onPress={signOut} variant="secondary" />
+      </View>
+    </ScrollView>
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value, last }: { label: string; value: string; last?: boolean }) {
   return (
-    <View style={styles.row}>
+    <View style={[styles.row, last && styles.rowLast]}>
       <Text style={styles.rowLabel}>{label}</Text>
       <Text style={styles.rowValue}>{value}</Text>
     </View>
@@ -40,7 +159,8 @@ function Row({ label, value }: { label: string; value: string }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
+  container: { flex: 1, backgroundColor: colors.background },
+  content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
   title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 24 },
   card: {
     backgroundColor: colors.surface,
@@ -57,6 +177,37 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
+  rowLast: { borderBottomWidth: 0 },
   rowLabel: { color: colors.textMuted, fontSize: 14 },
   rowValue: { color: colors.text, fontSize: 14, fontWeight: "600" },
+  editButtonSpacer: { marginTop: 16 },
+  cancelSpacer: { marginTop: 10 },
+  label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
+  input: {
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: 12,
+    padding: 14,
+    color: colors.text,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  error: { color: colors.danger, marginBottom: 12 },
+  achievementsHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 14 },
+  sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text },
+  achievementsCount: { fontSize: 13, color: colors.textMuted },
+  achievementsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 24 },
+  badge: {
+    width: "47%",
+    backgroundColor: colors.surface,
+    borderRadius: 14,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: colors.primary,
+  },
+  badgeLocked: { borderColor: colors.border, opacity: 0.5 },
+  badgeIcon: { fontSize: 22, marginBottom: 6 },
+  badgeTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 2 },
+  badgeDescription: { color: colors.textMuted, fontSize: 11, lineHeight: 15 },
+  logoutSpacer: { marginTop: 8 },
 });
