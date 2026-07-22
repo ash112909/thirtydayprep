@@ -28,6 +28,10 @@ export default function TabsLayout() {
         options={{ tabBarIcon: ({ focused }) => <TabIcon label="Progress" focused={focused} /> }}
       />
       <Tabs.Screen
+        name="buddy"
+        options={{ tabBarIcon: ({ focused }) => <TabIcon label="Buddy" focused={focused} /> }}
+      />
+      <Tabs.Screen
         name="profile"
         options={{ tabBarIcon: ({ focused }) => <TabIcon label="Profile" focused={focused} /> }}
       />

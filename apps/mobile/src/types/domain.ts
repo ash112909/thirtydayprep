@@ -126,3 +126,12 @@ export interface StudyPlanDay {
   targets: DayTarget[];
   materialized: boolean;
 }
+
+export type PetSpecies = "cat" | "dog";
+
+export interface StudyPet {
+  user_id: string;
+  species: PetSpecies;
+  color: string;
+  equipped_accessories: string[];
+}
