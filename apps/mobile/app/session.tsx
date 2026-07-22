@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { getTodaySession, submitAttempt } from "@/api/studyFunctions";
+import { fetchCategories } from "@/api/progress";
 import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
+import { findMathCategoryId } from "@/lib/mathCategory";
 import { colors } from "@/theme";
 import type { SessionQuestion } from "@/types/domain";
 
@@ -19,11 +22,13 @@ export default function Session() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [completedDayId, setCompletedDayId] = useState<string | null>(null);
+  const [mathCategoryId, setMathCategoryId] = useState<string | null>(null);
   const questionStartedAt = useRef(Date.now());
 
   useEffect(() => {
-    getTodaySession()
-      .then((res) => {
+    Promise.all([getTodaySession(), fetchCategories()])
+      .then(([res, categories]) => {
+        setMathCategoryId(findMathCategoryId(categories));
         if (!res.questions) {
           setError(res.message ?? "No session available right now.");
           return;
@@ -106,9 +111,12 @@ export default function Session() {
   return (
     <View style={styles.container}>
       <View style={styles.progressRow}>
-        <Text style={styles.progressText}>
-          Question {index + 1} of {questions.length}
-        </Text>
+        <View style={styles.progressHeader}>
+          <Text style={styles.progressText}>
+            Question {index + 1} of {questions.length}
+          </Text>
+          {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+        </View>
         <View style={styles.progressBarTrack}>
           <View style={[styles.progressBarFill, { width: `${((index + 1) / questions.length) * 100}%` }]} />
         </View>
@@ -157,7 +165,8 @@ const styles = StyleSheet.create({
   doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text },
   doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
   progressRow: { marginBottom: 20 },
-  progressText: { color: colors.textMuted, fontSize: 13, marginBottom: 8 },
+  progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+  progressText: { color: colors.textMuted, fontSize: 13 },
   progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
   progressBarFill: { height: 6, backgroundColor: colors.primary },
   explanation: {

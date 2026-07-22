@@ -2,10 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchQuestionById, type QuestionDetail } from "@/api/mistakes";
+import { fetchCategories } from "@/api/progress";
 import { submitReviewAttempt } from "@/api/studyFunctions";
 import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
+import { findMathCategoryId } from "@/lib/mathCategory";
 import { colors } from "@/theme";
 
 export default function ReviewQuestion() {
@@ -19,13 +22,15 @@ export default function ReviewQuestion() {
   );
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [mathCategoryId, setMathCategoryId] = useState<string | null>(null);
   const startedAt = useRef(Date.now());
 
   useEffect(() => {
     if (!id) return;
-    fetchQuestionById(id)
-      .then((q) => {
+    Promise.all([fetchQuestionById(id), fetchCategories()])
+      .then(([q, categories]) => {
         setQuestion(q);
+        setMathCategoryId(findMathCategoryId(categories));
         startedAt.current = Date.now();
       })
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load question"))
@@ -69,7 +74,10 @@ export default function ReviewQuestion() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Review</Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.header}>Review</Text>
+        {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+      </View>
 
       {question.question_type === "grid_in" ? (
         <GridInAnswer
@@ -116,7 +124,8 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
   error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
-  header: { color: colors.textMuted, fontSize: 13, fontWeight: "700", marginBottom: 12 },
+  headerRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
+  header: { color: colors.textMuted, fontSize: 13, fontWeight: "700" },
   correctBanner: { color: colors.success, fontSize: 14, fontWeight: "600", marginTop: 12 },
   wrongBanner: { color: colors.danger, fontSize: 14, fontWeight: "600", marginTop: 12 },
   explanation: {

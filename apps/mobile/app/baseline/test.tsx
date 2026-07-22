@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { generateBaseline, submitBaseline } from "@/api/studyFunctions";
+import { fetchCategories } from "@/api/progress";
 import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
+import { findMathCategoryId } from "@/lib/mathCategory";
 import { useAuth } from "@/hooks/useAuth";
 import { colors } from "@/theme";
 import type { BaselineQuestion } from "@/types/domain";
@@ -26,13 +29,15 @@ export default function BaselineTest() {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [mathCategoryId, setMathCategoryId] = useState<string | null>(null);
   const questionStartedAt = useRef(Date.now());
 
   useEffect(() => {
-    generateBaseline()
-      .then((res) => {
+    Promise.all([generateBaseline(), fetchCategories()])
+      .then(([res, categories]) => {
         setBaselineTestId(res.baseline_test_id);
         setQuestions(res.questions);
+        setMathCategoryId(findMathCategoryId(categories));
         questionStartedAt.current = Date.now();
       })
       .catch((e) => setError(e instanceof Error ? e.message : "Failed to load baseline test"))
@@ -94,9 +99,12 @@ export default function BaselineTest() {
   return (
     <View style={styles.container}>
       <View style={styles.progressRow}>
-        <Text style={styles.progressText}>
-          Question {index + 1} of {questions.length}
-        </Text>
+        <View style={styles.progressHeader}>
+          <Text style={styles.progressText}>
+            Question {index + 1} of {questions.length}
+          </Text>
+          {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+        </View>
         <View style={styles.progressBarTrack}>
           <View style={[styles.progressBarFill, { width: `${((index + 1) / questions.length) * 100}%` }]} />
         </View>
@@ -138,7 +146,8 @@ const styles = StyleSheet.create({
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
   error: { color: colors.danger, padding: 24, textAlign: "center" },
   progressRow: { marginBottom: 20 },
-  progressText: { color: colors.textMuted, fontSize: 13, marginBottom: 8 },
+  progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+  progressText: { color: colors.textMuted, fontSize: 13 },
   progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
   progressBarFill: { height: 6, backgroundColor: colors.primary },
 });
