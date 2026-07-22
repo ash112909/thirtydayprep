@@ -1,9 +1,10 @@
 import { useCallback, useState } from "react";
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { updateStudyGoals } from "@/api/profile";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
+import { regeneratePlan } from "@/api/studyFunctions";
 import { computeAchievements, type Achievement } from "@/lib/achievements";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
@@ -71,11 +72,29 @@ export default function ProfileScreen() {
       setSaveError("Enter at least 10 minutes a day.");
       return;
     }
+    const goalsChanged = satDate !== profile?.sat_date || minutes !== profile?.daily_minutes;
+
     setSaving(true);
     try {
       await updateStudyGoals(session.user.id, satDate, minutes);
       await refreshProfile();
       setEditing(false);
+
+      if (goalsChanged && plan) {
+        try {
+          const result = await regeneratePlan();
+          setPlan(await fetchActivePlan(session.user.id));
+          Alert.alert(
+            "Plan updated",
+            `Your plan now runs ${result.total_days} days. Regenerations used: ${result.regenerations_used}/${result.regenerations_allowed}.`,
+          );
+        } catch (e) {
+          Alert.alert(
+            "Goals saved, plan unchanged",
+            e instanceof Error ? e.message : "Couldn't regenerate your plan.",
+          );
+        }
+      }
     } catch (e) {
       setSaveError(e instanceof Error ? e.message : "Something went wrong.");
     } finally {
@@ -92,6 +111,13 @@ export default function ProfileScreen() {
 
       {editing ? (
         <View style={styles.card}>
+          {plan && (
+            <Text style={styles.editHint}>
+              Changing either of these will regenerate the rest of your plan (
+              {plan.regenerations_allowed - plan.regenerations_used} regeneration
+              {plan.regenerations_allowed - plan.regenerations_used === 1 ? "" : "s"} left).
+            </Text>
+          )}
           <Text style={styles.label}>When is your SAT?</Text>
           <TextInput
             style={styles.input}
@@ -119,7 +145,18 @@ export default function ProfileScreen() {
           <Row label="Email" value={session?.user.email ?? "—"} />
           <Row label="SAT date" value={profile?.sat_date ?? "Not set"} />
           <Row label="Days remaining" value={remaining != null ? String(remaining) : "—"} />
-          <Row label="Daily study time" value={profile?.daily_minutes ? `${profile.daily_minutes} min` : "—"} last />
+          <Row
+            label="Daily study time"
+            value={profile?.daily_minutes ? `${profile.daily_minutes} min` : "—"}
+            last={!plan}
+          />
+          {plan && (
+            <Row
+              label="Plan regenerations"
+              value={`${plan.regenerations_used}/${plan.regenerations_allowed} used`}
+              last
+            />
+          )}
           <View style={styles.editButtonSpacer}>
             <PrimaryButton title="Edit goals" variant="secondary" onPress={startEditing} />
           </View>
@@ -193,6 +230,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   error: { color: colors.danger, marginBottom: 12 },
+  editHint: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginBottom: 16 },
   achievementsHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 14 },
   sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text },
   achievementsCount: { fontSize: 13, color: colors.textMuted },

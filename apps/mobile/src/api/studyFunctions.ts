@@ -80,3 +80,13 @@ export function submitReviewAttempt(questionId: string, selectedChoice: string, 
 export function skipDay(studyPlanDayId: string) {
   return invoke<{ skipped: boolean }>("skip-day", { study_plan_day_id: studyPlanDayId });
 }
+
+export interface RegeneratePlanResponse {
+  total_days: number;
+  regenerations_used: number;
+  regenerations_allowed: number;
+}
+
+export function regeneratePlan() {
+  return invoke<RegeneratePlanResponse>("regenerate-plan");
+}

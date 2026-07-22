@@ -106,6 +106,8 @@ export interface StudyPlan {
   total_days: number;
   daily_minutes: number;
   status: "active" | "completed" | "abandoned";
+  regenerations_used: number;
+  regenerations_allowed: number;
 }
 
 export interface DayTarget {
