@@ -134,4 +134,5 @@ export interface StudyPet {
   species: PetSpecies;
   color: string;
   equipped_accessories: string[];
+  points: number;
 }

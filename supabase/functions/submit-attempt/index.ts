@@ -13,6 +13,7 @@ import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
 import { computeDayTargets } from "../_shared/planEngine.ts";
 import { recordMasteryUpdate } from "../_shared/mastery.ts";
+import { awardDayCompletionPoints } from "../_shared/petPoints.ts";
 import { isCorrectAnswer, type MasterySnapshot } from "../_shared/types.ts";
 
 serve(async (req) => {
@@ -111,6 +112,7 @@ serve(async (req) => {
         .eq("status", "locked");
 
       await rebalanceFuturePlan(admin, supabase, userId, day.study_plan_id);
+      await awardDayCompletionPoints(supabase, userId);
     }
 
     return jsonResponse({

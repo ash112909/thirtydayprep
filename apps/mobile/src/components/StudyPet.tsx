@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Pressable } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Pressable, Text } from "react-native";
 import Animated, {
   Easing,
   useAnimatedProps,
@@ -16,6 +16,8 @@ import type { PetSpecies } from "@/types/domain";
 const AnimatedG = Animated.createAnimatedComponent(G);
 const AnimatedEllipse = Animated.createAnimatedComponent(Ellipse);
 
+export type PetAction = "petting" | "eating" | "playing";
+
 interface Props {
   species: PetSpecies;
   color: string;
@@ -23,11 +25,19 @@ interface Props {
   growthStage: GrowthStage;
   equippedAccessories: string[];
   size?: number;
+  activeAction?: PetAction | null;
+  onActionComplete?: () => void;
 }
 
 const GROWTH_SCALE: Record<GrowthStage, number> = { hatchling: 0.72, adolescent: 0.87, grown: 1 };
 const ENERGY_BREATH_MS: Record<Energy, number> = { sleepy: 2600, calm: 1700, energetic: 950 };
 const ENERGY_TAIL_SWING: Record<Energy, number> = { sleepy: 4, calm: 12, energetic: 26 };
+
+const REACTION_CONFIG: Record<PetAction, { emoji: string; durationMs: number }> = {
+  petting: { emoji: "💕", durationMs: 900 },
+  eating: { emoji: "😋", durationMs: 1200 },
+  playing: { emoji: "✨", durationMs: 1300 },
+};
 
 function Ears({ species, color }: { species: PetSpecies; color: string }) {
   if (species === "cat") {
@@ -105,11 +115,27 @@ function Accessory({ id }: { id: string }) {
   }
 }
 
-export function StudyPet({ species, color, energy, growthStage, equippedAccessories, size = 220 }: Props) {
+export function StudyPet({
+  species,
+  color,
+  energy,
+  growthStage,
+  equippedAccessories,
+  size = 220,
+  activeAction,
+  onActionComplete,
+}: Props) {
   const breathe = useSharedValue(0);
   const tailAngle = useSharedValue(0);
   const eyeSquish = useSharedValue(1);
   const tapBounce = useSharedValue(0);
+  const reactionBounce = useSharedValue(0);
+  const reactionRotate = useSharedValue(0);
+  const emojiOpacity = useSharedValue(0);
+  const emojiFloat = useSharedValue(0);
+  const zFloat = useSharedValue(0);
+  const restEyeOpenRef = useRef(1);
+  const [activeEmoji, setActiveEmoji] = useState<string | null>(null);
 
   useEffect(() => {
     const speed = ENERGY_BREATH_MS[energy];
@@ -129,22 +155,71 @@ export function StudyPet({ species, color, energy, growthStage, equippedAccessor
       -1,
       true,
     );
-  }, [energy, breathe, tailAngle]);
+    const target = energy === "sleepy" ? 0.4 : 1;
+    restEyeOpenRef.current = target;
+    eyeSquish.value = withTiming(target, { duration: 400 });
+
+    if (energy === "sleepy") {
+      zFloat.value = withRepeat(withSequence(withTiming(1, { duration: 1800, easing: Easing.out(Easing.quad) }), withTiming(0, { duration: 0 })), -1);
+    } else {
+      zFloat.value = 0;
+    }
+  }, [energy, breathe, tailAngle, eyeSquish, zFloat]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      eyeSquish.value = withSequence(withTiming(0.1, { duration: 90 }), withTiming(1, { duration: 130 }));
+      eyeSquish.value = withSequence(withTiming(0.1, { duration: 90 }), withTiming(restEyeOpenRef.current, { duration: 130 }));
     }, 2800);
     return () => clearInterval(interval);
   }, [eyeSquish]);
 
+  useEffect(() => {
+    if (!activeAction) return;
+    const config = REACTION_CONFIG[activeAction];
+    setActiveEmoji(config.emoji);
+
+    if (activeAction === "eating") {
+      reactionBounce.value = withRepeat(withSequence(withTiming(1, { duration: 180 }), withTiming(0, { duration: 180 })), 3, false);
+    } else if (activeAction === "playing") {
+      reactionBounce.value = withSequence(withTiming(1, { duration: 200 }), withTiming(0.3, { duration: 200 }), withTiming(1, { duration: 200 }), withTiming(0, { duration: 300 }));
+      reactionRotate.value = withSequence(withTiming(10, { duration: 150 }), withTiming(-10, { duration: 150 }), withTiming(10, { duration: 150 }), withTiming(0, { duration: 150 }));
+    } else {
+      reactionBounce.value = withSequence(withTiming(1, { duration: 150 }), withTiming(0, { duration: 300 }));
+    }
+
+    emojiOpacity.value = withSequence(withTiming(1, { duration: 150 }), withTiming(1, { duration: Math.max(config.durationMs - 400, 0) }), withTiming(0, { duration: 250 }));
+    emojiFloat.value = 0;
+    emojiFloat.value = withTiming(1, { duration: config.durationMs, easing: Easing.out(Easing.quad) });
+
+    const timeout = setTimeout(() => {
+      setActiveEmoji(null);
+      onActionComplete?.();
+    }, config.durationMs);
+    return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeAction]);
+
   const bodyStyle = useAnimatedStyle(() => {
     const breatheScale = 1 + breathe.value * 0.035;
-    const bounceScale = 1 + tapBounce.value * 0.15;
+    const bounceScale = 1 + tapBounce.value * 0.15 + reactionBounce.value * 0.12;
     return {
-      transform: [{ scale: GROWTH_SCALE[growthStage] * bounceScale }, { scaleY: breatheScale }],
+      transform: [
+        { scale: GROWTH_SCALE[growthStage] * bounceScale },
+        { scaleY: breatheScale },
+        { rotate: `${reactionRotate.value}deg` },
+      ],
     };
   });
+
+  const emojiStyle = useAnimatedStyle(() => ({
+    opacity: emojiOpacity.value,
+    transform: [{ translateY: -emojiFloat.value * 40 }, { scale: 0.8 + emojiFloat.value * 0.4 }],
+  }));
+
+  const zStyle = useAnimatedStyle(() => ({
+    opacity: energy === "sleepy" ? (1 - zFloat.value) * 0.8 : 0,
+    transform: [{ translateY: -zFloat.value * 30 }, { translateX: zFloat.value * 10 }],
+  }));
 
   const tailAnimatedProps = useAnimatedProps(() => ({ rotation: tailAngle.value }));
   const eyeAnimatedProps = useAnimatedProps(() => ({ ry: 9 * eyeSquish.value }));
@@ -158,6 +233,16 @@ export function StudyPet({ species, color, energy, growthStage, equippedAccessor
 
   return (
     <Pressable onPress={handlePress} style={{ width: size, alignItems: "center" }}>
+      {energy === "sleepy" && !activeEmoji && (
+        <Animated.View style={[{ position: "absolute", top: 10, right: size * 0.15, zIndex: 1 }, zStyle]}>
+          <Text style={{ fontSize: 20 }}>💤</Text>
+        </Animated.View>
+      )}
+      {activeEmoji && (
+        <Animated.View style={[{ position: "absolute", top: 10, zIndex: 1 }, emojiStyle]}>
+          <Text style={{ fontSize: 28 }}>{activeEmoji}</Text>
+        </Animated.View>
+      )}
       <Animated.View style={bodyStyle}>
         <Svg viewBox="0 0 200 220" width={size} height={size * 1.1}>
           {backpack && <Accessory id="backpack" />}
