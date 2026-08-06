@@ -30,9 +30,14 @@ const ENERGY_SWAY_PX: Record<Energy, number> = { sleepy: 1, calm: 2.5, energetic
 
 const REACTION_CONFIG: Record<PetAction, { emoji: string; durationMs: number }> = {
   petting: { emoji: "💕", durationMs: 900 },
-  eating: { emoji: "😋", durationMs: 1200 },
+  eating: { emoji: "😋", durationMs: 1500 },
   playing: { emoji: "✨", durationMs: 1300 },
 };
+
+// How long the food bowl sits on screen before the pet actually starts
+// eating from it — the whole point being that the food visibly arrives
+// first, rather than the pet just instantly appearing mid-chew.
+const EATING_ANTICIPATION_MS = 400;
 
 // Static requires — Metro needs these literal, can't build the path dynamically.
 const IMAGES: Record<PetSpecies, Record<Pose, ImageSourcePropType>> = {
@@ -62,13 +67,20 @@ const BLINK_FRAMES: Partial<Record<PetSpecies, Partial<Record<Pose, ImageSourceP
   },
 };
 
-function resolvePose(energy: Energy, activeAction: PetAction | null | undefined): Pose {
-  if (activeAction === "eating") return "eating";
-  if (activeAction === "playing") return "playing";
-  if (activeAction === "petting") return "energetic";
+function restingPose(energy: Energy): Pose {
   if (energy === "sleepy") return "sleepy";
   if (energy === "energetic") return "energetic";
   return "idle";
+}
+
+// While eating is in its anticipation phase (food just appeared, pet hasn't
+// reached it yet), the displayed pose stays at rest — only once the food
+// has visibly "arrived" does the pose swap to the eating frame.
+function resolvePose(energy: Energy, activeAction: PetAction | null | undefined, eatingPoseReady: boolean): Pose {
+  if (activeAction === "eating") return eatingPoseReady ? "eating" : restingPose(energy);
+  if (activeAction === "playing") return "playing";
+  if (activeAction === "petting") return "energetic";
+  return restingPose(energy);
 }
 
 export function StudyPet({ species, energy, growthStage, size = 220, activeAction, onActionComplete }: Props) {
@@ -82,10 +94,12 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
   const emojiOpacity = useSharedValue(0);
   const emojiFloat = useSharedValue(0);
   const zFloat = useSharedValue(0);
+  const bowlOpacity = useSharedValue(0);
   const [activeEmoji, setActiveEmoji] = useState<string | null>(null);
   const [blinking, setBlinking] = useState(false);
+  const [eatingPoseReady, setEatingPoseReady] = useState(false);
 
-  const pose = resolvePose(energy, activeAction);
+  const pose = resolvePose(energy, activeAction, eatingPoseReady);
   const blinkFrame = BLINK_FRAMES[species]?.[pose];
 
   // Idle breathing, skipped while a reaction is actively playing.
@@ -141,19 +155,43 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
     };
   }, [blinkFrame, activeAction]);
 
+  // The food bowl appears immediately (before the pose swap) and stays
+  // visible through the whole eating action.
+  useEffect(() => {
+    if (activeAction === "eating") {
+      setEatingPoseReady(false);
+      bowlOpacity.value = withTiming(1, { duration: 180 });
+      const t = setTimeout(() => setEatingPoseReady(true), EATING_ANTICIPATION_MS);
+      return () => clearTimeout(t);
+    }
+    bowlOpacity.value = withTiming(0, { duration: 200 });
+    setEatingPoseReady(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeAction]);
+
+  // The head-bob only starts once the pose has actually swapped to eating —
+  // bobbing while still showing the resting pose would look like eating
+  // food that isn't there yet.
+  useEffect(() => {
+    if (activeAction === "eating" && eatingPoseReady) {
+      reactionDip.value = withRepeat(withSequence(withTiming(8, { duration: 150 }), withTiming(0, { duration: 150 })), 3, false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [eatingPoseReady, activeAction]);
+
   useEffect(() => {
     if (!activeAction) return;
     const config = REACTION_CONFIG[activeAction];
     setActiveEmoji(config.emoji);
 
-    if (activeAction === "eating") {
-      reactionDip.value = withRepeat(withSequence(withTiming(8, { duration: 150 }), withTiming(0, { duration: 150 })), 3, false);
-    } else if (activeAction === "playing") {
+    if (activeAction === "playing") {
       reactionBounce.value = withSequence(withTiming(1, { duration: 200 }), withTiming(0.3, { duration: 200 }), withTiming(1, { duration: 200 }), withTiming(0, { duration: 300 }));
       reactionRotate.value = withSequence(withTiming(8, { duration: 150 }), withTiming(-8, { duration: 150 }), withTiming(8, { duration: 150 }), withTiming(0, { duration: 150 }));
-    } else {
+    } else if (activeAction === "petting") {
       reactionBounce.value = withSequence(withTiming(1, { duration: 150 }), withTiming(0, { duration: 300 }));
     }
+    // "eating" has its own dedicated dip animation (triggered once the food
+    // bowl has appeared and the pose swaps), handled in a separate effect.
 
     emojiOpacity.value = withSequence(withTiming(1, { duration: 150 }), withTiming(1, { duration: Math.max(config.durationMs - 400, 0) }), withTiming(0, { duration: 250 }));
     emojiFloat.value = 0;
@@ -194,6 +232,8 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
     transform: [{ translateY: -zFloat.value * 30 }, { translateX: zFloat.value * 10 }],
   }));
 
+  const bowlStyle = useAnimatedStyle(() => ({ opacity: bowlOpacity.value }));
+
   function handlePress() {
     tapBounce.value = withSequence(withTiming(1, { duration: 130 }), withTiming(0, { duration: 260 }));
   }
@@ -217,6 +257,16 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
           resizeMode="contain"
         />
       </Animated.View>
+      {activeAction === "eating" && (
+        <Animated.View
+          style={[
+            { position: "absolute", bottom: size * 0.08, left: 0, right: 0, alignItems: "center", zIndex: 2 },
+            bowlStyle,
+          ]}
+        >
+          <Text style={{ fontSize: size * 0.13 }}>🥣</Text>
+        </Animated.View>
+      )}
     </Pressable>
   );
 }

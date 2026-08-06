@@ -106,7 +106,9 @@ export default function BuddyScreen() {
 
   const hasFood = SHOP_ITEMS.some((item) => item.kind === "food" && (inventory[item.id] ?? 0) > 0);
   const hasToy = SHOP_ITEMS.some((item) => item.kind === "toy" && (inventory[item.id] ?? 0) > 0);
-  const ownedToys = SHOP_ITEMS.filter((item) => item.kind === "toy" && (inventory[item.id] ?? 0) > 0).map((item) => item.id);
+  // Everything currently in stock — toys (permanent) and unfed food — shown
+  // as props set down beside the doghouse/cathouse.
+  const ownedItems = SHOP_ITEMS.filter((item) => (inventory[item.id] ?? 0) > 0).map((item) => item.id);
 
   if (loading) {
     return (
@@ -187,7 +189,7 @@ export default function BuddyScreen() {
         </View>
       </View>
 
-      <PetScene ownedToys={ownedToys} width={SCENE_WIDTH} height={280}>
+      <PetScene species={pet.species} ownedItems={ownedItems} width={SCENE_WIDTH} height={280}>
         <StudyPet
           species={pet.species}
           energy={energy}
