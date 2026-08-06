@@ -2,28 +2,20 @@ import { useCallback, useState } from "react";
 import { ActivityIndicator, Dimensions, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
-import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
-import {
-  createPet,
-  fetchInventory,
-  fetchPet,
-  setItemQuantity,
-  setPetPoints,
-  updatePetAccessories,
-  updatePetColor,
-} from "@/api/pet";
-import { computeAchievements } from "@/lib/achievements";
+import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
+import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints } from "@/api/pet";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computeGrowthStage, computePetEnergy } from "@/lib/petState";
-import { ACCESSORIES } from "@/lib/accessories";
 import { SHOP_ITEMS } from "@/lib/petShop";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { colors } from "@/theme";
-import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
+import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, UserSkillStat } from "@/types/domain";
 
-const COLOR_OPTIONS = ["#F59E0B", "#38BDF8", "#F472B6", "#4ADE80", "#A78BFA", "#FB923C"];
+// Pets are fixed-art illustrations now, not recolorable — this just
+// satisfies the not-null color column from the earlier SVG-pet era.
+const DEFAULT_PET_COLOR = "#F59E0B";
 const SCENE_WIDTH = Math.min(Dimensions.get("window").width - 48, 400);
 
 export default function BuddyScreen() {
@@ -34,11 +26,9 @@ export default function BuddyScreen() {
   const [plan, setPlan] = useState<StudyPlan | null>(null);
   const [days, setDays] = useState<StudyPlanDay[]>([]);
   const [stats, setStats] = useState<UserSkillStat[]>([]);
-  const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
   const [activeAction, setActiveAction] = useState<PetAction | null>(null);
 
   const [pickerSpecies, setPickerSpecies] = useState<PetSpecies>("cat");
-  const [pickerColor, setPickerColor] = useState(COLOR_OPTIONS[0]);
   const [creating, setCreating] = useState(false);
 
   useFocusEffect(
@@ -47,18 +37,16 @@ export default function BuddyScreen() {
       let cancelled = false;
       setLoading(true);
       (async () => {
-        const [petData, activePlan, skillStats, subs, inv] = await Promise.all([
+        const [petData, activePlan, skillStats, inv] = await Promise.all([
           fetchPet(session.user.id),
           fetchActivePlan(session.user.id),
           fetchSkillStats(session.user.id),
-          fetchSubcategories(),
           fetchInventory(session.user.id),
         ]);
         if (cancelled) return;
         setPet(petData);
         setPlan(activePlan);
         setStats(skillStats);
-        setSubcategories(subs);
         setInventory(inv);
         setDays(activePlan ? await fetchPlanDays(activePlan.id) : []);
         setLoading(false);
@@ -73,25 +61,11 @@ export default function BuddyScreen() {
     if (!session) return;
     setCreating(true);
     try {
-      const created = await createPet(session.user.id, pickerSpecies, pickerColor);
+      const created = await createPet(session.user.id, pickerSpecies, DEFAULT_PET_COLOR);
       setPet(created);
     } finally {
       setCreating(false);
     }
-  }
-
-  async function handleChangeColor(color: string) {
-    if (!session || !pet) return;
-    setPet({ ...pet, color });
-    await updatePetColor(session.user.id, color);
-  }
-
-  async function toggleAccessory(id: string) {
-    if (!session || !pet) return;
-    const has = pet.equipped_accessories.includes(id);
-    const next = has ? pet.equipped_accessories.filter((a) => a !== id) : [...pet.equipped_accessories, id];
-    setPet({ ...pet, equipped_accessories: next });
-    await updatePetAccessories(session.user.id, next);
   }
 
   async function handlePurchase(itemId: string, cost: number) {
@@ -149,24 +123,7 @@ export default function BuddyScreen() {
           </Pressable>
         </View>
 
-        <StudyPet
-          species={pickerSpecies}
-          color={pickerColor}
-          energy="calm"
-          growthStage="hatchling"
-          equippedAccessories={[]}
-          size={180}
-        />
-
-        <View style={styles.colorRow}>
-          {COLOR_OPTIONS.map((c) => (
-            <Pressable
-              key={c}
-              style={[styles.colorSwatch, { backgroundColor: c }, pickerColor === c && styles.colorSwatchActive]}
-              onPress={() => setPickerColor(c)}
-            />
-          ))}
-        </View>
+        <StudyPet species={pickerSpecies} energy="calm" growthStage="hatchling" size={200} />
 
         <PrimaryButton title="This is my buddy" onPress={handleCreatePet} loading={creating} />
       </ScrollView>
@@ -178,8 +135,6 @@ export default function BuddyScreen() {
   const accuracy = computeOverallAccuracy(stats);
   const energy = computePetEnergy(days);
   const growthStage = computeGrowthStage(completedDays, plan?.total_days ?? 0);
-  const achievements = computeAchievements(plan, days, stats, subcategories);
-  const achievedIds = new Set(achievements.filter((a) => a.achieved).map((a) => a.id));
 
   const energyLabel = energy === "energetic" ? "Full of energy!" : energy === "calm" ? "Doing alright" : "Waiting for you";
 
@@ -198,10 +153,8 @@ export default function BuddyScreen() {
       <PetScene ownedToys={ownedToys} width={SCENE_WIDTH} height={280}>
         <StudyPet
           species={pet.species}
-          color={pet.color}
           energy={energy}
           growthStage={growthStage}
-          equippedAccessories={pet.equipped_accessories}
           activeAction={activeAction}
           onActionComplete={() => setActiveAction(null)}
         />
@@ -274,37 +227,6 @@ export default function BuddyScreen() {
           );
         })}
       </View>
-
-      <Text style={styles.sectionTitle}>Color</Text>
-      <View style={styles.colorRow}>
-        {COLOR_OPTIONS.map((c) => (
-          <Pressable
-            key={c}
-            style={[styles.colorSwatch, { backgroundColor: c }, pet.color === c && styles.colorSwatchActive]}
-            onPress={() => handleChangeColor(c)}
-          />
-        ))}
-      </View>
-
-      <Text style={styles.sectionTitle}>Accessories</Text>
-      <View style={styles.accessoryGrid}>
-        {ACCESSORIES.map((a) => {
-          const unlocked = achievedIds.has(a.achievementId);
-          const equipped = pet.equipped_accessories.includes(a.id);
-          return (
-            <Pressable
-              key={a.id}
-              disabled={!unlocked}
-              onPress={() => toggleAccessory(a.id)}
-              style={[styles.accessoryCard, equipped && styles.accessoryCardEquipped, !unlocked && styles.accessoryCardLocked]}
-            >
-              <Text style={styles.accessoryIcon}>{unlocked ? a.icon : "🔒"}</Text>
-              <Text style={styles.accessoryName}>{a.name}</Text>
-              {equipped && <Text style={styles.accessoryEquippedTag}>Equipped</Text>}
-            </Pressable>
-          );
-        })}
-      </View>
     </ScrollView>
   );
 }
@@ -346,9 +268,6 @@ const styles = StyleSheet.create({
   speciesButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
   speciesEmoji: { fontSize: 28, marginBottom: 4 },
   speciesLabel: { color: colors.text, fontSize: 13, fontWeight: "600" },
-  colorRow: { flexDirection: "row", gap: 10, marginBottom: 12 },
-  colorSwatch: { width: 34, height: 34, borderRadius: 17, borderWidth: 2, borderColor: "transparent" },
-  colorSwatchActive: { borderColor: colors.text },
   actionRow: { flexDirection: "row", gap: 10, width: "100%", marginTop: 16, marginBottom: 6 },
   actionButton: {
     flex: 1,
@@ -401,19 +320,4 @@ const styles = StyleSheet.create({
   },
   shopBuyButtonDisabled: { borderColor: colors.border, opacity: 0.5 },
   shopBuyText: { color: colors.text, fontSize: 11, fontWeight: "700" },
-  accessoryGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, width: "100%" },
-  accessoryCard: {
-    width: "47%",
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  accessoryCardEquipped: { borderColor: colors.primary },
-  accessoryCardLocked: { opacity: 0.45 },
-  accessoryIcon: { fontSize: 24, marginBottom: 6 },
-  accessoryName: { color: colors.text, fontSize: 12, fontWeight: "600", textAlign: "center" },
-  accessoryEquippedTag: { color: colors.primary, fontSize: 10, fontWeight: "700", marginTop: 4 },
 });
