@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
+import { useEffect } from "react";
 import { Text, View } from "react-native";
+import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from "react-native-reanimated";
 import Svg, { Circle, Defs, Ellipse, LinearGradient, Path, Polygon, RadialGradient, Rect, Stop } from "react-native-svg";
 import { SHOP_ITEMS } from "@/lib/petShop";
 import type { PetSpecies } from "@/types/domain";
@@ -7,12 +9,14 @@ import type { PetSpecies } from "@/types/domain";
 interface Props {
   species: PetSpecies;
   ownedItems: string[]; // toys + in-stock food ids, placed as props beside the house
+  isPlaying?: boolean; // bounces owned toys while the "playing" action is active
   width: number;
   height: number;
   children: ReactNode;
 }
 
 const ITEM_ICON: Record<string, string> = Object.fromEntries(SHOP_ITEMS.map((item) => [item.id, item.icon]));
+const ITEM_KIND: Record<string, string> = Object.fromEntries(SHOP_ITEMS.map((item) => [item.id, item.kind]));
 
 // Fixed ground-line slots (not random per-render) — kept in a tight cluster
 // on the same grass band just in front of the pet, so items read as a toy
@@ -30,7 +34,39 @@ function isNightNow() {
   return hour < 6 || hour >= 19;
 }
 
-export function PetScene({ species, ownedItems, width, height, children }: Props) {
+function SceneProp({ icon, slot, bouncing }: { icon: string; slot: (typeof ITEM_SLOTS)[number]; bouncing: boolean }) {
+  const bounce = useSharedValue(0);
+
+  useEffect(() => {
+    if (bouncing) {
+      bounce.value = withRepeat(
+        withSequence(
+          withTiming(1, { duration: 260, easing: Easing.out(Easing.quad) }),
+          withTiming(0, { duration: 260, easing: Easing.in(Easing.quad) }),
+        ),
+        -1,
+        true,
+      );
+    } else {
+      bounce.value = withTiming(0, { duration: 200 });
+    }
+  }, [bouncing]);
+
+  const style = useAnimatedStyle(() => ({
+    transform: [{ translateY: -bounce.value * 14 }, { rotate: `${bounce.value * 16 - 8}deg` }],
+  }));
+
+  return (
+    <View style={{ position: "absolute", alignItems: "center", ...slot }}>
+      <Animated.View style={style}>
+        <Text style={{ fontSize: 26 }}>{icon}</Text>
+      </Animated.View>
+      <View style={{ width: 16, height: 4, borderRadius: 4, backgroundColor: "#00000030" }} />
+    </View>
+  );
+}
+
+export function PetScene({ species, ownedItems, isPlaying = false, width, height, children }: Props) {
   const night = isNightNow();
   const skyTop = night ? "#0B1224" : "#7DD3FC";
   const skyBottom = night ? "#1E1B4B" : "#BAE6FD";
@@ -38,9 +74,9 @@ export function PetScene({ species, ownedItems, width, height, children }: Props
   const grassBottom = night ? "#142A1E" : "#2F5F3E";
 
   const groundY = height * 0.78;
-  const houseW = width * 0.36;
-  const houseH = height * 0.32;
-  const houseX = width * 0.74;
+  const houseW = width * 0.44;
+  const houseH = height * 0.38;
+  const houseX = width * 0.75;
   const houseBaseY = groundY + 4;
 
   return (
@@ -82,10 +118,10 @@ export function PetScene({ species, ownedItems, width, height, children }: Props
 
         {species === "dog" ? (
           <>
-            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.6} width={houseW} height={houseH * 0.6} rx={4} fill="#92400E" />
-            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.28} width={houseW} height={2} fill="#78350F" opacity={0.6} />
+            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.6} width={houseW} height={houseH * 0.6} rx={5} fill="#92400E" />
+            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.28} width={houseW} height={2.5} fill="#78350F" opacity={0.6} />
             <Polygon
-              points={`${houseX - houseW / 2 - 8},${houseBaseY - houseH * 0.6} ${houseX + houseW / 2 + 8},${houseBaseY - houseH * 0.6} ${houseX},${houseBaseY - houseH}`}
+              points={`${houseX - houseW / 2 - 10},${houseBaseY - houseH * 0.6} ${houseX + houseW / 2 + 10},${houseBaseY - houseH * 0.6} ${houseX},${houseBaseY - houseH}`}
               fill="#B45309"
             />
             <Path
@@ -95,24 +131,26 @@ export function PetScene({ species, ownedItems, width, height, children }: Props
           </>
         ) : (
           <>
-            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.56} width={houseW} height={houseH * 0.56} rx={12} fill="#7C3AED" />
+            <Rect x={houseX - houseW / 2} y={houseBaseY - houseH * 0.56} width={houseW} height={houseH * 0.56} rx={14} fill="#7C3AED" />
             <Polygon
-              points={`${houseX - houseW / 2 - 6},${houseBaseY - houseH * 0.56} ${houseX + houseW / 2 + 6},${houseBaseY - houseH * 0.56} ${houseX + houseW / 2 + 6},${houseBaseY - houseH * 0.56 - houseH * 0.15} ${houseX - houseW / 2 - 6},${houseBaseY - houseH * 0.56 - houseH * 0.15}`}
+              points={`${houseX - houseW / 2 - 8},${houseBaseY - houseH * 0.56} ${houseX + houseW / 2 + 8},${houseBaseY - houseH * 0.56} ${houseX + houseW / 2 + 8},${houseBaseY - houseH * 0.56 - houseH * 0.15} ${houseX - houseW / 2 - 8},${houseBaseY - houseH * 0.56 - houseH * 0.15}`}
               fill="#5B21B6"
             />
             <Circle cx={houseX} cy={houseBaseY - houseH * 0.3} r={houseW * 0.14} fill="#1E1233" />
             <Circle cx={houseX} cy={houseBaseY - houseH * 0.3} r={houseW * 0.14} fill="none" stroke="#5B21B6" strokeWidth={3} />
-            <Circle cx={houseX + houseW * 0.34} cy={houseBaseY - houseH * 0.62} r={4} fill="#5B21B6" />
-            <Circle cx={houseX + houseW * 0.34} cy={houseBaseY - houseH * 0.75} r={5} fill="#7C3AED" />
+            <Circle cx={houseX + houseW * 0.34} cy={houseBaseY - houseH * 0.62} r={4.5} fill="#5B21B6" />
+            <Circle cx={houseX + houseW * 0.34} cy={houseBaseY - houseH * 0.76} r={5.5} fill="#7C3AED" />
           </>
         )}
       </Svg>
 
       {ownedItems.slice(0, ITEM_SLOTS.length).map((itemId, i) => (
-        <View key={itemId} style={{ position: "absolute", alignItems: "center", ...ITEM_SLOTS[i] }}>
-          <Text style={{ fontSize: 18 }}>{ITEM_ICON[itemId] ?? "🧸"}</Text>
-          <View style={{ width: 14, height: 4, borderRadius: 4, backgroundColor: "#00000030" }} />
-        </View>
+        <SceneProp
+          key={itemId}
+          icon={ITEM_ICON[itemId] ?? "🧸"}
+          slot={ITEM_SLOTS[i]}
+          bouncing={isPlaying && ITEM_KIND[itemId] === "toy"}
+        />
       ))}
 
       <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-end", paddingBottom: 12 }}>{children}</View>

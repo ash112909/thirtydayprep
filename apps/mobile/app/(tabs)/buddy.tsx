@@ -189,7 +189,7 @@ export default function BuddyScreen() {
         </View>
       </View>
 
-      <PetScene species={pet.species} ownedItems={ownedItems} width={SCENE_WIDTH} height={280}>
+      <PetScene species={pet.species} ownedItems={ownedItems} isPlaying={activeAction === "playing"} width={SCENE_WIDTH} height={280}>
         <StudyPet
           species={pet.species}
           energy={energy}
