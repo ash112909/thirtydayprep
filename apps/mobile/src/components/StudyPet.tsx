@@ -52,6 +52,16 @@ const IMAGES: Record<PetSpecies, Record<Pose, ImageSourcePropType>> = {
   },
 };
 
+// Alternate single-frame "blinks" — swapped in briefly and reverted, rather
+// than crossfaded, since blinks are fast in real life. Sparse on purpose:
+// only add an entry once a frame has been verified to align with its base
+// pose (matching crop/scale), or the swap reads as a jump instead of a blink.
+const BLINK_FRAMES: Partial<Record<PetSpecies, Partial<Record<Pose, ImageSourcePropType>>>> = {
+  cat: {
+    idle: require("../../assets/pet/cat-idle-blink.png"),
+  },
+};
+
 function resolvePose(energy: Energy, activeAction: PetAction | null | undefined): Pose {
   if (activeAction === "eating") return "eating";
   if (activeAction === "playing") return "playing";
@@ -73,8 +83,10 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
   const emojiFloat = useSharedValue(0);
   const zFloat = useSharedValue(0);
   const [activeEmoji, setActiveEmoji] = useState<string | null>(null);
+  const [blinking, setBlinking] = useState(false);
 
   const pose = resolvePose(energy, activeAction);
+  const blinkFrame = BLINK_FRAMES[species]?.[pose];
 
   // Idle breathing, skipped while a reaction is actively playing.
   useEffect(() => {
@@ -109,6 +121,25 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
     poseOpacity.value = withTiming(1, { duration: 220 });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pose]);
+
+  // Real blinks: swap to the alternate frame for ~160ms, no crossfade — a
+  // blink is fast in life, fading it would just look like a glitch.
+  useEffect(() => {
+    if (!blinkFrame || activeAction) return;
+    let blinkTimeout: ReturnType<typeof setTimeout>;
+    const interval = setInterval(
+      () => {
+        setBlinking(true);
+        blinkTimeout = setTimeout(() => setBlinking(false), 160);
+      },
+      3200 + Math.random() * 1800,
+    );
+    return () => {
+      clearInterval(interval);
+      clearTimeout(blinkTimeout);
+      setBlinking(false);
+    };
+  }, [blinkFrame, activeAction]);
 
   useEffect(() => {
     if (!activeAction) return;
@@ -180,7 +211,11 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
         </Animated.View>
       )}
       <Animated.View style={bodyStyle}>
-        <Image source={IMAGES[species][pose]} style={{ width: size, height: size }} resizeMode="contain" />
+        <Image
+          source={blinking && blinkFrame ? blinkFrame : IMAGES[species][pose]}
+          style={{ width: size, height: size }}
+          resizeMode="contain"
+        />
       </Animated.View>
     </Pressable>
   );
