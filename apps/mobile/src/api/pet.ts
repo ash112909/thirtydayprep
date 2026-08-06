@@ -24,6 +24,11 @@ export async function updatePetColor(userId: string, color: string): Promise<voi
   if (error) throw error;
 }
 
+export async function updatePetSpecies(userId: string, species: PetSpecies): Promise<void> {
+  const { error } = await supabase.from("study_pets").update({ species }).eq("user_id", userId);
+  if (error) throw error;
+}
+
 export async function updatePetAccessories(userId: string, accessories: string[]): Promise<void> {
   const { error } = await supabase
     .from("study_pets")

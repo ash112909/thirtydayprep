@@ -3,7 +3,7 @@ import { ActivityIndicator, Dimensions, Pressable, ScrollView, StyleSheet, Text,
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
-import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints } from "@/api/pet";
+import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetSpecies } from "@/api/pet";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computeGrowthStage, computePetEnergy } from "@/lib/petState";
 import { SHOP_ITEMS } from "@/lib/petShop";
@@ -66,6 +66,22 @@ export default function BuddyScreen() {
     } finally {
       setCreating(false);
     }
+  }
+
+  async function handleSwitchSpecies(species: PetSpecies) {
+    if (!session || !pet || pet.species === species) return;
+    setPet({ ...pet, species });
+    await updatePetSpecies(session.user.id, species);
+  }
+
+  // Testing-only: grants points without requiring completed study days, so
+  // the shop/feed/play flow can be exercised without grinding through real
+  // plan days first. Not gated — pull this before shipping to real users.
+  async function handleGrantTestPoints() {
+    if (!session || !pet) return;
+    const newPoints = pet.points + 500;
+    setPet({ ...pet, points: newPoints });
+    await setPetPoints(session.user.id, newPoints);
   }
 
   async function handlePurchase(itemId: string, cost: number) {
@@ -147,6 +163,27 @@ export default function BuddyScreen() {
         </View>
         <View style={styles.pointsBadge}>
           <Text style={styles.pointsText}>⭐ {pet.points}</Text>
+        </View>
+      </View>
+
+      <View style={styles.testingPanel}>
+        <Text style={styles.testingLabel}>🧪 Testing tools</Text>
+        <View style={styles.testingRow}>
+          <Pressable
+            style={[styles.speciesToggle, pet.species === "cat" && styles.speciesToggleActive]}
+            onPress={() => handleSwitchSpecies("cat")}
+          >
+            <Text style={styles.speciesToggleText}>🐱 Cat</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.speciesToggle, pet.species === "dog" && styles.speciesToggleActive]}
+            onPress={() => handleSwitchSpecies("dog")}
+          >
+            <Text style={styles.speciesToggleText}>🐶 Dog</Text>
+          </Pressable>
+          <Pressable style={styles.testingButton} onPress={handleGrantTestPoints}>
+            <Text style={styles.testingButtonText}>+500 ⭐</Text>
+          </Pressable>
         </View>
       </View>
 
@@ -255,6 +292,40 @@ const styles = StyleSheet.create({
     borderColor: colors.border,
   },
   pointsText: { color: colors.text, fontSize: 14, fontWeight: "700" },
+  testingPanel: {
+    width: "100%",
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: colors.warning,
+    borderStyle: "dashed",
+    padding: 12,
+    marginBottom: 16,
+  },
+  testingLabel: { color: colors.warning, fontSize: 11, fontWeight: "700", marginBottom: 8 },
+  testingRow: { flexDirection: "row", gap: 8 },
+  speciesToggle: {
+    flex: 1,
+    alignItems: "center",
+    paddingVertical: 8,
+    borderRadius: 10,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  speciesToggleActive: { borderColor: colors.primary, backgroundColor: colors.background },
+  speciesToggleText: { color: colors.text, fontSize: 12, fontWeight: "600" },
+  testingButton: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 8,
+    borderRadius: 10,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.warning,
+  },
+  testingButtonText: { color: colors.warning, fontSize: 12, fontWeight: "700" },
   speciesRow: { flexDirection: "row", gap: 12 },
   speciesButton: {
     flex: 1,
