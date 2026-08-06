@@ -14,14 +14,15 @@ interface Props {
 
 const ITEM_ICON: Record<string, string> = Object.fromEntries(SHOP_ITEMS.map((item) => [item.id, item.icon]));
 
-// Fixed ground-line slots (not random per-render) so owned items read as
-// props actually set down beside the house, not floating decoration.
+// Fixed ground-line slots (not random per-render) — kept in a tight cluster
+// on the same grass band just in front of the pet, so items read as a toy
+// pile actually sitting on the ground, not a scatter climbing the corner.
 const ITEM_SLOTS: { left: `${number}%`; bottom: `${number}%` }[] = [
-  { left: "6%", bottom: "9%" },
-  { left: "17%", bottom: "6%" },
-  { left: "5%", bottom: "19%" },
-  { left: "27%", bottom: "12%" },
-  { left: "14%", bottom: "15%" },
+  { left: "10%", bottom: "6%" },
+  { left: "19%", bottom: "5%" },
+  { left: "27%", bottom: "8%" },
+  { left: "14%", bottom: "11%" },
+  { left: "22%", bottom: "12%" },
 ];
 
 function isNightNow() {
