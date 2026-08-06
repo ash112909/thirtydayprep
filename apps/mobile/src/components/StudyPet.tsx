@@ -25,6 +25,8 @@ interface Props {
 
 const GROWTH_SCALE: Record<GrowthStage, number> = { hatchling: 0.78, adolescent: 0.9, grown: 1 };
 const ENERGY_BREATH_MS: Record<Energy, number> = { sleepy: 2600, calm: 1700, energetic: 950 };
+const ENERGY_SWAY_DEG: Record<Energy, number> = { sleepy: 0.8, calm: 1.6, energetic: 2.6 };
+const ENERGY_SWAY_PX: Record<Energy, number> = { sleepy: 1, calm: 2.5, energetic: 4 };
 
 const REACTION_CONFIG: Record<PetAction, { emoji: string; durationMs: number }> = {
   petting: { emoji: "💕", durationMs: 900 },
@@ -61,6 +63,7 @@ function resolvePose(energy: Energy, activeAction: PetAction | null | undefined)
 
 export function StudyPet({ species, energy, growthStage, size = 220, activeAction, onActionComplete }: Props) {
   const breathe = useSharedValue(0);
+  const sway = useSharedValue(0);
   const tapBounce = useSharedValue(0);
   const reactionBounce = useSharedValue(0);
   const reactionRotate = useSharedValue(0);
@@ -83,6 +86,15 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
         withTiming(0, { duration: speed, easing: Easing.inOut(Easing.sin) }),
       ),
       -1,
+    );
+    const swaySpeed = speed * 1.8;
+    sway.value = withRepeat(
+      withSequence(
+        withTiming(1, { duration: swaySpeed, easing: Easing.inOut(Easing.sin) }),
+        withTiming(-1, { duration: swaySpeed, easing: Easing.inOut(Easing.sin) }),
+      ),
+      -1,
+      true,
     );
     zFloat.value =
       energy === "sleepy"
@@ -127,13 +139,16 @@ export function StudyPet({ species, energy, growthStage, size = 220, activeActio
   const bodyStyle = useAnimatedStyle(() => {
     const breatheScale = 1 + breathe.value * 0.025;
     const bounceScale = 1 + tapBounce.value * 0.12 + reactionBounce.value * 0.1;
+    const swayDeg = sway.value * ENERGY_SWAY_DEG[energy];
+    const swayPx = sway.value * ENERGY_SWAY_PX[energy];
     return {
       opacity: poseOpacity.value,
       transform: [
         { scale: GROWTH_SCALE[growthStage] * bounceScale },
         { scaleY: breatheScale },
         { translateY: reactionDip.value },
-        { rotate: `${reactionRotate.value}deg` },
+        { translateX: swayPx },
+        { rotate: `${reactionRotate.value + swayDeg}deg` },
       ],
     };
   });
