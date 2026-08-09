@@ -80,7 +80,7 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
   const houseBaseY = groundY + 4;
 
   return (
-    <View style={{ width, height, borderRadius: 24, overflow: "hidden" }}>
+    <View style={{ width, height, overflow: "hidden" }}>
       <Svg width={width} height={height} style={{ position: "absolute" }}>
         <Defs>
           <LinearGradient id="sky" x1="0" y1="0" x2="0" y2="1">

@@ -16,7 +16,12 @@ import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, Use
 // Pets are fixed-art illustrations now, not recolorable — this just
 // satisfies the not-null color column from the earlier SVG-pet era.
 const DEFAULT_PET_COLOR = "#F59E0B";
-const SCENE_WIDTH = Math.min(Dimensions.get("window").width - 48, 400);
+const SCREEN_WIDTH = Dimensions.get("window").width;
+// The pet's world fills the top of the screen edge-to-edge instead of
+// sitting in a boxed card — taller on bigger screens, capped so it never
+// crowds out the shop below.
+const HERO_HEIGHT = Math.min(Dimensions.get("window").height * 0.5, 460);
+const PET_SIZE = Math.round(HERO_HEIGHT * 0.52);
 
 export default function BuddyScreen() {
   const { session } = useAuth();
@@ -157,143 +162,180 @@ export default function BuddyScreen() {
   const energyLabel = energy === "energetic" ? "Full of energy!" : energy === "calm" ? "Doing alright" : "Waiting for you";
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <View style={styles.headerRow}>
-        <View>
-          <Text style={styles.title}>Your study buddy</Text>
-          <Text style={styles.energyLabel}>{energyLabel}</Text>
-        </View>
-        <View style={styles.pointsBadge}>
-          <Text style={styles.pointsText}>⭐ {pet.points}</Text>
-        </View>
-      </View>
-
-      <View style={styles.testingPanel}>
-        <Text style={styles.testingLabel}>🧪 Testing tools</Text>
-        <View style={styles.testingRow}>
-          <Pressable
-            style={[styles.speciesToggle, pet.species === "cat" && styles.speciesToggleActive]}
-            onPress={() => handleSwitchSpecies("cat")}
-          >
-            <Text style={styles.speciesToggleText}>🐱 Cat</Text>
-          </Pressable>
-          <Pressable
-            style={[styles.speciesToggle, pet.species === "dog" && styles.speciesToggleActive]}
-            onPress={() => handleSwitchSpecies("dog")}
-          >
-            <Text style={styles.speciesToggleText}>🐶 Dog</Text>
-          </Pressable>
-          <Pressable style={styles.testingButton} onPress={handleGrantTestPoints}>
-            <Text style={styles.testingButtonText}>+500 ⭐</Text>
-          </Pressable>
-        </View>
-      </View>
-
-      <PetScene species={pet.species} ownedItems={ownedItems} isPlaying={activeAction === "playing"} width={SCENE_WIDTH} height={280}>
-        <StudyPet
+    <View style={styles.screen}>
+      <View style={[styles.hero, { height: HERO_HEIGHT }]}>
+        <PetScene
           species={pet.species}
-          energy={energy}
-          growthStage={growthStage}
-          activeAction={activeAction}
-          onActionComplete={() => setActiveAction(null)}
-        />
-      </PetScene>
-
-      <View style={styles.actionRow}>
-        <Pressable style={styles.actionButton} onPress={() => setActiveAction("petting")}>
-          <Text style={styles.actionEmoji}>🤚</Text>
-          <Text style={styles.actionLabel}>Pet</Text>
-        </Pressable>
-        <Pressable style={[styles.actionButton, !hasFood && styles.actionButtonDisabled]} disabled={!hasFood} onPress={handleFeed}>
-          <Text style={styles.actionEmoji}>🍖</Text>
-          <Text style={styles.actionLabel}>Feed</Text>
-        </Pressable>
-        <Pressable
-          style={[styles.actionButton, !hasToy && styles.actionButtonDisabled]}
-          disabled={!hasToy}
-          onPress={() => setActiveAction("playing")}
+          ownedItems={ownedItems}
+          isPlaying={activeAction === "playing"}
+          width={SCREEN_WIDTH}
+          height={HERO_HEIGHT}
         >
-          <Text style={styles.actionEmoji}>🎾</Text>
-          <Text style={styles.actionLabel}>Play</Text>
-        </Pressable>
-      </View>
-      {(!hasFood || !hasToy) && (
-        <Text style={styles.actionHint}>
-          {!hasFood && !hasToy ? "Buy food and toys from the shop below." : !hasFood ? "Buy food from the shop below." : "Buy a toy from the shop below."}
-        </Text>
-      )}
+          <StudyPet
+            species={pet.species}
+            energy={energy}
+            growthStage={growthStage}
+            size={PET_SIZE}
+            activeAction={activeAction}
+            onActionComplete={() => setActiveAction(null)}
+          />
+        </PetScene>
 
-      <View style={styles.statsRow}>
-        <View style={styles.statBox}>
-          <Text style={styles.statValue}>{streak > 0 ? `🔥 ${streak}` : "—"}</Text>
-          <Text style={styles.statLabel}>day streak</Text>
-        </View>
-        <View style={styles.statBox}>
-          <Text style={styles.statValue}>{completedDays}</Text>
-          <Text style={styles.statLabel}>days done</Text>
-        </View>
-        <View style={styles.statBox}>
-          <Text style={styles.statValue}>{accuracy != null ? `${accuracy}%` : "—"}</Text>
-          <Text style={styles.statLabel}>accuracy</Text>
-        </View>
-      </View>
-
-      <Text style={styles.sectionTitle}>Shop</Text>
-      <Text style={styles.shopHint}>Earn 15 points every day you complete.</Text>
-      <View style={styles.shopGrid}>
-        {SHOP_ITEMS.map((item) => {
-          const owned = inventory[item.id] ?? 0;
-          const isToy = item.kind === "toy";
-          const alreadyOwned = isToy && owned > 0;
-          const canAfford = pet.points >= item.cost;
-          return (
-            <View key={item.id} style={styles.shopCard}>
-              <Text style={styles.shopIcon}>{item.icon}</Text>
-              <Text style={styles.shopName}>{item.name}</Text>
-              {!isToy && owned > 0 && <Text style={styles.shopOwned}>Have: {owned}</Text>}
-              {alreadyOwned ? (
-                <Text style={styles.shopOwnedTag}>Owned ✓</Text>
-              ) : (
-                <Pressable
-                  style={[styles.shopBuyButton, !canAfford && styles.shopBuyButtonDisabled]}
-                  disabled={!canAfford}
-                  onPress={() => handlePurchase(item.id, item.cost)}
-                >
-                  <Text style={styles.shopBuyText}>⭐ {item.cost}</Text>
-                </Pressable>
-              )}
+        <View style={styles.heroHud} pointerEvents="box-none">
+          <View style={styles.hudTopRow} pointerEvents="box-none">
+            <View style={styles.glassPill}>
+              <Text style={styles.heroTitle}>Your study buddy</Text>
+              <Text style={styles.heroSubtitle}>{energyLabel}</Text>
             </View>
-          );
-        })}
+            <View style={[styles.glassPill, styles.pointsPill]}>
+              <Text style={styles.pointsText}>⭐ {pet.points}</Text>
+            </View>
+          </View>
+
+          <View style={styles.hudBottomRow} pointerEvents="box-none">
+            <Pressable style={styles.hudButton} onPress={() => setActiveAction("petting")}>
+              <Text style={styles.hudButtonEmoji}>🤚</Text>
+              <Text style={styles.hudButtonLabel}>Pet</Text>
+            </Pressable>
+            <Pressable style={[styles.hudButton, !hasFood && styles.hudButtonDisabled]} disabled={!hasFood} onPress={handleFeed}>
+              <Text style={styles.hudButtonEmoji}>🍖</Text>
+              <Text style={styles.hudButtonLabel}>Feed</Text>
+            </Pressable>
+            <Pressable
+              style={[styles.hudButton, !hasToy && styles.hudButtonDisabled]}
+              disabled={!hasToy}
+              onPress={() => setActiveAction("playing")}
+            >
+              <Text style={styles.hudButtonEmoji}>🎾</Text>
+              <Text style={styles.hudButtonLabel}>Play</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
-    </ScrollView>
+
+      <ScrollView style={styles.sheet} contentContainerStyle={styles.sheetContent}>
+        <View style={styles.sheetHandle} />
+
+        {(!hasFood || !hasToy) && (
+          <Text style={styles.actionHint}>
+            {!hasFood && !hasToy ? "Buy food and toys from the shop below." : !hasFood ? "Buy food from the shop below." : "Buy a toy from the shop below."}
+          </Text>
+        )}
+
+        <View style={styles.testingPanel}>
+          <Text style={styles.testingLabel}>🧪 Testing tools</Text>
+          <View style={styles.testingRow}>
+            <Pressable
+              style={[styles.speciesToggle, pet.species === "cat" && styles.speciesToggleActive]}
+              onPress={() => handleSwitchSpecies("cat")}
+            >
+              <Text style={styles.speciesToggleText}>🐱 Cat</Text>
+            </Pressable>
+            <Pressable
+              style={[styles.speciesToggle, pet.species === "dog" && styles.speciesToggleActive]}
+              onPress={() => handleSwitchSpecies("dog")}
+            >
+              <Text style={styles.speciesToggleText}>🐶 Dog</Text>
+            </Pressable>
+            <Pressable style={styles.testingButton} onPress={handleGrantTestPoints}>
+              <Text style={styles.testingButtonText}>+500 ⭐</Text>
+            </Pressable>
+          </View>
+        </View>
+
+        <View style={styles.statsRow}>
+          <View style={styles.statBox}>
+            <Text style={styles.statValue}>{streak > 0 ? `🔥 ${streak}` : "—"}</Text>
+            <Text style={styles.statLabel}>day streak</Text>
+          </View>
+          <View style={styles.statBox}>
+            <Text style={styles.statValue}>{completedDays}</Text>
+            <Text style={styles.statLabel}>days done</Text>
+          </View>
+          <View style={styles.statBox}>
+            <Text style={styles.statValue}>{accuracy != null ? `${accuracy}%` : "—"}</Text>
+            <Text style={styles.statLabel}>accuracy</Text>
+          </View>
+        </View>
+
+        <Text style={styles.sectionTitle}>Shop</Text>
+        <Text style={styles.shopHint}>Earn 15 points every day you complete.</Text>
+        <View style={styles.shopGrid}>
+          {SHOP_ITEMS.map((item) => {
+            const owned = inventory[item.id] ?? 0;
+            const isToy = item.kind === "toy";
+            const alreadyOwned = isToy && owned > 0;
+            const canAfford = pet.points >= item.cost;
+            return (
+              <View key={item.id} style={styles.shopCard}>
+                <Text style={styles.shopIcon}>{item.icon}</Text>
+                <Text style={styles.shopName}>{item.name}</Text>
+                {!isToy && owned > 0 && <Text style={styles.shopOwned}>Have: {owned}</Text>}
+                {alreadyOwned ? (
+                  <Text style={styles.shopOwnedTag}>Owned ✓</Text>
+                ) : (
+                  <Pressable
+                    style={[styles.shopBuyButton, !canAfford && styles.shopBuyButtonDisabled]}
+                    disabled={!canAfford}
+                    onPress={() => handlePurchase(item.id, item.cost)}
+                  >
+                    <Text style={styles.shopBuyText}>⭐ {item.cost}</Text>
+                  </Pressable>
+                )}
+              </View>
+            );
+          })}
+        </View>
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: colors.background },
   container: { flex: 1, backgroundColor: colors.background },
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-  content: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center" },
   pickerContent: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center", gap: 16 },
-  headerRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    width: "100%",
-    marginBottom: 16,
-  },
   title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
   subtitle: { fontSize: 13, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
-  energyLabel: { fontSize: 13, color: colors.primary, fontWeight: "600" },
-  pointsBadge: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 14,
-    paddingHorizontal: 14,
-    paddingVertical: 8,
+
+  // Full-bleed pet world — no card, no border, sky bleeds to the screen edges.
+  hero: { width: "100%", overflow: "hidden" },
+  heroHud: { ...StyleSheet.absoluteFillObject, justifyContent: "space-between" },
+  hudTopRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", paddingHorizontal: 20, paddingTop: 52 },
+  hudBottomRow: { flexDirection: "row", justifyContent: "center", gap: 14, paddingHorizontal: 20, paddingBottom: 30 },
+  glassPill: {
+    backgroundColor: "rgba(15,23,42,0.55)",
+    borderRadius: 20,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
     borderWidth: 1,
-    borderColor: colors.border,
+    borderColor: "rgba(255,255,255,0.14)",
   },
-  pointsText: { color: colors.text, fontSize: 14, fontWeight: "700" },
+  heroTitle: { color: "#F8FAFC", fontSize: 17, fontWeight: "800" },
+  heroSubtitle: { color: colors.primary, fontSize: 12, fontWeight: "600", marginTop: 2 },
+  pointsPill: { alignSelf: "flex-start" },
+  pointsText: { color: "#F8FAFC", fontSize: 14, fontWeight: "700" },
+  hudButton: {
+    width: 66,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
+    backgroundColor: "rgba(15,23,42,0.55)",
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.14)",
+  },
+  hudButtonDisabled: { opacity: 0.35 },
+  hudButtonEmoji: { fontSize: 20, marginBottom: 2 },
+  hudButtonLabel: { color: "#F8FAFC", fontSize: 11, fontWeight: "700" },
+
+  // The scroll sheet overlaps the hero's bottom edge, so the world feels
+  // continuous with the panel resting on top of it rather than stacked below.
+  sheet: { flex: 1, backgroundColor: colors.background, borderTopLeftRadius: 28, borderTopRightRadius: 28, marginTop: -28 },
+  sheetContent: { padding: 24, paddingTop: 16, paddingBottom: 40, alignItems: "center" },
+  sheetHandle: { width: 36, height: 4, borderRadius: 2, backgroundColor: colors.border, marginBottom: 18 },
+
   testingPanel: {
     width: "100%",
     backgroundColor: colors.surfaceAlt,
@@ -341,21 +383,8 @@ const styles = StyleSheet.create({
   speciesButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
   speciesEmoji: { fontSize: 28, marginBottom: 4 },
   speciesLabel: { color: colors.text, fontSize: 13, fontWeight: "600" },
-  actionRow: { flexDirection: "row", gap: 10, width: "100%", marginTop: 16, marginBottom: 6 },
-  actionButton: {
-    flex: 1,
-    alignItems: "center",
-    paddingVertical: 12,
-    borderRadius: 14,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  actionButtonDisabled: { opacity: 0.4 },
-  actionEmoji: { fontSize: 20, marginBottom: 2 },
-  actionLabel: { color: colors.text, fontSize: 12, fontWeight: "600" },
   actionHint: { color: colors.textMuted, fontSize: 11, marginBottom: 16, textAlign: "center" },
-  statsRow: { flexDirection: "row", gap: 10, width: "100%", marginBottom: 24, marginTop: 16 },
+  statsRow: { flexDirection: "row", gap: 10, width: "100%", marginBottom: 24 },
   statBox: {
     flex: 1,
     backgroundColor: colors.surface,
