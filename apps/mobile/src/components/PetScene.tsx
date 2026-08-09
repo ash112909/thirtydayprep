@@ -9,7 +9,7 @@ import type { PetSpecies } from "@/types/domain";
 interface Props {
   species: PetSpecies;
   ownedItems: string[]; // toys + in-stock food ids, placed as props beside the house
-  isPlaying?: boolean; // bounces owned toys while the "playing" action is active
+  isPlaying?: boolean; // sends the toy being played with over to the pet
   width: number;
   height: number;
   children: ReactNode;
@@ -21,47 +21,73 @@ const ITEM_KIND: Record<string, string> = Object.fromEntries(SHOP_ITEMS.map((ite
 // Fixed ground-line slots (not random per-render) — kept in a tight cluster
 // on the same grass band just in front of the pet, so items read as a toy
 // pile actually sitting on the ground, not a scatter climbing the corner.
-const ITEM_SLOTS: { left: `${number}%`; bottom: `${number}%` }[] = [
-  { left: "10%", bottom: "6%" },
-  { left: "19%", bottom: "5%" },
-  { left: "27%", bottom: "8%" },
-  { left: "14%", bottom: "11%" },
-  { left: "22%", bottom: "12%" },
+const ITEM_SLOTS: { left: number; bottom: number }[] = [
+  { left: 10, bottom: 6 },
+  { left: 19, bottom: 5 },
+  { left: 27, bottom: 8 },
+  { left: 14, bottom: 11 },
+  { left: 22, bottom: 12 },
 ];
+
+// Where a played toy travels to — roughly the pet's feet, so the toy visibly
+// meets the pet instead of just bouncing in its own resting spot.
+const PLAY_TARGET = { left: 42, bottom: 16 };
 
 function isNightNow() {
   const hour = new Date().getHours();
   return hour < 6 || hour >= 19;
 }
 
-function SceneProp({ icon, slot, bouncing }: { icon: string; slot: (typeof ITEM_SLOTS)[number]; bouncing: boolean }) {
-  const bounce = useSharedValue(0);
+function SceneProp({
+  icon,
+  size,
+  leftPx,
+  bottomPx,
+  travel,
+}: {
+  icon: string;
+  size: number;
+  leftPx: number;
+  bottomPx: number;
+  travel: { dx: number; dy: number } | null; // set only for the toy currently being played with
+}) {
+  const progress = useSharedValue(0);
 
   useEffect(() => {
-    if (bouncing) {
-      bounce.value = withRepeat(
-        withSequence(
-          withTiming(1, { duration: 260, easing: Easing.out(Easing.quad) }),
-          withTiming(0, { duration: 260, easing: Easing.in(Easing.quad) }),
-        ),
-        -1,
-        true,
+    if (travel) {
+      // Out (350ms) + two wiggle beats at the pet's feet (600ms) + back
+      // (350ms) = 1300ms, matching StudyPet's playing-pose duration so the
+      // toy's round trip lines up with the pet's own reaction animation.
+      progress.value = withSequence(
+        withTiming(1, { duration: 350, easing: Easing.out(Easing.quad) }),
+        withRepeat(withSequence(withTiming(0.85, { duration: 150 }), withTiming(1, { duration: 150 })), 2, true),
+        withTiming(0, { duration: 350, easing: Easing.in(Easing.quad) }),
       );
     } else {
-      bounce.value = withTiming(0, { duration: 200 });
+      progress.value = withTiming(0, { duration: 200 });
     }
-  }, [bouncing]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [travel != null]);
 
-  const style = useAnimatedStyle(() => ({
-    transform: [{ translateY: -bounce.value * 14 }, { rotate: `${bounce.value * 16 - 8}deg` }],
-  }));
+  const style = useAnimatedStyle(() => {
+    const dx = travel?.dx ?? 0;
+    const dy = travel?.dy ?? 0;
+    return {
+      transform: [
+        { translateX: progress.value * dx },
+        { translateY: progress.value * dy - Math.sin(progress.value * Math.PI) * 10 },
+        { rotate: `${Math.sin(progress.value * Math.PI * 3) * 14}deg` },
+        { scale: 1 + progress.value * 0.15 },
+      ],
+    };
+  });
 
   return (
-    <View style={{ position: "absolute", alignItems: "center", ...slot }}>
+    <View style={{ position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx }}>
       <Animated.View style={style}>
-        <Text style={{ fontSize: 26 }}>{icon}</Text>
+        <Text style={{ fontSize: size }}>{icon}</Text>
       </Animated.View>
-      <View style={{ width: 16, height: 4, borderRadius: 4, backgroundColor: "#00000030" }} />
+      <View style={{ width: size * 0.6, height: size * 0.15, borderRadius: size * 0.15, backgroundColor: "#00000030" }} />
     </View>
   );
 }
@@ -78,6 +104,17 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
   const houseH = height * 0.38;
   const houseX = width * 0.75;
   const houseBaseY = groundY + 4;
+
+  // Scaled to the pet's own size (roughly half the scene height) so props
+  // read as proportionate objects rather than tiny stickers next to it.
+  const propSize = Math.round(height * 0.16);
+
+  // Only the first owned toy (fixed catalog order — ball, then yarn, then
+  // chew toy) is "the toy in play" on any given press, so Play reads as the
+  // pet engaging with one specific thing instead of everything jittering.
+  const playToyId = ownedItems.find((id) => ITEM_KIND[id] === "toy");
+  const targetLeftPx = (PLAY_TARGET.left / 100) * width;
+  const targetBottomPx = (PLAY_TARGET.bottom / 100) * height;
 
   return (
     <View style={{ width, height, overflow: "hidden" }}>
@@ -144,14 +181,22 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
         )}
       </Svg>
 
-      {ownedItems.slice(0, ITEM_SLOTS.length).map((itemId, i) => (
-        <SceneProp
-          key={itemId}
-          icon={ITEM_ICON[itemId] ?? "🧸"}
-          slot={ITEM_SLOTS[i]}
-          bouncing={isPlaying && ITEM_KIND[itemId] === "toy"}
-        />
-      ))}
+      {ownedItems.slice(0, ITEM_SLOTS.length).map((itemId, i) => {
+        const slot = ITEM_SLOTS[i];
+        const leftPx = (slot.left / 100) * width;
+        const bottomPx = (slot.bottom / 100) * height;
+        const isPlayedToy = isPlaying && itemId === playToyId;
+        return (
+          <SceneProp
+            key={itemId}
+            icon={ITEM_ICON[itemId] ?? "🧸"}
+            size={propSize}
+            leftPx={leftPx}
+            bottomPx={bottomPx}
+            travel={isPlayedToy ? { dx: targetLeftPx - leftPx, dy: bottomPx - targetBottomPx } : null}
+          />
+        );
+      })}
 
       <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-end", paddingBottom: 12 }}>{children}</View>
     </View>
