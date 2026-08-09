@@ -32,6 +32,7 @@ export default function BuddyScreen() {
   const [days, setDays] = useState<StudyPlanDay[]>([]);
   const [stats, setStats] = useState<UserSkillStat[]>([]);
   const [activeAction, setActiveAction] = useState<PetAction | null>(null);
+  const [selectedToyId, setSelectedToyId] = useState<string | null>(null);
 
   const [pickerSpecies, setPickerSpecies] = useState<PetSpecies>("cat");
   const [creating, setCreating] = useState(false);
@@ -99,6 +100,14 @@ export default function BuddyScreen() {
     await setItemQuantity(session.user.id, itemId, newQty);
   }
 
+  // Tapping a toy directly in the scene (or the Play button, which reuses
+  // whichever toy was last chosen) both selects it and starts the reaction —
+  // there's no separate "confirm" step.
+  function handlePlayToy(toyId: string) {
+    setSelectedToyId(toyId);
+    setActiveAction("playing");
+  }
+
   async function handleFeed() {
     if (!session) return;
     const foodItem = SHOP_ITEMS.find((item) => item.kind === "food" && (inventory[item.id] ?? 0) > 0);
@@ -110,7 +119,8 @@ export default function BuddyScreen() {
   }
 
   const hasFood = SHOP_ITEMS.some((item) => item.kind === "food" && (inventory[item.id] ?? 0) > 0);
-  const hasToy = SHOP_ITEMS.some((item) => item.kind === "toy" && (inventory[item.id] ?? 0) > 0);
+  const ownedToyIds = SHOP_ITEMS.filter((item) => item.kind === "toy" && (inventory[item.id] ?? 0) > 0).map((item) => item.id);
+  const hasToy = ownedToyIds.length > 0;
   // Everything currently in stock — toys (permanent) and unfed food — shown
   // as props set down beside the doghouse/cathouse.
   const ownedItems = SHOP_ITEMS.filter((item) => (inventory[item.id] ?? 0) > 0).map((item) => item.id);
@@ -168,6 +178,8 @@ export default function BuddyScreen() {
           species={pet.species}
           ownedItems={ownedItems}
           isPlaying={activeAction === "playing"}
+          playingToyId={selectedToyId}
+          onToyPress={handlePlayToy}
           width={SCREEN_WIDTH}
           height={HERO_HEIGHT}
         >
@@ -204,7 +216,10 @@ export default function BuddyScreen() {
             <Pressable
               style={[styles.hudButton, !hasToy && styles.hudButtonDisabled]}
               disabled={!hasToy}
-              onPress={() => setActiveAction("playing")}
+              onPress={() => {
+                const toyId = selectedToyId && ownedToyIds.includes(selectedToyId) ? selectedToyId : ownedToyIds[0];
+                if (toyId) handlePlayToy(toyId);
+              }}
             >
               <Text style={styles.hudButtonEmoji}>🎾</Text>
               <Text style={styles.hudButtonLabel}>Play</Text>
@@ -221,6 +236,7 @@ export default function BuddyScreen() {
             {!hasFood && !hasToy ? "Buy food and toys from the shop below." : !hasFood ? "Buy food from the shop below." : "Buy a toy from the shop below."}
           </Text>
         )}
+        {ownedToyIds.length > 1 && <Text style={styles.actionHint}>Tip: tap any toy on the ground to play with that one.</Text>}
 
         <View style={styles.testingPanel}>
           <Text style={styles.testingLabel}>🧪 Testing tools</Text>

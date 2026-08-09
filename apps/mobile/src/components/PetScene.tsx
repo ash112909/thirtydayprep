@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
-import { Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from "react-native-reanimated";
 import Svg, { Circle, Defs, Ellipse, LinearGradient, Path, Polygon, RadialGradient, Rect, Stop } from "react-native-svg";
 import { SHOP_ITEMS } from "@/lib/petShop";
@@ -10,6 +10,8 @@ interface Props {
   species: PetSpecies;
   ownedItems: string[]; // toys + in-stock food ids, placed as props beside the house
   isPlaying?: boolean; // sends the toy being played with over to the pet
+  playingToyId?: string | null; // which owned toy id is the one in motion
+  onToyPress?: (itemId: string) => void; // tap a toy directly to choose it
   width: number;
   height: number;
   children: ReactNode;
@@ -44,12 +46,14 @@ function SceneProp({
   leftPx,
   bottomPx,
   travel,
+  onPress,
 }: {
   icon: string;
   size: number;
   leftPx: number;
   bottomPx: number;
   travel: { dx: number; dy: number } | null; // set only for the toy currently being played with
+  onPress?: () => void; // present only for tappable (toy) props
 }) {
   const progress = useSharedValue(0);
 
@@ -82,17 +86,36 @@ function SceneProp({
     };
   });
 
-  return (
-    <View style={{ position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx }}>
+  const content = (
+    <>
       <Animated.View style={style}>
         <Text style={{ fontSize: size }}>{icon}</Text>
       </Animated.View>
       <View style={{ width: size * 0.6, height: size * 0.15, borderRadius: size * 0.15, backgroundColor: "#00000030" }} />
-    </View>
+    </>
+  );
+
+  if (onPress) {
+    return (
+      <Pressable
+        onPress={onPress}
+        hitSlop={10}
+        style={({ pressed }) => [
+          { position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx },
+          pressed && { opacity: 0.75, transform: [{ scale: 0.94 }] },
+        ]}
+      >
+        {content}
+      </Pressable>
+    );
+  }
+
+  return (
+    <View style={{ position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx }}>{content}</View>
   );
 }
 
-export function PetScene({ species, ownedItems, isPlaying = false, width, height, children }: Props) {
+export function PetScene({ species, ownedItems, isPlaying = false, playingToyId = null, onToyPress, width, height, children }: Props) {
   const night = isNightNow();
   const skyTop = night ? "#0B1224" : "#7DD3FC";
   const skyBottom = night ? "#1E1B4B" : "#BAE6FD";
@@ -109,10 +132,6 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
   // read as proportionate objects rather than tiny stickers next to it.
   const propSize = Math.round(height * 0.16);
 
-  // Only the first owned toy (fixed catalog order — ball, then yarn, then
-  // chew toy) is "the toy in play" on any given press, so Play reads as the
-  // pet engaging with one specific thing instead of everything jittering.
-  const playToyId = ownedItems.find((id) => ITEM_KIND[id] === "toy");
   const targetLeftPx = (PLAY_TARGET.left / 100) * width;
   const targetBottomPx = (PLAY_TARGET.bottom / 100) * height;
 
@@ -185,7 +204,8 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
         const slot = ITEM_SLOTS[i];
         const leftPx = (slot.left / 100) * width;
         const bottomPx = (slot.bottom / 100) * height;
-        const isPlayedToy = isPlaying && itemId === playToyId;
+        const isToy = ITEM_KIND[itemId] === "toy";
+        const isPlayedToy = isPlaying && itemId === playingToyId;
         return (
           <SceneProp
             key={itemId}
@@ -194,6 +214,7 @@ export function PetScene({ species, ownedItems, isPlaying = false, width, height
             leftPx={leftPx}
             bottomPx={bottomPx}
             travel={isPlayedToy ? { dx: targetLeftPx - leftPx, dy: bottomPx - targetBottomPx } : null}
+            onPress={isToy ? () => onToyPress?.(itemId) : undefined}
           />
         );
       })}
