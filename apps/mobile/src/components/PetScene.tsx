@@ -56,6 +56,31 @@ function SceneProp({
   onPress?: () => void; // present only for tappable (toy) props
 }) {
   const progress = useSharedValue(0);
+  const invite = useSharedValue(0);
+
+  // A slow breathing glow behind tappable toys — the only cue (besides a
+  // hover cursor on web) that these are interactive at all, since nothing
+  // else in the scene distinguishes a tappable prop from a static one.
+  useEffect(() => {
+    if (onPress) {
+      invite.value = withRepeat(
+        withSequence(
+          withTiming(1, { duration: 900, easing: Easing.inOut(Easing.sin) }),
+          withTiming(0, { duration: 900, easing: Easing.inOut(Easing.sin) }),
+        ),
+        -1,
+        true,
+      );
+    } else {
+      invite.value = 0;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onPress != null]);
+
+  const inviteStyle = useAnimatedStyle(() => ({
+    opacity: 0.28 + invite.value * 0.22,
+    transform: [{ scale: 1 + invite.value * 0.12 }],
+  }));
 
   useEffect(() => {
     if (travel) {
@@ -101,10 +126,23 @@ function SceneProp({
         onPress={onPress}
         hitSlop={10}
         style={({ pressed }) => [
-          { position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx },
+          { position: "absolute", alignItems: "center", left: leftPx, bottom: bottomPx, cursor: "pointer" },
           pressed && { opacity: 0.75, transform: [{ scale: 0.94 }] },
         ]}
       >
+        <Animated.View
+          style={[
+            {
+              position: "absolute",
+              top: -size * 0.05,
+              width: size * 1.1,
+              height: size * 1.1,
+              borderRadius: size,
+              backgroundColor: "rgba(56,189,248,0.35)",
+            },
+            inviteStyle,
+          ]}
+        />
         {content}
       </Pressable>
     );

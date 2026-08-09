@@ -16,7 +16,11 @@ import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, Use
 // Pets are fixed-art illustrations now, not recolorable — this just
 // satisfies the not-null color column from the earlier SVG-pet era.
 const DEFAULT_PET_COLOR = "#F59E0B";
-const SCREEN_WIDTH = Dimensions.get("window").width;
+// Capped so the scene stays a sensible app-column width on wide desktop
+// browsers instead of stretching edge-to-edge into a flat horizontal strip —
+// "full-bleed" only makes sense up to phone-sized viewports.
+const MAX_APP_WIDTH = 480;
+const SCREEN_WIDTH = Math.min(Dimensions.get("window").width, MAX_APP_WIDTH);
 // The pet's world fills the top of the screen edge-to-edge instead of
 // sitting in a boxed card — taller on bigger screens, capped so it never
 // crowds out the shop below.
@@ -173,6 +177,7 @@ export default function BuddyScreen() {
 
   return (
     <View style={styles.screen}>
+      <View style={[styles.appColumn, { width: SCREEN_WIDTH }]}>
       <View style={[styles.hero, { height: HERO_HEIGHT }]}>
         <PetScene
           species={pet.species}
@@ -303,12 +308,17 @@ export default function BuddyScreen() {
           })}
         </View>
       </ScrollView>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.background },
+  // On phones the app column fills the full (narrow) window, so this is a
+  // no-op; on wide desktop web it keeps the pet's world at a sensible
+  // app-sized column instead of stretching edge-to-edge into a flat strip.
+  screen: { flex: 1, backgroundColor: colors.background, alignItems: "center" },
+  appColumn: { flex: 1 },
   container: { flex: 1, backgroundColor: colors.background },
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
   pickerContent: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center", gap: 16 },
