@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 import { PetCompanionProvider } from "@/hooks/usePetCompanion";
 import { FloatingPetBadge } from "@/components/FloatingPetBadge";
+import { MAX_APP_WIDTH, colors } from "@/theme";
 
 function RootNavigation() {
   const { session, profile, hasCompletedBaseline, loading } = useAuth();
@@ -57,8 +58,16 @@ export default function RootLayout() {
     <AuthProvider>
       <PetCompanionProvider>
         <StatusBar style="light" />
-        <RootNavigation />
-        <FloatingPetBadge />
+        {/* Every screen lives inside this capped, centered column — on a
+            phone it's a no-op (already narrower than the cap), but on a
+            wide web browser or tablet it keeps the whole app looking like a
+            mobile app instead of a website stretched full-width. */}
+        <View style={{ flex: 1, backgroundColor: colors.background, alignItems: "center" }}>
+          <View style={{ flex: 1, width: "100%", maxWidth: MAX_APP_WIDTH }}>
+            <RootNavigation />
+            <FloatingPetBadge />
+          </View>
+        </View>
       </PetCompanionProvider>
     </AuthProvider>
   );

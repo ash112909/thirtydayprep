@@ -11,16 +11,15 @@ import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { MAX_APP_WIDTH, colors } from "@/theme";
 import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, UserSkillStat } from "@/types/domain";
 
 // Pets are fixed-art illustrations now, not recolorable — this just
 // satisfies the not-null color column from the earlier SVG-pet era.
 const DEFAULT_PET_COLOR = "#F59E0B";
-// Capped so the scene stays a sensible app-column width on wide desktop
-// browsers instead of stretching edge-to-edge into a flat horizontal strip —
-// "full-bleed" only makes sense up to phone-sized viewports.
-const MAX_APP_WIDTH = 480;
+// Matches the app-wide column cap in the root layout — PetScene needs an
+// actual pixel width (for its SVG canvas), which Dimensions can't derive
+// from the surrounding layout, so it's computed the same way here too.
 const SCREEN_WIDTH = Math.min(Dimensions.get("window").width, MAX_APP_WIDTH);
 // The pet's world fills the top of the screen edge-to-edge instead of
 // sitting in a boxed card — taller on bigger screens, capped so it never
