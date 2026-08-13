@@ -257,7 +257,12 @@ export function PetScene({ species, ownedItems, isPlaying = false, playingToyId 
         );
       })}
 
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-end", paddingBottom: 12 }}>{children}</View>
+      <View
+        style={{ flex: 1, alignItems: "center", justifyContent: "flex-end", paddingBottom: 12 }}
+        pointerEvents="box-none"
+      >
+        {children}
+      </View>
     </View>
   );
 }
