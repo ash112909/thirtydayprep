@@ -198,18 +198,17 @@ export default function BuddyScreen() {
           />
         </PetScene>
 
-        <View style={styles.heroHud} pointerEvents="box-none">
-          <View style={styles.hudTopRow} pointerEvents="box-none">
-            <View style={styles.glassPill}>
-              <Text style={styles.heroTitle}>Your study buddy</Text>
-              <Text style={styles.heroSubtitle}>{energyLabel}</Text>
-            </View>
-            <View style={[styles.glassPill, styles.pointsPill]}>
-              <Text style={styles.pointsText}>⭐ {pet.points}</Text>
-            </View>
+        <View style={styles.hudTopRow} pointerEvents="box-none">
+          <View style={styles.glassPill}>
+            <Text style={styles.heroTitle}>Your study buddy</Text>
+            <Text style={styles.heroSubtitle}>{energyLabel}</Text>
           </View>
+          <View style={[styles.glassPill, styles.pointsPill]}>
+            <Text style={styles.pointsText}>⭐ {pet.points}</Text>
+          </View>
+        </View>
 
-          <View style={styles.hudBottomRow} pointerEvents="box-none">
+        <View style={styles.hudBottomRow} pointerEvents="box-none">
             <Pressable style={styles.hudButton} onPress={() => setActiveAction("petting")}>
               <Text style={styles.hudButtonEmoji}>🤚</Text>
               <Text style={styles.hudButtonLabel}>Pet</Text>
@@ -229,7 +228,6 @@ export default function BuddyScreen() {
               <Text style={styles.hudButtonEmoji}>🎾</Text>
               <Text style={styles.hudButtonLabel}>Play</Text>
             </Pressable>
-          </View>
         </View>
       </View>
 
@@ -327,9 +325,24 @@ const styles = StyleSheet.create({
 
   // Full-bleed pet world — no card, no border, sky bleeds to the screen edges.
   hero: { width: "100%", overflow: "hidden" },
-  heroHud: { ...StyleSheet.absoluteFillObject, justifyContent: "space-between" },
-  hudTopRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start", paddingHorizontal: 20, paddingTop: 52 },
-  hudBottomRow: { flexDirection: "row", justifyContent: "center", gap: 14, paddingHorizontal: 20, paddingBottom: 30 },
+  // Each HUD row is independently absolute-positioned (not nested inside a
+  // shared full-fill wrapper) so there's no invisible box-none container
+  // stacked over the whole hero — that pattern was silently swallowing taps
+  // on the toys underneath on web. The button row is also anchored to the
+  // right rather than centered, so its own hit area never reaches over the
+  // toy pile on the left at all, regardless of platform.
+  hudTopRow: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    paddingHorizontal: 20,
+    paddingTop: 52,
+  },
+  hudBottomRow: { position: "absolute", right: 20, bottom: 30, flexDirection: "row", gap: 14 },
   glassPill: {
     backgroundColor: "rgba(15,23,42,0.55)",
     borderRadius: 20,
