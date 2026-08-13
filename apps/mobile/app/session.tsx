@@ -6,20 +6,31 @@ import { fetchCategories } from "@/api/progress";
 import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { StudyPet } from "@/components/StudyPet";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
+import { pickSessionCompleteLine, pickTutorLine } from "@/lib/tutorVoice";
+import { TutorBubble } from "@/components/TutorBubble";
 import { colors } from "@/theme";
 import type { SessionQuestion } from "@/types/domain";
 
+interface Revealed {
+  correctAnswer: string;
+  explanation: string | null;
+  isCorrect: boolean;
+  tutorLine: string;
+}
+
 export default function Session() {
   const router = useRouter();
-  const { celebrate, refresh: refreshPetCompanion } = usePetCompanion();
+  const { pet, celebrate, refresh: refreshPetCompanion } = usePetCompanion();
   const [questions, setQuestions] = useState<SessionQuestion[]>([]);
   const [dayNumber, setDayNumber] = useState<number | null>(null);
   const [index, setIndex] = useState(0);
   const [answerValue, setAnswerValue] = useState("");
-  const [revealed, setRevealed] = useState<{ correctAnswer: string; explanation: string | null } | null>(null);
+  const [revealed, setRevealed] = useState<Revealed | null>(null);
+  const [sessionCompleteLine] = useState(pickSessionCompleteLine);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -67,7 +78,12 @@ export default function Session() {
   if (!question) {
     return (
       <View style={styles.center}>
-        <Text style={styles.doneTitle}>Nice work! 🎉</Text>
+        {pet && (
+          <View style={styles.doneAvatar}>
+            <StudyPet species={pet.species} energy="energetic" growthStage="grown" size={70} />
+          </View>
+        )}
+        <Text style={styles.doneTitle}>{sessionCompleteLine}</Text>
         <Text style={styles.doneBody}>
           {dayNumber ? `Day ${dayNumber} complete.` : "Session complete."} Come back tomorrow for your next
           session.
@@ -86,14 +102,22 @@ export default function Session() {
     setSubmitting(true);
     try {
       const result = await submitAttempt(question.study_plan_day_question_id, answerValue, timeSpent);
-      setRevealed({ correctAnswer: result.correct_answer, explanation: result.explanation });
+      setRevealed({
+        correctAnswer: result.correct_answer,
+        explanation: result.explanation,
+        isCorrect: result.is_correct,
+        tutorLine: pickTutorLine(result.is_correct),
+      });
       if (result.day_completed && result.study_plan_day_id) {
         setCompletedDayId(result.study_plan_day_id);
         // A bigger reaction for finishing the day (points were just awarded
-        // server-side), vs. a small one for just getting a question right.
+        // server-side), vs. a small supportive one for just answering —
+        // the pet reacts the same way whether the answer was right or
+        // wrong, since its role here is to walk through it with you, not
+        // to grade you.
         celebrate("playing");
         refreshPetCompanion();
-      } else if (result.is_correct) {
+      } else {
         celebrate("petting");
       }
     } catch (e) {
@@ -155,7 +179,14 @@ export default function Session() {
         />
       )}
 
-      {revealed?.explanation && <Text style={styles.explanation}>{revealed.explanation}</Text>}
+      {revealed && (
+        <TutorBubble
+          species={pet?.species ?? "cat"}
+          isCorrect={revealed.isCorrect}
+          line={revealed.tutorLine}
+          explanation={revealed.explanation}
+        />
+      )}
 
       {revealed ? (
         <PrimaryButton title={index + 1 === questions.length ? "Finish" : "Next question"} onPress={handleNext} />
@@ -170,21 +201,22 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
   error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
-  doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text },
+  doneAvatar: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    backgroundColor: colors.surfaceAlt,
+    borderWidth: 2,
+    borderColor: colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 4,
+  },
+  doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text, textAlign: "center" },
   doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
   progressRow: { marginBottom: 20 },
   progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
   progressText: { color: colors.textMuted, fontSize: 13 },
   progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
   progressBarFill: { height: 6, backgroundColor: colors.primary },
-  explanation: {
-    color: colors.textMuted,
-    fontSize: 13,
-    lineHeight: 19,
-    marginTop: 16,
-    marginBottom: 8,
-    backgroundColor: colors.surfaceAlt,
-    padding: 12,
-    borderRadius: 10,
-  },
 });

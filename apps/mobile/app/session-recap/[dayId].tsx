@@ -3,6 +3,8 @@ import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-nat
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchDayRecap, fetchPlanDay, fetchSubcategories, type RecapQuestion } from "@/api/progress";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { StudyPet } from "@/components/StudyPet";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { colors } from "@/theme";
 import type { StudyPlanDay, Subcategory } from "@/types/domain";
 
@@ -15,6 +17,7 @@ interface SubcategoryBreakdown {
 
 export default function SessionRecap() {
   const router = useRouter();
+  const { pet } = usePetCompanion();
   const { dayId } = useLocalSearchParams<{ dayId: string }>();
   const [loading, setLoading] = useState(true);
   const [day, setDay] = useState<StudyPlanDay | null>(null);
@@ -65,8 +68,17 @@ export default function SessionRecap() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.title}>Day {day?.day_number} complete 🎉</Text>
-      <Text style={styles.subtitle}>Here's how it went.</Text>
+      <View style={styles.titleRow}>
+        {pet && (
+          <View style={styles.titleAvatar}>
+            <StudyPet species={pet.species} energy="energetic" growthStage="grown" size={44} />
+          </View>
+        )}
+        <View>
+          <Text style={styles.title}>Day {day?.day_number} complete 🎉</Text>
+          <Text style={styles.subtitle}>Here's how it went.</Text>
+        </View>
+      </View>
 
       <View style={styles.statsRow}>
         <View style={styles.statBox}>
@@ -115,8 +127,19 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
   center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+  titleRow: { flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 24 },
+  titleAvatar: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: colors.surfaceAlt,
+    borderWidth: 2,
+    borderColor: colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
-  subtitle: { fontSize: 14, color: colors.textMuted, marginBottom: 24 },
+  subtitle: { fontSize: 14, color: colors.textMuted },
   statsRow: { flexDirection: "row", gap: 10, marginBottom: 28 },
   statBox: {
     flex: 1,
