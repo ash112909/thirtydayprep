@@ -8,11 +8,13 @@ import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { findMathCategoryId } from "@/lib/mathCategory";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { colors } from "@/theme";
 import type { SessionQuestion } from "@/types/domain";
 
 export default function Session() {
   const router = useRouter();
+  const { celebrate, refresh: refreshPetCompanion } = usePetCompanion();
   const [questions, setQuestions] = useState<SessionQuestion[]>([]);
   const [dayNumber, setDayNumber] = useState<number | null>(null);
   const [index, setIndex] = useState(0);
@@ -87,6 +89,12 @@ export default function Session() {
       setRevealed({ correctAnswer: result.correct_answer, explanation: result.explanation });
       if (result.day_completed && result.study_plan_day_id) {
         setCompletedDayId(result.study_plan_day_id);
+        // A bigger reaction for finishing the day (points were just awarded
+        // server-side), vs. a small one for just getting a question right.
+        celebrate("playing");
+        refreshPetCompanion();
+      } else if (result.is_correct) {
+        celebrate("petting");
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");

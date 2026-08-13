@@ -3,6 +3,8 @@ import { ActivityIndicator, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
+import { PetCompanionProvider } from "@/hooks/usePetCompanion";
+import { FloatingPetBadge } from "@/components/FloatingPetBadge";
 
 function RootNavigation() {
   const { session, profile, hasCompletedBaseline, loading } = useAuth();
@@ -53,8 +55,11 @@ function RootNavigation() {
 export default function RootLayout() {
   return (
     <AuthProvider>
-      <StatusBar style="light" />
-      <RootNavigation />
+      <PetCompanionProvider>
+        <StatusBar style="light" />
+        <RootNavigation />
+        <FloatingPetBadge />
+      </PetCompanionProvider>
     </AuthProvider>
   );
 }

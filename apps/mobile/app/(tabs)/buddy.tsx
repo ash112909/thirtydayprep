@@ -7,6 +7,7 @@ import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, upd
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computeGrowthStage, computePetEnergy } from "@/lib/petState";
 import { SHOP_ITEMS } from "@/lib/petShop";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
 import { PrimaryButton } from "@/components/PrimaryButton";
@@ -29,6 +30,11 @@ const PET_SIZE = Math.round(HERO_HEIGHT * 0.52);
 
 export default function BuddyScreen() {
   const { session } = useAuth();
+  // This screen keeps its own copy of pet/plan/inventory state (it needs
+  // finer-grained data than the floating companion does elsewhere in the
+  // app), so every mutation here also pings the shared context to refresh —
+  // otherwise the floating badge on other screens would go stale.
+  const { refresh: refreshPetCompanion } = usePetCompanion();
   const [loading, setLoading] = useState(true);
   const [pet, setPet] = useState<StudyPetData | null>(null);
   const [inventory, setInventory] = useState<Record<string, number>>({});
@@ -73,6 +79,7 @@ export default function BuddyScreen() {
     try {
       const created = await createPet(session.user.id, pickerSpecies, DEFAULT_PET_COLOR);
       setPet(created);
+      refreshPetCompanion();
     } finally {
       setCreating(false);
     }
@@ -82,6 +89,7 @@ export default function BuddyScreen() {
     if (!session || !pet || pet.species === species) return;
     setPet({ ...pet, species });
     await updatePetSpecies(session.user.id, species);
+    refreshPetCompanion();
   }
 
   // Testing-only: grants points without requiring completed study days, so
@@ -92,6 +100,7 @@ export default function BuddyScreen() {
     const newPoints = pet.points + 500;
     setPet({ ...pet, points: newPoints });
     await setPetPoints(session.user.id, newPoints);
+    refreshPetCompanion();
   }
 
   async function handlePurchase(itemId: string, cost: number) {
@@ -102,6 +111,7 @@ export default function BuddyScreen() {
     setInventory((prev) => ({ ...prev, [itemId]: newQty }));
     await setPetPoints(session.user.id, newPoints);
     await setItemQuantity(session.user.id, itemId, newQty);
+    refreshPetCompanion();
   }
 
   // Tapping a toy directly in the scene (or the Play button, which reuses
