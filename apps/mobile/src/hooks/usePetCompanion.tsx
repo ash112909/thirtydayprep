@@ -37,12 +37,21 @@ export function PetCompanionProvider({ children }: { children: ReactNode }) {
       setLoading(false);
       return;
     }
-    const [petData, activePlan] = await Promise.all([fetchPet(session.user.id), fetchActivePlan(session.user.id)]);
-    const days = activePlan ? await fetchPlanDays(activePlan.id) : [];
-    setPet(petData);
-    setEnergy(computePetEnergy(days));
-    setGrowthStage(computeGrowthStage(days.filter((d) => d.status === "completed").length, activePlan?.total_days ?? 0));
-    setLoading(false);
+    try {
+      const [petData, activePlan] = await Promise.all([fetchPet(session.user.id), fetchActivePlan(session.user.id)]);
+      const days = activePlan ? await fetchPlanDays(activePlan.id) : [];
+      setPet(petData);
+      setEnergy(computePetEnergy(days));
+      setGrowthStage(computeGrowthStage(days.filter((d) => d.status === "completed").length, activePlan?.total_days ?? 0));
+    } catch (err) {
+      // The companion is decorative — a fetch failure here (e.g. a pending
+      // migration) shouldn't break the rest of the app. Log it and just
+      // leave the badge hidden (pet stays whatever it last was) rather than
+      // getting stuck in a permanent loading state.
+      console.error("PetCompanionProvider refresh failed:", err);
+    } finally {
+      setLoading(false);
+    }
   }, [session]);
 
   useEffect(() => {

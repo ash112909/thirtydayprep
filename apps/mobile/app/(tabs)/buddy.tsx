@@ -47,31 +47,39 @@ export default function BuddyScreen() {
   const [creating, setCreating] = useState(false);
   const [nameModalVisible, setNameModalVisible] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [retryToken, setRetryToken] = useState(0);
 
   useFocusEffect(
     useCallback(() => {
       if (!session) return;
       let cancelled = false;
       setLoading(true);
+      setLoadError(null);
       (async () => {
-        const [petData, activePlan, skillStats, inv] = await Promise.all([
-          fetchPet(session.user.id),
-          fetchActivePlan(session.user.id),
-          fetchSkillStats(session.user.id),
-          fetchInventory(session.user.id),
-        ]);
-        if (cancelled) return;
-        setPet(petData);
-        setPlan(activePlan);
-        setStats(skillStats);
-        setInventory(inv);
-        setDays(activePlan ? await fetchPlanDays(activePlan.id) : []);
-        setLoading(false);
+        try {
+          const [petData, activePlan, skillStats, inv] = await Promise.all([
+            fetchPet(session.user.id),
+            fetchActivePlan(session.user.id),
+            fetchSkillStats(session.user.id),
+            fetchInventory(session.user.id),
+          ]);
+          if (cancelled) return;
+          setPet(petData);
+          setPlan(activePlan);
+          setStats(skillStats);
+          setInventory(inv);
+          setDays(activePlan ? await fetchPlanDays(activePlan.id) : []);
+        } catch (err) {
+          if (!cancelled) setLoadError(err instanceof Error ? err.message : "Couldn't load your study buddy.");
+        } finally {
+          if (!cancelled) setLoading(false);
+        }
       })();
       return () => {
         cancelled = true;
       };
-    }, [session]),
+    }, [session, retryToken]),
   );
 
   async function handleCreatePet() {
@@ -158,6 +166,16 @@ export default function BuddyScreen() {
     return (
       <View style={styles.center}>
         <ActivityIndicator color={colors.primary} />
+      </View>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <View style={styles.center}>
+        <Text style={styles.title}>Couldn't load your buddy</Text>
+        <Text style={styles.subtitle}>{loadError}</Text>
+        <PrimaryButton title="Try again" onPress={() => setRetryToken((n) => n + 1)} />
       </View>
     );
   }
@@ -370,7 +388,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.background, alignItems: "center" },
   appColumn: { flex: 1 },
   container: { flex: 1, backgroundColor: colors.background },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 12 },
   pickerContent: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center", gap: 16 },
   title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
   subtitle: { fontSize: 13, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
