@@ -2,9 +2,11 @@ import { useCallback, useState } from "react";
 import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { updateStudyGoals } from "@/api/profile";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
-import { regeneratePlan } from "@/api/studyFunctions";
+import { fetchClaimedAchievementIds } from "@/api/achievements";
+import { claimAchievement, regeneratePlan } from "@/api/studyFunctions";
 import { computeAchievements, type Achievement } from "@/lib/achievements";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useTheme } from "@/hooks/useTheme";
@@ -19,6 +21,7 @@ function daysUntil(dateStr: string | null): number | null {
 
 export default function ProfileScreen() {
   const { session, profile, refreshProfile, signOut } = useAuth();
+  const { refresh: refreshPetCompanion } = usePetCompanion();
   const { mode, toggleTheme } = useTheme();
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background },
@@ -97,6 +100,15 @@ export default function ProfileScreen() {
     badgeIcon: { fontSize: 22, marginBottom: 6 },
     badgeTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 2 },
     badgeDescription: { color: colors.textMuted, fontSize: 11, lineHeight: 15 },
+    badgeClaimed: { color: colors.success, fontSize: 11, fontWeight: "700", marginTop: 8 },
+    claimButton: {
+      backgroundColor: colors.primary,
+      borderRadius: 8,
+      paddingVertical: 6,
+      alignItems: "center",
+      marginTop: 8,
+    },
+    claimButtonText: { color: colors.onPrimary, fontSize: 12, fontWeight: "700" },
     logoutSpacer: { marginTop: 8 },
   }));
   const remaining = daysUntil(profile?.sat_date ?? null);
@@ -111,6 +123,8 @@ export default function ProfileScreen() {
   const [days, setDays] = useState<StudyPlanDay[]>([]);
   const [stats, setStats] = useState<UserSkillStat[]>([]);
   const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
+  const [claimedIds, setClaimedIds] = useState<Set<string>>(new Set());
+  const [claimingId, setClaimingId] = useState<string | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -120,11 +134,13 @@ export default function ProfileScreen() {
         fetchActivePlan(session.user.id),
         fetchSkillStats(session.user.id),
         fetchSubcategories(),
-      ]).then(async ([activePlan, skillStats, subs]) => {
+        fetchClaimedAchievementIds(session.user.id),
+      ]).then(async ([activePlan, skillStats, subs, claimed]) => {
         if (cancelled) return;
         setPlan(activePlan);
         setStats(skillStats);
         setSubcategories(subs);
+        setClaimedIds(claimed);
         if (activePlan) setDays(await fetchPlanDays(activePlan.id));
       });
       return () => {
@@ -132,6 +148,22 @@ export default function ProfileScreen() {
       };
     }, [session]),
   );
+
+  async function handleClaim(achievementId: string, reward: number) {
+    setClaimingId(achievementId);
+    try {
+      const result = await claimAchievement(achievementId);
+      setClaimedIds((prev) => new Set(prev).add(achievementId));
+      if (!result.already_claimed && result.points_awarded > 0) {
+        await refreshPetCompanion();
+        Alert.alert("Achievement claimed!", `Your buddy earned +${result.points_awarded} points.`);
+      }
+    } catch (e) {
+      Alert.alert("Couldn't claim achievement", e instanceof Error ? e.message : "Something went wrong.");
+    } finally {
+      setClaimingId(null);
+    }
+  }
 
   function startEditing() {
     setSatDate(profile?.sat_date ?? "");
@@ -272,13 +304,24 @@ export default function ProfileScreen() {
         </Text>
       </View>
       <View style={styles.achievementsGrid}>
-        {achievements.map((a) => (
-          <View key={a.id} style={[styles.badge, !a.achieved && styles.badgeLocked]}>
-            <Text style={styles.badgeIcon}>{a.icon}</Text>
-            <Text style={styles.badgeTitle}>{a.title}</Text>
-            <Text style={styles.badgeDescription}>{a.description}</Text>
-          </View>
-        ))}
+        {achievements.map((a) => {
+          const claimed = claimedIds.has(a.id);
+          return (
+            <View key={a.id} style={[styles.badge, !a.achieved && styles.badgeLocked]}>
+              <Text style={styles.badgeIcon}>{a.icon}</Text>
+              <Text style={styles.badgeTitle}>{a.title}</Text>
+              <Text style={styles.badgeDescription}>{a.description}</Text>
+              {a.achieved && claimed && <Text style={styles.badgeClaimed}>✓ +{a.reward} claimed</Text>}
+              {a.achieved && !claimed && (
+                <Pressable style={styles.claimButton} onPress={() => handleClaim(a.id, a.reward)} disabled={claimingId === a.id}>
+                  <Text style={styles.claimButtonText}>
+                    {claimingId === a.id ? "Claiming…" : `Claim +${a.reward} ⭐`}
+                  </Text>
+                </Pressable>
+              )}
+            </View>
+          );
+        })}
       </View>
 
       <View style={styles.logoutSpacer}>

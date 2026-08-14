@@ -35,14 +35,6 @@ export async function updatePetName(userId: string, name: string): Promise<void>
   if (error) throw error;
 }
 
-export async function updatePetAccessories(userId: string, accessories: string[]): Promise<void> {
-  const { error } = await supabase
-    .from("study_pets")
-    .update({ equipped_accessories: accessories })
-    .eq("user_id", userId);
-  if (error) throw error;
-}
-
 // Points are only ever *earned* server-side (submit-attempt, on day
 // completion) — this setter is for spending them (purchases), which is
 // low-stakes enough (cosmetic, single-player) to go through ordinary

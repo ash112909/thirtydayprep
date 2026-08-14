@@ -8,7 +8,7 @@ const POINTS_PER_CORRECT_ANSWER = 2;
 const POINTS_PER_COMPLETED_DAY = 15;
 
 // deno-lint-ignore no-explicit-any
-async function awardPoints(supabase: any, userId: string, amount: number): Promise<number> {
+export async function awardPoints(supabase: any, userId: string, amount: number): Promise<number> {
   const { data: pet } = await supabase.from("study_pets").select("points").eq("user_id", userId).maybeSingle();
   if (!pet) return 0;
   await supabase

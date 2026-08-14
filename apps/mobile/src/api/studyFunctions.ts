@@ -90,3 +90,12 @@ export interface RegeneratePlanResponse {
 export function regeneratePlan() {
   return invoke<RegeneratePlanResponse>("regenerate-plan");
 }
+
+export interface ClaimAchievementResponse {
+  already_claimed: boolean;
+  points_awarded: number;
+}
+
+export function claimAchievement(achievementId: string) {
+  return invoke<ClaimAchievementResponse>("claim-achievement", { achievement_id: achievementId });
+}
