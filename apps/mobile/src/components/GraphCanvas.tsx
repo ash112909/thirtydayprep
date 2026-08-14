@@ -1,8 +1,8 @@
 import { useMemo, useRef } from "react";
-import { PanResponder, StyleSheet, Text, View } from "react-native";
+import { PanResponder, Text, View } from "react-native";
 import Svg, { Line, Path, Text as SvgText } from "react-native-svg";
 import { evaluateExpression } from "@/lib/expressionEvaluator";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 interface Props {
   expression: string;
@@ -45,6 +45,11 @@ function computeTicks(min: number, max: number, targetCount = 5): number[] {
 }
 
 export function GraphCanvas({ expression, angleMode, xRange, onXRangeChange, width, height }: Props) {
+  const { styles, colors } = useThemedStyles((colors) => ({
+    svg: { backgroundColor: "transparent" },
+    errorOverlay: { position: "absolute", top: 8, left: 8 },
+    errorText: { color: colors.danger, fontSize: 12 },
+  }));
   const panStartRange = useRef<[number, number]>(xRange);
 
   const [xMin, xMax] = xRange;
@@ -183,9 +188,3 @@ export function GraphCanvas({ expression, angleMode, xRange, onXRangeChange, wid
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  svg: { backgroundColor: "transparent" },
-  errorOverlay: { position: "absolute", top: 8, left: 8 },
-  errorText: { color: colors.danger, fontSize: 12 },
-});

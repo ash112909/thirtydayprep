@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { completeOnboarding } from "@/api/profile";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 function todayPlusMinDays(): string {
   const d = new Date();
@@ -15,6 +15,22 @@ function todayPlusMinDays(): string {
 export default function Onboarding() {
   const { session, refreshProfile } = useAuth();
   const router = useRouter();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    subtitle: { fontSize: 14, color: colors.textMuted, marginBottom: 28, lineHeight: 20 },
+    label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
+    input: {
+      backgroundColor: colors.surface,
+      borderRadius: 12,
+      padding: 14,
+      color: colors.text,
+      marginBottom: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    error: { color: colors.danger, marginBottom: 12 },
+  }));
   const [satDate, setSatDate] = useState(""); // YYYY-MM-DD
   const [dailyMinutes, setDailyMinutes] = useState("30");
   const [error, setError] = useState<string | null>(null);
@@ -80,20 +96,3 @@ export default function Onboarding() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
-  subtitle: { fontSize: 14, color: colors.textMuted, marginBottom: 28, lineHeight: 20 },
-  label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
-  input: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
-    padding: 14,
-    color: colors.text,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  error: { color: colors.danger, marginBottom: 12 },
-});

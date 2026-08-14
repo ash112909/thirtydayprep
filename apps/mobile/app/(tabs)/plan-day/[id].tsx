@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Alert, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Alert, ScrollView, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
@@ -7,7 +7,7 @@ import { fetchPlanDay, fetchSkillStats, fetchSubcategories } from "@/api/progres
 import { skipDay } from "@/api/studyFunctions";
 import { buildDayNarrative } from "@/lib/planNarrative";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { MasterySnapshot, StudyPlanDay, Subcategory } from "@/types/domain";
 
 function formatDate(dateStr: string): string {
@@ -23,6 +23,36 @@ export default function PlanDayDetail() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { session } = useAuth();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    content: { padding: 24, paddingTop: 60 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
+    emptyText: { color: colors.textMuted, fontSize: 14 },
+    dayLabel: { fontSize: 26, fontWeight: "800", color: colors.text },
+    date: { fontSize: 14, color: colors.textMuted, marginTop: 4, marginBottom: 20 },
+    narrativeBox: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 18,
+      borderWidth: 1,
+      borderColor: colors.border,
+      marginBottom: 16,
+      gap: 8,
+    },
+    narrativeText: { color: colors.text, fontSize: 15, lineHeight: 22 },
+    statLine: { color: colors.textMuted, fontSize: 13, marginBottom: 16 },
+    chips: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 28 },
+    chip: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 20,
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+    },
+    chipText: { color: colors.textMuted, fontSize: 12, fontWeight: "600" },
+    secondaryActionSpacer: { marginTop: 10 },
+    doneNote: { color: colors.success, fontSize: 13, textAlign: "center" },
+    lockedNote: { color: colors.textMuted, fontSize: 13, textAlign: "center" },
+  }));
   const [loading, setLoading] = useState(true);
   const [day, setDay] = useState<StudyPlanDay | null>(null);
   const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
@@ -152,34 +182,3 @@ export default function PlanDayDetail() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  content: { padding: 24, paddingTop: 60 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
-  emptyText: { color: colors.textMuted, fontSize: 14 },
-  dayLabel: { fontSize: 26, fontWeight: "800", color: colors.text },
-  date: { fontSize: 14, color: colors.textMuted, marginTop: 4, marginBottom: 20 },
-  narrativeBox: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 18,
-    borderWidth: 1,
-    borderColor: colors.border,
-    marginBottom: 16,
-    gap: 8,
-  },
-  narrativeText: { color: colors.text, fontSize: 15, lineHeight: 22 },
-  statLine: { color: colors.textMuted, fontSize: 13, marginBottom: 16 },
-  chips: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 28 },
-  chip: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 20,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-  },
-  chipText: { color: colors.textMuted, fontSize: 12, fontWeight: "600" },
-  secondaryActionSpacer: { marginTop: 10 },
-  doneNote: { color: colors.success, fontSize: 13, textAlign: "center" },
-  lockedNote: { color: colors.textMuted, fontSize: 13, textAlign: "center" },
-});

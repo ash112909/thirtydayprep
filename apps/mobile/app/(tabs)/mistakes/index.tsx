@@ -1,14 +1,15 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, Pressable, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchMistakes, type MistakeQuestion } from "@/api/mistakes";
 import { fetchSubcategories } from "@/api/progress";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 import type { Subcategory } from "@/types/domain";
 
-function difficultyColor(difficulty: string) {
+function difficultyColor(difficulty: string, colors: ColorTokens) {
   if (difficulty === "hard") return colors.danger;
   if (difficulty === "medium") return colors.warning;
   return colors.success;
@@ -17,6 +18,27 @@ function difficultyColor(difficulty: string) {
 export default function MistakeBank() {
   const router = useRouter();
   const { session } = useAuth();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+    header: { padding: 24, paddingTop: 60, paddingBottom: 12 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
+    subtitle: { fontSize: 13, color: colors.textMuted },
+    list: { paddingHorizontal: 20, paddingBottom: 24, gap: 10 },
+    card: {
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    cardHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+    subcategory: { color: colors.textMuted, fontSize: 12, fontWeight: "700" },
+    difficultyDot: { width: 8, height: 8, borderRadius: 4 },
+    stem: { color: colors.text, fontSize: 14, lineHeight: 19, marginBottom: 8 },
+    meta: { color: colors.textMuted, fontSize: 11 },
+    emptyText: { color: colors.textMuted, fontSize: 14, lineHeight: 20, textAlign: "center", marginTop: 40 },
+  }));
   const [loading, setLoading] = useState(true);
   const [mistakes, setMistakes] = useState<MistakeQuestion[]>([]);
   const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
@@ -67,7 +89,7 @@ export default function MistakeBank() {
           <Pressable style={styles.card} onPress={() => router.push(`/mistakes/review?id=${item.id}`)}>
             <View style={styles.cardHeader}>
               <Text style={styles.subcategory}>{nameById.get(item.subcategory_id) ?? "Topic"}</Text>
-              <View style={[styles.difficultyDot, { backgroundColor: difficultyColor(item.difficulty) }]} />
+              <View style={[styles.difficultyDot, { backgroundColor: difficultyColor(item.difficulty, colors) }]} />
             </View>
             <Text style={styles.stem} numberOfLines={2}>
               {item.stem}
@@ -86,25 +108,3 @@ export default function MistakeBank() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-  header: { padding: 24, paddingTop: 60, paddingBottom: 12 },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
-  subtitle: { fontSize: 13, color: colors.textMuted },
-  list: { paddingHorizontal: 20, paddingBottom: 24, gap: 10 },
-  card: {
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  cardHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
-  subcategory: { color: colors.textMuted, fontSize: 12, fontWeight: "700" },
-  difficultyDot: { width: 8, height: 8, borderRadius: 4 },
-  stem: { color: colors.text, fontSize: 14, lineHeight: 19, marginBottom: 8 },
-  meta: { color: colors.textMuted, fontSize: 11 },
-  emptyText: { color: colors.textMuted, fontSize: 14, lineHeight: 20, textAlign: "center", marginTop: 40 },
-});

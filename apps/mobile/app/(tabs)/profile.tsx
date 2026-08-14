@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Alert, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { updateStudyGoals } from "@/api/profile";
@@ -7,7 +7,8 @@ import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } f
 import { regeneratePlan } from "@/api/studyFunctions";
 import { computeAchievements, type Achievement } from "@/lib/achievements";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useTheme } from "@/hooks/useTheme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
 
 function daysUntil(dateStr: string | null): number | null {
@@ -18,6 +19,86 @@ function daysUntil(dateStr: string | null): number | null {
 
 export default function ProfileScreen() {
   const { session, profile, refreshProfile, signOut } = useAuth();
+  const { mode, toggleTheme } = useTheme();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 24 },
+    card: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 20,
+      marginBottom: 32,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    row: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      paddingVertical: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    rowLast: { borderBottomWidth: 0 },
+    rowLabel: { color: colors.textMuted, fontSize: 14 },
+    rowValue: { color: colors.text, fontSize: 14, fontWeight: "600" },
+    editButtonSpacer: { marginTop: 16 },
+    cancelSpacer: { marginTop: 10 },
+    label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
+    input: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 12,
+      padding: 14,
+      color: colors.text,
+      marginBottom: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    error: { color: colors.danger, marginBottom: 12 },
+    editHint: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginBottom: 16 },
+    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text },
+    appearanceRow: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      marginBottom: 32,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    appearanceLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
+    appearanceHint: { color: colors.textMuted, fontSize: 12, marginTop: 2 },
+    themeToggle: {
+      flexDirection: "row",
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 10,
+      padding: 3,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    themeOption: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 8 },
+    themeOptionActive: { backgroundColor: colors.primary },
+    themeOptionText: { color: colors.textMuted, fontSize: 13, fontWeight: "600" },
+    themeOptionTextActive: { color: colors.onPrimary },
+    achievementsHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 14 },
+    achievementsCount: { fontSize: 13, color: colors.textMuted },
+    achievementsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 24 },
+    badge: {
+      width: "47%",
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 14,
+      borderWidth: 1,
+      borderColor: colors.primary,
+    },
+    badgeLocked: { borderColor: colors.border, opacity: 0.5 },
+    badgeIcon: { fontSize: 22, marginBottom: 6 },
+    badgeTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 2 },
+    badgeDescription: { color: colors.textMuted, fontSize: 11, lineHeight: 15 },
+    logoutSpacer: { marginTop: 8 },
+  }));
   const remaining = daysUntil(profile?.sat_date ?? null);
 
   const [editing, setEditing] = useState(false);
@@ -163,6 +244,27 @@ export default function ProfileScreen() {
         </View>
       )}
 
+      <View style={styles.appearanceRow}>
+        <View>
+          <Text style={styles.appearanceLabel}>Appearance</Text>
+          <Text style={styles.appearanceHint}>{mode === "dark" ? "Dark" : "Light"} mode</Text>
+        </View>
+        <View style={styles.themeToggle}>
+          <Pressable
+            style={[styles.themeOption, mode === "dark" && styles.themeOptionActive]}
+            onPress={() => mode !== "dark" && toggleTheme()}
+          >
+            <Text style={[styles.themeOptionText, mode === "dark" && styles.themeOptionTextActive]}>Dark</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.themeOption, mode === "light" && styles.themeOptionActive]}
+            onPress={() => mode !== "light" && toggleTheme()}
+          >
+            <Text style={[styles.themeOptionText, mode === "light" && styles.themeOptionTextActive]}>Light</Text>
+          </Pressable>
+        </View>
+      </View>
+
       <View style={styles.achievementsHeader}>
         <Text style={styles.sectionTitle}>Achievements</Text>
         <Text style={styles.achievementsCount}>
@@ -187,6 +289,18 @@ export default function ProfileScreen() {
 }
 
 function Row({ label, value, last }: { label: string; value: string; last?: boolean }) {
+  const { styles } = useThemedStyles((colors) => ({
+    row: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      paddingVertical: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    rowLast: { borderBottomWidth: 0 },
+    rowLabel: { color: colors.textMuted, fontSize: 14 },
+    rowValue: { color: colors.text, fontSize: 14, fontWeight: "600" },
+  }));
   return (
     <View style={[styles.row, last && styles.rowLast]}>
       <Text style={styles.rowLabel}>{label}</Text>
@@ -194,58 +308,3 @@ function Row({ label, value, last }: { label: string; value: string; last?: bool
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 24 },
-  card: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 20,
-    marginBottom: 32,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-  },
-  rowLast: { borderBottomWidth: 0 },
-  rowLabel: { color: colors.textMuted, fontSize: 14 },
-  rowValue: { color: colors.text, fontSize: 14, fontWeight: "600" },
-  editButtonSpacer: { marginTop: 16 },
-  cancelSpacer: { marginTop: 10 },
-  label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
-  input: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 12,
-    padding: 14,
-    color: colors.text,
-    marginBottom: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  error: { color: colors.danger, marginBottom: 12 },
-  editHint: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginBottom: 16 },
-  achievementsHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 14 },
-  sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text },
-  achievementsCount: { fontSize: 13, color: colors.textMuted },
-  achievementsGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 24 },
-  badge: {
-    width: "47%",
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 14,
-    borderWidth: 1,
-    borderColor: colors.primary,
-  },
-  badgeLocked: { borderColor: colors.border, opacity: 0.5 },
-  badgeIcon: { fontSize: 22, marginBottom: 6 },
-  badgeTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 2 },
-  badgeDescription: { color: colors.textMuted, fontSize: 11, lineHeight: 15 },
-  logoutSpacer: { marginTop: 8 },
-});

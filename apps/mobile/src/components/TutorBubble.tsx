@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import { StudyPet } from "@/components/StudyPet";
-import { colors } from "@/theme";
+import { useTheme } from "@/hooks/useTheme";
 import type { PetSpecies } from "@/types/domain";
 
 const AVATAR_CHIP_SIZE = 48;
@@ -18,6 +18,7 @@ interface Props {
 // than a plain feedback box — same visual language (avatar chip) as the
 // FloatingPetBadge, so it reads as the same character showing up here too.
 export function TutorBubble({ species, isCorrect, line, explanation, pointsAwarded = 0 }: Props) {
+  const { colors } = useTheme();
   return (
     <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 10, marginTop: 16, marginBottom: 8 }}>
       <View

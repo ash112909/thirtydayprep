@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchQuestionById, type QuestionDetail } from "@/api/mistakes";
 import { fetchCategories } from "@/api/progress";
@@ -10,11 +10,30 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 export default function ReviewQuestion() {
   const router = useRouter();
   const { refresh: refreshPetCompanion } = usePetCompanion();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
+    error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
+    headerRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
+    header: { color: colors.textMuted, fontSize: 13, fontWeight: "700" },
+    correctBanner: { color: colors.success, fontSize: 14, fontWeight: "600", marginTop: 12 },
+    wrongBanner: { color: colors.danger, fontSize: 14, fontWeight: "600", marginTop: 12 },
+    explanation: {
+      color: colors.textMuted,
+      fontSize: 13,
+      lineHeight: 19,
+      marginTop: 10,
+      marginBottom: 8,
+      backgroundColor: colors.surfaceAlt,
+      padding: 12,
+      borderRadius: 10,
+    },
+  }));
   const { id } = useLocalSearchParams<{ id: string }>();
   const [question, setQuestion] = useState<QuestionDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -128,23 +147,3 @@ export default function ReviewQuestion() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
-  error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
-  headerRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
-  header: { color: colors.textMuted, fontSize: 13, fontWeight: "700" },
-  correctBanner: { color: colors.success, fontSize: 14, fontWeight: "600", marginTop: 12 },
-  wrongBanner: { color: colors.danger, fontSize: 14, fontWeight: "600", marginTop: 12 },
-  explanation: {
-    color: colors.textMuted,
-    fontSize: 13,
-    lineHeight: 19,
-    marginTop: 10,
-    marginBottom: 8,
-    backgroundColor: colors.surfaceAlt,
-    padding: 12,
-    borderRadius: 10,
-  },
-});

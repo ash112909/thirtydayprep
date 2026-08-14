@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
@@ -19,13 +19,89 @@ import { computePaceDelta } from "@/lib/paceBenchmarks";
 import { predictScore } from "@/lib/scorePrediction";
 import { AccuracyBars } from "@/components/AccuracyBars";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 import type { AttemptRecord } from "@/api/progress";
 import type { Category, MasterySnapshot, StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
+
+function barColor(score: number, colors: ColorTokens) {
+  if (score < 40) return { backgroundColor: colors.danger };
+  if (score < 70) return { backgroundColor: colors.warning };
+  return { backgroundColor: colors.success };
+}
 
 export default function Progress() {
   const router = useRouter();
   const { session } = useAuth();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 20 },
+    statsRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
+    statBox: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      paddingVertical: 14,
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    statValue: { color: colors.text, fontSize: 15, fontWeight: "800" },
+    statLabel: { color: colors.textMuted, fontSize: 9, marginTop: 4, textAlign: "center" },
+    mistakeCard: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 14,
+      padding: 16,
+      marginBottom: 20,
+      gap: 12,
+    },
+    mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
+    scoreCard: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+      alignItems: "center",
+      marginBottom: 8,
+    },
+    scoreTotal: { color: colors.primary, fontSize: 36, fontWeight: "800" },
+    scoreCaption: { color: colors.textMuted, fontSize: 11, marginTop: 4, marginBottom: 16, textAlign: "center" },
+    scoreBreakdown: { flexDirection: "row", gap: 24 },
+    scoreSection: { alignItems: "center" },
+    scoreSectionValue: { color: colors.text, fontSize: 16, fontWeight: "700" },
+    scoreSectionLabel: { color: colors.textMuted, fontSize: 11, marginTop: 2 },
+    paceCard: {
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+      marginBottom: 8,
+    },
+    paceText: { color: colors.text, fontSize: 13, lineHeight: 19 },
+    chartCard: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 18,
+      borderWidth: 1,
+      borderColor: colors.border,
+      marginBottom: 28,
+    },
+    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 16, marginTop: 12 },
+    row: { marginBottom: 18 },
+    rowHeader: { flexDirection: "row", justifyContent: "space-between", marginBottom: 6 },
+    rowLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
+    rowValue: { color: colors.textMuted, fontSize: 13 },
+    barTrack: { height: 8, borderRadius: 4, backgroundColor: colors.surface, overflow: "hidden" },
+    barFill: { height: 8, borderRadius: 4 },
+    rowMetaRow: { flexDirection: "row", justifyContent: "space-between", marginTop: 4 },
+    rowMeta: { color: colors.textMuted, fontSize: 11 },
+    deltaUp: { color: colors.success },
+    deltaDown: { color: colors.danger },
+  }));
   const [loading, setLoading] = useState(true);
   const [plan, setPlan] = useState<StudyPlan | null>(null);
   const [days, setDays] = useState<StudyPlanDay[]>([]);
@@ -173,7 +249,7 @@ export default function Progress() {
               <Text style={styles.rowValue}>{avg != null ? `${avg}%` : "—"}</Text>
             </View>
             <View style={styles.barTrack}>
-              <View style={[styles.barFill, { width: `${avg ?? 0}%` }, barColor(avg ?? 0)]} />
+              <View style={[styles.barFill, { width: `${avg ?? 0}%` }, barColor(avg ?? 0, colors)]} />
             </View>
           </View>
         );
@@ -194,7 +270,7 @@ export default function Progress() {
               <Text style={styles.rowValue}>{attempted > 0 ? `${masteryScore}%` : "—"}</Text>
             </View>
             <View style={styles.barTrack}>
-              <View style={[styles.barFill, { width: `${masteryScore}%` }, barColor(masteryScore)]} />
+              <View style={[styles.barFill, { width: `${masteryScore}%` }, barColor(masteryScore, colors)]} />
             </View>
             <View style={styles.rowMetaRow}>
               {attempted > 0 && <Text style={styles.rowMeta}>{attempted} questions attempted</Text>}
@@ -210,79 +286,3 @@ export default function Progress() {
     </ScrollView>
   );
 }
-
-function barColor(score: number) {
-  if (score < 40) return { backgroundColor: colors.danger };
-  if (score < 70) return { backgroundColor: colors.warning };
-  return { backgroundColor: colors.success };
-}
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 20 },
-  statsRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
-  statBox: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    paddingVertical: 14,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  statValue: { color: colors.text, fontSize: 15, fontWeight: "800" },
-  statLabel: { color: colors.textMuted, fontSize: 9, marginTop: 4, textAlign: "center" },
-  mistakeCard: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 14,
-    padding: 16,
-    marginBottom: 20,
-    gap: 12,
-  },
-  mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
-  scoreCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-    alignItems: "center",
-    marginBottom: 8,
-  },
-  scoreTotal: { color: colors.primary, fontSize: 36, fontWeight: "800" },
-  scoreCaption: { color: colors.textMuted, fontSize: 11, marginTop: 4, marginBottom: 16, textAlign: "center" },
-  scoreBreakdown: { flexDirection: "row", gap: 24 },
-  scoreSection: { alignItems: "center" },
-  scoreSectionValue: { color: colors.text, fontSize: 16, fontWeight: "700" },
-  scoreSectionLabel: { color: colors.textMuted, fontSize: 11, marginTop: 2 },
-  paceCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    marginBottom: 8,
-  },
-  paceText: { color: colors.text, fontSize: 13, lineHeight: 19 },
-  chartCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 18,
-    borderWidth: 1,
-    borderColor: colors.border,
-    marginBottom: 28,
-  },
-  sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 16, marginTop: 12 },
-  row: { marginBottom: 18 },
-  rowHeader: { flexDirection: "row", justifyContent: "space-between", marginBottom: 6 },
-  rowLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
-  rowValue: { color: colors.textMuted, fontSize: 13 },
-  barTrack: { height: 8, borderRadius: 4, backgroundColor: colors.surface, overflow: "hidden" },
-  barFill: { height: 8, borderRadius: 4 },
-  rowMetaRow: { flexDirection: "row", justifyContent: "space-between", marginTop: 4 },
-  rowMeta: { color: colors.textMuted, fontSize: 11 },
-  deltaUp: { color: colors.success },
-  deltaDown: { color: colors.danger },
-});

@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import { colors } from "@/theme";
+import { Text, View } from "react-native";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 interface Props {
   passage: string;
@@ -8,6 +8,19 @@ interface Props {
 }
 
 export function PassageText({ passage, underlineStart, underlineEnd }: Props) {
+  const { styles } = useThemedStyles((colors) => ({
+    box: {
+      backgroundColor: colors.surface,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    text: { color: colors.textMuted, fontSize: 15, lineHeight: 22 },
+    underlined: { textDecorationLine: "underline", color: colors.text, fontWeight: "600" },
+  }));
+
   const hasUnderline =
     underlineStart != null &&
     underlineEnd != null &&
@@ -29,16 +42,3 @@ export function PassageText({ passage, underlineStart, underlineEnd }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  box: {
-    backgroundColor: colors.surface,
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  text: { color: colors.textMuted, fontSize: 15, lineHeight: 22 },
-  underlined: { textDecorationLine: "underline", color: colors.text, fontWeight: "600" },
-});

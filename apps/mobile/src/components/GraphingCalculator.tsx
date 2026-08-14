@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Dimensions, Modal, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Dimensions, Modal, Pressable, Text, TextInput, View } from "react-native";
 import { GraphCanvas } from "@/components/GraphCanvas";
 import { evaluateExpression } from "@/lib/expressionEvaluator";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 
 type Mode = "calculate" | "graph";
 type AngleMode = "deg" | "rad";
@@ -16,7 +17,106 @@ const KEY_ROWS: string[][] = [
   ["0", ".", "=", "+", ""],
 ];
 
+function createStyles(colors: ColorTokens) {
+  return {
+    launchButton: {
+      width: 40,
+      height: 40,
+      borderRadius: 20,
+      backgroundColor: colors.surfaceAlt,
+      alignItems: "center",
+      justifyContent: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    launchButtonText: { fontSize: 18 },
+    modalContainer: { flex: 1, backgroundColor: colors.background, padding: 20, paddingTop: 60 },
+    modalHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 20 },
+    modeToggle: { flexDirection: "row", gap: 8 },
+    modeButton: {
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 10,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    modeButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
+    modeButtonText: { color: colors.textMuted, fontSize: 13, fontWeight: "600" },
+    modeButtonTextActive: { color: colors.primary },
+    closeButton: { color: colors.textMuted, fontSize: 22, paddingHorizontal: 8 },
+    display: {
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      marginBottom: 12,
+      borderWidth: 1,
+      borderColor: colors.border,
+      minHeight: 80,
+      justifyContent: "flex-end",
+    },
+    displayInput: { color: colors.text, fontSize: 22, textAlign: "right" },
+    displayResult: { color: colors.primary, fontSize: 16, textAlign: "right", marginTop: 6 },
+    angleToggle: {
+      alignSelf: "flex-end",
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 8,
+      paddingHorizontal: 10,
+      paddingVertical: 4,
+      marginBottom: 12,
+    },
+    angleToggleText: { color: colors.primary, fontSize: 11, fontWeight: "700" },
+    keyRow: { flexDirection: "row", gap: 8, marginBottom: 8 },
+    key: {
+      flex: 1,
+      aspectRatio: 1.4,
+      backgroundColor: colors.surface,
+      borderRadius: 10,
+      alignItems: "center",
+      justifyContent: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    keyEmpty: { backgroundColor: "transparent", borderWidth: 0 },
+    keyEquals: { backgroundColor: colors.primary, borderColor: colors.primary },
+    keyText: { color: colors.text, fontSize: 15, fontWeight: "600" },
+    graphInputRow: { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 16 },
+    graphY: { color: colors.text, fontSize: 16, fontWeight: "700" },
+    graphInput: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 10,
+      padding: 12,
+      color: colors.text,
+      borderWidth: 1,
+      borderColor: colors.border,
+      fontSize: 15,
+    },
+    graphCanvasWrap: {
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      borderWidth: 1,
+      borderColor: colors.border,
+      alignSelf: "center",
+      overflow: "hidden",
+      marginBottom: 12,
+    },
+    graphControls: { flexDirection: "row", gap: 8, flexWrap: "wrap", marginBottom: 8 },
+    graphButton: {
+      paddingVertical: 8,
+      paddingHorizontal: 14,
+      borderRadius: 10,
+      backgroundColor: colors.surfaceAlt,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    graphButtonText: { color: colors.text, fontSize: 12, fontWeight: "600" },
+    graphHint: { color: colors.textMuted, fontSize: 11, textAlign: "center" },
+  } as const;
+}
+
 function CalculatorPad() {
+  const { styles } = useThemedStyles(createStyles);
   const [angleMode, setAngleMode] = useState<AngleMode>("deg");
   const [input, setInput] = useState("");
   const [result, setResult] = useState<string | null>(null);
@@ -77,6 +177,7 @@ function CalculatorPad() {
 }
 
 function GraphPad() {
+  const { styles, colors } = useThemedStyles(createStyles);
   const [angleMode, setAngleMode] = useState<AngleMode>("deg");
   const [expression, setExpression] = useState("x^2");
   const [xRange, setXRange] = useState<[number, number]>([-10, 10]);
@@ -135,6 +236,7 @@ function GraphPad() {
 }
 
 export function GraphingCalculatorButton() {
+  const { styles } = useThemedStyles(createStyles);
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState<Mode>("calculate");
 
@@ -173,99 +275,3 @@ export function GraphingCalculatorButton() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  launchButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: colors.surfaceAlt,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  launchButtonText: { fontSize: 18 },
-  modalContainer: { flex: 1, backgroundColor: colors.background, padding: 20, paddingTop: 60 },
-  modalHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 20 },
-  modeToggle: { flexDirection: "row", gap: 8 },
-  modeButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 10,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  modeButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
-  modeButtonText: { color: colors.textMuted, fontSize: 13, fontWeight: "600" },
-  modeButtonTextActive: { color: colors.primary },
-  closeButton: { color: colors.textMuted, fontSize: 22, paddingHorizontal: 8 },
-  display: {
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: colors.border,
-    minHeight: 80,
-    justifyContent: "flex-end",
-  },
-  displayInput: { color: colors.text, fontSize: 22, textAlign: "right" },
-  displayResult: { color: colors.primary, fontSize: 16, textAlign: "right", marginTop: 6 },
-  angleToggle: {
-    alignSelf: "flex-end",
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 8,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    marginBottom: 12,
-  },
-  angleToggleText: { color: colors.primary, fontSize: 11, fontWeight: "700" },
-  keyRow: { flexDirection: "row", gap: 8, marginBottom: 8 },
-  key: {
-    flex: 1,
-    aspectRatio: 1.4,
-    backgroundColor: colors.surface,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  keyEmpty: { backgroundColor: "transparent", borderWidth: 0 },
-  keyEquals: { backgroundColor: colors.primary, borderColor: colors.primary },
-  keyText: { color: colors.text, fontSize: 15, fontWeight: "600" },
-  graphInputRow: { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 16 },
-  graphY: { color: colors.text, fontSize: 16, fontWeight: "700" },
-  graphInput: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 10,
-    padding: 12,
-    color: colors.text,
-    borderWidth: 1,
-    borderColor: colors.border,
-    fontSize: 15,
-  },
-  graphCanvasWrap: {
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.border,
-    alignSelf: "center",
-    overflow: "hidden",
-    marginBottom: 12,
-  },
-  graphControls: { flexDirection: "row", gap: 8, flexWrap: "wrap", marginBottom: 8 },
-  graphButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    borderRadius: 10,
-    backgroundColor: colors.surfaceAlt,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  graphButtonText: { color: colors.text, fontSize: 12, fontWeight: "600" },
-  graphHint: { color: colors.textMuted, fontSize: 11, textAlign: "center" },
-});

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchDayRecap, fetchPlanDay, fetchSubcategories, type RecapQuestion } from "@/api/progress";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { StudyPet } from "@/components/StudyPet";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { StudyPlanDay, Subcategory } from "@/types/domain";
 
 interface SubcategoryBreakdown {
@@ -18,6 +18,55 @@ interface SubcategoryBreakdown {
 export default function SessionRecap() {
   const router = useRouter();
   const { pet } = usePetCompanion();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+    titleRow: { flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 24 },
+    titleAvatar: {
+      width: 56,
+      height: 56,
+      borderRadius: 28,
+      backgroundColor: colors.surfaceAlt,
+      borderWidth: 2,
+      borderColor: colors.primary,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    subtitle: { fontSize: 14, color: colors.textMuted },
+    statsRow: { flexDirection: "row", gap: 10, marginBottom: 28 },
+    statBox: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      paddingVertical: 16,
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    statValue: { color: colors.text, fontSize: 17, fontWeight: "800" },
+    statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4, textAlign: "center" },
+    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
+    row: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      paddingVertical: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    rowLabel: { color: colors.text, fontSize: 14 },
+    rowValue: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
+    mistakeCard: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 14,
+      padding: 16,
+      marginTop: 24,
+      marginBottom: 8,
+      gap: 12,
+    },
+    mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
+  }));
   const { dayId } = useLocalSearchParams<{ dayId: string }>();
   const [loading, setLoading] = useState(true);
   const [day, setDay] = useState<StudyPlanDay | null>(null);
@@ -122,53 +171,3 @@ export default function SessionRecap() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-  titleRow: { flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 24 },
-  titleAvatar: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    backgroundColor: colors.surfaceAlt,
-    borderWidth: 2,
-    borderColor: colors.primary,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
-  subtitle: { fontSize: 14, color: colors.textMuted },
-  statsRow: { flexDirection: "row", gap: 10, marginBottom: 28 },
-  statBox: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    paddingVertical: 16,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  statValue: { color: colors.text, fontSize: 17, fontWeight: "800" },
-  statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4, textAlign: "center" },
-  sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-  },
-  rowLabel: { color: colors.text, fontSize: 14 },
-  rowValue: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
-  mistakeCard: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 14,
-    padding: 16,
-    marginTop: 24,
-    marginBottom: 8,
-    gap: 12,
-  },
-  mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
-});

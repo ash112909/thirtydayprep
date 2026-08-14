@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Dimensions, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Dimensions, Modal, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
@@ -11,7 +11,8 @@ import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { MAX_APP_WIDTH, colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { MAX_APP_WIDTH } from "@/theme";
 import type { PetSpecies, StudyPet as StudyPetData, StudyPlan, StudyPlanDay, UserSkillStat } from "@/types/domain";
 
 // Pets are fixed-art illustrations now, not recolorable — this just
@@ -34,6 +35,180 @@ export default function BuddyScreen() {
   // app), so every mutation here also pings the shared context to refresh —
   // otherwise the floating badge on other screens would go stale.
   const { refresh: refreshPetCompanion } = usePetCompanion();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    // On phones the app column fills the full (narrow) window, so this is a
+    // no-op; on wide desktop web it keeps the pet's world at a sensible
+    // app-sized column instead of stretching edge-to-edge into a flat strip.
+    screen: { flex: 1, backgroundColor: colors.background, alignItems: "center" },
+    appColumn: { flex: 1 },
+    container: { flex: 1, backgroundColor: colors.background },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 12 },
+    pickerContent: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center", gap: 16 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    subtitle: { fontSize: 13, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
+
+    // Full-bleed pet world — no card, no border, sky bleeds to the screen edges.
+    hero: { width: "100%", overflow: "hidden" },
+    // Each HUD row is independently absolute-positioned (not nested inside a
+    // shared full-fill wrapper) so there's no invisible box-none container
+    // stacked over the whole hero — that pattern was silently swallowing taps
+    // on the toys underneath on web. The button row is also anchored to the
+    // right rather than centered, so its own hit area never reaches over the
+    // toy pile on the left at all, regardless of platform.
+    hudTopRow: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      paddingHorizontal: 20,
+      paddingTop: 52,
+    },
+    hudBottomRow: { position: "absolute", right: 20, bottom: 30, flexDirection: "row", gap: 14 },
+    // These HUD glass pills float over the illustrated pet scene, not the
+    // app's own surfaces, so they intentionally stay a fixed dark/translucent
+    // look regardless of the app's light/dark theme (same reasoning as the
+    // scene's own day/night sky, which also doesn't follow app theme).
+    glassPill: {
+      backgroundColor: "rgba(15,23,42,0.55)",
+      borderRadius: 20,
+      paddingHorizontal: 16,
+      paddingVertical: 10,
+      borderWidth: 1,
+      borderColor: "rgba(255,255,255,0.14)",
+    },
+    heroTitle: { color: "#F8FAFC", fontSize: 17, fontWeight: "800" },
+    heroSubtitle: { color: colors.primary, fontSize: 12, fontWeight: "600", marginTop: 2 },
+    pointsPill: { alignSelf: "flex-start" },
+    pointsText: { color: "#F8FAFC", fontSize: 14, fontWeight: "700" },
+    hudButton: {
+      width: 66,
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: 10,
+      backgroundColor: "rgba(15,23,42,0.55)",
+      borderRadius: 18,
+      borderWidth: 1,
+      borderColor: "rgba(255,255,255,0.14)",
+    },
+    hudButtonDisabled: { opacity: 0.35 },
+    hudButtonEmoji: { fontSize: 20, marginBottom: 2 },
+    hudButtonLabel: { color: "#F8FAFC", fontSize: 11, fontWeight: "700" },
+
+    // The scroll sheet overlaps the hero's bottom edge, so the world feels
+    // continuous with the panel resting on top of it rather than stacked below.
+    sheet: { flex: 1, backgroundColor: colors.background, borderTopLeftRadius: 28, borderTopRightRadius: 28, marginTop: -28 },
+    sheetContent: { padding: 24, paddingTop: 16, paddingBottom: 40, alignItems: "center" },
+    sheetHandle: { width: 36, height: 4, borderRadius: 2, backgroundColor: colors.border, marginBottom: 18 },
+
+    testingPanel: {
+      width: "100%",
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 14,
+      borderWidth: 1,
+      borderColor: colors.warning,
+      borderStyle: "dashed",
+      padding: 12,
+      marginBottom: 16,
+    },
+    testingLabel: { color: colors.warning, fontSize: 11, fontWeight: "700", marginBottom: 8 },
+    testingRow: { flexDirection: "row", gap: 8 },
+    speciesToggle: {
+      flex: 1,
+      alignItems: "center",
+      paddingVertical: 8,
+      borderRadius: 10,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    speciesToggleActive: { borderColor: colors.primary, backgroundColor: colors.background },
+    speciesToggleText: { color: colors.text, fontSize: 12, fontWeight: "600" },
+    testingButton: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: 8,
+      borderRadius: 10,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.warning,
+    },
+    testingButtonText: { color: colors.warning, fontSize: 12, fontWeight: "700" },
+    speciesRow: { flexDirection: "row", gap: 12 },
+    speciesButton: {
+      flex: 1,
+      alignItems: "center",
+      paddingVertical: 16,
+      borderRadius: 14,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    speciesButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
+    speciesEmoji: { fontSize: 28, marginBottom: 4 },
+    speciesLabel: { color: colors.text, fontSize: 13, fontWeight: "600" },
+    actionHint: { color: colors.textMuted, fontSize: 11, marginBottom: 16, textAlign: "center" },
+    statsRow: { flexDirection: "row", gap: 10, width: "100%", marginBottom: 24 },
+    statBox: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      paddingVertical: 14,
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    statValue: { color: colors.text, fontSize: 16, fontWeight: "800" },
+    statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4 },
+    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, alignSelf: "flex-start", marginBottom: 4 },
+    shopHint: { fontSize: 11, color: colors.textMuted, alignSelf: "flex-start", marginBottom: 12 },
+    shopGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, width: "100%", marginBottom: 24 },
+    shopCard: {
+      width: "30%",
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 12,
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    shopIcon: { fontSize: 22, marginBottom: 4 },
+    shopName: { color: colors.text, fontSize: 11, fontWeight: "600", textAlign: "center", marginBottom: 6 },
+    shopOwned: { color: colors.textMuted, fontSize: 10, marginBottom: 6 },
+    shopOwnedTag: { color: colors.success, fontSize: 11, fontWeight: "700" },
+    shopBuyButton: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 10,
+      paddingHorizontal: 8,
+      paddingVertical: 5,
+      borderWidth: 1,
+      borderColor: colors.primary,
+    },
+    shopBuyButtonDisabled: { borderColor: colors.border, opacity: 0.5 },
+    shopBuyText: { color: colors.text, fontSize: 11, fontWeight: "700" },
+    modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.6)", alignItems: "center", justifyContent: "center", padding: 24 },
+    modalCard: { width: "100%", maxWidth: 340, backgroundColor: colors.surface, borderRadius: 18, padding: 20, borderWidth: 1, borderColor: colors.border },
+    modalTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
+    modalInput: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: colors.border,
+      paddingHorizontal: 14,
+      paddingVertical: 10,
+      color: colors.text,
+      fontSize: 15,
+      marginBottom: 16,
+    },
+    modalActions: { flexDirection: "row", justifyContent: "flex-end", gap: 10 },
+    modalCancelButton: { paddingHorizontal: 14, paddingVertical: 10, borderRadius: 10 },
+    modalCancelText: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
+    modalSaveButton: { backgroundColor: colors.primary, paddingHorizontal: 18, paddingVertical: 10, borderRadius: 10 },
+    modalSaveText: { color: colors.onPrimary, fontSize: 14, fontWeight: "700" },
+  }));
   const [loading, setLoading] = useState(true);
   const [pet, setPet] = useState<StudyPetData | null>(null);
   const [inventory, setInventory] = useState<Record<string, number>>({});
@@ -380,174 +555,3 @@ export default function BuddyScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  // On phones the app column fills the full (narrow) window, so this is a
-  // no-op; on wide desktop web it keeps the pet's world at a sensible
-  // app-sized column instead of stretching edge-to-edge into a flat strip.
-  screen: { flex: 1, backgroundColor: colors.background, alignItems: "center" },
-  appColumn: { flex: 1 },
-  container: { flex: 1, backgroundColor: colors.background },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 12 },
-  pickerContent: { padding: 24, paddingTop: 60, paddingBottom: 40, alignItems: "center", gap: 16 },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
-  subtitle: { fontSize: 13, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
-
-  // Full-bleed pet world — no card, no border, sky bleeds to the screen edges.
-  hero: { width: "100%", overflow: "hidden" },
-  // Each HUD row is independently absolute-positioned (not nested inside a
-  // shared full-fill wrapper) so there's no invisible box-none container
-  // stacked over the whole hero — that pattern was silently swallowing taps
-  // on the toys underneath on web. The button row is also anchored to the
-  // right rather than centered, so its own hit area never reaches over the
-  // toy pile on the left at all, regardless of platform.
-  hudTopRow: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    paddingHorizontal: 20,
-    paddingTop: 52,
-  },
-  hudBottomRow: { position: "absolute", right: 20, bottom: 30, flexDirection: "row", gap: 14 },
-  glassPill: {
-    backgroundColor: "rgba(15,23,42,0.55)",
-    borderRadius: 20,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.14)",
-  },
-  heroTitle: { color: "#F8FAFC", fontSize: 17, fontWeight: "800" },
-  heroSubtitle: { color: colors.primary, fontSize: 12, fontWeight: "600", marginTop: 2 },
-  pointsPill: { alignSelf: "flex-start" },
-  pointsText: { color: "#F8FAFC", fontSize: 14, fontWeight: "700" },
-  hudButton: {
-    width: 66,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 10,
-    backgroundColor: "rgba(15,23,42,0.55)",
-    borderRadius: 18,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.14)",
-  },
-  hudButtonDisabled: { opacity: 0.35 },
-  hudButtonEmoji: { fontSize: 20, marginBottom: 2 },
-  hudButtonLabel: { color: "#F8FAFC", fontSize: 11, fontWeight: "700" },
-
-  // The scroll sheet overlaps the hero's bottom edge, so the world feels
-  // continuous with the panel resting on top of it rather than stacked below.
-  sheet: { flex: 1, backgroundColor: colors.background, borderTopLeftRadius: 28, borderTopRightRadius: 28, marginTop: -28 },
-  sheetContent: { padding: 24, paddingTop: 16, paddingBottom: 40, alignItems: "center" },
-  sheetHandle: { width: 36, height: 4, borderRadius: 2, backgroundColor: colors.border, marginBottom: 18 },
-
-  testingPanel: {
-    width: "100%",
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: colors.warning,
-    borderStyle: "dashed",
-    padding: 12,
-    marginBottom: 16,
-  },
-  testingLabel: { color: colors.warning, fontSize: 11, fontWeight: "700", marginBottom: 8 },
-  testingRow: { flexDirection: "row", gap: 8 },
-  speciesToggle: {
-    flex: 1,
-    alignItems: "center",
-    paddingVertical: 8,
-    borderRadius: 10,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  speciesToggleActive: { borderColor: colors.primary, backgroundColor: colors.background },
-  speciesToggleText: { color: colors.text, fontSize: 12, fontWeight: "600" },
-  testingButton: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 8,
-    borderRadius: 10,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.warning,
-  },
-  testingButtonText: { color: colors.warning, fontSize: 12, fontWeight: "700" },
-  speciesRow: { flexDirection: "row", gap: 12 },
-  speciesButton: {
-    flex: 1,
-    alignItems: "center",
-    paddingVertical: 16,
-    borderRadius: 14,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  speciesButtonActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
-  speciesEmoji: { fontSize: 28, marginBottom: 4 },
-  speciesLabel: { color: colors.text, fontSize: 13, fontWeight: "600" },
-  actionHint: { color: colors.textMuted, fontSize: 11, marginBottom: 16, textAlign: "center" },
-  statsRow: { flexDirection: "row", gap: 10, width: "100%", marginBottom: 24 },
-  statBox: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    paddingVertical: 14,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  statValue: { color: colors.text, fontSize: 16, fontWeight: "800" },
-  statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4 },
-  sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, alignSelf: "flex-start", marginBottom: 4 },
-  shopHint: { fontSize: 11, color: colors.textMuted, alignSelf: "flex-start", marginBottom: 12 },
-  shopGrid: { flexDirection: "row", flexWrap: "wrap", gap: 10, width: "100%", marginBottom: 24 },
-  shopCard: {
-    width: "30%",
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 12,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  shopIcon: { fontSize: 22, marginBottom: 4 },
-  shopName: { color: colors.text, fontSize: 11, fontWeight: "600", textAlign: "center", marginBottom: 6 },
-  shopOwned: { color: colors.textMuted, fontSize: 10, marginBottom: 6 },
-  shopOwnedTag: { color: colors.success, fontSize: 11, fontWeight: "700" },
-  shopBuyButton: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 10,
-    paddingHorizontal: 8,
-    paddingVertical: 5,
-    borderWidth: 1,
-    borderColor: colors.primary,
-  },
-  shopBuyButtonDisabled: { borderColor: colors.border, opacity: 0.5 },
-  shopBuyText: { color: colors.text, fontSize: 11, fontWeight: "700" },
-  modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.6)", alignItems: "center", justifyContent: "center", padding: 24 },
-  modalCard: { width: "100%", maxWidth: 340, backgroundColor: colors.surface, borderRadius: 18, padding: 20, borderWidth: 1, borderColor: colors.border },
-  modalTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
-  modalInput: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: colors.border,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    color: colors.text,
-    fontSize: 15,
-    marginBottom: 16,
-  },
-  modalActions: { flexDirection: "row", justifyContent: "flex-end", gap: 10 },
-  modalCancelButton: { paddingHorizontal: 14, paddingVertical: 10, borderRadius: 10 },
-  modalCancelText: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
-  modalSaveButton: { backgroundColor: colors.primary, paddingHorizontal: 18, paddingVertical: 10, borderRadius: 10 },
-  modalSaveText: { color: colors.background, fontSize: 14, fontWeight: "700" },
-});

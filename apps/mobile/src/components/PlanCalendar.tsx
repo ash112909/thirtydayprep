@@ -1,5 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { colors } from "@/theme";
+import { Pressable, Text, View } from "react-native";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 import type { StudyPlanDay } from "@/types/domain";
 
 interface Props {
@@ -22,7 +23,7 @@ function monthLabel(key: string): string {
   });
 }
 
-function statusColor(status: StudyPlanDay["status"]): string | null {
+function statusColor(status: StudyPlanDay["status"], colors: ColorTokens): string | null {
   if (status === "completed") return colors.success;
   if (status === "available") return colors.primary;
   if (status === "skipped") return colors.danger;
@@ -30,6 +31,30 @@ function statusColor(status: StudyPlanDay["status"]): string | null {
 }
 
 export function PlanCalendar({ days, onDayPress }: Props) {
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { gap: 24 },
+    month: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    monthLabel: { color: colors.text, fontSize: 15, fontWeight: "700", marginBottom: 12 },
+    weekdayRow: { flexDirection: "row", marginBottom: 4 },
+    weekdayLabel: { flex: 1, textAlign: "center", color: colors.textMuted, fontSize: 10, fontWeight: "700" },
+    grid: { flexDirection: "row", flexWrap: "wrap" },
+    cell: {
+      width: `${100 / 7}%`,
+      aspectRatio: 1,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    cellText: { color: colors.text, fontSize: 13 },
+    cellTextMuted: { color: colors.textMuted, opacity: 0.4 },
+    dot: { width: 5, height: 5, borderRadius: 2.5, marginTop: 2 },
+  }));
+
   const byMonth = new Map<string, StudyPlanDay[]>();
   for (const day of days) {
     const key = monthKey(day.date);
@@ -68,7 +93,7 @@ export function PlanCalendar({ days, onDayPress }: Props) {
             <View style={styles.grid}>
               {cells.map((cell, idx) => {
                 if (!cell.dateStr) return <View key={idx} style={styles.cell} />;
-                const dot = cell.day ? statusColor(cell.day.status) : null;
+                const dot = cell.day ? statusColor(cell.day.status, colors) : null;
                 const cellDay = Number(cell.dateStr.slice(-2));
                 return (
                   <Pressable
@@ -89,27 +114,3 @@ export function PlanCalendar({ days, onDayPress }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { gap: 24 },
-  month: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  monthLabel: { color: colors.text, fontSize: 15, fontWeight: "700", marginBottom: 12 },
-  weekdayRow: { flexDirection: "row", marginBottom: 4 },
-  weekdayLabel: { flex: 1, textAlign: "center", color: colors.textMuted, fontSize: 10, fontWeight: "700" },
-  grid: { flexDirection: "row", flexWrap: "wrap" },
-  cell: {
-    width: `${100 / 7}%`,
-    aspectRatio: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  cellText: { color: colors.text, fontSize: 13 },
-  cellTextMuted: { color: colors.textMuted, opacity: 0.4 },
-  dot: { width: 5, height: 5, borderRadius: 2.5, marginTop: 2 },
-});

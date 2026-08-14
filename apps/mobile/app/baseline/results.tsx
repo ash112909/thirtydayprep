@@ -1,13 +1,34 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchSubcategories } from "@/api/progress";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 import type { MasterySnapshot, Subcategory } from "@/types/domain";
+
+function barColor(score: number, colors: ColorTokens) {
+  if (score < 40) return { backgroundColor: colors.danger };
+  if (score < 70) return { backgroundColor: colors.warning };
+  return { backgroundColor: colors.success };
+}
 
 export default function BaselineResults() {
   const router = useRouter();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 8 },
+    subtitle: { fontSize: 14, color: colors.textMuted, lineHeight: 20, marginBottom: 24 },
+    overall: { color: colors.primary, fontWeight: "700" },
+    list: { flex: 1, marginBottom: 16 },
+    row: { marginBottom: 16 },
+    rowHeader: { flexDirection: "row", justifyContent: "space-between", marginBottom: 6 },
+    rowLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
+    rowValue: { color: colors.textMuted, fontSize: 13 },
+    barTrack: { height: 8, borderRadius: 4, backgroundColor: colors.surface, overflow: "hidden" },
+    barFill: { height: 8, borderRadius: 4 },
+    buttons: { gap: 12 },
+  }));
   const { mastery: masteryParam, totalDays } = useLocalSearchParams<{ mastery: string; totalDays: string }>();
   const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
   const [loading, setLoading] = useState(true);
@@ -46,7 +67,7 @@ export default function BaselineResults() {
                   <Text style={styles.rowValue}>{score}%</Text>
                 </View>
                 <View style={styles.barTrack}>
-                  <View style={[styles.barFill, { width: `${score}%` }, barColor(score)]} />
+                  <View style={[styles.barFill, { width: `${score}%` }, barColor(score, colors)]} />
                 </View>
               </View>
             );
@@ -61,24 +82,3 @@ export default function BaselineResults() {
     </View>
   );
 }
-
-function barColor(score: number) {
-  if (score < 40) return { backgroundColor: colors.danger };
-  if (score < 70) return { backgroundColor: colors.warning };
-  return { backgroundColor: colors.success };
-}
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 8 },
-  subtitle: { fontSize: 14, color: colors.textMuted, lineHeight: 20, marginBottom: 24 },
-  overall: { color: colors.primary, fontWeight: "700" },
-  list: { flex: 1, marginBottom: 16 },
-  row: { marginBottom: 16 },
-  rowHeader: { flexDirection: "row", justifyContent: "space-between", marginBottom: 6 },
-  rowLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
-  rowValue: { color: colors.textMuted, fontSize: 13 },
-  barTrack: { height: 8, borderRadius: 4, backgroundColor: colors.surface, overflow: "hidden" },
-  barFill: { height: 8, borderRadius: 4 },
-  buttons: { gap: 12 },
-});

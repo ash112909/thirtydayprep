@@ -1,12 +1,13 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, FlatList, Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchCategories, fetchPlanDayResults, fetchPlanDays, fetchSubcategories } from "@/api/progress";
 import { DayTile } from "@/components/DayTile";
 import { PlanCalendar } from "@/components/PlanCalendar";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
+import type { ColorTokens } from "@/theme";
 import type { DayResult } from "@/api/progress";
 import type { Category, StudyPlan, StudyPlanDay, Subcategory } from "@/types/domain";
 
@@ -20,9 +21,52 @@ function formatDate(dateStr: string): string {
   });
 }
 
+function segmentColor(categorySlug: string, colors: ColorTokens) {
+  return categorySlug === "math" ? { backgroundColor: colors.primary } : { backgroundColor: colors.success };
+}
+
 export default function Plan() {
   const router = useRouter();
   const { session } = useAuth();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
+    emptyText: { color: colors.textMuted, fontSize: 14, textAlign: "center" },
+    header: { paddingHorizontal: 24, paddingTop: 60, paddingBottom: 12 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
+    subtitle: { fontSize: 13, color: colors.textMuted },
+    hint: { fontSize: 12, color: colors.textMuted, marginTop: 8 },
+    rollupCard: {
+      marginHorizontal: 20,
+      marginBottom: 16,
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      padding: 16,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    rollupTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 10 },
+    rollupBar: { flexDirection: "row", height: 8, borderRadius: 4, overflow: "hidden", marginBottom: 10 },
+    rollupSegment: { height: 8 },
+    rollupLegend: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
+    rollupLegendText: { color: colors.textMuted, fontSize: 11 },
+    toggleRow: { flexDirection: "row", gap: 8, marginHorizontal: 20, marginBottom: 16 },
+    toggle: {
+      flex: 1,
+      paddingVertical: 8,
+      borderRadius: 10,
+      alignItems: "center",
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    toggleActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
+    toggleText: { color: colors.textMuted, fontSize: 12, fontWeight: "600" },
+    toggleTextActive: { color: colors.primary },
+    grid: { paddingHorizontal: 16, paddingBottom: 24 },
+    calendarContent: { paddingBottom: 24 },
+    cell: { flex: 1, padding: 8 },
+  }));
   const [loading, setLoading] = useState(true);
   const [plan, setPlan] = useState<StudyPlan | null>(null);
   const [days, setDays] = useState<StudyPlanDay[]>([]);
@@ -111,7 +155,7 @@ export default function Plan() {
             {categories.map((cat) => {
               const count = categoryTotals.get(cat.id) ?? 0;
               const pct = totalQuestions ? (count / totalQuestions) * 100 : 0;
-              return <View key={cat.id} style={[styles.rollupSegment, { flex: pct || 0.001 }, segmentColor(cat.slug)]} />;
+              return <View key={cat.id} style={[styles.rollupSegment, { flex: pct || 0.001 }, segmentColor(cat.slug, colors)]} />;
             })}
           </View>
           <View style={styles.rollupLegend}>
@@ -172,47 +216,3 @@ export default function Plan() {
     </View>
   );
 }
-
-function segmentColor(categorySlug: string) {
-  return categorySlug === "math" ? { backgroundColor: colors.primary } : { backgroundColor: colors.success };
-}
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
-  emptyText: { color: colors.textMuted, fontSize: 14, textAlign: "center" },
-  header: { paddingHorizontal: 24, paddingTop: 60, paddingBottom: 12 },
-  title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
-  subtitle: { fontSize: 13, color: colors.textMuted },
-  hint: { fontSize: 12, color: colors.textMuted, marginTop: 8 },
-  rollupCard: {
-    marginHorizontal: 20,
-    marginBottom: 16,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  rollupTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 10 },
-  rollupBar: { flexDirection: "row", height: 8, borderRadius: 4, overflow: "hidden", marginBottom: 10 },
-  rollupSegment: { height: 8 },
-  rollupLegend: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
-  rollupLegendText: { color: colors.textMuted, fontSize: 11 },
-  toggleRow: { flexDirection: "row", gap: 8, marginHorizontal: 20, marginBottom: 16 },
-  toggle: {
-    flex: 1,
-    paddingVertical: 8,
-    borderRadius: 10,
-    alignItems: "center",
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  toggleActive: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
-  toggleText: { color: colors.textMuted, fontSize: 12, fontWeight: "600" },
-  toggleTextActive: { color: colors.primary },
-  grid: { paddingHorizontal: 16, paddingBottom: 24 },
-  calendarContent: { paddingBottom: 24 },
-  cell: { flex: 1, padding: 8 },
-});

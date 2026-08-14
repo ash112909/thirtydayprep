@@ -1,10 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 export default function BaselineIntro() {
   const router = useRouter();
+  const { styles } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
+    title: { fontSize: 28, fontWeight: "800", color: colors.text, marginBottom: 12 },
+    body: { fontSize: 15, color: colors.textMuted, lineHeight: 22, marginBottom: 32 },
+    stats: { flexDirection: "row", justifyContent: "space-between", marginBottom: 40 },
+  }));
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Baseline check-in</Text>
@@ -23,6 +30,11 @@ export default function BaselineIntro() {
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
+  const { styles } = useThemedStyles((colors) => ({
+    stat: { alignItems: "center" },
+    statValue: { fontSize: 22, fontWeight: "800", color: colors.primary },
+    statLabel: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
+  }));
   return (
     <View style={styles.stat}>
       <Text style={styles.statValue}>{value}</Text>
@@ -30,13 +42,3 @@ function Stat({ label, value }: { label: string; value: string }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
-  title: { fontSize: 28, fontWeight: "800", color: colors.text, marginBottom: 12 },
-  body: { fontSize: 15, color: colors.textMuted, lineHeight: 22, marginBottom: 32 },
-  stats: { flexDirection: "row", justifyContent: "space-between", marginBottom: 40 },
-  stat: { alignItems: "center" },
-  statValue: { fontSize: 22, fontWeight: "800", color: colors.primary },
-  statLabel: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
-});

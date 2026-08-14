@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { getTodaySession, submitAttempt } from "@/api/studyFunctions";
 import { fetchCategories } from "@/api/progress";
@@ -12,7 +12,7 @@ import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { pickSessionCompleteLine, pickTutorLine } from "@/lib/tutorVoice";
 import { TutorBubble } from "@/components/TutorBubble";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { SessionQuestion } from "@/types/domain";
 
 interface Revealed {
@@ -25,6 +25,29 @@ interface Revealed {
 
 export default function Session() {
   const router = useRouter();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
+    error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
+    doneAvatar: {
+      width: 96,
+      height: 96,
+      borderRadius: 48,
+      backgroundColor: colors.surfaceAlt,
+      borderWidth: 2,
+      borderColor: colors.primary,
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: 4,
+    },
+    doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text, textAlign: "center" },
+    doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
+    progressRow: { marginBottom: 20 },
+    progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+    progressText: { color: colors.textMuted, fontSize: 13 },
+    progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
+    progressBarFill: { height: 6, backgroundColor: colors.primary },
+  }));
   const { pet, celebrate, refresh: refreshPetCompanion } = usePetCompanion();
   const [questions, setQuestions] = useState<SessionQuestion[]>([]);
   const [dayNumber, setDayNumber] = useState<number | null>(null);
@@ -201,27 +224,3 @@ export default function Session() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
-  error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
-  doneAvatar: {
-    width: 96,
-    height: 96,
-    borderRadius: 48,
-    backgroundColor: colors.surfaceAlt,
-    borderWidth: 2,
-    borderColor: colors.primary,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 4,
-  },
-  doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text, textAlign: "center" },
-  doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
-  progressRow: { marginBottom: 20 },
-  progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
-  progressText: { color: colors.textMuted, fontSize: 13 },
-  progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
-  progressBarFill: { height: 6, backgroundColor: colors.primary },
-});

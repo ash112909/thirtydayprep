@@ -2,7 +2,7 @@ import { Pressable } from "react-native";
 import { useRouter, useSegments } from "expo-router";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet } from "@/components/StudyPet";
-import { colors } from "@/theme";
+import { useTheme } from "@/hooks/useTheme";
 
 const BADGE_SIZE = 76;
 const AVATAR_SIZE = 56;
@@ -13,6 +13,7 @@ const AVATAR_SIZE = 56;
 export function FloatingPetBadge() {
   const router = useRouter();
   const segments = useSegments();
+  const { colors } = useTheme();
   const { pet, energy, growthStage, reactionAction, clearReaction } = usePetCompanion();
 
   const onBuddyTab = segments[segments.length - 1] === "buddy";

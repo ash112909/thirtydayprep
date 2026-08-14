@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { generateBaseline, submitBaseline } from "@/api/studyFunctions";
 import { fetchCategories } from "@/api/progress";
@@ -9,7 +9,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { useAuth } from "@/hooks/useAuth";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { BaselineQuestion } from "@/types/domain";
 
 interface Answer {
@@ -21,6 +21,16 @@ interface Answer {
 export default function BaselineTest() {
   const router = useRouter();
   const { refreshProfile } = useAuth();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
+    center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
+    error: { color: colors.danger, padding: 24, textAlign: "center" },
+    progressRow: { marginBottom: 20 },
+    progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+    progressText: { color: colors.textMuted, fontSize: 13 },
+    progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
+    progressBarFill: { height: 6, backgroundColor: colors.primary },
+  }));
   const [baselineTestId, setBaselineTestId] = useState<string | null>(null);
   const [questions, setQuestions] = useState<BaselineQuestion[]>([]);
   const [index, setIndex] = useState(0);
@@ -140,14 +150,3 @@ export default function BaselineTest() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
-  center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-  error: { color: colors.danger, padding: 24, textAlign: "center" },
-  progressRow: { marginBottom: 20 },
-  progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
-  progressText: { color: colors.textMuted, fontSize: 13 },
-  progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
-  progressBarFill: { height: 6, backgroundColor: colors.primary },
-});

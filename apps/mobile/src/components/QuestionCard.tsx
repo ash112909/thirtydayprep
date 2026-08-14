@@ -1,6 +1,6 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { PassageText } from "@/components/PassageText";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { Choice } from "@/types/domain";
 
 interface Props {
@@ -26,6 +26,28 @@ export function QuestionCard({
   onSelect,
   disabled,
 }: Props) {
+  const { styles } = useThemedStyles((colors) => ({
+    container: { flex: 1 },
+    content: { paddingBottom: 24 },
+    stem: { color: colors.text, fontSize: 17, fontWeight: "600", marginBottom: 20, lineHeight: 24 },
+    choices: { gap: 12 },
+    choice: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      gap: 12,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 12,
+      padding: 14,
+    },
+    choiceSelected: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
+    choiceCorrect: { borderColor: colors.success, backgroundColor: "#14532D33" },
+    choiceWrong: { borderColor: colors.danger, backgroundColor: "#7F1D1D33" },
+    choiceKey: { color: colors.textMuted, fontWeight: "700", width: 20 },
+    choiceText: { color: colors.text, flex: 1, fontSize: 15, lineHeight: 21 },
+  }));
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       {passage && <PassageText passage={passage} underlineStart={underlineStart} underlineEnd={underlineEnd} />}
@@ -58,25 +80,3 @@ export function QuestionCard({
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  content: { paddingBottom: 24 },
-  stem: { color: colors.text, fontSize: 17, fontWeight: "600", marginBottom: 20, lineHeight: 24 },
-  choices: { gap: 12 },
-  choice: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 12,
-    backgroundColor: colors.surface,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: 12,
-    padding: 14,
-  },
-  choiceSelected: { borderColor: colors.primary, backgroundColor: colors.surfaceAlt },
-  choiceCorrect: { borderColor: colors.success, backgroundColor: "#14532D33" },
-  choiceWrong: { borderColor: colors.danger, backgroundColor: "#7F1D1D33" },
-  choiceKey: { color: colors.textMuted, fontWeight: "700", width: 20 },
-  choiceText: { color: colors.text, flex: 1, fontSize: 15, lineHeight: 21 },
-});

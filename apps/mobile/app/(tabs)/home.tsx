@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, RefreshControl, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, RefreshControl, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { getTodaySession } from "@/api/studyFunctions";
@@ -8,7 +8,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { buildDayNarrative } from "@/lib/planNarrative";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { PrimaryButton } from "@/components/PrimaryButton";
-import { colors } from "@/theme";
+import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type {
   DayTarget,
   MasterySnapshot,
@@ -38,6 +38,38 @@ function sessionTargets(session: TodaySessionResponse): DayTarget[] {
 
 export default function Home() {
   const router = useRouter();
+  const { styles, colors } = useThemedStyles((colors) => ({
+    container: { flex: 1, backgroundColor: colors.background },
+    content: { padding: 24, paddingTop: 60 },
+    greeting: { fontSize: 26, fontWeight: "800", color: colors.text },
+    countdown: { fontSize: 14, color: colors.textMuted, marginTop: 6, marginBottom: 24 },
+    statsRow: { flexDirection: "row", gap: 10, marginBottom: 20 },
+    statBox: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 14,
+      paddingVertical: 14,
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    statValue: { color: colors.text, fontSize: 16, fontWeight: "800" },
+    statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4 },
+    card: {
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      padding: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    cardTitle: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 6 },
+    narrativeText: { color: colors.text, fontSize: 14, lineHeight: 20, marginBottom: 6 },
+    cardBody: { fontSize: 14, color: colors.textMuted, marginBottom: 16, lineHeight: 20 },
+    progressText: { fontSize: 12, color: colors.textMuted, marginBottom: 6 },
+    progressTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surfaceAlt, overflow: "hidden", marginBottom: 20 },
+    progressFill: { height: 6, backgroundColor: colors.primary },
+    error: { color: colors.danger, marginTop: 20 },
+  }));
   const { session: auth, profile } = useAuth();
   const [session, setSession] = useState<TodaySessionResponse | null>(null);
   const [plan, setPlan] = useState<StudyPlan | null>(null);
@@ -181,36 +213,3 @@ export default function Home() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background },
-  content: { padding: 24, paddingTop: 60 },
-  greeting: { fontSize: 26, fontWeight: "800", color: colors.text },
-  countdown: { fontSize: 14, color: colors.textMuted, marginTop: 6, marginBottom: 24 },
-  statsRow: { flexDirection: "row", gap: 10, marginBottom: 20 },
-  statBox: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 14,
-    paddingVertical: 14,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  statValue: { color: colors.text, fontSize: 16, fontWeight: "800" },
-  statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4 },
-  card: {
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  cardTitle: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 6 },
-  narrativeText: { color: colors.text, fontSize: 14, lineHeight: 20, marginBottom: 6 },
-  cardBody: { fontSize: 14, color: colors.textMuted, marginBottom: 16, lineHeight: 20 },
-  progressText: { fontSize: 12, color: colors.textMuted, marginBottom: 6 },
-  progressTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surfaceAlt, overflow: "hidden", marginBottom: 20 },
-  progressFill: { height: 6, backgroundColor: colors.primary },
-  error: { color: colors.danger, marginTop: 20 },
-});
