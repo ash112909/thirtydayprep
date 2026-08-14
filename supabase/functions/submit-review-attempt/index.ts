@@ -1,11 +1,11 @@
 // POST /submit-review-attempt
-// body: { question_id, selected_choice, time_spent_seconds }
+// body: { question_id, selected_choice, time_spent_seconds, source? }
 //
-// Grades a Mistake Bank retry: a question the student already answered
-// wrong at some point, being re-attempted outside of any study plan day.
-// Records the attempt (source: "review") and updates rolling mastery just
-// like a normal day's answer, so working through missed questions actually
-// feeds back into the adaptive plan.
+// Grades a question answered outside of any study plan day: either a
+// Mistake Bank retry (source: "review", the default) or an on-demand
+// practice-by-topic attempt (source: "practice"). Records the attempt and
+// updates rolling mastery just like a normal day's answer, so both feed
+// back into the adaptive plan the same way.
 
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
@@ -28,10 +28,11 @@ serve(async (req) => {
     );
 
     const body = await req.json();
-    const { question_id, selected_choice, time_spent_seconds } = body;
+    const { question_id, selected_choice, time_spent_seconds, source } = body;
     if (!question_id || !selected_choice) {
       return errorResponse("Missing question_id or selected_choice");
     }
+    const attemptSource = source === "practice" ? "practice" : "review";
 
     const { data: question, error: qErr } = await admin
       .from("questions")
@@ -45,7 +46,7 @@ serve(async (req) => {
     const { error: attemptErr } = await supabase.from("question_attempts").insert({
       user_id: userId,
       question_id,
-      source: "review",
+      source: attemptSource,
       selected_choice,
       is_correct: isCorrect,
       time_spent_seconds,

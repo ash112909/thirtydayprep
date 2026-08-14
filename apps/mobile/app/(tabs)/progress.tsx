@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, Text, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
@@ -101,6 +101,7 @@ export default function Progress() {
     rowMeta: { color: colors.textMuted, fontSize: 11 },
     deltaUp: { color: colors.success },
     deltaDown: { color: colors.danger },
+    practiceHint: { color: colors.primary, fontSize: 11, fontWeight: "700", marginTop: 6 },
   }));
   const [loading, setLoading] = useState(true);
   const [plan, setPlan] = useState<StudyPlan | null>(null);
@@ -255,7 +256,7 @@ export default function Progress() {
         );
       })}
 
-      <Text style={styles.sectionTitle}>Mastery by topic</Text>
+      <Text style={styles.sectionTitle}>Practice by topic</Text>
       {subcategories.map((sc) => {
         const stat = statByCategoryId.get(sc.id);
         const masteryScore = Math.round(stat?.mastery_score ?? 0);
@@ -264,7 +265,11 @@ export default function Progress() {
         const delta =
           hasBaselineComparison && baseline != null && attempted > 0 ? Math.round(masteryScore - baseline) : null;
         return (
-          <View key={sc.id} style={styles.row}>
+          <Pressable
+            key={sc.id}
+            style={styles.row}
+            onPress={() => router.push({ pathname: "/practice/[subcategoryId]", params: { subcategoryId: sc.id, name: sc.name } })}
+          >
             <View style={styles.rowHeader}>
               <Text style={styles.rowLabel}>{sc.name}</Text>
               <Text style={styles.rowValue}>{attempted > 0 ? `${masteryScore}%` : "—"}</Text>
@@ -280,7 +285,8 @@ export default function Progress() {
                 </Text>
               )}
             </View>
-          </View>
+            <Text style={styles.practiceHint}>Practice this topic →</Text>
+          </Pressable>
         );
       })}
     </ScrollView>

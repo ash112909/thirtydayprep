@@ -47,6 +47,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="session-recap/[dayId]" options={{ href: null }} />
       <Tabs.Screen name="plan-day/[id]" options={{ href: null }} />
       <Tabs.Screen name="mistakes" options={{ href: null }} />
+      <Tabs.Screen name="practice" options={{ href: null }} />
     </Tabs>
   );
 }

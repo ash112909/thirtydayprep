@@ -22,7 +22,7 @@ export interface MistakeQuestion extends QuestionDetail {
   last_attempted_at: string;
 }
 
-const QUESTION_FIELDS =
+export const QUESTION_FIELDS =
   "id, category_id, subcategory_id, difficulty, question_type, stem, passage, passage_underline_start, passage_underline_end, choices, correct_choice, correct_value, explanation";
 
 // A question belongs in the Mistake Bank if the student's most recent

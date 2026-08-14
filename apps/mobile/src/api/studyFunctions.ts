@@ -69,11 +69,17 @@ export function submitAttempt(
   });
 }
 
-export function submitReviewAttempt(questionId: string, selectedChoice: string, timeSpentSeconds: number) {
+export function submitReviewAttempt(
+  questionId: string,
+  selectedChoice: string,
+  timeSpentSeconds: number,
+  source: "review" | "practice" = "review",
+) {
   return invoke<SubmitAttemptResponse>("submit-review-attempt", {
     question_id: questionId,
     selected_choice: selectedChoice,
     time_spent_seconds: timeSpentSeconds,
+    source,
   });
 }
 
