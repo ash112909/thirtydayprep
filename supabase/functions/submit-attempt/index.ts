@@ -13,7 +13,7 @@ import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
 import { computeDayTargets } from "../_shared/planEngine.ts";
 import { recordMasteryUpdate } from "../_shared/mastery.ts";
-import { awardDayCompletionPoints } from "../_shared/petPoints.ts";
+import { awardCorrectAnswerPoints, awardDayCompletionPoints } from "../_shared/petPoints.ts";
 import { isCorrectAnswer, type MasterySnapshot } from "../_shared/types.ts";
 
 serve(async (req) => {
@@ -89,6 +89,11 @@ serve(async (req) => {
       time_spent_seconds,
     );
 
+    // --- Award study-buddy points for the correct answer itself, on top of
+    // (not instead of) the day-completion bonus below, so the reward loop is
+    // immediate rather than only paying out once a day.
+    let pointsAwarded = isCorrect ? await awardCorrectAnswerPoints(supabase, userId) : 0;
+
     // --- Check if the day is now complete --------------------------------
     const { count: unanswered } = await supabase
       .from("study_plan_day_questions")
@@ -112,7 +117,7 @@ serve(async (req) => {
         .eq("status", "locked");
 
       await rebalanceFuturePlan(admin, supabase, userId, day.study_plan_id);
-      await awardDayCompletionPoints(supabase, userId);
+      pointsAwarded += await awardDayCompletionPoints(supabase, userId);
     }
 
     return jsonResponse({
@@ -121,6 +126,7 @@ serve(async (req) => {
       explanation: question.explanation,
       day_completed: dayCompleted,
       study_plan_day_id: dq.study_plan_day_id,
+      points_awarded: pointsAwarded,
     });
   } catch (err) {
     console.error(err);

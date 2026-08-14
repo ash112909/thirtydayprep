@@ -89,6 +89,7 @@ export interface SubmitAttemptResponse {
   explanation: string | null;
   day_completed: boolean;
   study_plan_day_id?: string;
+  points_awarded?: number;
 }
 
 export interface UserSkillStat {
@@ -135,4 +136,5 @@ export interface StudyPet {
   color: string;
   equipped_accessories: string[];
   points: number;
+  name: string | null;
 }

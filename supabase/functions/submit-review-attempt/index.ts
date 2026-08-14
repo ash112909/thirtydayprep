@@ -12,6 +12,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 import { corsHeaders, errorResponse, jsonResponse } from "../_shared/cors.ts";
 import { userClient, getUserIdOrThrow } from "../_shared/client.ts";
 import { recordMasteryUpdate } from "../_shared/mastery.ts";
+import { awardCorrectAnswerPoints } from "../_shared/petPoints.ts";
 import { isCorrectAnswer } from "../_shared/types.ts";
 
 serve(async (req) => {
@@ -60,11 +61,14 @@ serve(async (req) => {
       time_spent_seconds,
     );
 
+    const pointsAwarded = isCorrect ? await awardCorrectAnswerPoints(supabase, userId) : 0;
+
     return jsonResponse({
       is_correct: isCorrect,
       correct_answer: question.question_type === "grid_in" ? question.correct_value : question.correct_choice,
       explanation: question.explanation,
       day_completed: false,
+      points_awarded: pointsAwarded,
     });
   } catch (err) {
     console.error(err);

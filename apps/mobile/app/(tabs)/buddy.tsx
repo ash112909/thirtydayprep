@@ -1,9 +1,9 @@
 import { useCallback, useState } from "react";
-import { ActivityIndicator, Dimensions, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Dimensions, Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
-import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetSpecies } from "@/api/pet";
+import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetName, updatePetSpecies } from "@/api/pet";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computeGrowthStage, computePetEnergy } from "@/lib/petState";
 import { SHOP_ITEMS } from "@/lib/petShop";
@@ -45,6 +45,8 @@ export default function BuddyScreen() {
 
   const [pickerSpecies, setPickerSpecies] = useState<PetSpecies>("cat");
   const [creating, setCreating] = useState(false);
+  const [nameModalVisible, setNameModalVisible] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
 
   useFocusEffect(
     useCallback(() => {
@@ -88,6 +90,20 @@ export default function BuddyScreen() {
     if (!session || !pet || pet.species === species) return;
     setPet({ ...pet, species });
     await updatePetSpecies(session.user.id, species);
+    refreshPetCompanion();
+  }
+
+  function openNameModal() {
+    setNameDraft(pet?.name ?? "");
+    setNameModalVisible(true);
+  }
+
+  async function handleSaveName() {
+    if (!session || !pet) return;
+    const trimmed = nameDraft.trim().slice(0, 20);
+    setPet({ ...pet, name: trimmed || null });
+    setNameModalVisible(false);
+    await updatePetName(session.user.id, trimmed);
     refreshPetCompanion();
   }
 
@@ -208,10 +224,10 @@ export default function BuddyScreen() {
         </PetScene>
 
         <View style={styles.hudTopRow} pointerEvents="box-none">
-          <View style={styles.glassPill}>
-            <Text style={styles.heroTitle}>Your study buddy</Text>
+          <Pressable style={styles.glassPill} onPress={openNameModal}>
+            <Text style={styles.heroTitle}>{pet.name || "Your study buddy"} ✏️</Text>
             <Text style={styles.heroSubtitle}>{energyLabel}</Text>
-          </View>
+          </Pressable>
           <View style={[styles.glassPill, styles.pointsPill]}>
             <Text style={styles.pointsText}>⭐ {pet.points}</Text>
           </View>
@@ -287,7 +303,7 @@ export default function BuddyScreen() {
         </View>
 
         <Text style={styles.sectionTitle}>Shop</Text>
-        <Text style={styles.shopHint}>Earn 15 points every day you complete.</Text>
+        <Text style={styles.shopHint}>Earn 2 points per correct answer, plus 15 for finishing the day.</Text>
         <View style={styles.shopGrid}>
           {SHOP_ITEMS.map((item) => {
             const owned = inventory[item.id] ?? 0;
@@ -316,6 +332,33 @@ export default function BuddyScreen() {
         </View>
       </ScrollView>
       </View>
+
+      <Modal visible={nameModalVisible} transparent animationType="fade" onRequestClose={() => setNameModalVisible(false)}>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <Text style={styles.modalTitle}>Name your buddy</Text>
+            <TextInput
+              style={styles.modalInput}
+              value={nameDraft}
+              onChangeText={setNameDraft}
+              placeholder="e.g. Biscuit"
+              placeholderTextColor={colors.textMuted}
+              maxLength={20}
+              autoFocus
+              returnKeyType="done"
+              onSubmitEditing={handleSaveName}
+            />
+            <View style={styles.modalActions}>
+              <Pressable style={styles.modalCancelButton} onPress={() => setNameModalVisible(false)}>
+                <Text style={styles.modalCancelText}>Cancel</Text>
+              </Pressable>
+              <Pressable style={styles.modalSaveButton} onPress={handleSaveName}>
+                <Text style={styles.modalSaveText}>Save</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -470,4 +513,23 @@ const styles = StyleSheet.create({
   },
   shopBuyButtonDisabled: { borderColor: colors.border, opacity: 0.5 },
   shopBuyText: { color: colors.text, fontSize: 11, fontWeight: "700" },
+  modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.6)", alignItems: "center", justifyContent: "center", padding: 24 },
+  modalCard: { width: "100%", maxWidth: 340, backgroundColor: colors.surface, borderRadius: 18, padding: 20, borderWidth: 1, borderColor: colors.border },
+  modalTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
+  modalInput: {
+    backgroundColor: colors.surfaceAlt,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    color: colors.text,
+    fontSize: 15,
+    marginBottom: 16,
+  },
+  modalActions: { flexDirection: "row", justifyContent: "flex-end", gap: 10 },
+  modalCancelButton: { paddingHorizontal: 14, paddingVertical: 10, borderRadius: 10 },
+  modalCancelText: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
+  modalSaveButton: { backgroundColor: colors.primary, paddingHorizontal: 18, paddingVertical: 10, borderRadius: 10 },
+  modalSaveText: { color: colors.background, fontSize: 14, fontWeight: "700" },
 });

@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabase";
 import type { PetSpecies, StudyPet } from "@/types/domain";
 
-const PET_FIELDS = "user_id, species, color, equipped_accessories, points";
+const PET_FIELDS = "user_id, species, color, equipped_accessories, points, name";
 
 export async function fetchPet(userId: string): Promise<StudyPet | null> {
   const { data, error } = await supabase.from("study_pets").select(PET_FIELDS).eq("user_id", userId).maybeSingle();
@@ -26,6 +26,12 @@ export async function updatePetColor(userId: string, color: string): Promise<voi
 
 export async function updatePetSpecies(userId: string, species: PetSpecies): Promise<void> {
   const { error } = await supabase.from("study_pets").update({ species }).eq("user_id", userId);
+  if (error) throw error;
+}
+
+export async function updatePetName(userId: string, name: string): Promise<void> {
+  const trimmed = name.trim().slice(0, 20);
+  const { error } = await supabase.from("study_pets").update({ name: trimmed || null }).eq("user_id", userId);
   if (error) throw error;
 }
 

@@ -9,17 +9,19 @@ import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { findMathCategoryId } from "@/lib/mathCategory";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { colors } from "@/theme";
 
 export default function ReviewQuestion() {
   const router = useRouter();
+  const { refresh: refreshPetCompanion } = usePetCompanion();
   const { id } = useLocalSearchParams<{ id: string }>();
   const [question, setQuestion] = useState<QuestionDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [answerValue, setAnswerValue] = useState("");
-  const [revealed, setRevealed] = useState<{ correctAnswer: string; explanation: string | null; isCorrect: boolean } | null>(
-    null,
-  );
+  const [revealed, setRevealed] = useState<
+    { correctAnswer: string; explanation: string | null; isCorrect: boolean; pointsAwarded: number } | null
+  >(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [mathCategoryId, setMathCategoryId] = useState<string | null>(null);
@@ -62,7 +64,13 @@ export default function ReviewQuestion() {
     setSubmitting(true);
     try {
       const result = await submitReviewAttempt(question.id, answerValue, timeSpent);
-      setRevealed({ correctAnswer: result.correct_answer, explanation: result.explanation, isCorrect: result.is_correct });
+      setRevealed({
+        correctAnswer: result.correct_answer,
+        explanation: result.explanation,
+        isCorrect: result.is_correct,
+        pointsAwarded: result.points_awarded ?? 0,
+      });
+      if (result.points_awarded) refreshPetCompanion();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
     } finally {
@@ -107,6 +115,7 @@ export default function ReviewQuestion() {
       {revealed && (
         <Text style={revealed.isCorrect ? styles.correctBanner : styles.wrongBanner}>
           {revealed.isCorrect ? "Got it! That one's off the list." : "Not quite — it'll stay in your Mistake Bank."}
+          {revealed.pointsAwarded > 0 ? `  +${revealed.pointsAwarded} ⭐` : ""}
         </Text>
       )}
       {revealed?.explanation && <Text style={styles.explanation}>{revealed.explanation}</Text>}

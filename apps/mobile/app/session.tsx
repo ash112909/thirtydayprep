@@ -20,6 +20,7 @@ interface Revealed {
   explanation: string | null;
   isCorrect: boolean;
   tutorLine: string;
+  pointsAwarded: number;
 }
 
 export default function Session() {
@@ -107,19 +108,22 @@ export default function Session() {
         explanation: result.explanation,
         isCorrect: result.is_correct,
         tutorLine: pickTutorLine(result.is_correct),
+        pointsAwarded: result.points_awarded ?? 0,
       });
       if (result.day_completed && result.study_plan_day_id) {
         setCompletedDayId(result.study_plan_day_id);
-        // A bigger reaction for finishing the day (points were just awarded
-        // server-side), vs. a small supportive one for just answering —
-        // the pet reacts the same way whether the answer was right or
-        // wrong, since its role here is to walk through it with you, not
-        // to grade you.
+        // A bigger reaction for finishing the day (a bonus was just awarded
+        // server-side on top of the per-question points), vs. a small
+        // supportive one for just answering — the pet reacts the same way
+        // whether the answer was right or wrong, since its role here is to
+        // walk through it with you, not to grade you.
         celebrate("playing");
-        refreshPetCompanion();
       } else {
         celebrate("petting");
       }
+      // Points changed (a correct answer and/or a completed day both award
+      // them), so the floating badge and Buddy screen shouldn't go stale.
+      if (result.points_awarded) refreshPetCompanion();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
     } finally {
@@ -185,6 +189,7 @@ export default function Session() {
           isCorrect={revealed.isCorrect}
           line={revealed.tutorLine}
           explanation={revealed.explanation}
+          pointsAwarded={revealed.pointsAwarded}
         />
       )}
 
