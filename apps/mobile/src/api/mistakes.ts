@@ -15,6 +15,7 @@ export interface QuestionDetail {
   correct_choice: string | null;
   correct_value: string | null;
   explanation: string | null;
+  avg_seconds: number;
 }
 
 export interface MistakeQuestion extends QuestionDetail {
@@ -23,7 +24,7 @@ export interface MistakeQuestion extends QuestionDetail {
 }
 
 export const QUESTION_FIELDS =
-  "id, category_id, subcategory_id, difficulty, question_type, stem, passage, passage_underline_start, passage_underline_end, choices, correct_choice, correct_value, explanation";
+  "id, category_id, subcategory_id, difficulty, question_type, stem, passage, passage_underline_start, passage_underline_end, choices, correct_choice, correct_value, explanation, avg_seconds";
 
 // A question belongs in the Mistake Bank if the student's most recent
 // attempt at it (of any source — baseline, daily, or a prior review) was

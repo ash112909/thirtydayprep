@@ -9,6 +9,7 @@ import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { StudyPet } from "@/components/StudyPet";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
+import { QuestionTimer } from "@/components/QuestionTimer";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { pickTutorLine } from "@/lib/tutorVoice";
@@ -47,6 +48,7 @@ export default function PracticeByTopic() {
     doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
     progressRow: { marginBottom: 20 },
     progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
+    progressHeaderRight: { flexDirection: "row", alignItems: "center", gap: 8 },
     progressText: { color: colors.textMuted, fontSize: 13 },
     topicTitle: { color: colors.text, fontSize: 15, fontWeight: "700" },
     progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
@@ -170,7 +172,10 @@ export default function PracticeByTopic() {
               Question {index + 1} of {questions.length}
             </Text>
           </View>
-          {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+          <View style={styles.progressHeaderRight}>
+            <QuestionTimer benchmarkSeconds={question.avg_seconds} running={!disabled} resetKey={question.id} />
+            {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+          </View>
         </View>
         <View style={styles.progressBarTrack}>
           <View style={[styles.progressBarFill, { width: `${((index + 1) / questions.length) * 100}%` }]} />

@@ -8,6 +8,7 @@ import { QuestionCard } from "@/components/QuestionCard";
 import { GridInAnswer } from "@/components/GridInAnswer";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
+import { QuestionTimer } from "@/components/QuestionTimer";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
@@ -20,6 +21,7 @@ export default function ReviewQuestion() {
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24, gap: 16 },
     error: { color: colors.danger, textAlign: "center", marginBottom: 8 },
     headerRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
+    headerRight: { flexDirection: "row", alignItems: "center", gap: 8 },
     header: { color: colors.textMuted, fontSize: 13, fontWeight: "700" },
     correctBanner: { color: colors.success, fontSize: 14, fontWeight: "600", marginTop: 12 },
     wrongBanner: { color: colors.danger, fontSize: 14, fontWeight: "600", marginTop: 12 },
@@ -103,7 +105,10 @@ export default function ReviewQuestion() {
     <View style={styles.container}>
       <View style={styles.headerRow}>
         <Text style={styles.header}>Review</Text>
-        {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+        <View style={styles.headerRight}>
+          <QuestionTimer benchmarkSeconds={question.avg_seconds} running={!disabled} resetKey={question.id} />
+          {question.category_id === mathCategoryId && <GraphingCalculatorButton />}
+        </View>
       </View>
 
       {question.question_type === "grid_in" ? (
