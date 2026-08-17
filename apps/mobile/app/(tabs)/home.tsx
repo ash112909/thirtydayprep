@@ -25,6 +25,13 @@ function daysUntil(dateStr: string | null): number | null {
   return Math.ceil(diff / 86_400_000);
 }
 
+// No push notifications yet, so this is the in-app stand-in: a visible
+// nudge once it's late enough in the day that a streak is genuinely at
+// risk, rather than nagging first thing in the morning.
+function isLateInDay(): boolean {
+  return new Date().getHours() >= 18;
+}
+
 function sessionTargets(session: TodaySessionResponse): DayTarget[] {
   const map = new Map<string, DayTarget>();
   for (const q of session.questions ?? []) {
@@ -69,6 +76,15 @@ export default function Home() {
     progressTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surfaceAlt, overflow: "hidden", marginBottom: 20 },
     progressFill: { height: 6, backgroundColor: colors.primary },
     error: { color: colors.danger, marginTop: 20 },
+    streakWarning: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: colors.warning,
+      padding: 14,
+      marginBottom: 20,
+    },
+    streakWarningText: { color: colors.text, fontSize: 13, lineHeight: 19, fontWeight: "600" },
   }));
   const { session: auth, profile } = useAuth();
   const [session, setSession] = useState<TodaySessionResponse | null>(null);
@@ -128,6 +144,7 @@ export default function Home() {
     session?.questions && session.day_number != null
       ? buildDayNarrative(session.day_number, sessionTargets(session), subcategories, mastery)
       : [];
+  const streakAtRisk = !loading && streak > 0 && !!session?.questions && !allAnswered && isLateInDay();
 
   return (
     <ScrollView
@@ -146,6 +163,14 @@ export default function Home() {
         <ActivityIndicator color={colors.primary} style={{ marginTop: 40 }} />
       ) : (
         <>
+          {streakAtRisk && (
+            <View style={styles.streakWarning}>
+              <Text style={styles.streakWarningText}>
+                🔥 Don't lose your {streak}-day streak — finish today's session before the day's out.
+              </Text>
+            </View>
+          )}
+
           {plan && (
             <View style={styles.statsRow}>
               <View style={styles.statBox}>
