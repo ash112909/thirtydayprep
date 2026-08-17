@@ -18,7 +18,9 @@ import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computePaceDelta } from "@/lib/paceBenchmarks";
 import { predictScore } from "@/lib/scorePrediction";
 import { AccuracyBars } from "@/components/AccuracyBars";
+import { SkillRadarChart } from "@/components/SkillRadarChart";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { pickFocusTopic } from "@/lib/insights";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
 import type { AttemptRecord } from "@/api/progress";
@@ -58,6 +60,18 @@ export default function Progress() {
       gap: 12,
     },
     mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
+    focusCard: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 14,
+      padding: 16,
+      marginBottom: 20,
+      gap: 12,
+      borderWidth: 1,
+      borderColor: colors.primary,
+    },
+    focusLabel: { color: colors.primary, fontSize: 11, fontWeight: "700", textTransform: "uppercase" },
+    focusText: { color: colors.text, fontSize: 13, lineHeight: 19, marginTop: 4 },
+    radarWrap: { alignItems: "center" },
     scoreCard: {
       backgroundColor: colors.surface,
       borderRadius: 16,
@@ -155,6 +169,7 @@ export default function Progress() {
   for (const s of stats) mastery[s.subcategory_id] = s.mastery_score;
   const score = predictScore(categories, subcategories, mastery);
   const hasBaselineComparison = Object.keys(baselineMastery).length > 0;
+  const focusTopic = pickFocusTopic(stats, subcategories);
 
   if (loading) {
     return (
@@ -188,6 +203,24 @@ export default function Progress() {
             <Text style={styles.statValue}>{totalAnswered}</Text>
             <Text style={styles.statLabel}>questions</Text>
           </View>
+        </View>
+      )}
+
+      {focusTopic && (
+        <View style={styles.focusCard}>
+          <Text style={styles.focusLabel}>Today's focus</Text>
+          <Text style={styles.focusText}>
+            {focusTopic.subcategory.name} is your weakest area right now, at {focusTopic.masteryScore}% mastery.
+          </Text>
+          <PrimaryButton
+            title="Practice this topic"
+            onPress={() =>
+              router.push({
+                pathname: "/practice/[subcategoryId]",
+                params: { subcategoryId: focusTopic.subcategory.id, name: focusTopic.subcategory.name },
+              })
+            }
+          />
         </View>
       )}
 
@@ -236,6 +269,11 @@ export default function Progress() {
       <Text style={styles.sectionTitle}>Accuracy trend</Text>
       <View style={styles.chartCard}>
         <AccuracyBars data={dailyAccuracy} />
+      </View>
+
+      <Text style={styles.sectionTitle}>Skills overview</Text>
+      <View style={[styles.chartCard, styles.radarWrap]}>
+        <SkillRadarChart subcategories={subcategories} mastery={mastery} />
       </View>
 
       <Text style={styles.sectionTitle}>By section</Text>
