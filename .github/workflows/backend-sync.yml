@@ -83,7 +83,7 @@ jobs:
       - name: Deploy edge functions
         run: |
           set -e
-          for fn in generate-baseline submit-baseline get-today-session submit-attempt submit-review-attempt skip-day regenerate-plan; do
+          for fn in generate-baseline submit-baseline get-today-session submit-attempt submit-review-attempt skip-day regenerate-plan claim-achievement; do
             echo "Deploying $fn..."
             supabase functions deploy "$fn" --project-ref "$SUPABASE_PROJECT_REF"
           done
