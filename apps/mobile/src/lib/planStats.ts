@@ -2,8 +2,10 @@ import type { StudyPlanDay, UserSkillStat } from "@/types/domain";
 
 // Consecutive completed days counting back from the most recent day in the
 // plan, so a student who's caught up sees a real "streak" rather than just
-// a raw completed-day count.
-export function computeStreak(days: StudyPlanDay[]): number {
+// a raw completed-day count. Takes only the two fields it needs (rather
+// than the full StudyPlanDay) so callers with a narrower query — like a
+// friend's leaderboard row — don't need to fetch or fake the rest.
+export function computeStreak(days: Pick<StudyPlanDay, "day_number" | "status">[]): number {
   const sorted = [...days].sort((a, b) => b.day_number - a.day_number);
   let streak = 0;
   for (const day of sorted) {

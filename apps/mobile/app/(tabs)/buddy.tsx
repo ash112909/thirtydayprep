@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { ActivityIndicator, Dimensions, Modal, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
+import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
 import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetName, updatePetSpecies, updatePetTheme } from "@/api/pet";
@@ -30,6 +31,7 @@ const HERO_HEIGHT = Math.min(Dimensions.get("window").height * 0.5, 460);
 const PET_SIZE = Math.round(HERO_HEIGHT * 0.52);
 
 export default function BuddyScreen() {
+  const router = useRouter();
   const { session } = useAuth();
   // This screen keeps its own copy of pet/plan/inventory state (it needs
   // finer-grained data than the floating companion does elsewhere in the
@@ -508,6 +510,10 @@ export default function BuddyScreen() {
             <Text style={styles.statValue}>{accuracy != null ? `${accuracy}%` : "—"}</Text>
             <Text style={styles.statLabel}>accuracy</Text>
           </View>
+        </View>
+
+        <View style={{ width: "100%", marginBottom: 24 }}>
+          <PrimaryButton title="👥 Compare streaks with friends" variant="secondary" onPress={() => router.push("/friends")} />
         </View>
 
         <Text style={styles.sectionTitle}>Shop</Text>
