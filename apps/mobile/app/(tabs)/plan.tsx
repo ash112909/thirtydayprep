@@ -111,6 +111,16 @@ export default function Plan() {
     }, [session]),
   );
 
+  // Computed unconditionally, before the early returns below — a hook can
+  // never be called conditionally, and this one was sitting after them,
+  // which is exactly what threw "Rendered more hooks than during the
+  // previous render" the moment loading/plan state changed.
+  const streak = computeStreak(days);
+  const buddyLine = useMemo(
+    () => pickHomeBuddyLine({ streakAtRisk: false, streak, focusTopicName: null }),
+    [streak],
+  );
+
   if (loading) {
     return (
       <View style={styles.center}>
@@ -128,11 +138,6 @@ export default function Plan() {
   }
 
   const completedCount = days.filter((d) => d.status === "completed").length;
-  const streak = computeStreak(days);
-  const buddyLine = useMemo(
-    () => pickHomeBuddyLine({ streakAtRisk: false, streak, focusTopicName: null }),
-    [streak],
-  );
   const subcategoryById = new Map(subcategories.map((s) => [s.id, s]));
   const categoryTotals = new Map<string, number>();
   let totalQuestions = 0;
