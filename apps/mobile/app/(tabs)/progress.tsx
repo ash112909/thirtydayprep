@@ -40,7 +40,17 @@ export default function Progress() {
     container: { flex: 1, backgroundColor: colors.background },
     content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 20 },
+    title: { fontSize: 26, fontWeight: "800", color: colors.text },
+    titleRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 20 },
+    recapButton: {
+      backgroundColor: colors.surfaceAlt,
+      borderRadius: 999,
+      paddingVertical: 8,
+      paddingHorizontal: 14,
+      borderWidth: 1,
+      borderColor: colors.primary,
+    },
+    recapButtonText: { color: colors.primary, fontSize: 12, fontWeight: "700" },
     statsRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
     statBox: {
       flex: 1,
@@ -184,7 +194,12 @@ export default function Progress() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.title}>Your progress</Text>
+      <View style={styles.titleRow}>
+        <Text style={styles.title}>Your progress</Text>
+        <Pressable style={styles.recapButton} onPress={() => router.push("/wrapped")}>
+          <Text style={styles.recapButtonText}>✨ Recap</Text>
+        </Pressable>
+      </View>
 
       {plan && (
         <View style={styles.statsRow}>
