@@ -6,6 +6,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { StudyPet } from "@/components/StudyPet";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { StudyPlanDay, Subcategory } from "@/types/domain";
 
 interface SubcategoryBreakdown {
@@ -33,21 +34,21 @@ export default function SessionRecap() {
       alignItems: "center",
       justifyContent: "center",
     },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 4 },
     subtitle: { fontSize: 14, color: colors.textMuted },
     statsRow: { flexDirection: "row", gap: 10, marginBottom: 28 },
     statBox: {
       flex: 1,
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       paddingVertical: 16,
       alignItems: "center",
       borderWidth: 1,
       borderColor: colors.border,
     },
-    statValue: { color: colors.text, fontSize: 17, fontWeight: "800" },
+    statValue: { color: colors.text, fontSize: 17, fontFamily: fonts.displaySemibold },
     statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4, textAlign: "center" },
-    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 12 },
+    sectionTitle: { fontSize: 16, fontFamily: fonts.displaySemibold, color: colors.text, marginBottom: 12 },
     row: {
       flexDirection: "row",
       justifyContent: "space-between",
@@ -59,7 +60,7 @@ export default function SessionRecap() {
     rowValue: { color: colors.textMuted, fontSize: 14, fontWeight: "600" },
     mistakeCard: {
       backgroundColor: colors.surfaceAlt,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       marginTop: 24,
       marginBottom: 8,

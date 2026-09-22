@@ -23,9 +23,10 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { pickFocusTopic } from "@/lib/insights";
 import { pickHomeBuddyLine } from "@/lib/tutorVoice";
 import { BuddyHeader } from "@/components/BuddyHeader";
+import { FlameIcon, SparkleIcon } from "@/components/icons";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
-import { cardElevation } from "@/theme";
+import { cardElevation, fonts } from "@/theme";
 import type { AttemptRecord } from "@/api/progress";
 import type { Category, MasterySnapshot, StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
 
@@ -42,7 +43,7 @@ export default function Progress() {
     container: { flex: 1, backgroundColor: colors.background },
     content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text },
     titleRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 20 },
     recapButton: {
       backgroundColor: colors.surfaceAlt,
@@ -51,23 +52,27 @@ export default function Progress() {
       paddingHorizontal: 14,
       borderWidth: 1,
       borderColor: colors.primary,
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
     },
-    recapButtonText: { color: colors.primary, fontSize: 12, fontWeight: "700" },
+    recapButtonText: { color: colors.primary, fontSize: 12, fontFamily: fonts.bodyBold },
     statsRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
     statBox: {
       flex: 1,
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       paddingVertical: 14,
       alignItems: "center",
       borderWidth: 1,
       borderColor: colors.border,
     },
-    statValue: { color: colors.text, fontSize: 15, fontWeight: "800" },
+    statValue: { color: colors.text, fontSize: 15, fontFamily: fonts.displaySemibold },
+    statValueRow: { flexDirection: "row", alignItems: "center", gap: 4 },
     statLabel: { color: colors.textMuted, fontSize: 9, marginTop: 4, textAlign: "center" },
     mistakeCard: {
       backgroundColor: colors.surfaceAlt,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       marginBottom: 20,
       gap: 12,
@@ -75,7 +80,7 @@ export default function Progress() {
     mistakeText: { color: colors.text, fontSize: 13, lineHeight: 19 },
     focusCard: {
       backgroundColor: colors.surfaceAlt,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       marginBottom: 20,
       gap: 12,
@@ -83,12 +88,12 @@ export default function Progress() {
       borderColor: colors.primary,
       ...cardElevation,
     },
-    focusLabel: { color: colors.primary, fontSize: 11, fontWeight: "700", textTransform: "uppercase" },
+    focusLabel: { color: colors.primary, fontSize: 11, fontFamily: fonts.bodyExtraBold, textTransform: "uppercase" },
     focusText: { color: colors.text, fontSize: 13, lineHeight: 19, marginTop: 4 },
     radarWrap: { alignItems: "center" },
     scoreCard: {
       backgroundColor: colors.surface,
-      borderRadius: 16,
+      borderRadius: 20,
       padding: 20,
       borderWidth: 1,
       borderColor: colors.border,
@@ -96,15 +101,15 @@ export default function Progress() {
       marginBottom: 8,
       ...cardElevation,
     },
-    scoreTotal: { color: colors.primary, fontSize: 36, fontWeight: "800" },
+    scoreTotal: { color: colors.primary, fontSize: 36, fontFamily: fonts.display },
     scoreCaption: { color: colors.textMuted, fontSize: 11, marginTop: 4, marginBottom: 16, textAlign: "center" },
     scoreBreakdown: { flexDirection: "row", gap: 24 },
     scoreSection: { alignItems: "center" },
-    scoreSectionValue: { color: colors.text, fontSize: 16, fontWeight: "700" },
+    scoreSectionValue: { color: colors.text, fontSize: 16, fontFamily: fonts.displaySemibold },
     scoreSectionLabel: { color: colors.textMuted, fontSize: 11, marginTop: 2 },
     paceCard: {
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       borderWidth: 1,
       borderColor: colors.border,
@@ -113,13 +118,13 @@ export default function Progress() {
     paceText: { color: colors.text, fontSize: 13, lineHeight: 19 },
     chartCard: {
       backgroundColor: colors.surface,
-      borderRadius: 16,
+      borderRadius: 20,
       padding: 18,
       borderWidth: 1,
       borderColor: colors.border,
       marginBottom: 28,
     },
-    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 16, marginTop: 12 },
+    sectionTitle: { fontSize: 16, fontFamily: fonts.displaySemibold, color: colors.text, marginBottom: 16, marginTop: 12 },
     row: { marginBottom: 18 },
     rowHeader: { flexDirection: "row", justifyContent: "space-between", marginBottom: 6 },
     rowLabel: { color: colors.text, fontSize: 14, fontWeight: "600" },
@@ -206,14 +211,22 @@ export default function Progress() {
       <View style={styles.titleRow}>
         <Text style={styles.title}>Your progress</Text>
         <Pressable style={styles.recapButton} onPress={() => router.push("/wrapped")}>
-          <Text style={styles.recapButtonText}>✨ Recap</Text>
+          <SparkleIcon size={12} color={colors.primary} />
+          <Text style={styles.recapButtonText}>Recap</Text>
         </Pressable>
       </View>
 
       {plan && (
         <View style={styles.statsRow}>
           <View style={styles.statBox}>
-            <Text style={styles.statValue}>{streak > 0 ? `🔥 ${streak}` : "—"}</Text>
+            {streak > 0 ? (
+              <View style={styles.statValueRow}>
+                <FlameIcon size={14} color={colors.primary} />
+                <Text style={styles.statValue}>{streak}</Text>
+              </View>
+            ) : (
+              <Text style={styles.statValue}>—</Text>
+            )}
             <Text style={styles.statLabel}>day streak</Text>
           </View>
           <View style={styles.statBox}>

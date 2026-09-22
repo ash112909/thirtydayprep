@@ -19,6 +19,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
 import { LevelRing } from "@/components/LevelRing";
+import { FlameIcon, StarIcon, SparkleIcon } from "@/components/icons";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import { MAX_APP_WIDTH, cardElevation, fonts } from "@/theme";
 import type {
@@ -45,22 +46,6 @@ const SCREEN_WIDTH = Math.min(Dimensions.get("window").width, MAX_APP_WIDTH);
 // crowds out everything below.
 const HERO_HEIGHT = Math.min(Dimensions.get("window").height * 0.42, 380);
 const PET_SIZE = Math.round(HERO_HEIGHT * 0.5);
-
-function FlameIcon({ size, color }: { size: number; color: string }) {
-  return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
-      <Path d="M12 2c1 3-2 4-2 7a4 4 0 1 0 8 0c0-1-.5-2-1-2 .5 2-1 3-2 3-1.5 0-2-1.5-1-3-2 .5-4 2-4 5a6 6 0 1 0 12 0c0-5-4-7-10-10Z" />
-    </Svg>
-  );
-}
-
-function StarIcon({ size, color }: { size: number; color: string }) {
-  return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
-      <Path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8L5.7 21l1.7-7L2 9.2l7.1-.6L12 2Z" />
-    </Svg>
-  );
-}
 
 function daysUntil(dateStr: string | null): number | null {
   if (!dateStr) return null;
@@ -120,7 +105,7 @@ export default function Home() {
       borderWidth: 1,
       borderColor: "rgba(255,255,255,0.14)",
     },
-    heroTitle: { color: "#F8FAFC", fontSize: 17, fontWeight: "800" },
+    heroTitle: { color: "#F8FAFC", fontSize: 17, fontFamily: fonts.displaySemibold },
     heroSubtitle: { color: colors.primary, fontSize: 12, fontWeight: "600", marginTop: 2 },
     pointsPill: { alignSelf: "flex-start" },
     pointsText: { color: "#F8FAFC", fontSize: 14, fontWeight: "700" },
@@ -568,7 +553,10 @@ export default function Home() {
               <Text style={styles.heroSubtitle}>{energyLabel}</Text>
             </Pressable>
             <View style={[styles.glassPill, styles.pointsPill]}>
-              <Text style={styles.pointsText}>⭐ {pet.points}</Text>
+              <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+                <StarIcon size={14} color="#F8FAFC" />
+                <Text style={styles.pointsText}>{pet.points}</Text>
+              </View>
             </View>
           </View>
 

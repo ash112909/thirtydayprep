@@ -4,13 +4,16 @@ import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { captureRef } from "react-native-view-shot";
 import * as Sharing from "expo-sharing";
+import { Ionicons } from "@expo/vector-icons";
 import { useAuth } from "@/hooks/useAuth";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { fetchActivePlan, fetchAttempts, fetchPlanDays } from "@/api/progress";
 import { computeStreak } from "@/lib/planStats";
 import { StudyPet } from "@/components/StudyPet";
+import { FlameIcon, StarIcon } from "@/components/icons";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { StudyPlanDay } from "@/types/domain";
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
@@ -22,7 +25,7 @@ export default function WrappedRecap() {
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background },
     content: { padding: 24, paddingTop: 60, alignItems: "center" },
-    header: { fontSize: 22, fontWeight: "800", color: colors.text, marginBottom: 4, alignSelf: "flex-start" },
+    header: { fontSize: 22, fontFamily: fonts.display, color: colors.text, marginBottom: 4, alignSelf: "flex-start" },
     subheader: { fontSize: 13, color: colors.textMuted, marginBottom: 24, alignSelf: "flex-start" },
     center: { flex: 1, alignItems: "center", justifyContent: "center" },
     card: {
@@ -33,7 +36,7 @@ export default function WrappedRecap() {
       padding: 24,
       justifyContent: "space-between",
     },
-    wordmark: { color: "#FFF7ED", fontSize: 12, fontWeight: "800", letterSpacing: 2, opacity: 0.85 },
+    wordmark: { color: "#FFF7ED", fontSize: 12, fontFamily: fonts.bodyExtraBold, letterSpacing: 2, opacity: 0.85 },
     petBlock: { alignItems: "center", gap: 10 },
     petAvatarWrap: {
       width: 92,
@@ -43,12 +46,14 @@ export default function WrappedRecap() {
       alignItems: "center",
       justifyContent: "center",
     },
-    petName: { color: "#FFFFFF", fontSize: 18, fontWeight: "800" },
+    petName: { color: "#FFFFFF", fontSize: 18, fontFamily: fonts.displaySemibold },
     statsBlock: { gap: 14 },
-    statRow: { flexDirection: "row", alignItems: "baseline", gap: 8 },
-    statValue: { color: "#FFFFFF", fontSize: 32, fontWeight: "900" },
-    statLabel: { color: "#FFF7ED", fontSize: 13, fontWeight: "600", opacity: 0.9 },
-    footer: { color: "#FFF7ED", fontSize: 11, fontWeight: "700", opacity: 0.75, alignSelf: "center" },
+    statRow: { flexDirection: "row", alignItems: "center", gap: 8 },
+    statValueRow: { flexDirection: "row", alignItems: "baseline", gap: 6 },
+    statValue: { color: "#FFFFFF", fontSize: 32, fontFamily: fonts.display },
+    statLabel: { color: "#FFF7ED", fontSize: 13, fontFamily: fonts.bodySemibold, opacity: 0.9 },
+    footer: { color: "#FFF7ED", fontSize: 11, fontFamily: fonts.bodyExtraBold, opacity: 0.75, alignSelf: "center" },
+    footerRow: { flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "center" },
     shareSpacer: { marginTop: 24, width: 300 },
     webNote: { color: colors.textMuted, fontSize: 12, textAlign: "center", marginTop: 16, maxWidth: 280 },
   }));
@@ -108,7 +113,7 @@ export default function WrappedRecap() {
 
       <View ref={cardRef} collapsable={false} style={styles.card}>
         <LinearGradient
-          colors={["#FB923C", "#EA580C", "#7C2D12"]}
+          colors={["#FF7A1A", "#EA580C", "#7C2D12"]}
           style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}
         />
         <Text style={styles.wordmark}>THIRTYDAYPREP</Text>
@@ -122,7 +127,8 @@ export default function WrappedRecap() {
 
         <View style={styles.statsBlock}>
           <View style={styles.statRow}>
-            <Text style={styles.statValue}>{streak > 0 ? `🔥 ${streak}` : "0"}</Text>
+            {streak > 0 && <FlameIcon size={22} color="#FFFFFF" />}
+            <Text style={styles.statValue}>{streak}</Text>
             <Text style={styles.statLabel}>day streak</Text>
           </View>
           <View style={styles.statRow}>
@@ -134,12 +140,16 @@ export default function WrappedRecap() {
             <Text style={styles.statLabel}>accuracy this week</Text>
           </View>
           <View style={styles.statRow}>
-            <Text style={styles.statValue}>⭐ {pet?.points ?? 0}</Text>
+            <StarIcon size={20} color="#FFFFFF" />
+            <Text style={styles.statValue}>{pet?.points ?? 0}</Text>
             <Text style={styles.statLabel}>buddy points</Text>
           </View>
         </View>
 
-        <Text style={styles.footer}>studying with my buddy 🐾</Text>
+        <View style={styles.footerRow}>
+          <Ionicons name="paw" size={12} color="#FFF7ED" style={{ opacity: 0.75 }} />
+          <Text style={styles.footer}>studying with my buddy</Text>
+        </View>
       </View>
 
       <View style={styles.shareSpacer}>

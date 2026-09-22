@@ -16,6 +16,7 @@ import { pickTutorLine } from "@/lib/tutorVoice";
 import { hapticCorrect, hapticIncorrect } from "@/lib/haptics";
 import { TutorBubble } from "@/components/TutorBubble";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { QuestionDetail } from "@/api/mistakes";
 
 interface Revealed {
@@ -45,13 +46,13 @@ export default function PracticeByTopic() {
       justifyContent: "center",
       marginBottom: 4,
     },
-    doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text, textAlign: "center" },
+    doneTitle: { fontSize: 26, fontFamily: fonts.display, color: colors.text, textAlign: "center" },
     doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
     progressRow: { marginBottom: 20 },
     progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },
     progressHeaderRight: { flexDirection: "row", alignItems: "center", gap: 8 },
     progressText: { color: colors.textMuted, fontSize: 13 },
-    topicTitle: { color: colors.text, fontSize: 15, fontWeight: "700" },
+    topicTitle: { color: colors.text, fontSize: 15, fontFamily: fonts.displaySemibold },
     progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
     progressBarFill: { height: 6, backgroundColor: colors.primary },
   }));

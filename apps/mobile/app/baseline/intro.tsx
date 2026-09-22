@@ -2,12 +2,13 @@ import { Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 
 export default function BaselineIntro() {
   const router = useRouter();
   const { styles } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
-    title: { fontSize: 28, fontWeight: "800", color: colors.text, marginBottom: 12 },
+    title: { fontSize: 28, fontFamily: fonts.display, color: colors.text, marginBottom: 12 },
     body: { fontSize: 15, color: colors.textMuted, lineHeight: 22, marginBottom: 32 },
     stats: { flexDirection: "row", justifyContent: "space-between", marginBottom: 40 },
   }));
@@ -32,7 +33,7 @@ export default function BaselineIntro() {
 function Stat({ label, value }: { label: string; value: string }) {
   const { styles } = useThemedStyles((colors) => ({
     stat: { alignItems: "center" },
-    statValue: { fontSize: 22, fontWeight: "800", color: colors.primary },
+    statValue: { fontSize: 22, fontFamily: fonts.display, color: colors.primary },
     statLabel: { fontSize: 12, color: colors.textMuted, marginTop: 4 },
   }));
   return (

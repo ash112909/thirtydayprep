@@ -5,6 +5,7 @@ import { fetchSubcategories } from "@/api/progress";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
+import { fonts } from "@/theme";
 import type { MasterySnapshot, Subcategory } from "@/types/domain";
 
 function barColor(score: number, colors: ColorTokens) {
@@ -17,7 +18,7 @@ export default function BaselineResults() {
   const router = useRouter();
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background, padding: 24, paddingTop: 60 },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 8 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 8 },
     subtitle: { fontSize: 14, color: colors.textMuted, lineHeight: 20, marginBottom: 24 },
     overall: { color: colors.primary, fontWeight: "700" },
     list: { flex: 1, marginBottom: 16 },

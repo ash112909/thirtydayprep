@@ -11,27 +11,29 @@ import {
   type FriendSummary,
 } from "@/api/friends";
 import { StudyPet } from "@/components/StudyPet";
+import { FlameIcon, StarIcon } from "@/components/icons";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 
 export default function Friends() {
   const { session } = useAuth();
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background },
     content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 20 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 20 },
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
     card: {
       backgroundColor: colors.surface,
-      borderRadius: 16,
+      borderRadius: 20,
       padding: 20,
       borderWidth: 1,
       borderColor: colors.border,
       marginBottom: 20,
     },
-    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text, marginBottom: 10 },
+    sectionTitle: { fontSize: 16, fontFamily: fonts.displaySemibold, color: colors.text, marginBottom: 10 },
     codeRow: { flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 14 },
-    codeText: { fontSize: 28, fontWeight: "900", color: colors.primary, letterSpacing: 4 },
+    codeText: { fontSize: 28, fontFamily: fonts.display, color: colors.primary, letterSpacing: 4 },
     hint: { fontSize: 12, color: colors.textMuted, marginBottom: 14, lineHeight: 17 },
     input: {
       backgroundColor: colors.surfaceAlt,
@@ -51,7 +53,7 @@ export default function Friends() {
       alignItems: "center",
       gap: 12,
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 14,
       marginBottom: 10,
       borderWidth: 1,
@@ -65,8 +67,10 @@ export default function Friends() {
       alignItems: "center",
       justifyContent: "center",
     },
-    friendName: { color: colors.text, fontSize: 14, fontWeight: "700" },
-    friendStats: { color: colors.textMuted, fontSize: 12, marginTop: 2 },
+    friendName: { color: colors.text, fontSize: 14, fontFamily: fonts.bodyBold },
+    friendStatsRow: { flexDirection: "row", alignItems: "center", gap: 4, marginTop: 3 },
+    friendStats: { color: colors.textMuted, fontSize: 12 },
+    friendStatsDot: { color: colors.textMuted, fontSize: 12, marginHorizontal: 2 },
     removeText: { color: colors.danger, fontSize: 12, fontWeight: "600" },
     emptyText: { color: colors.textMuted, fontSize: 13, lineHeight: 19, textAlign: "center", marginTop: 8 },
   }));
@@ -178,9 +182,19 @@ export default function Friends() {
             </View>
             <View style={{ flex: 1 }}>
               <Text style={styles.friendName}>{friend.petName ?? "Study buddy"}</Text>
-              <Text style={styles.friendStats}>
-                {friend.streak > 0 ? `🔥 ${friend.streak} day streak` : "No streak yet"} · ⭐ {friend.points}
-              </Text>
+              <View style={styles.friendStatsRow}>
+                {friend.streak > 0 ? (
+                  <>
+                    <FlameIcon size={12} color={colors.primary} />
+                    <Text style={styles.friendStats}>{friend.streak} day streak</Text>
+                  </>
+                ) : (
+                  <Text style={styles.friendStats}>No streak yet</Text>
+                )}
+                <Text style={styles.friendStatsDot}>·</Text>
+                <StarIcon size={12} color={colors.secondary} />
+                <Text style={styles.friendStats}>{friend.points}</Text>
+              </View>
             </View>
             <Pressable onPress={() => handleRemove(friend.userId)} hitSlop={8}>
               <Text style={styles.removeText}>Remove</Text>

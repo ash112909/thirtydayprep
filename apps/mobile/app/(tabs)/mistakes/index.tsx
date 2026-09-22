@@ -7,6 +7,7 @@ import { fetchMistakes, type MistakeQuestion } from "@/api/mistakes";
 import { fetchSubcategories } from "@/api/progress";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
+import { fonts } from "@/theme";
 import type { Subcategory } from "@/types/domain";
 
 function difficultyColor(difficulty: string, colors: ColorTokens) {
@@ -22,12 +23,12 @@ export default function MistakeBank() {
     container: { flex: 1, backgroundColor: colors.background },
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center" },
     header: { padding: 24, paddingTop: 60, paddingBottom: 12 },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 6 },
     subtitle: { fontSize: 13, color: colors.textMuted },
     list: { paddingHorizontal: 20, paddingBottom: 24, gap: 10 },
     card: {
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       borderWidth: 1,
       borderColor: colors.border,

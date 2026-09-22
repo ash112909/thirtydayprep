@@ -8,6 +8,7 @@ import { skipDay } from "@/api/studyFunctions";
 import { buildDayNarrative } from "@/lib/planNarrative";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { MasterySnapshot, StudyPlanDay, Subcategory } from "@/types/domain";
 
 function formatDate(dateStr: string): string {
@@ -28,7 +29,7 @@ export default function PlanDayDetail() {
     content: { padding: 24, paddingTop: 60 },
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
     emptyText: { color: colors.textMuted, fontSize: 14 },
-    dayLabel: { fontSize: 26, fontWeight: "800", color: colors.text },
+    dayLabel: { fontSize: 26, fontFamily: fonts.display, color: colors.text },
     date: { fontSize: 14, color: colors.textMuted, marginTop: 4, marginBottom: 20 },
     narrativeBox: {
       backgroundColor: colors.surface,

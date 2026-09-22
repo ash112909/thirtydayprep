@@ -11,6 +11,7 @@ import { DayTile } from "@/components/DayTile";
 import { PlanCalendar } from "@/components/PlanCalendar";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
+import { fonts } from "@/theme";
 import type { DayResult } from "@/api/progress";
 import type { Category, StudyPlan, StudyPlanDay, Subcategory } from "@/types/domain";
 
@@ -36,19 +37,19 @@ export default function Plan() {
     center: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: 24 },
     emptyText: { color: colors.textMuted, fontSize: 14, textAlign: "center" },
     header: { paddingHorizontal: 24, paddingTop: 60, paddingBottom: 12 },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 6 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 6 },
     subtitle: { fontSize: 13, color: colors.textMuted },
     hint: { fontSize: 12, color: colors.textMuted, marginTop: 8 },
     rollupCard: {
       marginHorizontal: 20,
       marginBottom: 16,
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 20,
       padding: 16,
       borderWidth: 1,
       borderColor: colors.border,
     },
-    rollupTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 10 },
+    rollupTitle: { color: colors.text, fontSize: 13, fontFamily: fonts.displaySemibold, marginBottom: 10 },
     rollupBar: { flexDirection: "row", height: 8, borderRadius: 4, overflow: "hidden", marginBottom: 10 },
     rollupSegment: { height: 8 },
     rollupLegend: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
@@ -56,8 +57,8 @@ export default function Plan() {
     toggleRow: { flexDirection: "row", gap: 8, marginHorizontal: 20, marginBottom: 16 },
     toggle: {
       flex: 1,
-      paddingVertical: 8,
-      borderRadius: 10,
+      paddingVertical: 9,
+      borderRadius: 999,
       alignItems: "center",
       backgroundColor: colors.surface,
       borderWidth: 1,

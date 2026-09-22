@@ -15,6 +15,7 @@ import { pickSessionCompleteLine, pickTutorLine } from "@/lib/tutorVoice";
 import { hapticCelebrate, hapticCorrect, hapticIncorrect } from "@/lib/haptics";
 import { TutorBubble } from "@/components/TutorBubble";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { SessionQuestion } from "@/types/domain";
 
 interface Revealed {
@@ -42,7 +43,7 @@ export default function Session() {
       justifyContent: "center",
       marginBottom: 4,
     },
-    doneTitle: { fontSize: 26, fontWeight: "800", color: colors.text, textAlign: "center" },
+    doneTitle: { fontSize: 26, fontFamily: fonts.display, color: colors.text, textAlign: "center" },
     doneBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8 },
     progressRow: { marginBottom: 20 },
     progressHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 },

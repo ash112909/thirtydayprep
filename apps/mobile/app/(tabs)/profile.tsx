@@ -10,8 +10,10 @@ import { claimAchievement, regeneratePlan } from "@/api/studyFunctions";
 import { computeAchievements, type Achievement } from "@/lib/achievements";
 import { hapticCelebrate } from "@/lib/haptics";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { StarIcon } from "@/components/icons";
 import { useTheme } from "@/hooks/useTheme";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 import type { StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
 
 function daysUntil(dateStr: string | null): number | null {
@@ -27,10 +29,10 @@ export default function ProfileScreen() {
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background },
     content: { padding: 24, paddingTop: 60, paddingBottom: 40 },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 24 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 24 },
     card: {
       backgroundColor: colors.surface,
-      borderRadius: 16,
+      borderRadius: 20,
       padding: 20,
       marginBottom: 32,
       borderWidth: 1,
@@ -60,13 +62,13 @@ export default function ProfileScreen() {
     },
     error: { color: colors.danger, marginBottom: 12 },
     editHint: { color: colors.textMuted, fontSize: 12, lineHeight: 17, marginBottom: 16 },
-    sectionTitle: { fontSize: 16, fontWeight: "700", color: colors.text },
+    sectionTitle: { fontSize: 16, fontFamily: fonts.displaySemibold, color: colors.text },
     appearanceRow: {
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 16,
       marginBottom: 32,
       borderWidth: 1,
@@ -77,12 +79,12 @@ export default function ProfileScreen() {
     themeToggle: {
       flexDirection: "row",
       backgroundColor: colors.surfaceAlt,
-      borderRadius: 10,
+      borderRadius: 999,
       padding: 3,
       borderWidth: 1,
       borderColor: colors.border,
     },
-    themeOption: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 8 },
+    themeOption: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 999 },
     themeOptionActive: { backgroundColor: colors.primary },
     themeOptionText: { color: colors.textMuted, fontSize: 13, fontWeight: "600" },
     themeOptionTextActive: { color: colors.onPrimary },
@@ -92,24 +94,27 @@ export default function ProfileScreen() {
     badge: {
       width: "47%",
       backgroundColor: colors.surface,
-      borderRadius: 14,
+      borderRadius: 18,
       padding: 14,
       borderWidth: 1,
       borderColor: colors.primary,
     },
     badgeLocked: { borderColor: colors.border, opacity: 0.5 },
     badgeIcon: { fontSize: 22, marginBottom: 6 },
-    badgeTitle: { color: colors.text, fontSize: 13, fontWeight: "700", marginBottom: 2 },
+    badgeTitle: { color: colors.text, fontSize: 13, fontFamily: fonts.bodyBold, marginBottom: 2 },
     badgeDescription: { color: colors.textMuted, fontSize: 11, lineHeight: 15 },
-    badgeClaimed: { color: colors.success, fontSize: 11, fontWeight: "700", marginTop: 8 },
+    badgeClaimed: { color: colors.success, fontSize: 11, fontFamily: fonts.bodyBold, marginTop: 8 },
     claimButton: {
       backgroundColor: colors.primary,
-      borderRadius: 8,
-      paddingVertical: 6,
+      borderRadius: 999,
+      paddingVertical: 7,
+      flexDirection: "row",
       alignItems: "center",
+      justifyContent: "center",
+      gap: 4,
       marginTop: 8,
     },
-    claimButtonText: { color: colors.onPrimary, fontSize: 12, fontWeight: "700" },
+    claimButtonText: { color: colors.onPrimary, fontSize: 12, fontFamily: fonts.bodyExtraBold },
     logoutSpacer: { marginTop: 8 },
   }));
   const remaining = daysUntil(profile?.sat_date ?? null);
@@ -316,9 +321,8 @@ export default function ProfileScreen() {
               {a.achieved && claimed && <Text style={styles.badgeClaimed}>✓ +{a.reward} claimed</Text>}
               {a.achieved && !claimed && (
                 <Pressable style={styles.claimButton} onPress={() => handleClaim(a.id, a.reward)} disabled={claimingId === a.id}>
-                  <Text style={styles.claimButtonText}>
-                    {claimingId === a.id ? "Claiming…" : `Claim +${a.reward} ⭐`}
-                  </Text>
+                  <Text style={styles.claimButtonText}>{claimingId === a.id ? "Claiming…" : `Claim +${a.reward}`}</Text>
+                  {claimingId !== a.id && <StarIcon size={11} color={colors.onPrimary} />}
                 </Pressable>
               )}
             </View>

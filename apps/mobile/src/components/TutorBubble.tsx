@@ -1,6 +1,8 @@
 import { Text, View } from "react-native";
 import { StudyPet } from "@/components/StudyPet";
+import { StarIcon } from "@/components/icons";
 import { useTheme } from "@/hooks/useTheme";
+import { fonts } from "@/theme";
 import type { PetSpecies } from "@/types/domain";
 
 const AVATAR_CHIP_SIZE = 48;
@@ -35,20 +37,24 @@ export function TutorBubble({ species, isCorrect, line, explanation, pointsAward
       >
         <StudyPet species={species} energy="calm" growthStage="grown" size={AVATAR_SIZE} />
       </View>
-      <View style={{ flex: 1, backgroundColor: colors.surfaceAlt, borderRadius: 14, padding: 12 }}>
+      <View style={{ flex: 1, backgroundColor: colors.surfaceAlt, borderRadius: 18, padding: 12 }}>
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-          <Text style={{ color: colors.text, fontSize: 13, fontWeight: "700", flexShrink: 1 }}>{line}</Text>
+          <Text style={{ color: colors.text, fontSize: 13, fontFamily: fonts.bodyBold, flexShrink: 1 }}>{line}</Text>
           {pointsAwarded > 0 && (
             <View
               style={{
+                flexDirection: "row",
+                alignItems: "center",
+                gap: 4,
                 backgroundColor: colors.background,
-                borderRadius: 10,
+                borderRadius: 999,
                 paddingHorizontal: 8,
                 paddingVertical: 3,
                 marginLeft: 8,
               }}
             >
-              <Text style={{ color: colors.warning, fontSize: 12, fontWeight: "800" }}>+{pointsAwarded} ⭐</Text>
+              <StarIcon size={11} color={colors.warning} />
+              <Text style={{ color: colors.warning, fontSize: 12, fontFamily: fonts.bodyExtraBold }}>+{pointsAwarded}</Text>
             </View>
           )}
         </View>

@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { completeOnboarding } from "@/api/profile";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 
 function todayPlusMinDays(): string {
   const d = new Date();
@@ -17,7 +18,7 @@ export default function Onboarding() {
   const router = useRouter();
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
-    title: { fontSize: 26, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    title: { fontSize: 26, fontFamily: fonts.display, color: colors.text, marginBottom: 4 },
     subtitle: { fontSize: 14, color: colors.textMuted, marginBottom: 28, lineHeight: 20 },
     label: { color: colors.text, marginBottom: 8, fontWeight: "600" },
     input: {

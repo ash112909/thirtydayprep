@@ -4,15 +4,16 @@ import { Link } from "expo-router";
 import { supabase } from "@/lib/supabase";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { fonts } from "@/theme";
 
 export default function SignUp() {
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background, padding: 24, justifyContent: "center" },
-    title: { fontSize: 28, fontWeight: "800", color: colors.text, marginBottom: 4 },
+    title: { fontSize: 28, fontFamily: fonts.display, color: colors.text, marginBottom: 4 },
     subtitle: { fontSize: 15, color: colors.textMuted, marginBottom: 32 },
     input: {
       backgroundColor: colors.surface,
-      borderRadius: 12,
+      borderRadius: 16,
       padding: 14,
       color: colors.text,
       marginBottom: 12,
