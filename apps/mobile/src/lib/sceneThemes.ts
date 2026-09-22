@@ -7,6 +7,11 @@ export interface SceneTheme {
   skyBottom: string;
   grassTop: string;
   grassBottom: string;
+  // When set, equipping this theme also overrides the app's primary accent
+  // color everywhere (buttons, active tab, progress fills) — the buddy's
+  // chosen vibe becomes the app's vibe, not just a backyard cosmetic.
+  // Omitted for themes that are already the default orange identity.
+  accent?: { primary: string; onPrimary: string };
 }
 
 // "classic" is the original auto day/night scene (free, always owned) —
@@ -43,6 +48,7 @@ export const SCENE_THEMES: SceneTheme[] = [
     skyBottom: "#C4B5FD",
     grassTop: "#A78BFA",
     grassBottom: "#7C3AED",
+    accent: { primary: "#EC4899", onPrimary: "#FFFFFF" },
   },
   {
     id: "neon_night",
@@ -53,6 +59,7 @@ export const SCENE_THEMES: SceneTheme[] = [
     skyBottom: "#4C1D95",
     grassTop: "#312E81",
     grassBottom: "#1E1B4B",
+    accent: { primary: "#A855F7", onPrimary: "#FFFFFF" },
   },
 ];
 

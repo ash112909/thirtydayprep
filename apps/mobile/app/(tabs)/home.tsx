@@ -430,6 +430,7 @@ export default function Home() {
     if (!auth || !pet) return;
     setPet({ ...pet, equipped_theme: themeId });
     await updatePetTheme(auth.user.id, themeId);
+    refreshPetCompanion();
   }
 
   async function handleBuyTheme(themeId: string, cost: number) {

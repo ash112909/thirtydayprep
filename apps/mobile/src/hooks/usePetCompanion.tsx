@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { useAuth } from "@/hooks/useAuth";
+import { useTheme } from "@/hooks/useTheme";
 import { fetchActivePlan, fetchPlanDays } from "@/api/progress";
 import { fetchPet } from "@/api/pet";
 import { computeGrowthStage, computePetEnergy, type Energy, type GrowthStage } from "@/lib/petState";
@@ -25,6 +26,7 @@ const PetCompanionContext = createContext<PetCompanionContextValue | undefined>(
 
 export function PetCompanionProvider({ children }: { children: ReactNode }) {
   const { session } = useAuth();
+  const { setAccentTheme } = useTheme();
   const [pet, setPet] = useState<StudyPetData | null>(null);
   const [energy, setEnergy] = useState<Energy>("calm");
   const [growthStage, setGrowthStage] = useState<GrowthStage>("hatchling");
@@ -34,6 +36,7 @@ export function PetCompanionProvider({ children }: { children: ReactNode }) {
   const refresh = useCallback(async () => {
     if (!session) {
       setPet(null);
+      setAccentTheme(null);
       setLoading(false);
       return;
     }
@@ -41,6 +44,7 @@ export function PetCompanionProvider({ children }: { children: ReactNode }) {
       const [petData, activePlan] = await Promise.all([fetchPet(session.user.id), fetchActivePlan(session.user.id)]);
       const days = activePlan ? await fetchPlanDays(activePlan.id) : [];
       setPet(petData);
+      setAccentTheme(petData?.equipped_theme ?? null);
       setEnergy(computePetEnergy(days));
       setGrowthStage(computeGrowthStage(days.filter((d) => d.status === "completed").length, activePlan?.total_days ?? 0));
     } catch (err) {
@@ -52,7 +56,7 @@ export function PetCompanionProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
     }
-  }, [session]);
+  }, [session, setAccentTheme]);
 
   useEffect(() => {
     refresh();

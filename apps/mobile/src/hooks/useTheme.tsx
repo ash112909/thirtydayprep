@@ -1,7 +1,8 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { useColorScheme } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { darkColors, lightColors, type ColorTokens } from "@/theme";
+import { findSceneTheme } from "@/lib/sceneThemes";
 
 export type ThemeMode = "light" | "dark";
 
@@ -12,6 +13,10 @@ interface ThemeContextValue {
   colors: ColorTokens;
   toggleTheme: () => void;
   setMode: (mode: ThemeMode) => void;
+  // Called by PetCompanionProvider whenever the pet's equipped scene theme
+  // changes, so a theme with its own accent (see sceneThemes.ts) recolors
+  // the whole app, not just the backyard scene.
+  setAccentTheme: (themeId: string | null) => void;
 }
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
@@ -21,6 +26,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   // Starts from the device's own preference, then a saved manual override
   // (if any) applies once AsyncStorage resolves a moment later.
   const [mode, setModeState] = useState<ThemeMode>(systemScheme === "light" ? "light" : "dark");
+  const [accentThemeId, setAccentThemeId] = useState<string | null>(null);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((saved) => {
@@ -37,9 +43,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setMode(mode === "dark" ? "light" : "dark");
   }
 
-  const colors = mode === "light" ? lightColors : darkColors;
+  const setAccentTheme = useCallback((themeId: string | null) => setAccentThemeId(themeId), []);
 
-  return <ThemeContext.Provider value={{ mode, colors, toggleTheme, setMode }}>{children}</ThemeContext.Provider>;
+  const colors = useMemo<ColorTokens>(() => {
+    const base = mode === "light" ? lightColors : darkColors;
+    const accent = accentThemeId ? findSceneTheme(accentThemeId).accent : undefined;
+    return accent ? { ...base, primary: accent.primary, onPrimary: accent.onPrimary } : base;
+  }, [mode, accentThemeId]);
+
+  return (
+    <ThemeContext.Provider value={{ mode, colors, toggleTheme, setMode, setAccentTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export function useTheme(): ThemeContextValue {
