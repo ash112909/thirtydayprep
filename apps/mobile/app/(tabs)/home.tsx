@@ -1,14 +1,19 @@
-import { useCallback, useState } from "react";
-import { ActivityIndicator, RefreshControl, ScrollView, Text, View } from "react-native";
+import { useCallback, useMemo, useState } from "react";
+import { ActivityIndicator, Pressable, RefreshControl, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { getTodaySession } from "@/api/studyFunctions";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
 import { useAuth } from "@/hooks/useAuth";
+import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { buildDayNarrative } from "@/lib/planNarrative";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
+import { pickFocusTopic } from "@/lib/insights";
+import { pickHomeBuddyLine } from "@/lib/tutorVoice";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { StudyPet } from "@/components/StudyPet";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { cardElevation } from "@/theme";
 import type {
   DayTarget,
   MasterySnapshot,
@@ -68,6 +73,7 @@ export default function Home() {
       padding: 20,
       borderWidth: 1,
       borderColor: colors.border,
+      ...cardElevation,
     },
     cardTitle: { fontSize: 20, fontWeight: "700", color: colors.text, marginBottom: 6 },
     narrativeText: { color: colors.text, fontSize: 14, lineHeight: 20, marginBottom: 6 },
@@ -76,17 +82,30 @@ export default function Home() {
     progressTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surfaceAlt, overflow: "hidden", marginBottom: 20 },
     progressFill: { height: 6, backgroundColor: colors.primary },
     error: { color: colors.danger, marginTop: 20 },
-    streakWarning: {
+    buddyRow: { flexDirection: "row", alignItems: "flex-end", gap: 10, marginBottom: 20 },
+    buddyAvatarWrap: {
+      width: 68,
+      height: 68,
+      borderRadius: 34,
       backgroundColor: colors.surfaceAlt,
-      borderRadius: 12,
-      borderWidth: 1,
-      borderColor: colors.warning,
-      padding: 14,
-      marginBottom: 20,
+      borderWidth: 2,
+      borderColor: colors.primary,
+      alignItems: "center",
+      justifyContent: "center",
     },
-    streakWarningText: { color: colors.text, fontSize: 13, lineHeight: 19, fontWeight: "600" },
+    buddyBubble: {
+      flex: 1,
+      backgroundColor: colors.surface,
+      borderRadius: 16,
+      borderBottomLeftRadius: 4,
+      padding: 14,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    buddyBubbleText: { color: colors.text, fontSize: 13, lineHeight: 19, fontWeight: "600" },
   }));
   const { session: auth, profile } = useAuth();
+  const { pet, energy, growthStage } = usePetCompanion();
   const [session, setSession] = useState<TodaySessionResponse | null>(null);
   const [plan, setPlan] = useState<StudyPlan | null>(null);
   const [days, setDays] = useState<StudyPlanDay[]>([]);
@@ -145,6 +164,12 @@ export default function Home() {
       ? buildDayNarrative(session.day_number, sessionTargets(session), subcategories, mastery)
       : [];
   const streakAtRisk = !loading && streak > 0 && !!session?.questions && !allAnswered && isLateInDay();
+  const focusTopic = pickFocusTopic(stats, subcategories);
+  const focusTopicId = focusTopic?.subcategory.id ?? null;
+  const buddyLine = useMemo(
+    () => pickHomeBuddyLine({ streakAtRisk, streak, focusTopicName: focusTopic?.subcategory.name ?? null }),
+    [streakAtRisk, streak, focusTopicId],
+  );
 
   return (
     <ScrollView
@@ -163,12 +188,15 @@ export default function Home() {
         <ActivityIndicator color={colors.primary} style={{ marginTop: 40 }} />
       ) : (
         <>
-          {streakAtRisk && (
-            <View style={styles.streakWarning}>
-              <Text style={styles.streakWarningText}>
-                🔥 Don't lose your {streak}-day streak — finish today's session before the day's out.
-              </Text>
-            </View>
+          {pet && (
+            <Pressable style={styles.buddyRow} onPress={() => router.push("/(tabs)/buddy")}>
+              <View style={styles.buddyAvatarWrap}>
+                <StudyPet species={pet.species} energy={energy} growthStage={growthStage} size={52} />
+              </View>
+              <View style={styles.buddyBubble}>
+                <Text style={styles.buddyBubbleText}>{buddyLine}</Text>
+              </View>
+            </Pressable>
           )}
 
           {plan && (

@@ -17,9 +17,12 @@ export function FloatingPetBadge() {
   const { pet, energy, growthStage, reactionAction, clearReaction } = usePetCompanion();
 
   const onBuddyTab = segments[segments.length - 1] === "buddy";
+  // Home now embeds the buddy directly (with a reactive speech bubble), so
+  // the floating badge there would just be a redundant second pet on screen.
+  const onHomeTab = segments[segments.length - 1] === "home";
   const inTabs = segments[0] === "(tabs)";
 
-  if (!pet || onBuddyTab) return null;
+  if (!pet || onBuddyTab || onHomeTab) return null;
 
   return (
     <Pressable
@@ -27,7 +30,7 @@ export function FloatingPetBadge() {
       style={{
         position: "absolute",
         right: 16,
-        bottom: inTabs ? 78 : 24,
+        bottom: inTabs ? 88 : 24,
         width: BADGE_SIZE,
         height: BADGE_SIZE,
         borderRadius: BADGE_SIZE / 2,
