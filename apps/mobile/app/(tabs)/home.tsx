@@ -156,18 +156,41 @@ export default function Home() {
     buddyBubbleText: { color: colors.text, fontSize: 13, lineHeight: 19, fontFamily: fonts.bodyBold, textAlign: "center" },
 
     chipRow: { flexDirection: "row", gap: 8, marginBottom: 24 },
-    chip: {
+    chipPrimary: {
+      flex: 1,
       flexDirection: "row",
       alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      backgroundColor: colors.primary,
+      borderRadius: 18,
+      paddingVertical: 12,
+    },
+    chipSecondary: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      backgroundColor: colors.secondary,
+      borderRadius: 18,
+      paddingVertical: 12,
+    },
+    chipNeutral: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
       gap: 6,
       backgroundColor: colors.surfaceAlt,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: 999,
-      paddingHorizontal: 14,
-      paddingVertical: 8,
+      borderRadius: 18,
+      paddingVertical: 12,
     },
-    chipText: { color: colors.text, fontSize: 12, fontFamily: fonts.bodyBold },
+    chipTextOnPrimary: { color: colors.onPrimary, fontSize: 13, fontFamily: fonts.bodyExtraBold },
+    chipTextOnSecondary: { color: colors.onSecondary, fontSize: 13, fontFamily: fonts.bodyExtraBold },
+    chipText: { color: colors.text, fontSize: 13, fontFamily: fonts.bodyExtraBold },
 
     card: {
       width: "100%",
@@ -612,14 +635,14 @@ export default function Home() {
           </View>
 
           <View style={styles.chipRow}>
-            <View style={styles.chip}>
-              <FlameIcon size={13} color={colors.primary} />
-              <Text style={styles.chipText}>{streak}</Text>
+            <View style={styles.chipPrimary}>
+              <FlameIcon size={13} color={colors.onPrimary} />
+              <Text style={styles.chipTextOnPrimary}>{streak}</Text>
             </View>
-            <View style={styles.chip}>
-              <Text style={styles.chipText}>{overallAccuracy != null ? `${overallAccuracy}% acc.` : "— acc."}</Text>
+            <View style={styles.chipSecondary}>
+              <Text style={styles.chipTextOnSecondary}>{overallAccuracy != null ? `${overallAccuracy}%` : "—"}</Text>
             </View>
-            <View style={styles.chip}>
+            <View style={styles.chipNeutral}>
               <StarIcon size={13} color={colors.secondary} />
               <Text style={styles.chipText}>{pet.points}</Text>
             </View>

@@ -46,8 +46,14 @@ export default function SessionRecap() {
       borderWidth: 1,
       borderColor: colors.border,
     },
+    statBoxPrimary: { backgroundColor: colors.primary, borderWidth: 0 },
+    statBoxSecondary: { backgroundColor: colors.secondary, borderWidth: 0 },
     statValue: { color: colors.text, fontSize: 17, fontFamily: fonts.displaySemibold },
+    statValueOnPrimary: { color: colors.onPrimary },
+    statValueOnSecondary: { color: colors.onSecondary },
     statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 4, textAlign: "center" },
+    statLabelOnPrimary: { color: colors.onPrimary, opacity: 0.8 },
+    statLabelOnSecondary: { color: colors.onSecondary, opacity: 0.8 },
     sectionTitle: { fontSize: 16, fontFamily: fonts.displaySemibold, color: colors.text, marginBottom: 12 },
     row: {
       flexDirection: "row",
@@ -131,15 +137,15 @@ export default function SessionRecap() {
       </View>
 
       <View style={styles.statsRow}>
-        <View style={styles.statBox}>
-          <Text style={styles.statValue}>{accuracy}%</Text>
-          <Text style={styles.statLabel}>accuracy</Text>
+        <View style={[styles.statBox, styles.statBoxPrimary]}>
+          <Text style={[styles.statValue, styles.statValueOnPrimary]}>{accuracy}%</Text>
+          <Text style={[styles.statLabel, styles.statLabelOnPrimary]}>accuracy</Text>
         </View>
-        <View style={styles.statBox}>
-          <Text style={styles.statValue}>
+        <View style={[styles.statBox, styles.statBoxSecondary]}>
+          <Text style={[styles.statValue, styles.statValueOnSecondary]}>
             {correct}/{total}
           </Text>
-          <Text style={styles.statLabel}>correct</Text>
+          <Text style={[styles.statLabel, styles.statLabelOnSecondary]}>correct</Text>
         </View>
         <View style={styles.statBox}>
           <Text style={styles.statValue}>

@@ -67,9 +67,18 @@ export default function Progress() {
       borderWidth: 1,
       borderColor: colors.border,
     },
+    statBoxPrimary: { backgroundColor: colors.primary, borderWidth: 0 },
+    statBoxSecondary: { backgroundColor: colors.secondary, borderWidth: 0 },
+    statBoxAccent: { backgroundColor: colors.accentPop, borderWidth: 0 },
     statValue: { color: colors.text, fontSize: 15, fontFamily: fonts.displaySemibold },
+    statValueOnPrimary: { color: colors.onPrimary },
+    statValueOnSecondary: { color: colors.onSecondary },
+    statValueOnAccent: { color: colors.onAccentPop },
     statValueRow: { flexDirection: "row", alignItems: "center", gap: 4 },
     statLabel: { color: colors.textMuted, fontSize: 9, marginTop: 4, textAlign: "center" },
+    statLabelOnPrimary: { color: colors.onPrimary, opacity: 0.8 },
+    statLabelOnSecondary: { color: colors.onSecondary, opacity: 0.8 },
+    statLabelOnAccent: { color: colors.onAccentPop, opacity: 0.8 },
     mistakeCard: {
       backgroundColor: colors.surfaceAlt,
       borderRadius: 18,
@@ -218,26 +227,26 @@ export default function Progress() {
 
       {plan && (
         <View style={styles.statsRow}>
-          <View style={styles.statBox}>
+          <View style={[styles.statBox, styles.statBoxPrimary]}>
             {streak > 0 ? (
               <View style={styles.statValueRow}>
-                <FlameIcon size={14} color={colors.primary} />
-                <Text style={styles.statValue}>{streak}</Text>
+                <FlameIcon size={14} color={colors.onPrimary} />
+                <Text style={[styles.statValue, styles.statValueOnPrimary]}>{streak}</Text>
               </View>
             ) : (
-              <Text style={styles.statValue}>—</Text>
+              <Text style={[styles.statValue, styles.statValueOnPrimary]}>—</Text>
             )}
-            <Text style={styles.statLabel}>day streak</Text>
+            <Text style={[styles.statLabel, styles.statLabelOnPrimary]}>day streak</Text>
           </View>
-          <View style={styles.statBox}>
-            <Text style={styles.statValue}>
+          <View style={[styles.statBox, styles.statBoxSecondary]}>
+            <Text style={[styles.statValue, styles.statValueOnSecondary]}>
               {completedDays}/{plan.total_days}
             </Text>
-            <Text style={styles.statLabel}>days done</Text>
+            <Text style={[styles.statLabel, styles.statLabelOnSecondary]}>days done</Text>
           </View>
-          <View style={styles.statBox}>
-            <Text style={styles.statValue}>{overallAccuracy != null ? `${overallAccuracy}%` : "—"}</Text>
-            <Text style={styles.statLabel}>accuracy</Text>
+          <View style={[styles.statBox, styles.statBoxAccent]}>
+            <Text style={[styles.statValue, styles.statValueOnAccent]}>{overallAccuracy != null ? `${overallAccuracy}%` : "—"}</Text>
+            <Text style={[styles.statLabel, styles.statLabelOnAccent]}>accuracy</Text>
           </View>
           <View style={styles.statBox}>
             <Text style={styles.statValue}>{totalAnswered}</Text>
