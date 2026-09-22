@@ -3,6 +3,20 @@
 // rather than only the Buddy tab having that treatment.
 export const MAX_APP_WIDTH = 480;
 
+// Bricolage Grotesque for display type (greetings, stat numbers, section
+// headlines) — Plus Jakarta Sans for everything else. Loaded via
+// @expo-google-fonts in app/_layout.tsx; these are the exact family names
+// that package registers with the RN font system.
+export const fonts = {
+  display: "BricolageGrotesque_800ExtraBold",
+  displaySemibold: "BricolageGrotesque_700Bold",
+  displayMedium: "BricolageGrotesque_600SemiBold",
+  body: "PlusJakartaSans_500Medium",
+  bodySemibold: "PlusJakartaSans_600SemiBold",
+  bodyBold: "PlusJakartaSans_700Bold",
+  bodyExtraBold: "PlusJakartaSans_800ExtraBold",
+};
+
 export interface ColorTokens {
   background: string;
   surface: string;
@@ -15,37 +29,57 @@ export interface ColorTokens {
   // background — primary flips from a bright amber (dark mode) to a
   // deeper burnt orange (light mode), so what reads well on it flips too.
   onPrimary: string;
+  // A citrus-and-pink duotone alongside the buddy's orange, not just one
+  // muted accent on gray — secondary (lime) and accentPop (pink) are used
+  // for the second-tier CTA/highlight moments (e.g. the shareable recap).
+  secondary: string;
+  onSecondary: string;
+  accentPop: string;
+  onAccentPop: string;
   success: string;
   danger: string;
   warning: string;
 }
 
 export const darkColors: ColorTokens = {
-  background: "#0F172A",
-  surface: "#1E293B",
-  surfaceAlt: "#273449",
-  border: "#334155",
-  text: "#F8FAFC",
-  textMuted: "#94A3B8",
+  // A warm near-black instead of a cool corporate slate — reads as a
+  // designed consumer app rather than an admin dashboard.
+  background: "#17130E",
+  surface: "#221C14",
+  surfaceAlt: "#2C241A",
+  border: "#3A3225",
+  text: "#FFF8EE",
+  textMuted: "#B8AC9C",
   // Pulled from the study buddy's own fur/collar colors, not a generic
   // dashboard blue, so the accent color reads as "the buddy's color"
   // wherever it shows up (buttons, active tab, progress fills).
-  primary: "#FB923C",
-  onPrimary: "#431407",
+  primary: "#FF7A1A",
+  onPrimary: "#17130E",
+  secondary: "#C6FF3D",
+  onSecondary: "#17130E",
+  accentPop: "#FF3D81",
+  onAccentPop: "#17130E",
   success: "#4ADE80",
-  danger: "#F87171",
-  warning: "#FBBF24",
+  danger: "#FF5470",
+  warning: "#FFC93D",
 };
 
 export const lightColors: ColorTokens = {
-  background: "#F8FAFC",
+  background: "#FFF9F0",
   surface: "#FFFFFF",
-  surfaceAlt: "#F1F5F9",
-  border: "#E2E8F0",
-  text: "#0F172A",
-  textMuted: "#64748B",
-  primary: "#EA580C",
+  surfaceAlt: "#FDF1E1",
+  border: "#F0E4D0",
+  text: "#241A0D",
+  textMuted: "#8A7A63",
+  primary: "#E8600A",
   onPrimary: "#FFFFFF",
+  // Darker than dark mode's lime — the bright version has too little
+  // contrast to use as text/icon color on a light background, only ever
+  // safe as a fill with dark text on top.
+  secondary: "#5C8A0A",
+  onSecondary: "#FFFFFF",
+  accentPop: "#D6216B",
+  onAccentPop: "#FFFFFF",
   success: "#15803D",
   danger: "#DC2626",
   warning: "#B45309",

@@ -16,7 +16,7 @@ interface Props {
 
 // Frames the answer explanation as the buddy talking you through it, rather
 // than a plain feedback box — same visual language (avatar chip) as the
-// FloatingPetBadge, so it reads as the same character showing up here too.
+// buddy hub on Home, so it reads as the same character showing up here too.
 export function TutorBubble({ species, isCorrect, line, explanation, pointsAwarded = 0 }: Props) {
   const { colors } = useTheme();
   return (

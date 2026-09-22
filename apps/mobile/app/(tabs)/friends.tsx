@@ -1,7 +1,6 @@
 import { useCallback, useState } from "react";
 import { ActivityIndicator, Alert, Pressable, ScrollView, Share, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
-import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import {
   fetchFriendIds,
@@ -16,7 +15,6 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 export default function Friends() {
-  const router = useRouter();
   const { session } = useAuth();
   const { styles, colors } = useThemedStyles((colors) => ({
     container: { flex: 1, backgroundColor: colors.background },
@@ -190,10 +188,6 @@ export default function Friends() {
           </View>
         ))
       )}
-
-      <View style={{ marginTop: 20 }}>
-        <PrimaryButton title="Back" variant="secondary" onPress={() => router.back()} />
-      </View>
     </ScrollView>
   );
 }

@@ -2,11 +2,25 @@ import { useEffect } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import {
+  BricolageGrotesque_600SemiBold,
+  BricolageGrotesque_700Bold,
+  BricolageGrotesque_800ExtraBold,
+} from "@expo-google-fonts/bricolage-grotesque";
+import {
+  PlusJakartaSans_500Medium,
+  PlusJakartaSans_600SemiBold,
+  PlusJakartaSans_700Bold,
+  PlusJakartaSans_800ExtraBold,
+} from "@expo-google-fonts/plus-jakarta-sans";
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 import { PetCompanionProvider } from "@/hooks/usePetCompanion";
 import { ThemeProvider, useTheme } from "@/hooks/useTheme";
-import { FloatingPetBadge } from "@/components/FloatingPetBadge";
 import { MAX_APP_WIDTH } from "@/theme";
+
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
 function RootNavigation() {
   const { session, profile, hasCompletedBaseline, loading } = useAuth();
@@ -67,7 +81,6 @@ function RootShell() {
       <View style={{ flex: 1, backgroundColor: colors.background, alignItems: "center" }}>
         <View style={{ flex: 1, width: "100%", maxWidth: MAX_APP_WIDTH }}>
           <RootNavigation />
-          <FloatingPetBadge />
         </View>
       </View>
     </>
@@ -75,6 +88,22 @@ function RootShell() {
 }
 
 export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    BricolageGrotesque_600SemiBold,
+    BricolageGrotesque_700Bold,
+    BricolageGrotesque_800ExtraBold,
+    PlusJakartaSans_500Medium,
+    PlusJakartaSans_600SemiBold,
+    PlusJakartaSans_700Bold,
+    PlusJakartaSans_800ExtraBold,
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) SplashScreen.hideAsync().catch(() => {});
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
+
   return (
     <ThemeProvider>
       <AuthProvider>

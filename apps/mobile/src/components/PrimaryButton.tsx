@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { ActivityIndicator, Animated, Pressable, Text } from "react-native";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import { hapticTap } from "@/lib/haptics";
+import { fonts } from "@/theme";
 
 interface Props {
   title: string;
@@ -15,8 +16,8 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
   const isSecondary = variant === "secondary";
   const { styles, colors } = useThemedStyles((colors) => ({
     base: {
-      paddingVertical: 14,
-      borderRadius: 12,
+      paddingVertical: 15,
+      borderRadius: 999,
       alignItems: "center",
       justifyContent: "center",
     },
@@ -30,7 +31,7 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
     },
     secondary: {
       backgroundColor: "transparent",
-      borderWidth: 1,
+      borderWidth: 2,
       borderColor: colors.border,
     },
     disabled: {
@@ -39,7 +40,7 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
     text: {
       color: colors.onPrimary,
       fontSize: 16,
-      fontWeight: "700",
+      fontFamily: fonts.bodyExtraBold,
     },
     secondaryText: {
       color: colors.text,
