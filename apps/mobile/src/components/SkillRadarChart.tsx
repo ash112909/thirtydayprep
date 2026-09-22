@@ -12,17 +12,21 @@ const SHORT_LABELS: Record<string, string> = {
   "information-and-ideas": "Info & Ideas",
   "craft-and-structure": "Craft",
   "expression-of-ideas": "Expression",
-  "standard-english-conventions": "Conventions",
+  "standard-english-conventions": "Grammar",
   algebra: "Algebra",
   "advanced-math": "Adv. Math",
   "problem-solving-data-analysis": "Data Analysis",
   "geometry-trigonometry": "Geometry",
 };
 
-const SIZE = 300;
+// SIZE carries generous margin beyond MAX_RADIUS + LABEL_RADIUS on every
+// side — the labels at the horizontal extremes (0°/180°) are anchored by
+// their own edge (textAnchor "start"/"end"), so a tight canvas clips the
+// far side of a long label right off the SVG instead of just crowding it.
+const SIZE = 400;
 const CENTER = SIZE / 2;
-const MAX_RADIUS = 88;
-const LABEL_RADIUS = MAX_RADIUS + 30;
+const MAX_RADIUS = 90;
+const LABEL_RADIUS = MAX_RADIUS + 28;
 const RINGS = [0.25, 0.5, 0.75, 1];
 
 function pointAt(index: number, count: number, radius: number): { x: number; y: number } {
