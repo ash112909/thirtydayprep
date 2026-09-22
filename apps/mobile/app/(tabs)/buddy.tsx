@@ -3,10 +3,11 @@ import { ActivityIndicator, Dimensions, Modal, Pressable, ScrollView, Text, Text
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats } from "@/api/progress";
-import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetName, updatePetSpecies } from "@/api/pet";
+import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetName, updatePetSpecies, updatePetTheme } from "@/api/pet";
 import { computeStreak, computeOverallAccuracy } from "@/lib/planStats";
 import { computeGrowthStage, computePetEnergy } from "@/lib/petState";
 import { SHOP_ITEMS } from "@/lib/petShop";
+import { SCENE_THEMES, findSceneTheme } from "@/lib/sceneThemes";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet, type PetAction } from "@/components/StudyPet";
 import { PetScene } from "@/components/PetScene";
@@ -312,6 +313,19 @@ export default function BuddyScreen() {
     refreshPetCompanion();
   }
 
+  async function handleEquipTheme(themeId: string) {
+    if (!session || !pet) return;
+    setPet({ ...pet, equipped_theme: themeId });
+    await updatePetTheme(session.user.id, themeId);
+  }
+
+  // Buying a theme equips it immediately — no separate confirm step, same
+  // as picking a Bitmoji/Roblox skin the moment you buy it.
+  async function handleBuyTheme(themeId: string, cost: number) {
+    await handlePurchase(themeId, cost);
+    await handleEquipTheme(themeId);
+  }
+
   // Tapping a toy directly in the scene (or the Play button, which reuses
   // whichever toy was last chosen) both selects it and starts the reaction —
   // there's no separate "confirm" step.
@@ -403,6 +417,7 @@ export default function BuddyScreen() {
           isPlaying={activeAction === "playing"}
           playingToyId={selectedToyId}
           onToyPress={handlePlayToy}
+          theme={findSceneTheme(pet.equipped_theme)}
           width={SCREEN_WIDTH}
           height={HERO_HEIGHT}
         >
@@ -517,6 +532,37 @@ export default function BuddyScreen() {
                     onPress={() => handlePurchase(item.id, item.cost)}
                   >
                     <Text style={styles.shopBuyText}>⭐ {item.cost}</Text>
+                  </Pressable>
+                )}
+              </View>
+            );
+          })}
+        </View>
+
+        <Text style={styles.sectionTitle}>Scene themes</Text>
+        <Text style={styles.shopHint}>Buying a theme equips it right away.</Text>
+        <View style={styles.shopGrid}>
+          {SCENE_THEMES.map((themeOption) => {
+            const owned = themeOption.cost === 0 || (inventory[themeOption.id] ?? 0) > 0;
+            const equipped = (pet.equipped_theme ?? "classic") === themeOption.id;
+            const canAfford = pet.points >= themeOption.cost;
+            return (
+              <View key={themeOption.id} style={styles.shopCard}>
+                <Text style={styles.shopIcon}>{themeOption.icon}</Text>
+                <Text style={styles.shopName}>{themeOption.name}</Text>
+                {equipped ? (
+                  <Text style={styles.shopOwnedTag}>Equipped ✓</Text>
+                ) : owned ? (
+                  <Pressable style={styles.shopBuyButton} onPress={() => handleEquipTheme(themeOption.id)}>
+                    <Text style={styles.shopBuyText}>Equip</Text>
+                  </Pressable>
+                ) : (
+                  <Pressable
+                    style={[styles.shopBuyButton, !canAfford && styles.shopBuyButtonDisabled]}
+                    disabled={!canAfford}
+                    onPress={() => handleBuyTheme(themeOption.id, themeOption.cost)}
+                  >
+                    <Text style={styles.shopBuyText}>⭐ {themeOption.cost}</Text>
                   </Pressable>
                 )}
               </View>

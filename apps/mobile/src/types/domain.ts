@@ -137,4 +137,5 @@ export interface StudyPet {
   equipped_accessories: string[];
   points: number;
   name: string | null;
+  equipped_theme: string | null;
 }

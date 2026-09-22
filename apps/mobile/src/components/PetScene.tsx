@@ -4,6 +4,7 @@ import { Pressable, Text, View } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from "react-native-reanimated";
 import Svg, { Circle, Defs, Ellipse, LinearGradient, Path, Polygon, RadialGradient, Rect, Stop } from "react-native-svg";
 import { SHOP_ITEMS } from "@/lib/petShop";
+import type { SceneTheme } from "@/lib/sceneThemes";
 import type { PetSpecies } from "@/types/domain";
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
   isPlaying?: boolean; // sends the toy being played with over to the pet
   playingToyId?: string | null; // which owned toy id is the one in motion
   onToyPress?: (itemId: string) => void; // tap a toy directly to choose it
+  theme?: SceneTheme; // an equipped scene theme overrides the auto day/night colors
   width: number;
   height: number;
   children: ReactNode;
@@ -153,12 +155,17 @@ function SceneProp({
   );
 }
 
-export function PetScene({ species, ownedItems, isPlaying = false, playingToyId = null, onToyPress, width, height, children }: Props) {
+export function PetScene({ species, ownedItems, isPlaying = false, playingToyId = null, onToyPress, theme, width, height, children }: Props) {
   const night = isNightNow();
-  const skyTop = night ? "#0B1224" : "#7DD3FC";
-  const skyBottom = night ? "#1E1B4B" : "#BAE6FD";
-  const grassTop = night ? "#1F3B2C" : "#3F7D52";
-  const grassBottom = night ? "#142A1E" : "#2F5F3E";
+  const customTheme = theme && theme.id !== "classic" ? theme : null;
+  const skyTop = customTheme ? customTheme.skyTop : night ? "#0B1224" : "#7DD3FC";
+  const skyBottom = customTheme ? customTheme.skyBottom : night ? "#1E1B4B" : "#BAE6FD";
+  const grassTop = customTheme ? customTheme.grassTop : night ? "#1F3B2C" : "#3F7D52";
+  const grassBottom = customTheme ? customTheme.grassBottom : night ? "#142A1E" : "#2F5F3E";
+  // A custom theme is a deliberate aesthetic choice, not a lighting
+  // simulation, so it always shows the sun/daytime glow rather than
+  // flipping to a moon-and-stars sky whenever it happens to be evening.
+  const showNightSky = night && !customTheme;
 
   const groundY = height * 0.78;
   const houseW = width * 0.44;
@@ -186,15 +193,15 @@ export function PetScene({ species, ownedItems, isPlaying = false, playingToyId 
             <Stop offset="1" stopColor={grassBottom} />
           </LinearGradient>
           <RadialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-            <Stop offset="0" stopColor={night ? "#E2E8F0" : "#FDE68A"} stopOpacity={0.5} />
-            <Stop offset="1" stopColor={night ? "#E2E8F0" : "#FDE68A"} stopOpacity={0} />
+            <Stop offset="0" stopColor={showNightSky ? "#E2E8F0" : "#FDE68A"} stopOpacity={0.5} />
+            <Stop offset="1" stopColor={showNightSky ? "#E2E8F0" : "#FDE68A"} stopOpacity={0} />
           </RadialGradient>
         </Defs>
 
         <Rect x={0} y={0} width={width} height={height} fill="url(#sky)" />
 
         <Circle cx={width * 0.18} cy={height * 0.17} r={36} fill="url(#glow)" />
-        {night ? (
+        {showNightSky ? (
           <>
             <Circle cx={width * 0.18} cy={height * 0.17} r={15} fill="#F1F5F9" />
             <Circle cx={width * 0.18 + 6} cy={height * 0.17 - 4} r={12.5} fill={skyTop} />
