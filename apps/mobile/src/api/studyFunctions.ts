@@ -2,8 +2,10 @@ import { FunctionsHttpError } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabase";
 import type {
   GenerateBaselineResponse,
+  GenerateMockTestResponse,
   SubmitAttemptResponse,
   SubmitBaselineResponse,
+  SubmitMockTestResponse,
   TodaySessionResponse,
 } from "@/types/domain";
 
@@ -104,4 +106,15 @@ export interface ClaimAchievementResponse {
 
 export function claimAchievement(achievementId: string) {
   return invoke<ClaimAchievementResponse>("claim-achievement", { achievement_id: achievementId });
+}
+
+export function generateMockTest() {
+  return invoke<GenerateMockTestResponse>("generate-mock-test");
+}
+
+export function submitMockTest(
+  mockTestId: string,
+  answers: { question_id: string; selected_choice: string; time_spent_seconds: number }[],
+) {
+  return invoke<SubmitMockTestResponse>("submit-mock-test", { mock_test_id: mockTestId, answers });
 }

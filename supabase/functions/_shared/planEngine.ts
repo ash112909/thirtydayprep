@@ -41,7 +41,7 @@ const WEAKNESS_EMPHASIS = 1.5;
 export const BASELINE_QUESTIONS_PER_SUBCATEGORY = 3; // one easy, one medium, one hard
 export const BASELINE_DIFFICULTIES: Difficulty[] = ["easy", "medium", "hard"];
 
-const DIFFICULTY_POINTS: Record<Difficulty, number> = { easy: 1, medium: 2, hard: 3 };
+export const DIFFICULTY_POINTS: Record<Difficulty, number> = { easy: 1, medium: 2, hard: 3 };
 
 /**
  * Score a completed baseline test into a per-subcategory mastery snapshot
@@ -179,7 +179,7 @@ export function computeDayTargets(
   return targets;
 }
 
-function splitByRatio(
+export function splitByRatio(
   total: number,
   mix: Record<Difficulty, number>,
 ): Record<Difficulty, number> {

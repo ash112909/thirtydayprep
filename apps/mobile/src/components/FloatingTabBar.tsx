@@ -10,11 +10,12 @@ type IconName = keyof typeof Ionicons.glyphMap;
 const SIDE_ICONS: Record<string, { focused: IconName; unfocused: IconName; label: string }> = {
   plan: { focused: "calendar", unfocused: "calendar-outline", label: "Plan" },
   progress: { focused: "stats-chart", unfocused: "stats-chart-outline", label: "Progress" },
+  "mock-test": { focused: "clipboard", unfocused: "clipboard-outline", label: "Test" },
   profile: { focused: "person-circle", unfocused: "person-circle-outline", label: "Profile" },
 };
 
 // Left-to-right visual order regardless of Tabs.Screen registration order.
-const SIDE_ORDER = ["plan", "progress", "profile"];
+const SIDE_ORDER = ["plan", "progress", "mock-test", "profile"];
 
 const BAR_HEIGHT = 62;
 const BUTTON_SIZE = 66;

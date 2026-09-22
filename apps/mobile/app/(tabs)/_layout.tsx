@@ -10,6 +10,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="home" />
       <Tabs.Screen name="plan" />
       <Tabs.Screen name="progress" />
+      <Tabs.Screen name="mock-test" />
       <Tabs.Screen name="profile" />
       {/* These aren't destinations the custom tab bar renders a button for —
           they're "inside" screens (a session, its recap, a plan day, Mistake
@@ -24,6 +25,8 @@ export default function TabsLayout() {
       <Tabs.Screen name="mistakes" options={{ href: null }} />
       <Tabs.Screen name="practice" options={{ href: null }} />
       <Tabs.Screen name="wrapped" options={{ href: null }} />
+      <Tabs.Screen name="mock-test-run" options={{ href: null }} />
+      <Tabs.Screen name="mock-test-results" options={{ href: null }} />
     </Tabs>
   );
 }

@@ -128,6 +128,35 @@ export interface StudyPlanDay {
   materialized: boolean;
 }
 
+export interface MockTestQuestion extends SessionQuestion {}
+
+export interface MockTestSectionInfo {
+  category_slug: string;
+  time_limit_minutes: number;
+}
+
+export interface GenerateMockTestResponse {
+  mock_test_id: string;
+  sections: MockTestSectionInfo[];
+  questions: MockTestQuestion[];
+}
+
+export interface SubmitMockTestResponse {
+  rw_scaled: number | null;
+  math_scaled: number | null;
+  total_scaled: number | null;
+}
+
+export interface MockTestSummary {
+  id: string;
+  started_at: string;
+  completed_at: string | null;
+  total_questions: number;
+  rw_scaled: number | null;
+  math_scaled: number | null;
+  total_scaled: number | null;
+}
+
 export type PetSpecies = "cat" | "dog";
 
 export interface StudyPet {
