@@ -11,6 +11,7 @@ import { GraphingCalculatorButton } from "@/components/GraphingCalculator";
 import { QuestionTimer } from "@/components/QuestionTimer";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
+import { hapticCorrect, hapticIncorrect } from "@/lib/haptics";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 export default function ReviewQuestion() {
@@ -92,6 +93,8 @@ export default function ReviewQuestion() {
         pointsAwarded: result.points_awarded ?? 0,
       });
       if (result.points_awarded) refreshPetCompanion();
+      if (result.is_correct) hapticCorrect();
+      else hapticIncorrect();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
     } finally {

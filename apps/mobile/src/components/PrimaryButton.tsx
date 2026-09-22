@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { ActivityIndicator, Animated, Pressable, Text } from "react-native";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { hapticTap } from "@/lib/haptics";
 
 interface Props {
   title: string;
@@ -57,7 +58,11 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
       <Pressable
         onPress={onPress}
         disabled={isDisabled}
-        onPressIn={() => !isDisabled && animateTo(0.96)}
+        onPressIn={() => {
+          if (isDisabled) return;
+          animateTo(0.96);
+          hapticTap();
+        }}
         onPressOut={() => !isDisabled && animateTo(1)}
         style={[styles.base, isSecondary ? styles.secondary : styles.primary, isDisabled && styles.disabled]}
       >

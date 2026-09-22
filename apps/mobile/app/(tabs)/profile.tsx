@@ -8,6 +8,7 @@ import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } f
 import { fetchClaimedAchievementIds } from "@/api/achievements";
 import { claimAchievement, regeneratePlan } from "@/api/studyFunctions";
 import { computeAchievements, type Achievement } from "@/lib/achievements";
+import { hapticCelebrate } from "@/lib/haptics";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { useTheme } from "@/hooks/useTheme";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
@@ -156,6 +157,7 @@ export default function ProfileScreen() {
       setClaimedIds((prev) => new Set(prev).add(achievementId));
       if (!result.already_claimed && result.points_awarded > 0) {
         await refreshPetCompanion();
+        hapticCelebrate();
         Alert.alert("Achievement claimed!", `Your buddy earned +${result.points_awarded} points.`);
       }
     } catch (e) {

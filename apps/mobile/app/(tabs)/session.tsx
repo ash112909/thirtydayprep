@@ -12,6 +12,7 @@ import { QuestionTimer } from "@/components/QuestionTimer";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { pickSessionCompleteLine, pickTutorLine } from "@/lib/tutorVoice";
+import { hapticCelebrate, hapticCorrect, hapticIncorrect } from "@/lib/haptics";
 import { TutorBubble } from "@/components/TutorBubble";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { SessionQuestion } from "@/types/domain";
@@ -143,8 +144,11 @@ export default function Session() {
         // whether the answer was right or wrong, since its role here is to
         // walk through it with you, not to grade you.
         celebrate("playing");
+        hapticCelebrate();
       } else {
         celebrate("petting");
+        if (result.is_correct) hapticCorrect();
+        else hapticIncorrect();
       }
       // Points changed (a correct answer and/or a completed day both award
       // them), so the floating badge and Buddy screen shouldn't go stale.

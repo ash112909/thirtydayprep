@@ -13,6 +13,7 @@ import { QuestionTimer } from "@/components/QuestionTimer";
 import { findMathCategoryId } from "@/lib/mathCategory";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { pickTutorLine } from "@/lib/tutorVoice";
+import { hapticCorrect, hapticIncorrect } from "@/lib/haptics";
 import { TutorBubble } from "@/components/TutorBubble";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { QuestionDetail } from "@/api/mistakes";
@@ -145,6 +146,8 @@ export default function PracticeByTopic() {
         setPointsEarned((p) => p + (result.points_awarded ?? 0));
         refreshPetCompanion();
       }
+      if (result.is_correct) hapticCorrect();
+      else hapticIncorrect();
       celebrate("petting");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to submit answer");
