@@ -30,7 +30,10 @@ const SECTION_LABELS: Record<string, string> = {
   math: "Math",
 };
 
-type Phase = "loading" | "section" | "transition" | "submitting" | "error";
+// Matches the real digital SAT's break between Reading & Writing and Math.
+const BREAK_SECONDS = 10 * 60;
+
+type Phase = "loading" | "section" | "break" | "submitting" | "error";
 
 export default function MockTestRun() {
   const router = useRouter();
@@ -46,7 +49,8 @@ export default function MockTestRun() {
     progressBarTrack: { height: 6, borderRadius: 3, backgroundColor: colors.surface, overflow: "hidden" },
     progressBarFill: { height: 6, backgroundColor: colors.primary },
     transitionTitle: { fontSize: 24, fontFamily: fonts.display, color: colors.text, marginBottom: 12, textAlign: "center" },
-    transitionBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 24, lineHeight: 20 },
+    transitionBody: { fontSize: 14, color: colors.textMuted, textAlign: "center", marginBottom: 8, lineHeight: 20 },
+    breakTimerWrap: { marginBottom: 24 },
     loadingText: { color: colors.textMuted, fontSize: 13 },
   }));
 
@@ -106,7 +110,7 @@ export default function MockTestRun() {
     if (sectionIdx + 1 >= sections.length) {
       void submitFinal(finalAnswers);
     } else {
-      setPhase("transition");
+      setPhase("break");
     }
   }
 
@@ -142,6 +146,10 @@ export default function MockTestRun() {
     finishSection(answers);
   }
 
+  function handleBreakExpire() {
+    startNextSection();
+  }
+
   if (phase === "loading" || !sections.length) {
     return (
       <View style={styles.center}>
@@ -168,7 +176,7 @@ export default function MockTestRun() {
     );
   }
 
-  if (phase === "transition") {
+  if (phase === "break") {
     const finishedSection = sections[sectionIdx];
     const nextSection = sections[sectionIdx + 1];
     return (
@@ -178,11 +186,19 @@ export default function MockTestRun() {
         </Text>
         <Text style={styles.transitionBody}>
           Next up: {SECTION_LABELS[nextSection?.categorySlug ?? ""] ?? "the next section"} —{" "}
-          {nextSection?.questions.length} questions, {nextSection?.timeLimitMinutes} minutes. Take a breath, then
-          start when you're ready.
+          {nextSection?.questions.length} questions, {nextSection?.timeLimitMinutes} minutes.
         </Text>
+        <Text style={styles.transitionBody}>Take your break. It'll move on automatically when time's up.</Text>
+        <View style={styles.breakTimerWrap}>
+          <SectionTimer
+            totalSeconds={BREAK_SECONDS}
+            running={phase === "break"}
+            resetKey={`break-${sectionIdx}`}
+            onExpire={handleBreakExpire}
+          />
+        </View>
         <PrimaryButton
-          title={`Start ${SECTION_LABELS[nextSection?.categorySlug ?? ""] ?? "next section"}`}
+          title={`Skip break, start ${SECTION_LABELS[nextSection?.categorySlug ?? ""] ?? "next section"}`}
           onPress={startNextSection}
         />
       </View>
