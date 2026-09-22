@@ -1,9 +1,12 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ActivityIndicator, FlatList, Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import { useFocusEffect } from "@react-navigation/native";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchCategories, fetchPlanDayResults, fetchPlanDays, fetchSubcategories } from "@/api/progress";
+import { computeStreak } from "@/lib/planStats";
+import { pickHomeBuddyLine } from "@/lib/tutorVoice";
+import { BuddyHeader } from "@/components/BuddyHeader";
 import { DayTile } from "@/components/DayTile";
 import { PlanCalendar } from "@/components/PlanCalendar";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
@@ -124,6 +127,11 @@ export default function Plan() {
   }
 
   const completedCount = days.filter((d) => d.status === "completed").length;
+  const streak = computeStreak(days);
+  const buddyLine = useMemo(
+    () => pickHomeBuddyLine({ streakAtRisk: false, streak, focusTopicName: null }),
+    [streak],
+  );
   const subcategoryById = new Map(subcategories.map((s) => [s.id, s]));
   const categoryTotals = new Map<string, number>();
   let totalQuestions = 0;
@@ -141,6 +149,7 @@ export default function Plan() {
   const header = (
     <>
       <View style={styles.header}>
+        <BuddyHeader line={buddyLine} />
         <Text style={styles.title}>Your study plan</Text>
         <Text style={styles.subtitle}>
           {completedCount}/{plan.total_days} days done · ends {formatDate(plan.end_date)}

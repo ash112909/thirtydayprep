@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useRouter } from "expo-router";
@@ -21,6 +21,8 @@ import { AccuracyBars } from "@/components/AccuracyBars";
 import { SkillRadarChart } from "@/components/SkillRadarChart";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { pickFocusTopic } from "@/lib/insights";
+import { pickHomeBuddyLine } from "@/lib/tutorVoice";
+import { BuddyHeader } from "@/components/BuddyHeader";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
 import { cardElevation } from "@/theme";
@@ -183,6 +185,11 @@ export default function Progress() {
   const score = predictScore(categories, subcategories, mastery);
   const hasBaselineComparison = Object.keys(baselineMastery).length > 0;
   const focusTopic = pickFocusTopic(stats, subcategories);
+  const focusTopicId = focusTopic?.subcategory.id ?? null;
+  const buddyLine = useMemo(
+    () => pickHomeBuddyLine({ streakAtRisk: false, streak, focusTopicName: focusTopic?.subcategory.name ?? null }),
+    [streak, focusTopicId],
+  );
 
   if (loading) {
     return (
@@ -194,6 +201,8 @@ export default function Progress() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+      <BuddyHeader line={buddyLine} />
+
       <View style={styles.titleRow}>
         <Text style={styles.title}>Your progress</Text>
         <Pressable style={styles.recapButton} onPress={() => router.push("/wrapped")}>
