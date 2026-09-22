@@ -1,4 +1,5 @@
-import { ActivityIndicator, Pressable, Text } from "react-native";
+import { useRef } from "react";
+import { ActivityIndicator, Animated, Pressable, Text } from "react-native";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 interface Props {
@@ -20,6 +21,11 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
     },
     primary: {
       backgroundColor: colors.primary,
+      shadowColor: colors.primary,
+      shadowOpacity: 0.4,
+      shadowRadius: 10,
+      shadowOffset: { width: 0, height: 4 },
+      elevation: 4,
     },
     secondary: {
       backgroundColor: "transparent",
@@ -28,9 +34,6 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
     },
     disabled: {
       opacity: 0.5,
-    },
-    pressed: {
-      opacity: 0.85,
     },
     text: {
       color: colors.onPrimary,
@@ -42,22 +45,28 @@ export function PrimaryButton({ title, onPress, loading, disabled, variant = "pr
     },
   }));
 
+  const scale = useRef(new Animated.Value(1)).current;
+  const isDisabled = disabled || loading;
+
+  function animateTo(toValue: number) {
+    Animated.spring(scale, { toValue, useNativeDriver: true, friction: 5, tension: 200 }).start();
+  }
+
   return (
-    <Pressable
-      onPress={onPress}
-      disabled={disabled || loading}
-      style={({ pressed }) => [
-        styles.base,
-        isSecondary ? styles.secondary : styles.primary,
-        (disabled || loading) && styles.disabled,
-        pressed && styles.pressed,
-      ]}
-    >
-      {loading ? (
-        <ActivityIndicator color={isSecondary ? colors.primary : colors.onPrimary} />
-      ) : (
-        <Text style={[styles.text, isSecondary && styles.secondaryText]}>{title}</Text>
-      )}
-    </Pressable>
+    <Animated.View style={{ transform: [{ scale }] }}>
+      <Pressable
+        onPress={onPress}
+        disabled={isDisabled}
+        onPressIn={() => !isDisabled && animateTo(0.96)}
+        onPressOut={() => !isDisabled && animateTo(1)}
+        style={[styles.base, isSecondary ? styles.secondary : styles.primary, isDisabled && styles.disabled]}
+      >
+        {loading ? (
+          <ActivityIndicator color={isSecondary ? colors.primary : colors.onPrimary} />
+        ) : (
+          <Text style={[styles.text, isSecondary && styles.secondaryText]}>{title}</Text>
+        )}
+      </Pressable>
+    </Animated.View>
   );
 }

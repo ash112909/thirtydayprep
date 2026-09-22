@@ -23,6 +23,7 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 import { pickFocusTopic } from "@/lib/insights";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { ColorTokens } from "@/theme";
+import { cardElevation } from "@/theme";
 import type { AttemptRecord } from "@/api/progress";
 import type { Category, MasterySnapshot, StudyPlan, StudyPlanDay, Subcategory, UserSkillStat } from "@/types/domain";
 
@@ -68,6 +69,7 @@ export default function Progress() {
       gap: 12,
       borderWidth: 1,
       borderColor: colors.primary,
+      ...cardElevation,
     },
     focusLabel: { color: colors.primary, fontSize: 11, fontWeight: "700", textTransform: "uppercase" },
     focusText: { color: colors.text, fontSize: 13, lineHeight: 19, marginTop: 4 },
@@ -80,6 +82,7 @@ export default function Progress() {
       borderColor: colors.border,
       alignItems: "center",
       marginBottom: 8,
+      ...cardElevation,
     },
     scoreTotal: { color: colors.primary, fontSize: 36, fontWeight: "800" },
     scoreCaption: { color: colors.textMuted, fontSize: 11, marginTop: 4, marginBottom: 16, textAlign: "center" },
