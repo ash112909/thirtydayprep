@@ -30,9 +30,12 @@ export default function WrappedRecap() {
     center: { flex: 1, alignItems: "center", justifyContent: "center" },
     card: {
       width: 300,
-      aspectRatio: 9 / 16,
+      // A min-height instead of a fixed aspectRatio — the display font's
+      // taller line metrics need more vertical room than the old system
+      // font did, and a fixed 9:16 box combined with overflow: hidden was
+      // clipping the bottom of the card once that content grew.
+      minHeight: 520,
       borderRadius: 28,
-      overflow: "hidden",
       padding: 24,
       justifyContent: "space-between",
     },
@@ -114,7 +117,7 @@ export default function WrappedRecap() {
       <View ref={cardRef} collapsable={false} style={styles.card}>
         <LinearGradient
           colors={["#FF7A1A", "#EA580C", "#7C2D12"]}
-          style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}
+          style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: 28 }}
         />
         <Text style={styles.wordmark}>THIRTYDAYPREP</Text>
 
