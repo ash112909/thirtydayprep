@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 
 const CONTINUING_RE = /^\(Continuing to generate[^)]*\)\s*/i;
 const PREAMBLE_RE = /^Of course\.?\s*Here are.*?s\s*\d+-\d+\s+/is;
+const FINAL_N_RE = /^\(Final \d+ questions? to follow\)\s*/i;
 
 function parseArgs() {
   const args = Object.fromEntries(
@@ -36,7 +37,7 @@ function main() {
   for (const q of questions) {
     if (typeof q.stem !== "string") continue;
     const before = q.stem;
-    let after = before.replace(CONTINUING_RE, "").replace(PREAMBLE_RE, "");
+    let after = before.replace(CONTINUING_RE, "").replace(PREAMBLE_RE, "").replace(FINAL_N_RE, "");
     after = after.trim();
     if (after !== before) {
       q.stem = after;
