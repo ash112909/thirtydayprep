@@ -1,0 +1,2546 @@
+[
+  {
+    "external_id": "Add Delete Revise_19thcenturyquestions_29",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation claims the original underlined sentence ('Her previous position had been far less demanding') 'shows her transition from apprehension to curiosity,' but that emotional transition is actually conveyed by the passage's final sentence, not the sentence under evaluation; the stated rationale does not describe the sentence it is supposed to be justifying."
+  },
+  {
+    "external_id": "Add Delete Revise_psychologyquestions_16",
+    "category": "ambiguous_question",
+    "confidence": "medium",
+    "reasoning": "The underlined sentence ('For example, information presented in a clear, easy-to-read font often feels more fluent') directly illustrates the paragraph's central claim that fluency can arise from superficial factors unrelated to true understanding, so choice C ('No, because it clarifies the concept of fluency with a concrete instance') is at least as defensible as the stated answer A; throughout the rest of the batch, 'For example' sentences that concretely illustrate a just-stated abstract claim are consistently treated as essential and NOT deleted, making this one an inconsistent outlier rather than a clear case of an irrelevant tangent."
+  },
+  {
+    "external_id": "Angles_SPR All_101",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Ratio 7:5:4 sums to 16 parts of 11.25° each; the smallest angle (4 parts) is 4×11.25=45°, not 40°. The explanation itself computes 45° (with a 'Correction' note) but correct_value was left at 40."
+  },
+  {
+    "external_id": "Angles_SPR All_103",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "180-(360/n)=174 gives 360/n=6, so n=60, not 30. The explanation's own math reaches n=60 but correct_value states 30."
+  },
+  {
+    "external_id": "Angles_SPR All_113",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Ratio 8:5:7 sums to 20 parts of 9° each; the largest angle (8 parts) is 8×9=72°, not 90°. The explanation itself computes 72° but correct_value states 90."
+  },
+  {
+    "external_id": "Angles_SPR All_115",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "180-177=3=360/n gives n=120, not 60. The explanation's own math reaches n=120 but correct_value states 60."
+  },
+  {
+    "external_id": "Angles_SPR All_116",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For angles 2x, 2x, 3x summing to 180, 7x=180 so x≈25.71 and the largest angle 3x≈77.14°, not 60°. The explanation itself computes ≈77.14° but correct_value states 60."
+  },
+  {
+    "external_id": "Angles_SPR All_133",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Ratio 9:7:8 sums to 24 parts of 7.5° each; the largest angle (9 parts) is 9×7.5=67.5°, not 90°. The explanation itself computes 67.5° but correct_value states 90."
+  },
+  {
+    "external_id": "Angles_SPR All_143",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Ratio 6:5:7 sums to 18 parts of 10° each; the smallest angle (5 parts) is 5×10=50°, not 45°. The explanation contains conflicting intermediate values (60, then 'corrected' to 50) but correct_value states 45, which matches neither."
+  },
+  {
+    "external_id": "Angles_SPR All_16",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "For angles x, 2x, (2x−40), the correct sum equation is 5x−40=180, but the explanation shows '4x−40=180 → x=44'; that equation is algebraically wrong (4x−40=180 gives x=55), even though the final stated answer of 44 happens to be numerically correct via the proper equation."
+  },
+  {
+    "external_id": "Angles_MC No Calc_83",
+    "category": "ambiguous_question",
+    "confidence": "medium",
+    "reasoning": "If the parallelogram is a rectangle, two angles labeled x and x could be adjacent (both 90°) rather than opposite, which the explanation itself concedes ('...or the parallelogram is a rectangle'); this makes 'It cannot be determined' (choice B) at least as defensible as the stated answer 'Opposite'."
+  },
+  {
+    "external_id": "Author's Intent_penguinheatquestions_25",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation quotes the passage as saying the theory was 'ill-suited to the harsh realities of cross-cultural variation and the desire for usage-based accounts,' but no such phrase exists in this penguin/biology passage (it actually says 'ill-suited to the harsh realities of shared evolutionary pathways and the desire for broader phylogenetic accounts'). This looks like leftover text copy-pasted from an unrelated linguistics-themed passage, so the explanation cites evidence that isn't in the passage the student is given."
+  },
+  {
+    "external_id": "Circles_MC Calc Allowed_40",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The stem contains a stray, leaked production note — \"(Completing the final 45 questions.)\" — prepended to the actual math problem, which is unrelated content that shouldn't be shown to a student. The math itself (area = circumference implies r = 2) is correct."
+  },
+  {
+    "external_id": "Circles_MC No Calc_65",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Equation is x² + y² = 50. Choice D (7,1) also satisfies it (49+1=50), not just the stated correct choice B (5,5) (25+25=50), so the question has two valid answers."
+  },
+  {
+    "external_id": "Circles_MC No Calc_78",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "The circle is (x-1)²+(y-1)²=1. Besides the stated correct choice D (1,0), choices A (0,1) and B (1,2) also satisfy the equation (each gives distance 1 from the center), so 3 of the 4 choices are actually on the circle."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_13",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem asks for the common internal tangent, but with d=13 and radii 5 and 12 the circles intersect (d < r1+r2=17), so no internal tangent exists; the explanation itself notes this is 'not possible' and then silently switches to computing the external tangent formula to arrive at the stated answer of 11, which doesn't actually answer the question asked."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_1",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Using the instructed π ≈ 3.14, A = 3.14 × 6.4² = 3.14 × 40.96 = 128.61, not the stated 128.69; the stated value appears to have been computed with a more precise value of π instead of the 3.14 the stem specifies."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_16",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Using π ≈ 3.14 as instructed, C = 3.14 × 15.6 = 48.98, not the stated 49.03."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_46",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Using π ≈ 3.14 as instructed, θ = 12×360/(2×3.14×9) = 4320/56.52 ≈ 76.43°, not the stated 76.39° (the stated value matches using a more precise π, inconsistent with the stem's instruction)."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_53",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Using π ≈ 3.14 as instructed, θ = 5×360/(2×3.14×4) = 1800/25.12 ≈ 71.66°, not the stated 71.63°."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_23",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The exact chord length is 2√69 ≈ 16.61, but the stated answer is 17; the stem gives no rounding instruction, and the explanation itself hedges ('round to nearest integer'), indicating an unjustified rounding to reach 17."
+  },
+  {
+    "external_id": "Circles_SPR Calc Allowed_69",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The exact radius is √61 ≈ 7.81, but the stated answer is 8 with no rounding instruction given; the essentially identical question 'Circles_SPR No Calc_10' (same chord/distance values) correctly gives 7.8, showing this one's rounding to a whole number is inconsistent and unjustified."
+  },
+  {
+    "external_id": "Circles_MC No Calc_44",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The stem contains leaked editorial/batch-processing text ('(Final 40 questions to follow)') that isn't part of the actual math question shown to students."
+  },
+  {
+    "external_id": "Elimination_MC Calc Allowed_15",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation explicitly states 'Option C correctly represents this' and describes option D as 'uses percentages without converting to decimals' (which is factually wrong about D's text), yet the stated correct_choice is D. The explanation contradicts the stated answer."
+  },
+  {
+    "external_id": "Elimination_MC Calc Allowed_32",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The question asks for the value of c that gives NO solution, but the stated answer c=32 is exactly the value that makes the two equations identical (10x-6y = 2*(5x-3y) = 32), producing infinitely many solutions, not no solution — the explanation itself admits this. Any value other than 32 (e.g., 8, 16, or 48) would actually give no solution."
+  },
+  {
+    "external_id": "Elimination_MC Calc Allowed Gemini_56",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation field contains leftover generation artifacts ('Error.', a re-derivation with different equations, a rewritten problem/choices) rather than a clean solution, and the stated answer x=10 does not actually solve the given system (5x-6y=80, 11x+2y=88 yields x≈9.05)."
+  },
+  {
+    "external_id": "Circles_SPR No Calc_40",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The final answer 4 (ceiling of sqrt(11)≈3.317) is defensible given 'rounded up to the nearest integer', but the explanation is incoherent ('round not needed for SAT simple version, here exact 4 if designed integer') and never actually justifies rounding up to reach 4."
+  },
+  {
+    "external_id": "Elimination_MC No Calc_21",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 2x-7y=4 and 2x-3y=12 by subtraction gives -4y=-8, so y=2 (choice D), but the stated correct_choice is A (-2); the explanation even derives -4y=-8 correctly but then mis-states the result as y=-2."
+  },
+  {
+    "external_id": "Elimination_SPR Calc Allowed_2",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3x-4y=5 and 6x+4y=29 gives x=34/9, y=19/12, so x+y=193/36 (≈5.361), not 17/3 (≈5.667) as stated; the explanation's own arithmetic (136+57)/36=193/36 contradicts its final claim that this equals 17/3."
+  },
+  {
+    "external_id": "Elimination_SPR Calc Allowed_3",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "After finding y=6, substituting gives (3/4)x=8, so x=32/3 (≈10.67), not 8; the explanation incorrectly treats '(3/4)x=8' as if it means x=8."
+  },
+  {
+    "external_id": "Elimination_SPR Calc Allowed_40",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 7x-1.5y=14.5 and -14x-1.5y=-3.5 by elimination gives 21x=18, so x=6/7 (≈0.857), not 11/21 (≈0.524) as stated; the explanation's own step '21x=11' is an arithmetic error (should be 21x=18)."
+  },
+  {
+    "external_id": "Elimination_SPR Calc Allowed_75",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving (5/4)x+(1/8)y=9 and -(5/2)x+(1/8)y=-3 gives x=16/5 and y=40, not y=-24 as stated; the explanation skips the x-term when back-substituting, which produces the wrong value."
+  },
+  {
+    "external_id": "Elimination_SPR No Calc_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3x+2y=19 and -3x+5y=1 gives y=20/7 and x=93/21=31/7 (≈4.43), not x=3 as stated; the explanation's own final fraction 31/7 is misreported as equal to 3."
+  },
+  {
+    "external_id": "Elimination_SPR No Calc_26",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 2x + y = 13 and 4x - y = 7 gives x = 10/3 and y = 19/3, so x - y = -3, not -19/3 as stated (which is actually the value of y, not x - y)."
+  },
+  {
+    "external_id": "Elimination_SPR No Calc_76",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving (5/6)x + (1/3)y = 7 and -(5/3)x + (1/3)y = -1 (multiply by 6: 5x+2y=42, -10x+2y=-6) gives x = 16/5 and y = 13, not y = -3 as stated."
+  },
+  {
+    "external_id": "Factoring_MC Calc Allowed_16",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "2x³+12x²+16x = 2x(x+2)(x+4). Choice D, 2x+4 = 2(x+2), also divides the polynomial evenly (quotient x²+4x, no remainder), so it is also a genuine factor, not just choice B (x+4) as marked."
+  },
+  {
+    "external_id": "Factoring_MC Calc Allowed_78",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "x² - 24x + 144 = 1 gives (x-12)² = 1, so x = 13 or x = 11; both values appear as answer choices (A=13, B=11) but only B is marked correct, so the question does not have a unique defensible answer."
+  },
+  {
+    "external_id": "Factoring_MC No Calc_16",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "Correct choice B's text is the self-referential, nonsensical 'Both A and B are correct'; the explanation instead argues that A (5x(x+2)) and C (5(x²+2x)) are the two equivalent forms, indicating the choice text should read 'Both A and C are correct.'"
+  },
+  {
+    "external_id": "Factoring_MC No Calc_29",
+    "category": "bad_distractor",
+    "confidence": "medium",
+    "reasoning": "Choice C is the self-referential, nonsensical 'Both B and C are correct'; also, choice D, (x²-4)(x²+4), is itself algebraically equal to x⁴-16 just like the marked correct answer B, so more than one choice is arguably a valid 'equivalent' expression."
+  },
+  {
+    "external_id": "Factoring_MC No Calc_53",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For x² + ax – 15 = 0 with root 3: 9 + 3a – 15 = 0 → a = 2, which is choice A. The stated correct_choice is B (-2), and even the explanation's own final line computes a = 2, contradicting the selected choice."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_19",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "correct_value is the unevaluated string \"-4 + 7 = 3\" instead of the clean numeric answer \"3\"; the underlying math (sum of roots = 3) is correct, but the field format would break grid-in autograding."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_27",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "0.5x² – 3x + 2 = 0 → x² – 6x + 4 = 0 has roots 3 ± √5 (≈5.24, 0.76); x = 4 does not satisfy the equation (0.5(16) – 12 + 2 = –2 ≠ 0), so correct_value \"4\" is wrong and the explanation never actually derives it."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_36",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "10x² – 19x + 6 = 0 correctly factors as (5x – 2)(2x – 3) = 0, giving roots 0.4 and 1.5; the given factoring (5x – 6)(2x – 1) is wrong (expands to 10x² – 17x + 6), and the stated correct_value 1.2 does not satisfy the equation. The correct larger root is 1.5."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_37",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "m² – 49m + 300 = 0 does not factor as (m – 25)(m – 24), which expands to m² – 49m + 600, not 300. The equation's actual roots are irrational (≈7.17 and ≈41.83); m = 25 does not satisfy the equation, so correct_value \"25\" is wrong."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_38",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "x² + 3.6x + 0.8 = 0 does not factor as (10x + 4)(10x + 20)/100, which expands to x² + 2.4x + 0.8, not the original equation. The real roots are irrational (≈ -0.238 and ≈ -3.362); x = -0.4 does not satisfy the equation, so correct_value \"-0.4\" is wrong."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_52",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "5r² + 11r + 2 = 0 factors correctly as (5r + 1)(r + 2) = 0 per the explanation, giving roots -0.2 and -2 (the explanation itself states the larger root is -0.2). But correct_value is stored as \"-0.4\", which is neither root and does not satisfy the equation."
+  },
+  {
+    "external_id": "Factoring_SPR Calc Allowed_70",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "k² + 0.9k – 1.8 = 0 does not factor as (5k – 6)(2k + 3)/10, which expands to k² + 0.3k – 1.8, not the original equation. The actual roots are irrational (≈0.965 and ≈ -1.865); k = 1.2 does not satisfy the equation, so correct_value \"1.2\" is wrong."
+  },
+  {
+    "external_id": "Factoring_SPR No Calc_17",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "3x² + 14x + 8 = 0 factors to (3x + 2)(x + 4) = 0, with roots -2/3 and -4. The explanation labels -4 as the \"larger\" root, but -2/3 (≈ -0.67) is actually the larger root; -4 is the smaller one. (correct_value -4 is still a valid root, but the explanation's reasoning for choosing it is factually wrong.)"
+  },
+  {
+    "external_id": "Factoring_SPR No Calc_44",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "2x² + x – 15 = 0 correctly factors as (2x – 5)(x + 3) = 0, giving roots 2.5 and -3, not the stated (2x + 5)(x – 3) which expands to 2x² – x – 15 (wrong sign on x). The positive root is 2.5, not 3; x = 3 gives 2(9)+3-15 = 6 ≠ 0, so correct_value \"3\" is wrong."
+  },
+  {
+    "external_id": "Factoring_SPR No Calc_49",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "3y² + 11y + 10 = 0 factors to (3y + 5)(y + 2) = 0, with roots -5/3 (≈ -1.67) and -2. The explanation labels -2 as the \"larger\" root, but -5/3 is actually larger; -2 is the smaller root. (correct_value -2 is still a valid root, but the stated reasoning for it is incorrect.)"
+  },
+  {
+    "external_id": "Factoring_SPR No Calc_83",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Plugging x=2 into 4x²-9x-10 gives 16-18-10=-12, not 0, so x=2 is not a root. The stated factoring (4x+5)(x-2) actually expands to 4x²-3x-10, not 4x²-9x-10, so it doesn't match the stem. The true equation 4x²-9x-10=0 has discriminant 81+160=241 (not a perfect square), giving an irrational positive root (9+√241)/8 ≈ 3.065, not the clean grid-in value 2."
+  },
+  {
+    "external_id": "Grammar_communicationinbees_5",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The subject is \"The simplicity of this dance and its close proximity to the hive entrance\" — a compound subject joined by \"and,\" which takes a plural verb (\"make\", choice B), not singular \"makes\" (choice A). This is the same rule the batch itself applies consistently elsewhere (e.g., \"scale and alignment suggest,\" \"cutting of stones and...masonry contribute,\" \"resolve and courage were\"); the explanation's claim that this is a 'singular idea of ease' is an ad hoc exception that contradicts standard subject-verb agreement."
+  },
+  {
+    "external_id": "Grammar_communicationinbees_10",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation justifies the plural pronoun \"them\" by saying it refers to the plural noun \"colony,\" but the passage explicitly treats \"colony\" as singular (\"the entire colony\") and contains no explicit plural noun (only \"a disturbed bee,\" \"the hive,\" \"the colony,\" all singular) to serve as a clear antecedent for \"them,\" making the stated justification self-contradictory."
+  },
+  {
+    "external_id": "Grammar_architecturequestions_10",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation claims \"it\" refers to \"location and scale\" treated as \"a combined singular idea,\" but a compound subject joined by \"and\" is grammatically plural (the same passage set treats an identical construction, \"scale and alignment,\" as plural elsewhere, e.g. Grammar_architecturequestions_0). The actual antecedent that makes \"it\" work is \"The Great Wall\" itself (which stands as a symbol), not \"location and scale\" — the given reasoning doesn't correctly support the answer."
+  },
+  {
+    "external_id": "Grammar_architecturequestions_29",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The list \"historians often study archaeological remains, analyze ancient maps and texts, and ___\" requires a base-verb-form third item parallel to \"study\" and \"analyze\" (i.e., \"interpret depictions in artwork\"), but the marked answer D, \"interpreting depictions in artwork,\" is a gerund and breaks that parallelism; no offered choice (A–D) actually restores correct parallel structure."
+  },
+  {
+    "external_id": "Grammar_memoryretention_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "In 'Neither consistent all-nighters nor a sudden burst of caffeine ___ enough,' the verb must agree with the nearer subject 'a sudden burst of caffeine' (singular 'burst'), so the correct choice is C 'is enough,' not the stated B 'are enough.' The near-duplicate question Grammar_memoryretention_3 uses the identical sentence and correctly identifies 'is enough' as correct; here the explanation field is also empty (None)."
+  },
+  {
+    "external_id": "Grammar_museumcuration_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "In 'Neither a groundbreaking, experimental art installation nor the passionate appeals of a visionary curator ___ enough,' the verb must agree with the nearer subject 'the passionate appeals' (plural 'appeals'), so the correct choice is B 'are enough,' not the stated C 'is enough.' The explanation is also corrupted, referring to a noun 'burst' that does not appear anywhere in this passage (copy-pasted from a different question)."
+  },
+  {
+    "external_id": "Grammar_penguinheatquestions_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "In 'Neither the fierce blizzards nor the constant sub-zero temperatures ___ able to break their huddles,' the verb must agree with the nearer subject 'temperatures' (plural), so the correct choice is C 'were able,' not the stated D 'was able.' The explanation itself concedes the plural rule requires 'were able' and even says 'the correct answer should be B,' directly contradicting the stored correct_choice of D."
+  },
+  {
+    "external_id": "Grammar_postalsystemsquestions_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "In 'Neither the harsh weather conditions nor the sparse population density ___ enough to deter...,' the verb must agree with the nearer subject 'population density' (singular), so the correct choice is C 'was enough,' not the stated A 'were enough.' The explanation is garbled and even rewrites the passage/choices mid-explanation to justify a different answer, never actually supporting the stored answer."
+  },
+  {
+    "external_id": "Grammar_languagedevelopment_9",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The list 'caregivers can engage in joint attention activities, point to objects while naming them, and ___' is governed by the modal 'can' with bare-infinitive verbs ('engage,' 'point'), so the parallel completion must also be a bare verb: choice C 'also use.' The stated answer B 'using' (a gerund) breaks the sentence ('can engage..., point..., and using...'). The explanation even misquotes the passage as containing gerunds 'engaging' and 'pointing,' which do not actually appear in the passage (it has 'engage' and 'point')."
+  },
+  {
+    "external_id": "Grammar_penguinheatquestions_9",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The list 'penguins often increase their fat reserves, thicken their feather layers, and ___' uses present-tense verbs ('increase,' 'thicken'), so the parallel completion should be present tense too: choice D 'also change their behavior by huddling.' The stated answer B 'changing' (gerund) is ungrammatical in context, and the explanation falsely claims the passage contains gerunds 'increasing' and 'thickening,' which it does not (it has 'increase' and 'thicken')."
+  },
+  {
+    "external_id": "Grammar_museumcuration_13",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The list 'one must select compelling artworks, consider the gallery's architectural space, and ___' is governed by the modal 'must' with bare-infinitive verbs ('select,' 'consider'), so a parallel bare verb like 'prepare' is needed, but no such choice is offered. The stated answer B 'preparing' still produces an ungrammatical sentence ('must select..., consider..., and preparing...'), and the explanation incorrectly claims the passage uses gerunds 'selecting' and 'considering,' which it does not."
+  },
+  {
+    "external_id": "Grammar_platetectonics_2",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation field is corrupted: instead of explaining the given passage/choices, it second-guesses itself, then fabricates and inserts an entirely different revised passage, question, and answer choices (with a different correct answer, B) mid-explanation, never actually justifying the stored correct_choice of A for the actual question shown."
+  },
+  {
+    "external_id": "Grammar_psychologyquestions_26",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The original text uses a semicolon joining two independent clauses ('...distorted sense of time; it is optimal for learning'), which is already correct — not a comma splice as the explanation claims. Choice D ('it is optimal for learning', i.e. no change) is grammatical; the stated answer C ('which is optimal for learning') is wrong because a semicolon cannot be followed by a dependent relative clause."
+  },
+  {
+    "external_id": "Grammar_psychologyquestions_3",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "In a 'By the time X, Y had emerged' construction, the by-the-time clause should take simple past ('concluded', choice B) while the main clause carries the past perfect — the same rule this batch applies explicitly in Grammar_scientificquestions_15. The stated answer A ('had concluded') creates a redundant double past-perfect that is inconsistent with the rule used elsewhere in the batch."
+  },
+  {
+    "external_id": "Grammar_psychologyquestions_7",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation justifies past tense by citing 'highlights' as evidence the passage is in past tense, but 'This highlights sleep's crucial role' is actually present tense, so the cited evidence does not support the reasoning given."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_12",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "correct_choice is stored as raw text 'Y = -4X + 2' rather than a valid choice key, and choices B and D are exact duplicates ('y = -4x + 2'), so it's ambiguous which single key is meant to be correct."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_27",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation is garbled and self-contradictory ('Correction: ... Wait—checking all... Need fix:'). Checking the math, all four points (1,2), (0,3), (-1,4), and (2,0) actually satisfy y > -1.5x + 2, so none is 'NOT in the solution set' as the stem requires — the question has no valid answer."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_31",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "For y ≥ 0.5x - 4, both (4,-1) [choice A: -1 ≥ -2] and (0,-3) [choice C: -3 ≥ -4] satisfy the inequality, giving two valid answers instead of one."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_43",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "For y ≤ 2x - 5, three of the four points satisfy the inequality: (2,-1) [-1≤-1], (1,-4) [-4≤-3], and (0,-6) [-6≤-5], all true, along with the stated answer D — only (3,3) fails. Three valid answers exist, not one."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_50",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "For y > -3x + 4, three of the four points satisfy the inequality: (2,-1) [-1>-2], (0,5) [5>4, the stated answer], and (1,2) [2>1] are all true — only (0,3) fails. Three valid answers exist, not one."
+  },
+  {
+    "external_id": "Graph Interpretation_MC Calc Allowed_60",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "For y ≥ -x + 2, three of the four points satisfy the inequality: (3,-1) [-1≥-1], (2,1) [1≥0], and (0,2) [2≥2, the stated answer] are all true — only (-1,1) fails. Three valid answers exist, not one."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_20",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Slope through (0,-1) and (3,5) is (5-(-1))/(3-0) = 6/3 = 2, which is choice B — and the explanation itself says this 'corresponds to option B. (Corrected)' — yet correct_choice is stated as D ('3/2'), contradicting the explanation's own computation."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_22",
+    "category": "bad_distractor",
+    "confidence": "medium",
+    "reasoning": "Choice B, 'y = (x + 3) - 4 = x - 1', simplifies to exactly the same equation as the stated correct answer C, 'y = x - 1', making B a duplicate of the correct answer rather than a wrong distractor."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_23",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The line passes through (0,2), so the y-intercept b = 2 directly (not -2 as the explanation states); with slope 2, the correct equation is y ≥ 2x + 2 (choice C), not y ≥ 2x - 2 (the stated answer D). The explanation's own arithmetic ('using (0,2) gives b = -2') is incorrect."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_25",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices A, C, and D are all the identical text 'y = 1/2x + 2', and choice B ('y = 1/2x + 2/1') is numerically the same value, so all four answer options are equivalent to the correct answer — there are no genuine distractors."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_30",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Slope through (0,3) and (6,0) is (0-3)/(6-0) = -3/6 = -1/2, which is choice B, matching the explanation's own computation — yet correct_choice is stated as C ('-1/3'), which is mathematically wrong."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_35",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The line through (2,5) and (4,9) has slope 2 and, per the explanation's own work (b=1), equation y = 2x + 1, which is choice A. The stated correct_choice B (y = 2x + 3) does not pass through either point (e.g., at x=2 it gives y=7, not 5)."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_39",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Point (1,3) does not lie on y = -3x + 5 (that gives y = 2, not 3), so 'All of the above' (choice C) is not actually correct even though B (2,-1) and D (0,5) are valid."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_4",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Reflecting y = -x + 4 across the x-axis gives -y = -x + 4, i.e. y = x - 4 (choice B), which is exactly what the explanation computes. The stated correct_choice A (y = x + 4) is incorrect."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_44",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "All four answer choices are identical text ('y = 3/2 x + 6'), so the question has no meaningful distractors even though the value itself is mathematically correct."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_46",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "The line with x-intercept 3 and y-intercept -6 is y = 2x - 6, which is exactly choice A, mathematically identical to the stated correct choice D (x/3 + y/(-6) = 1). Two choices are both correct representations of the same line."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_5",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation itself derives slope 2 and b = 0 (y = 2x, choice B), but the stated correct_choice is C (y = 2x + 1), which does not pass through (3,6) (gives 7, not 6)."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_59",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation correctly computes the slope as 2 (matching the stated correct_choice D = 2) but then says 'so correct answer is A) 2', even though choice A is actually 4/3, not 2 — the explanation's letter reference contradicts the answer key."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_66",
+    "category": "bad_distractor",
+    "confidence": "medium",
+    "reasoning": "Choices A and D are identical text ('y = x - 2'), both equal to the correct reflected equation, so two choices are indistinguishable/duplicated rather than one unique correct answer."
+  },
+  {
+    "external_id": "Graph Interpretation_MC No Calc_7",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Shifting y = 3x + 2 up 4 units gives y-intercept 2+4=6, i.e. y = 3x + 6 (choice A), exactly as the explanation computes. The stated correct_choice C (y = 3x + 8) is incorrect."
+  },
+  {
+    "external_id": "Graph Interpretation_SPR No Calc_33",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving y = 4x - 7 and y = -x + 3 gives x = 2 and y = 4(2)-7 = 1 (also -2+3=1), so the intersection y-coordinate is 1, not -1 as stated in correct_value; the explanation's final step is an arithmetic error."
+  },
+  {
+    "external_id": "Inference_platetectonics_27",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation quotes the passage as saying the San Andreas Fault is a 'transform plate boundary, where the Pacific Plate and the North American Plate slide horizontally past each other,' but that sentence does not appear in this question's passage (it appears in a different question's passage, Inference_platetectonics_8). The stated correct answer (D) is still reasonable given the actual passage's description of offset infrastructure, but the explanation misquotes/fabricates passage content."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_19thcentury_25",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Population rose from 5,000 to 6,000, an exact 20% increase, so choice A ('the increase is 20%') is correct, not D ('more than 20%'); the explanation itself admits the rise is 'exactly' 20% and that D's wording is 'slightly overstated.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_communicationinbees_16",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Distance rises from 300 to 360, exactly a 20% increase (matching the claim), so the correct answer is A ('Yes; matches exactly'), not D which incorrectly states the increase is 25%; the explanation itself concludes '0.20 exactly — meaning the claim is correct.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_foundingdocs_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "400 to 500 copies is exactly a 25% increase, matching the pamphleteer's claim, so choice B ('Yes, it rose by 25%') is correct, not D ('rose by 50%'); the explanation even states the rise is 'actually a 25% rise, not 50%.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_foundingdocs_21",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Militia fell from 10,000 to 8,000, exactly 20%, matching the delegate's claim, so choice B ('Yes, it fell by 20%') is correct, not C ('fell by 25%'); the explanation itself computes the drop as '20% of the original.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_foundingdocs_24",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "States sending representatives rose from 12 to 15, exactly 25%, matching the claim, so choice D ('Yes, it rose by 25%') is correct, not B ('rose by 30%'); the explanation itself computes the increase as 'exactly 25%.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_globalhistorical_10",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Class size fell from 50 to 40, exactly 20%, matching the claim, so choice A ('Yes, the decrease is 20%') is correct, not D ('the decrease is 25%'); the explanation itself says the decrease 'is 20% exactly.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_globalhistorical_12",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Grain price rose from 5.0 to 5.5, exactly 10%, matching the claim, so choice C ('Yes, the increase is 10%') is correct, not D ('the increase is 15%'); the explanation itself states the increase 'is 10% exactly.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_globalhistorical_4",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is B ('No, the increase is 30%'), but 4,000 to 5,000 tons is exactly a 25% increase, matching the claim; the explanation even says 'A is correct' referring to the 25% option, so the answer key (B, 30%) is simply wrong and the true correct answer is 'Yes, the increase is 25%' (choice C)."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_globalhistorical_5",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is B ('Yes, the gain is less than 10%'), but the explanation itself computes the increase from 40% to 44% as a '10% relative increase' -- i.e. exactly 10%, not less than 10%, so the claim is false and the correct answer should be A ('No, the gain is exactly 10%')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_languagedevelopment_8",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is C ('No; increase is 75%'), but 5 to 9 words learned/week is exactly an 80% increase (4/5=0.80), matching the claim; the explanation explicitly states 'it actually is exactly 80%', contradicting the stated correct choice, which should instead be B ('Yes; matches exactly')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_museumcuration_23",
+    "category": "ambiguous_question",
+    "confidence": "medium",
+    "reasoning": "The claim is only that artifacts are displayed 'almost twice as often' as stored, a hedged qualitative claim; the actual ratio is 65:35 ≈ 1.86, which reasonably satisfies 'almost twice.' correct_choice D labels this a 'No', but its own reasoning ('slightly less than double') actually supports the claim's hedge wording rather than contradicting it, so 'Yes; close enough' (choice A) is at least equally defensible."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_penguinheat_2",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is D ('Yes; matches exactly'), but 90 vs. 75 feathers/cm² is only a 20% difference, not the claimed 25%; the explanation self-corrects mid-sentence ('wait correction: that's actually 20%, not 25%'), so the true correct answer should be A ('No; difference is 20%')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_penguinheat_6",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is C ('No; it increases less than double'), but mass loss going from 4% to 9% is a ratio of 2.25 (doubling would only reach 8%), so it actually increases MORE than double, not less; the correct answer should be A ('No; loss rate increases more than double')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_penguinheat_7",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is A ('No; increase is 66.7%'), but insulation thickness going from 2.0 to 3.0 cm is exactly a 50% increase, matching the claim; the explanation self-corrects ('wait correction: that's actually exactly 50%. My earlier explanation incorrect'), so the correct answer should be C ('Yes; matches exactly')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_postalsystems_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is C ('No; reduction is 50%'), which miscalculates using the wrong base (2÷4); properly checking the claim that Britain's 4-day delivery was 33% shorter than France's 6-day delivery gives (6−4)÷6≈33.3%, which matches the claim, so the correct answer should be 'Yes' (A or B), not C."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_postalsystems_1",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "correct_choice is B ('No; increase is 20%'), but 12 to 15 letters/capita is exactly a 25% increase, matching the claim; the explanation concludes 'that is exactly correct, so the original claim is accurate', directly contradicting the stated correct choice, which should be A ('Yes; matches exactly')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_postalsystems_7",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The claim (12 to 8 days is a one-third drop) is exactly correct: (12-8)/12 = 33.3%. The labeled correct choice D is self-contradictory, opening with 'No' while its own math confirms the claim ('so correct'). The clean, non-contradictory correct answer is choice B, 'Yes; matches exactly.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_postalsystems_8",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The claim (200,000 to 300,000 is a 50% rise) is exactly correct: (300,000-200,000)/200,000 = 50%. The labeled correct choice C is self-contradictory, opening with 'No' while its own math confirms the claim ('so correct'). The clean, non-contradictory correct answer is choice D, 'Yes; matches exactly.'"
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_scientificphenomena_12",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "(2310-2200)/2200 = 0.05, exactly 5%, so the claim is exactly correct and choice D ('Yes, the increase is 5%') is correct, not the stated A ('No, the increase is slightly more than 5%')."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_scientificphenomena_13",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "29.0-25.0 = 4.0°C exactly, matching the claim, so choice D ('Yes, the increase is 4°C') is correct, not the stated C ('No, the increase is 3°C'). The explanation itself admits the arithmetic gives 4°C and even names a different (also wrong) choice as correct, contradicting the stored correct_choice."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_scientificphenomena_17",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "(30-20)/20 = 50%, exactly matching the claim, so choice A ('Yes, the increase is 50%') is correct, not the stated D ('No, the increase is 100%'). The explanation itself computes 50% and says 'so A is correct,' contradicting the stored correct_choice."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_scientificphenomena_19",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "(500-400)/400 = 25%, exactly matching the claim, so choice C ('Yes, the increase is 25%') is correct, not the stated D ('No, the increase is more than 25%'). The explanation itself computes 'exactly 25%' but names yet another (wrong) choice as correct, contradicting the stored correct_choice."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_scientificphenomena_23",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "(500-300)/500 = 40%, exactly matching the claim, so choice C ('Yes, the decrease is 40%') is correct, not the stated A ('No, the decrease is 50%'). The garbled explanation itself computes a 40% drop and says 'so yes, A is correct,' contradicting the stored correct_choice (and misnaming the letter besides)."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_sociologyquestions_3",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem is truncated mid-sentence ('...claimed Neighborhood B has 20% more support than'), never naming the comparison neighborhood, with the passage field left null instead of holding the data table; the question is unreadable as written even though the answer choices imply the intended comparison is to Neighborhood A."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_sociologyquestions_28",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Trips rose from 1,800 to 2,160, a 360/1,800 = 20% increase, not the claimed 15%, so the claim is inaccurate and choice A ('No; increase is 20%') is correct, not the stated C ('Yes; matches exactly'). The explanation itself says the actual increase is 'higher than claimed,' directly contradicting the 'matches exactly' verdict."
+  },
+  {
+    "external_id": "Interpreting Charts and Tables_psychologyquestions_3",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Visualization (20) is only a 6/14 ≈ 42.9% increase over Rote Repetition (14), not the claimed 50% (which would require 21); the stated correct choice D excuses this gap as 'close to 20,' but by the same strict standard used elsewhere in this batch (e.g., rejecting a 20.6% actual vs. a 20% claim), this should be judged inaccurate, making choice B ('No; Visualization is only 6 words higher') the more defensible correct answer."
+  },
+  {
+    "external_id": "Logical Flow_globalhistoricalquestions_26",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Correct choice D (\"Before Sentence 1\") is stated, but Sentence 3 (\"This partitioning disregarded...\") opens with a demonstrative that requires an antecedent (the colonization/partitioning described in Sentences 1-2), so it cannot logically open the paragraph; the explanation itself argues for placing it \"after Sentence 2,\" which corresponds to choice C (\"No change\"), not D."
+  },
+  {
+    "external_id": "Logical Flow_museumcuration_5",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation states that Sentence 3 (the broad vision) \"logically precedes the specific implementation\" but then justifies the stated correct answer B (\"After Sentence 4\", i.e. placing the vision after the specific implementation) as providing flow \"from the general vision to the concrete methods\" — a direct contradiction, since placing vision after implementation reverses that order; the original placement (\"No change\", directly after Sentence 2 and before Sentence 4) actually matches the stated vision-before-implementation logic."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_16",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation's own addition is wrong: 0(8)+1(5)+2(4)+3(2)+4(1) = 0+5+8+6+4 = 23, not the stated 22, so the mean is 23/20 = 1.15, not the stated 1.1 (choice A). None of the answer choices (1.1, 1.0, 1.2, 1.5) exactly equals the correct value of 1.15."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_34",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation itself admits 'This question is flawed' because for the stated data set {72,75,78,78,87}, mean=median=mode=78, so choices A, B, and C (mean>median, mean=median, mean=mode) are all simultaneously false/true inconsistently and the question doesn't work; the explanation then substitutes an entirely different data set and answer key that was never applied to the actual stem/choices shown to the student."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_37",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "For the actual stem's data {500,650,800,850,1000,1200,3000}, the true mean-median difference is about 8000/7 - 850 ≈ $292.86, which does not match any of the given choices ($600/$400/$500/$300, correct_choice A=$600). The explanation admits this ('Let's fix the numbers to be cleaner') and substitutes a completely different 5-laptop problem/answer that was never applied to the actual published stem and choices."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_41",
+    "category": "ambiguous_question",
+    "confidence": "medium",
+    "reasoning": "In the base set {5,8,12,5,9,8}, 5 and 8 are already tied at 2 occurrences each, so adding x=9 or x=12 (as the explanation claims 'still works') actually produces a 3-way tie (5,8,and x all at 2), which does NOT give a unique mode of 8; strictly, only x=8 uniquely satisfies 'the mode is 8', making the premise behind excluding only choice C (x=5) inconsistent."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_51",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "Both choice C {2,5,8,10,10} and choice D {3,4,8,10,10} satisfy all stated conditions (median 8, mode 10, mean 7 with sum 35), so there are two mathematically valid answers though only D is marked correct; the explanation also mislabels the sum check as being for 'option B' when it is actually option D's numbers."
+  },
+  {
+    "external_id": "Mean Median Mode_MC Calc Allowed_73",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice B's text is 'Both A and B are true,' a self-referential/nonsensical statement (it should read 'Both A and D are true,' since the mean (choice A) and median (choice D) are both 3x); as written the correct answer choice's text is logically incoherent."
+  },
+  {
+    "external_id": "Mean Median Mode_MC No Calc_42",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stated correct_choice D is '50,' but 50 is not even a member of the given data set {10,20,30,40}, so it cannot be a value 'removed from the set.' The explanation admits the original question doesn't have a clean answer (10 and 40 tie) and substitutes an unrelated data set {10,20,30,50} and answer that was never applied to the actual stem/choices shown."
+  },
+  {
+    "external_id": "Mean Median Mode_SPR Calc Allowed_11",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "In {10,12,15,14,13,15,14,12,13,10}, every one of the five distinct values (10,12,13,14,15) appears exactly twice, so all five are tied for mode; correct_value '12, 13, 14, 15' incorrectly omits 10."
+  },
+  {
+    "external_id": "Mean Median Mode_SPR Calc Allowed_17",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "New mean = 290/9 = 32.222..., which does not round cleanly to 32; the rest of the batch reports such repeating means as e.g. '21.67', so correct_value should be '32.2' (or 290/9), not the integer '32' the explanation admits was rounded down."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "749.99 × 1.0825 = $811.864175 (≈$811.86), not $812.85 as the explanation computes; the closest choice is B ($811.87), not the stated correct_choice A."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_13",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation's own cross-multiplication step, 2(2x-1) = 4(x+3), simplifies to 4x-2=4x+12, i.e. -2=12, a contradiction with no solution — it cannot be solved to give x=7 as stated; none of the answer choices satisfy the equation as given."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_21",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation's own intermediate equation, 0.6x + 3.6 = -0.6, solves to x = -5 (or, using the full original equation 2.4x+3.6=1.8x-0.6, to x = -7), not x = 7 as stated; x=7 does not satisfy the equation (LHS=20.4 vs RHS=12.0 when substituted)."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_23",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation itself computes x = 17/3 ≈ 5.67, but the stated correct_choice is B (x=6), which contradicts the explanation's own final value."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_24",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 15x + 35(1250-x) = 32750 gives x = 550 (choice B), not x = 500 (choice A); plugging x=500 gives total revenue $33,750, not $32,750, while x=550 gives exactly $32,750."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_31",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation's own cleared-fraction equation, 3(5x+3)-24 = 2(3x-1), simplifies to 15x-15=6x-2, i.e. x=13/9 (≈1.44), not x=5 as stated; substituting x=5 into the original equation gives 10 ≠ 4.67, so it does not satisfy it."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_36",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 7.50x + 12.75(348-x) = 3726 gives x ≈ 135.4, not 132; substituting x=132 yields total revenue of $3,744, not the required $3,726, so the stated correct_choice C is not actually correct (and no listed choice satisfies the equation exactly)."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_39",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation's own cleared-fraction equation, 2(4x-7)+12 = 3(2x+5), simplifies to 8x-2=6x+15, i.e. x=8.5, not x=12 as stated; substituting x=12 into the original equation gives 15.67 ≠ 14.5, so it does not satisfy it."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_4",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3(29.99) + 0.22x = 184.47 gives x ≈ 429.5 miles, not 290; none of the choices (285, 295, 290, 300) come close to satisfying the stated total cost."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_41",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3.2x + 1.8 = 2.4x - 0.6 gives x = -3 (or x = -1.5 under the alternate sign reading), not x = 3; no positive choice satisfies the equation."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_42",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 2.25x + 1.50(18-x) = 34.50 gives x = 10 muffins exactly (choice B), not 12 (choice C): 12 muffins/6 cookies costs $36.00, not $34.50."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_43",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The equation 5x - 8 = 2(x+4) + 7 has exact solution x = 23/3 ≈ 7.67, not an integer; the explanation itself admits rounding ('x = 7.67 ≈ 8'), which is not appropriate for an abstract solve-for-x item."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_45",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own cleared equation 3(2x-3) = 4(x+1) + 12 solves to x = 12.5, not x = 15; even the closest choice would be C (13), not D (15)."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_47",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 7x + 12 = 4x - 9 gives x = -7 (or x = -1 under the alternate reading), never x = 7; the explanation's step '3x + 12 = 9... x = 7' is also internally inconsistent (that equation gives x = -1, not 7)."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_49",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 0.4x - 1.2 = 0.6x + 0.8 gives x = -10, not x = 10; the explanation's intermediate step also solves to x = 2 if read literally, neither of which is +10."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_52",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3.25x + 4.75(89-x) = 351.25 gives x ≈ 47.67, whose closest choice is A (48); the stated answer C (52) is far off (52 coffees would total $344.75, not $351.25)."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_55",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own cleared equation 2(3x+5) - 12 = (x-1) + 8 solves to x = 1.8, nowhere near the stated x = 7, and no listed choice (6, 8, 7, 9) is close."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_57",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 4.5x + 2.7 = 3.2x - 1.6 gives x ≈ -3.31, not the stated +3.3; the sign was dropped somewhere in generating the answer key."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_59",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own equation '6x - 8 - 5x = 4x - 2x - 7' simplifies to x - 8 = 2x - 7, i.e. x = -1, not x = 1 as claimed; x = -1 is choice C, so the correct answer should be C, not A."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_61",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 5(x-3) + 2x = 3(x+2) - 8 gives x = 3.25 under the most natural sign reading, not x = 2; no combination of signs for the equation yields any of the listed choices (4, 0, 2, 3) exactly."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_65",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The explanation's own cleared equation 2(4x-1) = 3(2x+7) - 6 solves to x = 8.5, not the clean integer x = 8 that is stated as correct."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_66",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 6x + 9 = 3x - 12 gives x = -7, so 2x - 5 = -19, not +19; no listed choice (13, 17, 15, 19) matches under any sign interpretation of the equation."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_68",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 0.75x + 2.25 = 0.25x - 1.75 gives x = -8, not x = 8; the answer key appears to have dropped the negative sign."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_77",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 75x + 125(850-x) = 87,500 gives exactly x = 375 balcony seats, but none of the answer choices (450, 425, 400, 475) equal 375."
+  },
+  {
+    "external_id": "One Variable_MC Calc Allowed_80",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own cleared equation 3(2x+3) = 5(x-2) + 15 solves to x = -4, not x = 10; none of the listed choices (7, 13, 10, 4) is close to the true solution."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_15",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 7x + 2 = 4x - 10 gives x = -4, not x = 4; the stated answer has the wrong sign and no listed choice is negative."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_27",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 9x + 5 = 6x - 7 gives x = -4, not x = 4 as stated; the explanation's own step '3x + 5 = 7' should read '3x + 5 = -7', which leads to x = -4, not the claimed +4."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_36",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 5x + 12 = 3x - 4 gives x = -8, not x = 8 as stated; the sign of the final answer is flipped."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_48",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3x + 11 = 2x - 1 gives x = -12, not x = 12 as stated; the sign of the final answer is flipped."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_49",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The equation 5(x-2) + 3 = 2(x+4) - 1 has exact solution x = 14/3 ≈ 4.67, not an integer; the explanation admits this ('x ≈ 4.67 ~ 5'), which is inappropriate for an abstract solve-for-x item with only integer choices."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_54",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 4x + 9 = x - 6 gives x = -5, not x = 5 as stated; the sign of the final answer is flipped."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_64",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 8x + 6 = 5x - 9 gives x = -5, so x - 2 = -7, not +7 as stated; the sign of the final answer is flipped."
+  },
+  {
+    "external_id": "One Variable_MC No Calc_74",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 7x + 14 = 4x - 1 gives x = -5, not x = 5 as stated; the sign of the final answer is flipped."
+  },
+  {
+    "external_id": "One Variable_SPR Calc Allowed_13",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation correctly shows 6x + 8 = 2(3x+7) reduces to the false statement 8 = 14, meaning the equation has NO solution, but correct_value states 'All real numbers,' which is the opposite conclusion; it should be 'No solution.'"
+  },
+  {
+    "external_id": "One Variable_SPR Calc Allowed_35",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving x - 15 = 3x + 5 gives x = -10, not 10 as stated (check: -10-15=-25 and 3(-10)+5=-25, confirming -10 is correct); the answer key dropped the negative sign."
+  },
+  {
+    "external_id": "One Variable_SPR Calc Allowed_59",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own equation 25c = 140 solves to c = 5.6, not c = 4 as stated (25 × 4 + 45 = 145 ≠ 185); the final division step in the explanation is simply wrong."
+  },
+  {
+    "external_id": "Paired Passages_balletpassages_12",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The 'passage' field, which is null for every other question in this set, instead contains leftover pipeline metadata ('Correct Answer: B ... Estimated Time: 80 seconds ... Difficulty: 4/5') rather than an actual passage. This both garbles the item and leaks the answer key directly in the passage field a student would read before answering."
+  },
+  {
+    "external_id": "Paired Passages_learningbehaviorpassages_23",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The 'passage' field does not contain a passage; it contains leaked generation scaffolding ('Correct Answer: B ... Explanation: ... Estimated Time: 75 seconds ... Difficulty: 4/5'), and that leaked 'Correct Answer: B' even contradicts the stored correct_choice of A, making the displayed content garbled and confusing even though the real explanation supports A."
+  },
+  {
+    "external_id": "Paired Passages_learningbehaviorpassages_28",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The 'passage' field contains leaked generation scaffolding ('Correct Answer: B ... Estimated Time: 80 seconds ... Difficulty: 4/5') instead of an actual passage, and that leaked label contradicts the stored correct_choice of A, making the displayed content garbled/broken."
+  },
+  {
+    "external_id": "Paired Passages_urbanplanningpassages_23",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage field contains leaked generation scaffolding text ('Correct Answer: B\\n\\nExplanation: ...\\n\\nEstimated Time: 80 seconds\\n\\nDifficulty: 4/5') instead of an actual passage, and the leaked 'Correct Answer: B' also conflicts with the actual stored correct_choice of C."
+  },
+  {
+    "external_id": "Paired Passages_usfoundingdocumentspassages_14",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage field contains leaked generation scaffolding text ('Correct Answer: B\\n\\nExplanation: ...\\n\\nEstimated Time: 80 seconds\\n\\nDifficulty: 4/5') instead of an actual passage."
+  },
+  {
+    "external_id": "Parabolas_MC Calc Allowed_44",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation concludes 'Only option C, (4, 0), satisfies this condition,' but choice C is actually (3, 2) — the point (4, 0) is choice A, which is the stored correct_choice. The explanation cites the wrong letter for the point it is discussing, even though the final stored answer (A) is mathematically correct."
+  },
+  {
+    "external_id": "Parabolas_MC Calc Allowed_60",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text '(Continuing to generate the final 25 questions.)' before the actual math question."
+  },
+  {
+    "external_id": "Parabolas_MC No Calc_40",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation scaffolding text: '(I will continue generating the remaining questions in this format.)' before the actual question about the vertex of y = x(x - 10)."
+  },
+  {
+    "external_id": "Parabolas_MC No Calc_52",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation says 'In choice D, a = 2, which is positive,' but choice D is y = 5x - 2x² (a = -2, opens downward); it is choice C (y = 2x² - 5x, a = 2) that has the positive coefficient and matches the stored correct_choice C. The explanation names the wrong letter."
+  },
+  {
+    "external_id": "Parabolas_MC No Calc_59",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation concludes 'Choice D is the case where a = 1' for y = a(x+5)², but choice D is y = x² - 5 (unrelated form); it is choice A (y = (x+5)², the stored correct_choice) that is the a=1 case. The explanation names the wrong letter."
+  },
+  {
+    "external_id": "Parabolas_SPR Calc Allowed_45",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y = -x² + 12x - 32, the vertex y-value at x = 6 is -36 + 72 - 32 = 4, which the explanation itself computes and confirms ('correct = 4'), yet correct_value is stored as '40', an order-of-magnitude typo."
+  },
+  {
+    "external_id": "Parabolas_SPR Calc Allowed_62",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y = 0.25(x-8)² - 5 at x = 6, y = 0.25(4) - 5 = -4, which the explanation itself computes and confirms ('Correct = -4'), yet correct_value is stored as '-6'."
+  },
+  {
+    "external_id": "Parabolas_SPR Calc Allowed_54",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "correct_value (-4) is the mathematically correct vertex y-value for y=(x+3)(x-1) (at x=-1: (2)(-2)=-4), but the explanation's 'correction' contains an arithmetic error and asserts the answer is 4, directly contradicting the stored correct_value."
+  },
+  {
+    "external_id": "Parabolas_SPR No Calc_59",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y = 2x² + 2x − 12, the vertex is at x = -0.5, giving y = 2(0.25) − 1 − 12 = -12.5 (as the explanation itself computes), not -13 as stored in correct_value."
+  },
+  {
+    "external_id": "Parabolas_SPR No Calc_74",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y = 2x² − 12x + 19, the vertex is at x = 3, giving y = 18 − 36 + 19 = 1 (as the explanation itself computes and states 'Correct = 1'), but correct_value is stored as -1."
+  },
+  {
+    "external_id": "Parabolas_SPR No Calc_76",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y = (x + 7)(x − 1), the axis of symmetry is the midpoint of -7 and 1, which is -3 (as the explanation itself computes and states), but correct_value is stored as 3 (missing the negative sign)."
+  },
+  {
+    "external_id": "Percents_MC Calc Allowed_0",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('Of course. Here are 85 SAT-style Math questions for the Calculator-Allowed section... s 1-85') before the actual question."
+  },
+  {
+    "external_id": "Percents_MC Calc Allowed_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('(Continuing to generate the remaining 55 questions in the same pattern and format, ensuring variety and accuracy.)') before the actual question."
+  },
+  {
+    "external_id": "Percents_MC Calc Allowed_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('(Continuing to generate the final 35 questions in the same pattern and format.)') before the actual question."
+  },
+  {
+    "external_id": "Percents_MC No Calc_0",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('Of course. Here are 85 SAT-style Math questions for the No-Calculator section... s 1-85') before the actual question."
+  },
+  {
+    "external_id": "Percents_MC No Calc_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('(Continuing to generate the remaining 55 questions in the same pattern and format.)') before the actual question."
+  },
+  {
+    "external_id": "Percents_MC No Calc_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked LLM generation scaffolding text ('(Completing the final 35 questions.)') before the actual question."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_12",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "500 × (1.06)^4 = 631.23848, which rounds to 631.24 to the nearest cent, not the stated 631.23 (the explanation truncates instead of rounding)."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_37",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "5,000 × (1.07)^4 = 6,553.98, not 6,530.43 as stated in correct_value and explanation; the compounding arithmetic is wrong."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_52",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "1,000 × (1.01)^8 (quarterly compounding at 1%/quarter for 8 quarters) = 1,082.86, not 1,081.6; 1,081.6 is actually the answer to a different (annual compounding) problem elsewhere in the batch, apparently copy-pasted here by mistake."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_74",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "4,000 × (1.06)^3 = 4,764.06 (4,000→4,240→4,494.40→4,764.064), not 4,764.54 as stated."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_83",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "2,000 × (1.05)^8 = 2,954.91 (verified year-by-year: 2100→2205→2315.25→2431.01→2552.56→2680.19→2814.20→2954.91), not 2,950.34 as stated."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_50",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding (\"Wait, recalc: ... → Correct = 67.2\") rather than a clean explanation; the final numeric answer happens to still be correct, but the text is garbled generation artifact."
+  },
+  {
+    "external_id": "Percents_SPR Calc Allowed_80",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding (\"Wait, recalc: ... Correct = 38.4\") rather than a clean explanation; the final numeric answer happens to still be correct, but the text is garbled generation artifact."
+  },
+  {
+    "external_id": "Precision_memoryretention_31",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices A and D are both literally \"upkeep\" (an exact duplicate), making the option set invalid, and the explanation compounds this by justifying the correct answer \"care\" as being distinct from \"maintenance is too general and repeated as an option\" — but \"maintenance\" is not actually one of the four choices (the duplicated word is \"upkeep\"), so the explanation doesn't match the actual choice list either."
+  },
+  {
+    "external_id": "Probabilities_MC Calc Allowed_10",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation is leaked generation scaffolding: it abandons the actual stem (1/500 defective rate, 100 products bought) as 'too complex for SAT', then improvises two entirely different substitute problems, ending with an embedded second question ('In a lottery...') with its own lettered choices and a 'Correct Answer: C' line. Even that embedded reasoning computes 10/250=1/25, which corresponds to real choice D, not the stated correct_choice C (1/20) — so the stated answer isn't supported by any coherent derivation shown."
+  },
+  {
+    "external_id": "Probabilities_MC Calc Allowed_20",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text '(Continuing to generate the remaining 65 questions.)' before the actual marble-probability question. The math itself (10/15 = 2/3, choice D) is correct, but the stem is contaminated with meta-commentary that shouldn't be shown to a student."
+  },
+  {
+    "external_id": "Probabilities_MC Calc Allowed_40",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text '(Final 45 questions to follow)' before the actual coin-flip probability question. The math itself (3/8, choice D) is correct, but the stem is contaminated with meta-commentary that shouldn't be shown to a student."
+  },
+  {
+    "external_id": "Probabilities_MC Calc Allowed_53",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice A (12/50 = 0.24) is mathematically identical to the stated correct choice D (24/100 = 0.24), so two options represent the same correct probability."
+  },
+  {
+    "external_id": "Probabilities_MC Calc Allowed_84",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice A (20/9900) reduces to exactly 1/495, the same value as the stated correct choice B (1/495), giving the question two mathematically correct options."
+  },
+  {
+    "external_id": "Probabilities_MC No Calc_14",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice A (6/20) equals 3/10, the same value as stated correct choice D (3/10); the explanation itself admits '6/20 is also correct, but 3/10 is simplified,' confirming two options are correct."
+  },
+  {
+    "external_id": "Probabilities_MC No Calc_32",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice B (30/132) reduces to exactly 5/22, the same value as the stated correct choice A (5/22), giving the question two mathematically correct options."
+  },
+  {
+    "external_id": "Probabilities_MC No Calc_66",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choice D (8/52) reduces to exactly 2/13, the same value as the stated correct choice C (2/13), giving the question two mathematically correct options."
+  },
+  {
+    "external_id": "Probabilities_MC No Calc_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text: '(Continuing to generate the remaining 55 questions.)' before the actual question."
+  },
+  {
+    "external_id": "Probabilities_MC No Calc_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text: '(Final 35 questions to follow)' before the actual question."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_11",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked internal self-correction scaffolding ('Wait: 0.5+0.5=1.0; ...') rather than a clean solution, even though the final value 0.5333 is numerically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_17",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked generation scaffolding ('Oops—recompute: ...') rather than a clean solution, even though the final value 5/11 is numerically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_23",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked internal self-correction scaffolding ('size 5? Wait, list odds: ...') rather than a clean solution, even though the final value 5/7 is numerically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation scaffolding text: 'Batch 2 (Questions 31–60)' before the actual question."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_41",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked generation scaffolding ('Oops arithmetic: ...') rather than a clean solution, even though the final value 1215/4096 is numerically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_16",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "correct_value is stated as 25/130 (=5/26), but the explanation correctly computes P(even digit) x P(vowel) = (5/10)(5/26) = 25/260 = 5/52 and even says '(Grid 25/260 or 5/52)'; the true answer is 5/52, not 25/130."
+  },
+  {
+    "external_id": "Probabilities_SPR Calc Allowed_58",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "correct_value is stated as 37/55, but the explanation's own (corrected) computation gives P(at least one red) = 1 - (5/12)(4/11) = 1 - 5/33 = 28/33, and explicitly notes '(Grid 28/33)'; the true answer is 28/33, not 37/55."
+  },
+  {
+    "external_id": "Punctuation_19thcenturyquestions_4",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation contains massive leaked generation-pipeline scaffolding text ('Self-correction:', 'Let's re-evaluate for strict SAT adherence', 'Revised Excerpt and Explanation for Q5:', an entirely different embedded second question with its own choices A-D and a different 'Correct Answer: A'), which is incoherent and unusable as an explanation for this question."
+  },
+  {
+    "external_id": "Punctuation_artisticevolutionquestions_1",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices B and C are worded identically: both read \"Their impact on 20th century art's was immense.\" making two of the four answer options indistinguishable."
+  },
+  {
+    "external_id": "Probabilities_SPR No Calc_10",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding text ('Wait—check: ...') that repeats the same calculation rather than reading as a clean student-facing explanation, though the final answer (1/3) is mathematically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR No Calc_35",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation is garbled leaked reasoning ('Composite outcomes {4,6,8,9,10,12}? Wait — 1–6 only. ... {1?} (not composite)...') rather than a clean explanation, though the final answer (1/3, since composites on a die are {4,6}) is correct."
+  },
+  {
+    "external_id": "Probabilities_SPR No Calc_43",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding ('=3/5? Wait — denominator total combos...') rather than a clean explanation, though the final answer (3/5) is mathematically correct."
+  },
+  {
+    "external_id": "Probabilities_SPR No Calc_54",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding ('Wait—{A} is 1/4; but if {A, E} not listed. Correct: ...') rather than a clean explanation, though the final answer (1/4) is correct."
+  },
+  {
+    "external_id": "Probabilities_SPR No Calc_63",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation contains leaked self-correction scaffolding ('=8/14? Wait simplify: ... = 4/7? No — check denominator...') rather than a clean explanation, though the final answer (4/7) is mathematically correct."
+  },
+  {
+    "external_id": "Punctuation_foundingusdocs_22",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The passage reads '...the ultimate power of the people a concept central to the Declaration of Independence' with NO comma at all before the appositive. The explanation itself says the appositive 'should be set off by a comma' but then concludes 'No change is needed,' which contradicts its own reasoning since no comma is actually present in the underlined text. None of the offered choices (quotation mark, colon, semicolon, or no change) actually inserts the needed comma, so the stated correct answer D is not properly justified by the explanation."
+  },
+  {
+    "external_id": "Punctuation_foundingusdocs_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation field contains leaked generation-pipeline scaffolding text ('Revised Excerpt and Explanation for Q30:' followed by a duplicated passage, a second set of answer choices, and a second 'Correct Answer' block) that was never cleaned up before being stored."
+  },
+  {
+    "external_id": "Punctuation_globalhistoryquestions_25",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation field contains leaked generation-pipeline scaffolding text ('Revised Excerpt and Explanation for Q26:' followed by a duplicated passage, a second set of answer choices, and a second 'Correct Answer' block) that was never cleaned up before being stored."
+  },
+  {
+    "external_id": "Punctuation_globalhistoryquestions_7",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation is garbled, self-correcting mid-explanation ('Let's adjust this for a clear error.') and contains leaked generation-pipeline scaffolding ('Revised Excerpt and Explanation for Q8:' plus a duplicated passage and a second answer-choice/answer block). The explanation's own reasoning also concludes that 'impacts' needs no apostrophe since it's the plural subject of 'reverberated,' directly contradicting the stored correct_choice 'C' (impact's reverberated)."
+  },
+  {
+    "external_id": "Punctuation_penguinheatquestions_21",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_penguinheatquestions_24",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_penguinheatquestions_7",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_10",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_13",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_16",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_19",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_24",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_platetectonics_6",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_10",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_13",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_16",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_19",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_21",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_24",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_6",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_14",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_18",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_19",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_20",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_25",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_31",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_4",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_psychologyquestions_9",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_10",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_14",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_17",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_18",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_2",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_23",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_24",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_26",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_6",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_8",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_14",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_18",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_19",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_21",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_23",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_24",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_25",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_26",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Punctuation_sociologyquestions_9",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage text ends with the literal leaked string \"No change is needed.\" appended as a nonsensical final sentence that has nothing to do with the passage's subject matter -- generation-pipeline scaffolding (the boilerplate answer-choice label) bled into the passage content itself."
+  },
+  {
+    "external_id": "Ratios_MC Calc Allowed_20",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text -- '(Continuing to generate the remaining 65 questions in the same pattern and format.)' -- before the actual question, which is not something a student should ever see."
+  },
+  {
+    "external_id": "Punctuation_penguinheatquestions_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "Three of the four answer choices (and their punctuation variants) quote a sentence about 'without this adaptation, they would constantly face dehydration' that does not appear anywhere in this passage and has nothing to do with its subject -- the choices were copied/corrupted from an unrelated penguin-salt-gland question, making the question incoherent even though the stated 'No change is needed' correct answer happens to be grammatically defensible for the passage's actual sentence."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_9",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "Three of the four answer choices (and their punctuation variants) quote a sentence about 'without this adaptation, they would constantly face dehydration' that does not appear anywhere in this passage and has nothing to do with its subject -- the choices were copied/corrupted from an unrelated penguin-salt-gland question, making the question incoherent even though the stated 'No change is needed' correct answer happens to be grammatically defensible for the passage's actual sentence."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "Three of the four answer choices (and their punctuation variants) quote a sentence about 'without this adaptation, they would constantly face dehydration' that does not appear anywhere in this passage and has nothing to do with its subject -- the choices were copied/corrupted from an unrelated penguin-salt-gland question, making the question incoherent even though the stated 'No change is needed' correct answer happens to be grammatically defensible for the passage's actual sentence."
+  },
+  {
+    "external_id": "Punctuation_postalsystemsquestions_25",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "Three of the four answer choices reference \"Moreover its/; /: high cost\", but the passage's actual sentence is \"Moreover, it fostered a sense of national unity by connecting citizens across vast distances\" -- the choices were copied from an unrelated passage about cost, making the question incoherent even though 'No change is needed' happens to be grammatically defensible for the actual sentence shown."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_22",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation says an em dash is needed to introduce the explanatory clause, but the stored text of the stated correct choice (B) contains a stray straight quotation mark (\") in place of an em dash ('its many secrets\"particularly how memory...'), so the 'correct' choice as written is not actually the em-dash-punctuated sentence the explanation describes."
+  },
+  {
+    "external_id": "Punctuation_scientificquestions_16",
+    "category": "bad_distractor",
+    "confidence": "medium",
+    "reasoning": "Choice A ('is influenced by factors such as temperature, humidity, and wind speed.') reproduces the original sentence's wording and punctuation exactly, making it functionally identical to choice D ('No change is needed.'), the stated correct answer -- two choices represent the same unchanged text, an unresolvable duplicate."
+  },
+  {
+    "external_id": "Ratios_MC Calc Allowed_40",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Completing the final 45 questions.)' before the actual question content."
+  },
+  {
+    "external_id": "Ratios_MC Calc Allowed_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Final 35 questions to follow)' before the actual question content."
+  },
+  {
+    "external_id": "Ratios_MC No Calc_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Final 35 questions to follow)' before the actual question content."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_27",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "7x+11x=140 gives x=140/18≈7.78, so the larger angle = 11x ≈ 85.56 (as the explanation itself computes), but correct_value is stored as 85.86, which does not match the shown work."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_33",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving (7x+12)/(4x-24)=2 gives x=60, so the original total is 7x+4x=11x=660, not 132 as stored (the explanation even derives x=60 correctly but then reports an unrelated total)."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_34",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Mixing equal volumes (e.g. 70 units each) of water:juice=5:2 and 7:3 gives total water=99, juice=41, so the correct ratio is 99:41, not the stored 24:11."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_37",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving (13k+5)/(2k)=6 (from ratios 13:2 and 3:0.5=6:1) gives k=-5, an impossible negative value; plugging the stored answer (failed=8, k=4) into the stated new-ratio condition gives 57:8, not 6:1, so correct_value=8 does not satisfy the problem as written."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_39",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3(5x+24)=2(9x-24) gives x=40, so the total workforce is 14x=560, not 168; the stored explanation's own algebra step (x=12) is an arithmetic error since substituting x=12 gives an 84:84 (1:1) ratio, not the required 2:3."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_43",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Scaling men=5×1.1=5.5 and women=7×1.2=8.4 gives a new ratio of 55:84, which is already in lowest terms (GCD=1) and is not equal to 11:14 (11:14 = 55:70, not 55:84), so the stored answer is incorrect."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_46",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 5(5x-18)=2(2x+18) gives x=6, so the original total (A+B=7x) is 42, not the stored 49; checking x=6 gives A=12, B=30, which correctly satisfies the 2:5 final ratio."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_48",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "8 kg of a 4:1 alloy gives 6.4 kg copper/1.6 kg tin, and 16 kg of a 5:3 alloy gives 10 kg copper/6 kg tin; totals are 16.4 kg copper to 7.6 kg tin, i.e. 41:19, not the stored 92:44 (=23:11)."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_50",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 5(3x-12)=10x gives x=12, so the original total is 3x+5x=8x=96, not the stored 64; the explanation itself derives x=12 correctly but then reports the wrong total (8×12=96, not 64)."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_53",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "24 g of a 5:3 gold:silver alloy gives 15 g gold/9 g silver, and 16 g of a 3:2 alloy gives 9.6 g gold/6.4 g silver, for totals of 24.6 g gold to 15.4 g silver = 123:77, not the stored 27:17. The stem also contains leaked scaffolding text 'BATCH 3 — Questions 61–85'."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_31",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The problem's stated conditions are internally inconsistent: starting from a 5:3 profit ratio with a 20%/10% increase actually yields a new ratio of 20:11, not the stated 11:7, even though the specific numeric answer requested (original first-division profit = $400,000, from total $640,000 and ratio 5:3) happens to still be correct."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_47",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "A 4-angle polygon (quadrilateral) always has interior angles summing to 360°, but the problem derives a sum of 450° from the ratio 3:4:5:6 and a largest angle of 150°, describing a geometrically impossible quadrilateral."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_59",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving (5x+15)/(9x+15)=8/11 gives 17x=45, so x=45/17≈2.647, and the larger original number is 9x≈23.82, not 45. The explanation itself derives 45=17x and then illegitimately reuses that intermediate value as the final answer instead of solving for x."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_61",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "The stem gives only a speed ratio (4:5) and two distances (300mi, 240mi) that merely re-confirm that ratio, with no time value given, so the faster car's actual speed in mph cannot be determined; the explanation ('240/x = 300/y; speed of faster = 75 mph') is incoherent and does not derive 75 from anything given."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_62",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 3(7x+6)=4(8x-6) gives 11x=42, so x=42/11≈3.818, and original Class B = 8x ≈ 30.5, not 64. The explanation admits the algebra doesn't give a clean number and then arbitrarily substitutes x=8 to get 64, which is unsupported by the equation."
+  },
+  {
+    "external_id": "Ratios_SPR Calc Allowed_69",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "With A=3x, B=2x, replacing 10L of A with B gives (3x-10)/(2x+10)=2/3, so x=10, meaning original liquid A = 3x = 30 liters (total mixture = 5x = 50). The question asks for the amount of A, but correct_value is stated as 50 (the total), not the correct 30."
+  },
+  {
+    "external_id": "Ratios_SPR No Calc_27",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Boys:girls = 5:7 with girls=240 gives 1 part = 240/7≈34.286, so total = 12 parts ≈411.43, not 480. The explanation computes the same 34.2857 per-part value but then multiplies incorrectly to reach 480 (34.2857×12=411.43, not 480)."
+  },
+  {
+    "external_id": "Ratios_SPR No Calc_32",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "Solving (3x+6)/(2x+4)=9/7 yields 3x=-6 (negative, no valid solution), and testing the stated answer (width=10, length=15) gives a new ratio of 21:14=3:2, not 9:7, so the system as posed is inconsistent and the explanation's own '3x=-6' result contradicts the stated width=10."
+  },
+  {
+    "external_id": "Ratios_SPR No Calc_35",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Solving 9/2=33/x gives 9x=66, so x=66/9≈7.33, not 8. The explanation's final arithmetic step (9x=66 → x=8) is simply incorrect since 66/9≠8."
+  },
+  {
+    "external_id": "Ratios_SPR No Calc_73",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Boys:girls=13:11, total=312 gives 1 part=312/24=13, so boys=13×13=169, not 182. The explanation's final multiplication (13×13=182) is an arithmetic error; 13×13=169."
+  },
+  {
+    "external_id": "Real World Modeling_SPR No Calc_11",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "720(y+2)+480y=10080 gives 1200y=8640, so y=7.2 (not 7 as the explanation states), making x=y+2=9.2, not 9. Plugging back in confirms: 720(9.2)+480(7.2)=6624+3456=10080."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_45",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation's intermediate step '1.7l = 105' is arithmetically wrong (553.5-451.5=102, not 105); 102/1.7=60 still gives the correct stated answer of 60, but the shown work does not support it."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_56",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation's step '20.75o = 3060' is wrong (11257.5-7937.5=3320, not 3060); 3320/20.75=160 still matches the stated correct answer of 160, but the shown arithmetic is incorrect."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_72",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation's step '1.85l = 77.0' is wrong (307-225.6=81.4, not 77.0); 81.4/1.85=44 still matches the stated correct answer of 44, but the shown arithmetic is incorrect."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_76",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation's step '14.45h = 762.5' is wrong (1644.75-850=794.75, not 762.5); 794.75/14.45=55 still matches the stated correct answer of 55, but the shown arithmetic is incorrect."
+  },
+  {
+    "external_id": "Real World Modeling_SPR No Calc_39",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Solving 490s+685(280-s)=176020 gives s=15780/195≈80.92, not the integer 81 the explanation asserts; the given total ($1760.20) is not exactly consistent with any whole-number split of 280 meals, so the stated exact value of 81 is not actually supported by the algebra (nearest total for s=81 would be $1760.05)."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('Batch 2 — Questions 31–60') prepended before the actual question."
+  },
+  {
+    "external_id": "Real World Modeling_SPR Calc Allowed_60",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('Batch 3 — Questions 61–85') prepended before the actual question."
+  },
+  {
+    "external_id": "Real World Modeling_SPR No Calc_29",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('Batch 2 — Questions 31–60') prepended before the actual question."
+  },
+  {
+    "external_id": "Right Triangles_MC Calc Allowed_20",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('(Continuing to generate the remaining 65 questions.)') prepended before the actual question."
+  },
+  {
+    "external_id": "Right Triangles_MC Calc Allowed_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('(Completing the final 55 questions.)') prepended before the actual question."
+  },
+  {
+    "external_id": "Right Triangles_MC Calc Allowed_45",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text ('(Final 40 questions to follow)') prepended before the actual question."
+  },
+  {
+    "external_id": "Right Triangles_MC No Calc_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Final 35 questions to follow) What is the hypotenuse of a right triangle with legs 1 and 1?'"
+  },
+  {
+    "external_id": "Right Triangles_MC No Calc_62",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem is a garbled duplicate: 'A right triangle has integer side lengths. If one leg is 9 and the other leg is 40, what is the hypotenuse? A right triangle has integer side lengths. If the two legs are 9 and 40, what is the hypotenuse?' appears to be a leftover generation-retry artifact concatenated into the question text."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_5",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "sin(θ)=5/20=0.25 gives θ=arcsin(0.25)≈14.48°, which rounds to 14° (nearest degree), not 15°. The explanation itself computes 14.48° but then incorrectly rounds it up to 15°; correct_value should be '14'."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_21",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "d = 40/tan(25°) = 40/0.46631 ≈ 85.78, which rounds to 85.8, not the stated 85.7."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_27",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "arctan(7/9) = arctan(0.7778) ≈ 37.87°, which rounds to 37.9°, not the stated 37.8°."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_34",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation's own division is wrong: 12 / 0.4226 ≈ 28.40, not 28.35. Using the precise value cos(65°)=0.42262, hyp = 12/0.42262 ≈ 28.39, so correct_value should be about 28.39–28.40, not 28.35."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_42",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "√(20²−11²) = √279 ≈ 16.70, not 16.37 as stated (16.37² ≈ 268, far from 279). This is a sqrt computation error; correct_value should be about 16.70."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_43",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Height = 500 × tan(18°) = 500 × 0.32492 ≈ 162.46, which rounds to 162.5, not the stated 162.3."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_56",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "arccos(9/12) = arccos(0.75) ≈ 41.41°, which rounds to 41°, not 42°. The explanation even states 41.41° but then incorrectly rounds up to 42°; correct_value should be '41'."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_57",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "√(15²−6²) = √189 ≈ 13.75, not 13.66 as stated (13.66² ≈ 186.6, not 189). Correct_value should be about 13.75."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_59",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "arcsin(11/15) = arcsin(0.7333) ≈ 47.2°, not 47.5° as stated."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_60",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "arccos(20/22) = arccos(0.9091) ≈ 24.6°, not 24.1° as stated; the explanation's own rounding of 0.9091 to an angle is computed incorrectly."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_72",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "d = 100/tan(12°) = 100/0.21256 ≈ 470.5, which rounds to 470 m, not 472 m as stated."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_80",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "arcsin(300/800) = arcsin(0.375) ≈ 22.02°, not 21.98° as stated."
+  },
+  {
+    "external_id": "Right Triangles_SPR Calc Allowed_83",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "arccos(8/17) = arccos(0.4706) ≈ 61.9°, not 61.1° as stated; the explanation's own arccos evaluation of 0.4706 is computed incorrectly."
+  },
+  {
+    "external_id": "Right Triangles_SPR No Calc_64",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For hypotenuse 37 and leg 28, the other leg is √(37²−28²)=√585≈24.19, which is irrational, not 21 (21²=441≠585). The stated correct_value of 21 and the explanation's own arithmetic (√585=21) are both mathematically false."
+  },
+  {
+    "external_id": "Roots_MC Calc Allowed_12",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "Solving 0.5x²+4x−9=0 gives x≈1.83 and x≈−9.83, both of which appear as answer choices (B and C) and both are genuine solutions per the explanation's own work, so the question 'which is closest to a solution' has two defensible correct choices rather than one."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_11",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 6x²+7.8x-4.5=0, the quadratic formula gives the positive root as (-7.8+√168.84)/12 ≈ 0.433, not the stated 0.5; the explanation's own arithmetic yields 0.433 but states 0.5."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_13",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 2x²-3.4x-1.8=0, the larger root is (3.4+√25.96)/4 ≈ 2.12, not 2.4; the explanation's own computation (3.4±√25.96)/4 yields 2.12."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_15",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 3x²-4.4x-7.1=0, the positive root is (4.4+√104.56)/6 ≈ 2.44, not 3.14."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_17",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For x²-3.2x+0.96=0, the smaller root is (3.2-√6.4)/2 ≈ 0.34, not 0.4; the explanation's own √6.4≈2.53 gives 0.335, contradicting the stated 0.4."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_19",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 0.25x²-3.1x+4=0 (i.e. x²-12.4x+16=0), the larger root is (12.4+√89.76)/2 ≈ 10.94, not 12.93."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_24",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 1.5x²-5.2x+2=0, the larger positive root is (5.2+√15.04)/3 ≈ 3.03, not 2.28."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_26",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "0.4x²+0.8x-1.2=0 simplifies to x²+2x-3=0=(x+3)(x-1), so the larger root is exactly 1, not 1.2 as stated (the explanation's own (-4±8)/4 gives 1)."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_28",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 9x²-6.4x+0.8=0, the smaller root is (6.4-√12.16)/18 ≈ 0.16, not 0.125."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_29",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 4x²-5.8x+2.1=0, discriminant is 0.04 so roots are 0.75 and 0.7; the larger root is 0.75, not 1.2 as stated (the explanation's own math gives 0.75)."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_31",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 0.6x²-1.8x+1.05=0, the smaller root is (36-√288)/24 ≈ 0.79, not 1.25."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_33",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For x²-10.8x+28.5=0, the larger root is (10.8+√2.64)/2 ≈ 6.21, not 7.5; the explanation's own arithmetic gives 6.21."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_36",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "1.2x²-4.8x+2.88=0 simplifies to x²-4x+2.4=0; the larger (positive) root is 2+√1.6 ≈ 3.26, not 3."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_39",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 2.5x²-9x+6.4=0, the smaller root is (90-√1700)/50 ≈ 0.98, not 1.6."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_41",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 6x²-3.6x-5.4=0, the positive root is (6+√396)/20 ≈ 1.30, not 1.5; the explanation's own arithmetic gives 1.295."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_44",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 0.8x²+3.6x-4.48=0, the smaller (negative) root is (-36-√2729.6)/16 ≈ -5.52, not -5.6."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_47",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 1.6x²-4.8x+1.92=0, the larger root is (48+√1075.2)/32 ≈ 2.52, not 2.4."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_49",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 5x²+4.5x-1.35=0, the smaller (negative) root is (-90-√18900)/200 ≈ -1.14, not -1.5."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_5",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 5x²-4.2x-2.88=0, the smaller root is (4.2-√75.24)/10 ≈ -0.45, not -0.48; the explanation's own arithmetic gives -0.4474."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_52",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "1.25x²-2.5x+0.625=0 simplifies to x²-2x+0.5=0; the positive root is 1+√0.5 ≈ 1.71, not 1 as stated (the explanation's own (10±√50)/10 gives 1.71 or 0.29, never 1)."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_53",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 2x²-3.2x-0.8=0, the larger root is (32+√1664)/40 ≈ 1.82, not 2; the explanation's own arithmetic gives 1.82."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_54",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 0.9x²-1.8x+0.81=0, the discriminant (32400-29160=3240) is not 0, so the roots are not a double root of 0.9; the smaller root is actually ≈0.68."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_55",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 3x²+2.1x-4.2=0, the positive root is (-21+√5481)/60 ≈ 0.88, not 0.84."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_58",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 2.5x²+4.5x-3=0, the smaller (negative) root is (-45-√5025)/50 ≈ -2.32, not -2.4."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_60",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "4.8x²-9.6x+3.84=0 simplifies to x²-2x+0.8=0; the roots are 1±√0.2, i.e. ≈1.45 and ≈0.55 — neither equals the stated 2 (the explanation's own (10±√20)/10 never equals 2)."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_63",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 6x²+5x-2.5=0, the smaller (negative) root is (-20-√1360)/48 ≈ -1.18, not -1.25."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_65",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 1.8x²-4.5x+2.52=0, the larger root is (50+√260)/40 ≈ 1.65, not 1.4; the explanation's own arithmetic gives 1.653."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_69",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 4.4x²+2.2x-3.52=0, the positive root is (-55+√41745)/220 ≈ 0.68, not 0.8."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_71",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 0.9x²-1.8x+0.72=0, the larger root is (10+√20)/10 ≈ 1.45, not 1.2; the explanation's own arithmetic (10±√20)/10 gives 1.447, not 1.2."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_72",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 5.5x²+6.6x-2.75=0, the smaller (negative) root is (-12-√244)/20 ≈ -1.53, not -1.25."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_73",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 7.2x²-4.8x-3.6=0, the positive root is (4+√88)/12 ≈ 1.12, not 1.5."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_77",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 2.8x²-5.6x+1.4=0, the smaller root is (4-√8)/4 ≈ 0.29, not 0.333; the explanation's own arithmetic gives 0.293."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_80",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 1.2x²+0.6x-0.72=0 (10x²+5x-6=0), the positive root is (-5+√265)/20 ≈ 0.56, not 0.6."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_81",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For 5x²+8x-4.5=0, the larger root is (-80+√15400)/100 ≈ 0.44, not 0.3; the explanation's own arithmetic gives 0.441."
+  },
+  {
+    "external_id": "Roots_SPR Calc Allowed_82",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "6.6x²-2.2x-4.4=0 simplifies to 3x²-x-2=0=(3x+2)(x-1); the smaller root is -2/3 ≈ -0.67, not -0.8 as stated (the explanation's own (1±5)/6 gives -0.667)."
+  },
+  {
+    "external_id": "Roots_SPR No Calc_43",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "2x²+x-15=0 factors as (2x-5)(x+3)=0, giving roots 2.5 and -3, so the larger root is 2.5, not 3; the explanation's factoring (2x+5)(x-3) expands to 2x²-x-15, which does not match the given equation."
+  },
+  {
+    "external_id": "Roots_SPR No Calc_48",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "3y²+11y+10=0 factors correctly as (3y+5)(y+2)=0 with roots -5/3 (≈-1.67) and -2; the larger of these is -5/3, not -2 as stated — the explanation mislabels the smaller root as the larger one."
+  },
+  {
+    "external_id": "Roots_SPR No Calc_76",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "2y²-3y-18=0 does not factor as (2y+3)(y-4) (that expands to 2y²-5y-12, not the given equation); by the quadratic formula the positive root is (3+√153)/4 ≈ 3.84, not 4."
+  },
+  {
+    "external_id": "Roots_SPR No Calc_81",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "4x²-9x-10=0 does not factor as (4x+5)(x-2) (that expands to 4x²-3x-10, not the given equation); by the quadratic formula the larger root is (9+√241)/8 ≈ 3.07, not 2."
+  },
+  {
+    "external_id": "Sentence Boundaries_19thcenturyquestions_22",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The stated answer D (\"Her mind miles away, she was lost in thoughts of her beloved.\") produces 'Lady Harriet gazed out at the passing countryside, her mind miles away, she was lost in thoughts of her beloved,' which strings an absolute phrase and a new independent clause together with only commas — the same kind of boundary problem the question is testing. Choice A ('Her mind miles away, lost in thoughts of her beloved.') attaches the fragment as a second participial/absolute modifier without creating a new independent clause, matching the fix pattern used for every other fragment question in this batch, and is the more defensible correct answer."
+  },
+  {
+    "external_id": "Sentence Boundaries_19thcenturyquestions_26",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The passage reads '...their faces a mixture of excitement and hurried farewells, the platform quickly emptying.' but every answer choice is built around the clause order 'emptying, passengers rushed to board' (platform-emptying first, boarding second) — text that does not appear anywhere in the given passage. The choices don't correspond to the passage's actual wording/order, so the underlined-portion premise is broken."
+  },
+  {
+    "external_id": "Sentence Boundaries_19thcenturyquestions_29",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The original text is a list ('...broken only by the chirping of crickets, the gentle rustle of leaves in the nocturnal breeze') where the second item has no verb — it is a noun phrase, not an independent clause. The stated answer D ('crickets. The gentle rustle of leaves in the nocturnal breeze.') turns that verb-less noun phrase into its own sentence, which is an ungrammatical fragment. Choice C ('crickets and the gentle rustle of leaves in the nocturnal breeze.') correctly completes the parallel list with 'and' and is the actual correct fix."
+  },
+  {
+    "external_id": "Sentence Boundaries_globalhistoryquestions_12",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The passage as given ('This treaty aimed to ensure lasting peace. However, it inadvertently laid the groundwork for future conflicts.') is already two properly punctuated, grammatically complete sentences with no run-on, comma splice, or fragment — unlike every other item in this batch, there is no actual sentence-boundary error in the underlined portion for the answer choices to correct."
+  },
+  {
+    "external_id": "Sentence Boundaries_psychologyquestions_0",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices C and D are byte-identical text (\"however, it is less resistant to extinction.\"), so the stated correct_choice \"C\" is indistinguishable from distractor \"D\"; a student selecting D would have chosen the same text as the marked-correct answer."
+  },
+  {
+    "external_id": "Sentence Structure_19thcenturyquestions_13",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation names \"Option D\" as the best revision and describes phrasing that actually matches choice A's text (not D's), so the explanation cites the wrong option letter and contradicts the stored correct_choice (A)."
+  },
+  {
+    "external_id": "Sentence Boundaries_sociologyquestions_20",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The underlined portion 'leading to economic restructuring and shifts in population demographics' is a participial phrase, not an independent clause, so the original sentence ('...centers, leading to...') is already a grammatically correct sentence, not a run-on; the stated correct choice D turns it into a sentence fragment ('Leading to economic restructuring and shifts in population demographics.'), which is wrong. Choice C (identical to the original, correctly-punctuated text) should be correct instead."
+  },
+  {
+    "external_id": "Substitution_SPR Calc Allowed_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text \"Batch 2 — Questions 31–60\" before the actual question; this is not part of the math problem and should not be shown to a student."
+  },
+  {
+    "external_id": "Substitution_SPR Calc Allowed_60",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text \"Batch 3 — Questions 61–85\" before the actual question; this is not part of the math problem and should not be shown to a student."
+  },
+  {
+    "external_id": "Substitution_SPR No Calc_30",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text \"Batch 2 — Questions 31–60\" before the actual question; this is not part of the math problem and should not be shown to a student."
+  },
+  {
+    "external_id": "Substitution_SPR No Calc_60",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text \"Batch 3 — Questions 61–85\" before the actual question; this is not part of the math problem and should not be shown to a student."
+  },
+  {
+    "external_id": "Supporting Evidence_ancientcivilizations_6",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that the obelisk served BOTH political and religious purposes. Choice D (\"And the gods who blessed them.\") only shows the religious side; choice A (\"Its inscriptions told of victories in distant lands...\") represents the full sentence spanning both the military/political victories and the divine blessing, making A the better answer for evidence of a dual purpose."
+  },
+  {
+    "external_id": "Supporting Evidence_ancientcivilizations_18",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "Correct_choice B (\"Even in times of drought.\") is only a time-modifier fragment with no verb/claim; the actual assertion that cisterns 'served a vital survival function' is stated in choice C (\"This ensured a steady supply...\"), which represents the complete sentence \"This ensured a steady supply even in times of drought.\" C is the stronger, more complete piece of evidence."
+  },
+  {
+    "external_id": "Supporting Evidence_communicationinbees_18",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that guards used SCENT to confirm hive membership, but correct_choice C (\"Was enough to deny her entry.\") never mentions scent. Choice D (\"A shift in a bee's scent...\") contains the key term 'scent' and represents the sentence's actual claim, making D the stronger answer."
+  },
+  {
+    "external_id": "Supporting Evidence_foundingdocs_12",
+    "category": "bad_distractor",
+    "confidence": "medium",
+    "reasoning": "Choices A (\"No man is above the law...\") and B (\"We declare that no man is above the law...\", the stated correct answer) quote essentially identical text, with B only adding the introductory \"We declare that.\" This makes A an equally valid answer, undermining the question's single-best-answer design."
+  },
+  {
+    "external_id": "Supporting Evidence_memoryretention_12",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that sleep guards emotional memories, but correct_choice D (\"These recollections from fading.\") never mentions sleep or protection. Choice A (\"Sleep seemed to protect...\") contains the subject 'Sleep' and the verb 'protect' that directly establish the claim, making A the stronger evidence choice."
+  },
+  {
+    "external_id": "Supporting Evidence_memoryretention_2",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation says the evidence shows 'a short period of rest improves learning,' but the stored correct choice D ('Offered an advantage over no rest at all.') never mentions duration at all — the 'short/brief' detail ('Even ten minutes of rest') is only in choice C, which better matches the stem's emphasis on 'even brief sleep.'"
+  },
+  {
+    "external_id": "Supporting Evidence_memoryretention_7",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that dreams help with learning, and the explanation cites dreams having 'an active role in integrating new learning,' but the stored correct choice C ('This suggested that dreams might participate...') is truncated before stating what they participate in; the phrase naming the learning connection ('in processing new knowledge') is only in choice D."
+  },
+  {
+    "external_id": "Supporting Evidence_museumcuration_18",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The stem asks for evidence Carla wanted to encourage comparative thinking, and the explanation justifies the answer by citing 'viewing multiple perspectives'/'contrasting perspectives,' but that phrase appears only in choice D ('She believed that contrasting perspectives...'), not in the stored correct choice B ('Would enrich the visitor's understanding.'), which never mentions comparison or contrast at all."
+  },
+  {
+    "external_id": "Supporting Evidence_museumcuration_31",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The stem asks for evidence the curator valued 'expert interpretation,' and the explanation cites 'adding depth through expertise,' but the word 'expertise' appears only in choice B ('She believed that firsthand expertise...'), not in the stored correct choice D ('Brought a richer dimension to the artworks' stories.'), which never mentions expertise."
+  },
+  {
+    "external_id": "Supporting Evidence_platetectonics_22",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The stem asks for evidence that magma from subduction creates volcanic arcs, and the explanation says the sentence 'links rising magma to the creation of volcanic peaks,' but the word 'magma' appears only in choice D ('The rising magma...'), not in the stored correct choice A ('Feeds a chain of peaks...'), which never names magma as the subject."
+  },
+  {
+    "external_id": "Supporting Evidence_platetectonics_30",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation says the sentence 'ties the density difference to the reason for subduction,' but the specific term 'denser'/density appears only in choice B ('Oceanic plates are denser...'), not in the stored correct choice D ('Why they sink during subduction.'), which never mentions density."
+  },
+  {
+    "external_id": "Supporting Evidence_postalsystems_7",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices C ('Crowds gathered to hear which names would be called.') and D ('Crowds gathered to hear...') quote the identical sentence, with D simply a truncated version of C's exact same text; since D is marked correct, C (which contains all of D's text plus more) is an equally valid answer, making the distractor set ambiguous/duplicative."
+  },
+  {
+    "external_id": "Supporting Evidence_postalsystems_12",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that mail 'directly influenced government action,' and the explanation cites the sentence linking delivery to 'the scheduling of governmental decisions,' but the stored correct choice C ('The timing of critical decisions.') is a bare noun phrase with no verb connecting it to mail delivery — the connecting verb 'determined' that ties postal delivery to decision timing is only in choice B."
+  },
+  {
+    "external_id": "Supporting Evidence_postalsystems_17",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "Choices A ('At the telegraph desk, messages clicked out in rapid succession.') and B ('Messages clicked out in rapid succession.') quote essentially identical text, differing only by a leading prepositional phrase, making them a duplicate/redundant distractor pair regardless of which choice is correct."
+  },
+  {
+    "external_id": "Supporting Evidence_psychologyquestions_28",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that 'active recall' improves retention, and the explanation says the sentence 'ties the process of active recall to improved memory,' but the term 'active recall' (introduced for the first time in this sentence, not established earlier in the passage) appears only in choice A ('This active recall...'), not in the stored correct choice B ('Strengthened her memory.'), which never names active recall."
+  },
+  {
+    "external_id": "Text Support_19thcenturyquestions_1",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The stem asks for evidence that Eleanor was 'more grounded in reality than her family members' (a comparative claim), but the stored answer C is an abstract closing statement about her being the family's 'anchor' with no explicit comparison. Choice A ('While Marianne would weep over a tragic poem, Eleanor would quietly calculate the household expenses') gives an explicit, concrete contrast between Eleanor and a named family member, which more directly satisfies the comparative claim in the stem."
+  },
+  {
+    "external_id": "Text Support_19thcenturyquestions_14",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The stem asks for evidence that Mr. Harrison's approach was BOTH practical AND empathetic, and the stored answer is C, which only shows practicality (simple herbal remedies). The explanation itself admits this gap, stating the practical point is shown by C 'Combined with his \"reassuring hand\" in sentence 3, it shows empathy' -- i.e., it concedes the single selected choice does not by itself support the full claim, relying on a different, unselected sentence for half the answer."
+  },
+  {
+    "external_id": "Text Support_beescommunicationquestions_0",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The explanation field is null/missing entirely. Additionally, the stem asks for evidence that the waggle dance communicates BOTH direction and distance, but the passage splits this into two separate sentences and the stored correct choice A only covers distance ('duration of her vigorous wagging... conveyed the distance'), while direction is covered only by the unselected choice C. No single choice supports the full claim, unlike the near-identical sibling question (beescommunicationquestions_2) where a single choice combines both direction and distance correctly."
+  },
+  {
+    "external_id": "Text Support_beescommunicationquestions_15",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation describes the correct choice B as the broad, encompassing statement ('This sentence broadly states that buzzing can indicate alarm... or even the need for temperature regulation, encompassing both aspects of the claim') and then adds 'Sentences B and C provide specific examples' -- but B is the very sentence just described as the broad/general one, so it cannot also be one of the 'specific examples' being contrasted with it. This is an internally contradictory explanation (it should logically read 'Sentences A and C provide specific examples,' since A gives the predator-specific example and C the temperature-specific example)."
+  },
+  {
+    "external_id": "Text Support_scientificphenomenonquestions_12",
+    "category": "explanation_mismatch",
+    "confidence": "medium",
+    "reasoning": "The explanation claims choice A 'also mentions \"causing particles to vibrate\"', but A's actual text ('Unlike light, sound requires a medium...') contains no such phrase — that phrase is only in the passage's topic sentence, which is choice C's text. Since the stem asks for evidence of BOTH vibration-causation and medium-requirement, choice C ('Sound...travels as waves through a medium by causing particles to vibrate') is the only single sentence that actually supports both parts of the compound claim, suggesting C may be the intended correct answer rather than A."
+  },
+  {
+    "external_id": "Tone Attitude_communicationinbees_26",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The passage states 'Some skeptics question whether the waggle dance is truly language...—but the accuracy of its results is hard to deny.' The 'but...hard to deny' clause overrides the skeptics' doubt and affirms the dance's validity, so the narrator's own tone is one of respect/admiration for the demonstrated accuracy, not skepticism (compare the consistent 'Some X, but Y' pattern elsewhere in this batch, e.g. the Nazca Lines and Mohenjo-Daro items, where the answer tracks the concessive 'but' clause rather than the dismissed view). The stated correct_choice B (Skepticism) contradicts this pattern; C (Admiration) fits better."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_27",
+    "category": "bad_distractor",
+    "confidence": "high",
+    "reasoning": "The line through (10,4) with slope -0.2 is y = -0.2x + 6. Points A (5,5) and D (0,6) both satisfy this equation just as much as the stated correct choice B (15,3) does (only C (20,0) fails), so three of the four choices are actually correct and the question does not have a single defensible answer."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_11",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "This is a grid_in question (no choices array), but correct_value is stored as \"C) 4\" instead of a clean numeric value; the leaked multiple-choice-style letter prefix is generation-pipeline scaffolding that shouldn't be in a grid-in answer field (the underlying numeric answer, 4, is itself correct per the algebra shown)."
+  },
+  {
+    "external_id": "Tone Attitude_postalsystems_12",
+    "category": "ambiguous_question",
+    "confidence": "medium",
+    "reasoning": "The passage merely describes a still-current scene (machines 'had not yet' replaced pen and paper; the office smells of sealing wax and ink) with no expressed loss, so the warm sensory imagery supports 'Admiration' at least as well as the stated 'Regret'; other similarly warm, sensory nostalgic descriptions elsewhere in this batch (e.g., postalsystems_22) are keyed to Admiration rather than Regret."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_46",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Substituting x=5 into ⅖x + ½y = 7 gives 2 + ½y = 7, so y = 10 (choice A), and the explanation's own arithmetic ends at 'y=10'. But the stated correct_choice is B (12), which is inconsistent with both the algebra and the explanation."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "This is a grid_in question but correct_value is 'A) 2' instead of a clean numeric value; the leaked multiple-choice letter prefix is leftover scaffolding that will not match a grid-in answer field (the underlying value, 2, is otherwise correct)."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_57",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "This is a grid_in question but correct_value is 'B) -³/₅' instead of a clean numeric value; the leaked multiple-choice letter prefix is leftover scaffolding (the underlying value, -3/5, is otherwise correct)."
+  },
+  {
+    "external_id": "Two Variable_MC Calc Allowed_73",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "For y=ax+b with a>0 and b<0, for any x<0 we get y=ax+b<b<0, so the line always passes through Quadrant III (x<0,y<0) but never reaches Quadrant II (x<0,y>0, since y<0 whenever x<0). The correct answer is Quadrant II (choice B), not III (choice A) as stated; the explanation itself describes the line entering III (contradicting its own conclusion) while never explaining why II is impossible."
+  },
+  {
+    "external_id": "Two Variable_MC No Calc_8",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Same quadrant-skipping question as 'Two Variable_MC Calc Allowed_73': for a line with positive slope and negative y-intercept, the quadrant never entered is II (any x<0 forces y<0), not III as stated. Correct answer should be choice A (II), not B (III)."
+  },
+  {
+    "external_id": "Two Variable_MC No Calc_65",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "Checking y ≥ (1/2)x - 3 against all four choices: A(4,-1) gives -1≥-1 true, B(2,-2) gives -2≥-2 true, C(6,0) gives 0≥0 true, and D(0,0) gives 0≥-3 true. All four listed points satisfy the inequality (A, B, and C sit exactly on the boundary line), so there is no uniquely correct choice."
+  },
+  {
+    "external_id": "Two Variable_SPR No Calc_53",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "System is 2x+5y=1 and x−y=13; solving gives y=−25/7 and x=y+13=66/7 (≈9.4286), not 68/7 (≈9.7143). Both the stated correct_value (68/7) and the explanation's final arithmetic step (−25/7+13=68/7) are wrong; −25/7+13 actually equals 66/7."
+  },
+  {
+    "external_id": "Unit Conversion_MC Calc Allowed_25",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Continuing to generate the remaining 60 questions in the same pattern and format.)' before the actual question."
+  },
+  {
+    "external_id": "Unit Conversion_MC Calc Allowed_45",
+    "category": "explanation_mismatch",
+    "confidence": "high",
+    "reasoning": "The explanation correctly computes the marathoner's speed as ≈11.73 ft/s vs the sprinter's 22 ft/s, concluding the sprinter is faster by ≈10.27 ft/s (which matches choice D's text, the stored correct_choice), but then states 'Closest answer is B' — B is 'The marathon runner, by 14 ft/s,' which contradicts both the math and the stored answer."
+  },
+  {
+    "external_id": "Unit Conversion_MC Calc Allowed_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem begins with leaked generation-pipeline scaffolding text: '(Final 35 questions to follow)' before the actual question."
+  },
+  {
+    "external_id": "Unit Conversion_MC No Calc_50",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The stem contains leaked generation-pipeline scaffolding text \"(Final 35 questions to follow)\" prepended before the actual question."
+  },
+  {
+    "external_id": "Unit Conversion_MC No Calc_80",
+    "category": "ambiguous_question",
+    "confidence": "high",
+    "reasoning": "The explanation itself admits \"This question has ambiguity,\" and the stem's premise (120 minutes of work split between two people equaling exactly 60 minutes) requires an unstated assumption about constant combined work rate that isn't given, so the answer isn't uniquely determined by the stem as written."
+  },
+  {
+    "external_id": "Unit Conversion_SPR Calc Allowed_32",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The explanation's own arithmetic is wrong: 5.0715 lb × 16 oz/lb = 81.144, not 81.048. The correct answer (using the given conversion factors) is approximately 81.144 oz, not the stated 81.048."
+  },
+  {
+    "external_id": "Unit Conversion_SPR Calc Allowed_42",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "75 km/h ÷ 1.609 km/mile = 46.61 mph (46.6128...), not 46.65 as stated; the division in the explanation is computed incorrectly."
+  },
+  {
+    "external_id": "Unit Conversion_SPR Calc Allowed_64",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Using the given conversion factor (1 mile = 1609 m), 26.2 × 1609 = 42,155.8 m, not 42,195.8 m. The stated value appears to substitute the real-world marathon distance figure instead of applying the problem's own conversion factor."
+  },
+  {
+    "external_id": "Vocabulary Meaning_architectureancientquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "\"Coalesce\" means to combine/unite/merge into one whole (dictionary synonyms: combine, integrate, merge, unite), not \"solidify\" (become hard/fixed). The passage itself says the structures \"merged\" and \"blend[ed] seamlessly,\" which matches choice C \"combine\" (or B \"integrate\"), not A \"solidify.\" Elsewhere in this same batch (Vocabulary Meaning_globalhistoricalquestions_0), a passage explicitly uses \"coalesce\" and \"solidify\" as two distinct, sequential actions and correctly keys \"coalesce\" to \"combine,\" confirming \"solidify\" is not a valid synonym here."
+  },
+  {
+    "external_id": "Vocabulary Meaning_artisticevolutionballetquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Same template/error as architectureancientquestions_0: \"coalesce\" is keyed to A \"solidify,\" but the correct dictionary meaning is \"combine\"/\"unite\" (choice C), which is also what the passage's own language (\"blend seamlessly\") supports. \"Solidify\" is not a standard synonym of \"coalesce.\""
+  },
+  {
+    "external_id": "Vocabulary Meaning_communicationbeesquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "Same recurring error: \"coalesce\" is keyed to D \"solidify\" instead of A \"combine\" (or B \"integrate\"). \"Coalesce\" means to unite/merge into a whole; \"solidify\" (becoming hard/fixed) is not an accurate synonym, and the passage's own wording (\"merges,\" \"blend seamlessly\") supports \"combine,\" not \"solidify.\""
+  },
+  {
+    "external_id": "Vocabulary Meaning_communicationbeesquestions_11",
+    "category": "low_quality_content",
+    "confidence": "high",
+    "reasoning": "The \"explanation\" field is null/missing entirely, leaving the stated correct answer (B, \"disgraceful\") with no supporting justification in the data."
+  },
+  {
+    "external_id": "Vocabulary Meaning_foundingusdocsquestions_15",
+    "category": "low_quality_content",
+    "confidence": "medium",
+    "reasoning": "The explanation quotes the phrase \"unacknowledged by our laws\" as if it appears in this question's passage, but that phrase does not occur in this passage at all — it is leaked from a different question's passage (Vocabulary Meaning_foundingusdocsquestions_5). This fabricated citation undermines the explanation's support for the stated answer (\"Arbitrary\" = \"unrestrained\")."
+  },
+  {
+    "external_id": "Vocabulary Meaning_memoryretentionquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "medium",
+    "reasoning": "The passage's own paraphrase for 'coalesce' is 'synaptic integration,' directly echoing choice B 'integrate' (the same word-formation pattern used throughout this batch to signal the intended answer, e.g. 'exigency'->'urgency', 'ostensible'->'stated'), yet correct_choice is D 'solidify', which has only weak support ('stable... memories'). The nearly identical passage template appears 5 times across topics with the same four choices, and 4 of the 5 mark 'solidify' correct despite the explicit 'integration' echo, while only 1 (languagedevelopmentquestions_0) matches 'integrate' to its own 'phonetic integration' phrase -- 'integrate' is the better-supported answer here."
+  },
+  {
+    "external_id": "Vocabulary Meaning_museumcurationquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The passage explicitly paraphrases the process as 'curatorial integration,' directly matching choice A 'integrate,' but correct_choice is D 'solidify,' which has no supporting text at all (no mention of hardening/stability, only 'coherent narratives' and 'blend seamlessly'). This mirrors 3 other near-duplicate 'coalesce' items in the batch (memoryretention_0, platetectonics_0, postalsystems_0) that make the same error, while the one item that correctly matches its own 'integration' paraphrase (languagedevelopment_0) picks 'integrate.'"
+  },
+  {
+    "external_id": "Vocabulary Meaning_platetectonicsquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The passage explicitly paraphrases the process as 'conceptual integration,' directly matching choice A 'integrate,' but correct_choice is C 'solidify,' which is unsupported by any 'solid/stable' language in the text (only 'coherent explanation' and 'blend seamlessly' are given as justification). The correct answer should be 'integrate,' consistent with how this same word template is resolved elsewhere in the batch (languagedevelopmentquestions_0)."
+  },
+  {
+    "external_id": "Vocabulary Meaning_postalsystemsquestions_0",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "The passage explicitly paraphrases the process as 'logistical integration,' directly matching choice B 'integrate,' but correct_choice is A 'solidify,' which has no textual support beyond generic 'unified'/'coherent' language. The correct answer should be 'integrate,' as it is elsewhere in the batch (languagedevelopmentquestions_0) for the identical passage template and choice set."
+  },
+  {
+    "external_id": "Vocabulary Meaning_psychologicalquestions_28",
+    "category": "wrong_answer_key",
+    "confidence": "high",
+    "reasoning": "\"Impunity\" means exemption from punishment/freedom from negative consequences (choices C \"freedom from consequence\" or D \"exemption from punishment\"), but correct_choice is B \"lack of success.\" This is inconsistent with the parallel versions of this same question (postalsystemsquestions_28 and sociologicalquestions_28), where the equivalent 'freedom from consequence' choice was correctly selected; here the wrong distractor was marked correct."
+  }
+]
