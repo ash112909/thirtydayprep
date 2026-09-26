@@ -1,5 +1,6 @@
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { PassageText } from "@/components/PassageText";
+import { StemText } from "@/components/StemText";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 import type { Choice } from "@/types/domain";
 
@@ -51,7 +52,7 @@ export function QuestionCard({
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       {passage && <PassageText passage={passage} underlineStart={underlineStart} underlineEnd={underlineEnd} />}
-      <Text style={styles.stem}>{stem}</Text>
+      <StemText text={stem} style={styles.stem} />
       <View style={styles.choices}>
         {choices.map((choice) => {
           const isSelected = selected === choice.key;

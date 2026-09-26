@@ -1,5 +1,6 @@
 import { ScrollView, Text, TextInput } from "react-native";
 import { PassageText } from "@/components/PassageText";
+import { StemText } from "@/components/StemText";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
 
 interface Props {
@@ -52,7 +53,7 @@ export function GridInAnswer({
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       {passage && <PassageText passage={passage} underlineStart={underlineStart} underlineEnd={underlineEnd} />}
-      <Text style={styles.stem}>{stem}</Text>
+      <StemText text={stem} style={styles.stem} />
       <Text style={styles.hint}>Enter your answer (numbers, fractions, or symbols like π are fine)</Text>
       <TextInput
         style={[
