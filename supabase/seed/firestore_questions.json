@@ -98691,39 +98691,6 @@
     "correct_choice": "C"
   },
   {
-    "external_id": "Graph Interpretation_MC No Calc_43",
-    "subcategory": "algebra",
-    "difficulty": "easy",
-    "question_type": "multiple_choice",
-    "skill_tag": "graph-interpretation",
-    "passage": null,
-    "stem": "The line y = x - 5 is reflected across the x-axis. Which equation results?",
-    "explanation": "Reflection over x-axis: replace y with −y → −y = x − 5 ⇒ y = −x + 5.",
-    "avg_seconds": 40,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "y = -x - 5"
-      },
-      {
-        "key": "B",
-        "text": "y = -x + 5"
-      },
-      {
-        "key": "C",
-        "text": "y = x + 5"
-      },
-      {
-        "key": "D",
-        "text": "y = -x + 5"
-      }
-    ],
-    "correct_choice": "B"
-  },
-  {
     "external_id": "Graph Interpretation_MC No Calc_45",
     "subcategory": "algebra",
     "difficulty": "easy",
@@ -122443,39 +122410,6 @@
       }
     ],
     "correct_choice": "C"
-  },
-  {
-    "external_id": "Interpreting Charts and Tables_languagedevelopment_4",
-    "subcategory": "information-and-ideas",
-    "difficulty": "easy",
-    "question_type": "multiple_choice",
-    "skill_tag": "quantitative-information",
-    "passage": "A study measured average conversation turns per hour in toddlers: Age (months) Conversation Turns 24 50 36 80 They concluded there was a 60% increase.",
-    "stem": "Does the data support this claim?",
-    "explanation": "(80−50) ÷ 50 = 0.6, or 60%, exactly as claimed.",
-    "avg_seconds": 35,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "Yes; matches exactly."
-      },
-      {
-        "key": "B",
-        "text": "No; increase is actually 60%."
-      },
-      {
-        "key": "C",
-        "text": "Yes; matches exactly."
-      },
-      {
-        "key": "D",
-        "text": "No; increase is actually 60%, so the claim is correct."
-      }
-    ],
-    "correct_choice": "A"
   },
   {
     "external_id": "Interpreting Charts and Tables_languagedevelopment_5",
@@ -168163,39 +168097,6 @@
       }
     ],
     "correct_choice": "A"
-  },
-  {
-    "external_id": "One Variable_MC No Calc_6",
-    "subcategory": "algebra",
-    "difficulty": "easy",
-    "question_type": "multiple_choice",
-    "skill_tag": "one-variable",
-    "passage": null,
-    "stem": "Solve for x: 4(x 2) = 20",
-    "explanation": null,
-    "avg_seconds": 35,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "x = 6"
-      },
-      {
-        "key": "B",
-        "text": "x = 8"
-      },
-      {
-        "key": "C",
-        "text": "x = 5"
-      },
-      {
-        "key": "D",
-        "text": "x = 7"
-      }
-    ],
-    "correct_choice": "D"
   },
   {
     "external_id": "One Variable_MC No Calc_60",
@@ -227967,39 +227868,6 @@
     "correct_choice": "B"
   },
   {
-    "external_id": "Precision_platetectonics_27",
-    "subcategory": "expression-of-ideas",
-    "difficulty": "hard",
-    "question_type": "multiple_choice",
-    "skill_tag": "precision",
-    "passage": "Oceanic crust is significantly denser than continental crust, a key factor in subduction. When oceanic and continental plates collide, the denser oceanic plate is invariably forced to descend beneath the lighter continental plate. This density difference drives the subduction process, forming trenches and volcanic arcs at convergent boundaries.",
-    "stem": "Which choice best replaces the underlined word to improve precision and clarity?",
-    "explanation": null,
-    "avg_seconds": 70,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "discrepancy"
-      },
-      {
-        "key": "B",
-        "text": "imbalance"
-      },
-      {
-        "key": "C",
-        "text": "differential"
-      },
-      {
-        "key": "D",
-        "text": "contrast"
-      }
-    ],
-    "correct_choice": "C"
-  },
-  {
     "external_id": "Precision_platetectonics_28",
     "subcategory": "expression-of-ideas",
     "difficulty": "medium",
@@ -246193,39 +246061,6 @@
       {
         "key": "D",
         "text": "Despite its profound impact, this era also initiated complex challenges regarding colonialism and indigenous rights."
-      }
-    ],
-    "correct_choice": "D"
-  },
-  {
-    "external_id": "Punctuation_globalhistoryquestions_5",
-    "subcategory": "standard-english-conventions",
-    "difficulty": "easy",
-    "question_type": "multiple_choice",
-    "skill_tag": "punctuation",
-    "passage": "The Magna Carta, signed in 1215, marked a pivotal moment in the development of constitutional law. It established limits on the power of the monarch, laying groundwork for future legal rights. The document's influence spread far beyond England's borders.",
-    "stem": "Which choice best corrects the punctuation in the underlined portion?",
-    "explanation": "The noun \"document\" is singular, and it possesses the \"influence.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed. This tests apostrophes for singular possession.",
-    "avg_seconds": 45,
-    "calculator_allowed": false,
-    "passage_underline_start": 255,
-    "passage_underline_end": 274,
-    "choices": [
-      {
-        "key": "A",
-        "text": "The documents' influence"
-      },
-      {
-        "key": "B",
-        "text": "The documents influence,"
-      },
-      {
-        "key": "C",
-        "text": "The documents influence"
-      },
-      {
-        "key": "D",
-        "text": "No change is needed."
       }
     ],
     "correct_choice": "D"
@@ -404799,39 +404634,6 @@
     "correct_choice": "D"
   },
   {
-    "external_id": "Vocabulary Meaning_memoryretentionquestions_11",
-    "subcategory": "craft-and-structure",
-    "difficulty": "medium",
-    "question_type": "multiple_choice",
-    "skill_tag": "vocabulary-meaning",
-    "passage": "Research into the effects of certain \"memory-boosting\" supplements on cognitive performance revealed an ignominious impact on scientific credibility. Products widely publicized but lacking empirical support, often led to widespread ridicule and a significant reduction in public trust in neuroscience. This humiliating and disgraceful outcome actively inhibited genuine scientific discourse. The findings underscored how severe public judgment can paradoxically undermine the very scientific progress it seeks to \"evaluate,\" revealing the complex interplay between public understanding and scientific legitimacy.",
-    "stem": "As used in the passage, the word \"ignominious\" most nearly means...",
-    "explanation": null,
-    "avg_seconds": 75,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "severe"
-      },
-      {
-        "key": "B",
-        "text": "humiliating"
-      },
-      {
-        "key": "C",
-        "text": "disgraceful"
-      },
-      {
-        "key": "D",
-        "text": "shameful"
-      }
-    ],
-    "correct_choice": "C"
-  },
-  {
     "external_id": "Vocabulary Meaning_memoryretentionquestions_12",
     "subcategory": "craft-and-structure",
     "difficulty": "hard",
@@ -405820,39 +405622,6 @@
       }
     ],
     "correct_choice": "A"
-  },
-  {
-    "external_id": "Vocabulary Meaning_museumcurationquestions_11",
-    "subcategory": "craft-and-structure",
-    "difficulty": "medium",
-    "question_type": "multiple_choice",
-    "skill_tag": "vocabulary-meaning",
-    "passage": "Research into the effects of certain curatorial decisions on public perception revealed an ignominious impact on institutional credibility. Exhibitions widely publicized but lacking scholarly rigor or historical accuracy often led to widespread ridicule and a significant reduction in public trust in the museum's authority. This humiliating and disgraceful outcome actively inhibited genuine public engagement. The findings underscored how severe public judgment can paradoxically undermine the very educational mission it seeks to \"fulfill,\" revealing the complex interplay between public understanding and institutional legitimacy.",
-    "stem": "As used in the passage, the word \"ignominious\" most nearly means...",
-    "explanation": null,
-    "avg_seconds": 75,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "shameful"
-      },
-      {
-        "key": "B",
-        "text": "humiliating"
-      },
-      {
-        "key": "C",
-        "text": "severe"
-      },
-      {
-        "key": "D",
-        "text": "disgraceful"
-      }
-    ],
-    "correct_choice": "D"
   },
   {
     "external_id": "Vocabulary Meaning_museumcurationquestions_12",
@@ -407901,39 +407670,6 @@
     "correct_choice": "B"
   },
   {
-    "external_id": "Vocabulary Meaning_platetectonicsquestions_11",
-    "subcategory": "craft-and-structure",
-    "difficulty": "medium",
-    "question_type": "multiple_choice",
-    "skill_tag": "vocabulary-meaning",
-    "passage": "Research into the effects of certain geological theories on public perception revealed an ignominious impact on the credibility of early Earth science. Concepts such as the \"expanding Earth\" hypothesis, widely publicized but lacking empirical support, often led to widespread ridicule and a significant reduction in public trust in geological research. This humiliating and disgraceful outcome actively inhibited genuine scientific discourse. The findings underscored how severe public judgment can paradoxically undermine the very scientific progress it seeks to \"evaluate,\" revealing the complex interplay between public understanding and scientific legitimacy.",
-    "stem": "As used in the passage, the word \"ignominious\" most nearly means...",
-    "explanation": null,
-    "avg_seconds": 75,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "humiliating"
-      },
-      {
-        "key": "B",
-        "text": "severe"
-      },
-      {
-        "key": "C",
-        "text": "shameful"
-      },
-      {
-        "key": "D",
-        "text": "disgraceful"
-      }
-    ],
-    "correct_choice": "D"
-  },
-  {
     "external_id": "Vocabulary Meaning_platetectonicsquestions_12",
     "subcategory": "craft-and-structure",
     "difficulty": "hard",
@@ -408919,39 +408655,6 @@
       {
         "key": "D",
         "text": "urgency"
-      }
-    ],
-    "correct_choice": "D"
-  },
-  {
-    "external_id": "Vocabulary Meaning_postalsystemsquestions_11",
-    "subcategory": "craft-and-structure",
-    "difficulty": "medium",
-    "question_type": "multiple_choice",
-    "skill_tag": "vocabulary-meaning",
-    "passage": "Research into the effects of political scandals on postal administration revealed an ignominious impact on public trust and institutional credibility. Instances of corruption or mismanagement, widely publicized, often led to widespread condemnation and a significant reduction in public confidence in the postal service. This humiliating and disgraceful outcome actively inhibited the continuity of essential public functions. The findings underscored how severe public judgment can paradoxically undermine the very public good it seeks to \"reform,\" revealing the complex interplay between public perception and institutional legitimacy.",
-    "stem": "As used in the passage, the word \"ignominious\" most nearly means...",
-    "explanation": null,
-    "avg_seconds": 75,
-    "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
-    "choices": [
-      {
-        "key": "A",
-        "text": "shameful"
-      },
-      {
-        "key": "B",
-        "text": "humiliating"
-      },
-      {
-        "key": "C",
-        "text": "severe"
-      },
-      {
-        "key": "D",
-        "text": "disgraceful"
       }
     ],
     "correct_choice": "D"
