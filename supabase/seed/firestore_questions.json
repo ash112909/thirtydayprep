@@ -54400,7 +54400,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "What is the radius of the circle given by the equation (x + 1)² + (y – 6)² = 25?",
-    "explanation": "The equation of a circle is (x – h)² + (y – k)² = r². Here, r² = 25, so the radius r = sqrt(25) = 5.",
+    "explanation": "The equation of a circle is (x – h)² + (y – k)² = r². Here, r² = 25, so the radius r = √(25) = 5.",
     "avg_seconds": 20,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -54961,7 +54961,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "A circle has an area of 50 square units. What is its radius?",
-    "explanation": "A = πr². 50 = πr². r² = 50/π. r = sqrt(50/π).",
+    "explanation": "A = πr². 50 = πr². r² = 50/π. r = √(50/π).",
     "avg_seconds": 30,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -54969,7 +54969,7 @@
     "choices": [
       {
         "key": "A",
-        "text": "sqrt(50/π)"
+        "text": "√(50/π)"
       },
       {
         "key": "B",
@@ -55357,7 +55357,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "A circular table has an area of 1,256 square inches. What is the approximate radius of the table? (Use π ≈ 3.14)",
-    "explanation": "A = πr². 1256 ≈ 3.14 * r². r² ≈ 1256 / 3.14 = 400. r ≈ sqrt(400) = 20.",
+    "explanation": "A = πr². 1256 ≈ 3.14 * r². r² ≈ 1256 / 3.14 = 400. r ≈ √(400) = 20.",
     "avg_seconds": 40,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -56413,7 +56413,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "A circle has its center at (1, 2). The point (4, 6) is on the circle. What is the radius?",
-    "explanation": "Use the distance formula: r = sqrt((4-1)² + (6-2)²) = sqrt(3² + 4²) = sqrt(9+16) = sqrt(25) = 5.",
+    "explanation": "Use the distance formula: r = √((4-1)² + (6-2)²) = √(3² + 4²) = √(9+16) = √(25) = 5.",
     "avg_seconds": 40,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -56479,7 +56479,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "A circle has an area of 1. What is its radius, to the nearest hundredth?",
-    "explanation": "πr² = 1. r² = 1/π. r = sqrt(1/π) ≈ sqrt(0.318) ≈ 0.56.",
+    "explanation": "πr² = 1. r² = 1/π. r = √(1/π) ≈ √(0.318) ≈ 0.56.",
     "avg_seconds": 35,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -58789,7 +58789,7 @@
     "skill_tag": "circles",
     "passage": null,
     "stem": "The radius of Circle A is twice the radius of Circle B. The area of Circle A is how many times the area of Circle B?",
-    "explanation": "Let r_B = r. r_A = 2r. Area_B = πr². Area_A = π(2r)² = 4πr². The area is 4 times larger.",
+    "explanation": "Let r₂ = r. r₁ = 2r. Area₂ = πr². Area₁ = π(2r)² = 4πr². The area is 4 times larger.",
     "avg_seconds": 35,
     "calculator_allowed": false,
     "passage_underline_start": null,
@@ -194359,7 +194359,7 @@
     "skill_tag": "percents",
     "passage": null,
     "stem": "A rectangle's length is increased by 20% and its width is decreased by 20%. What is the percent change in the area of the rectangle?",
-    "explanation": "Let the original length be L and width be W. The original area is A = LW. The new length is 1.2L and the new width is 0.8W. The new area is A_new = (1.2L)(0.8W) = 0.96LW. The new area is 96% of the original, which is a 4% decrease.",
+    "explanation": "Let the original length be L and width be W. The original area is A = LW. The new length is 1.2L and the new width is 0.8W. The new area is A′ = (1.2L)(0.8W) = 0.96LW. The new area is 96% of the original, which is a 4% decrease.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -255397,7 +255397,7 @@
     "skill_tag": "ratios",
     "passage": null,
     "stem": "The ratio of the area of Circle A to Circle B is 9:4. What is the ratio of the radius of Circle A to the radius of Circle B?",
-    "explanation": "The ratio of the areas of two similar figures is the square of the ratio of their corresponding linear measurements (like the radius). If Area Ratio = r₁²/r₂² = 9/4, then the radius ratio r₁/r₂ is sqrt(9/4) = 3/2.",
+    "explanation": "The ratio of the areas of two similar figures is the square of the ratio of their corresponding linear measurements (like the radius). If Area Ratio = r₁²/r₂² = 9/4, then the radius ratio r₁/r₂ is √(9/4) = 3/2.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -263490,7 +263490,7 @@
     "question_type": "multiple_choice",
     "skill_tag": "real-world-modeling",
     "passage": null,
-    "stem": "Two friends live 20 miles apart and start cycling toward each other. Anna cycles at 12 miles per hour and Beth cycles at 8 miles per hour. How long will it take for them to meet? The system can be modeled as d_A + d_B = 20 and d_A = 12t, d_B = 8t.",
+    "stem": "Two friends live 20 miles apart and start cycling toward each other. Anna cycles at 12 miles per hour and Beth cycles at 8 miles per hour. How long will it take for them to meet? The system can be modeled as d₁ + d₂ = 20 and d₁ = 12t, d₂ = 8t.",
     "explanation": "Substituting the expressions for distance into the first equation gives 12t + 8t = 20. This simplifies to 20t = 20, so t = 1 hour.",
     "avg_seconds": 35,
     "calculator_allowed": false,
@@ -264366,8 +264366,8 @@
     "question_type": "grid_in",
     "skill_tag": "real-world-modeling",
     "passage": null,
-    "stem": "Two trains meet between cities 150 miles apart. Train A travels 60 mph for t_A hours; Train B travels 40 mph for t_B hours, with t_A − t_B = 1. How many minutes after Train A departs do they meet?",
-    "explanation": "60t_A + 40t_B = 150 and t_A − t_B = 1 → t_A = 1.9 hr → 1.9·60 = 114 min.",
+    "stem": "Two trains meet between cities 150 miles apart. Train A travels 60 mph for t₁ hours; Train B travels 40 mph for t₂ hours, with t₁ − t₂ = 1. How many minutes after Train A departs do they meet?",
+    "explanation": "60t₁ + 40t₂ = 150 and t₁ − t₂ = 1 → t₁ = 1.9 hr → 1.9·60 = 114 min.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -264636,8 +264636,8 @@
     "question_type": "grid_in",
     "skill_tag": "real-world-modeling",
     "passage": null,
-    "stem": "Two hikers start 24 km apart. A walks 3.2 km/h for t_A hours; B walks 2.8 km/h for t_B hours with t_A = t_B + 0.5. They meet. How many hours did A walk? Provide your answer as a fraction.",
-    "explanation": "3.2(t_B + 0.5) + 2.8t_B = 24 → 6t_B + 1.6 = 24 → t_B = 22.4/6; t_A = t_B + 0.5 = 127/30.",
+    "stem": "Two hikers start 24 km apart. A walks 3.2 km/h for t₁ hours; B walks 2.8 km/h for t₂ hours with t₁ = t₂ + 0.5. They meet. How many hours did A walk? Provide your answer as a fraction.",
+    "explanation": "3.2(t₂ + 0.5) + 2.8t₂ = 24 → 6t₂ + 1.6 = 24 → t₂ = 22.4/6; t₁ = t₂ + 0.5 = 127/30.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -274321,7 +274321,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "4x² – 81 = 0 What is the positive solution to the equation?",
-    "explanation": "The equation 4x² = 81 gives x² = 81/4. Taking the square root of both sides gives x = ±sqrt(81/4) = ±9/2. The positive solution is 9/2 or 4.5.",
+    "explanation": "The equation 4x² = 81 gives x² = 81/4. Taking the square root of both sides gives x = ±√(81/4) = ±9/2. The positive solution is 9/2 or 4.5.",
     "avg_seconds": 35,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -274519,7 +274519,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "2x² + 5x + 1 = 0 Which of the following is closest to the largest solution of the equation?",
-    "explanation": "Using the quadratic formula, x = [–5 ± sqrt(5² – 421)] / (2*2) = [–5 ± sqrt(25 – 8)] / 4 = [–5 ± sqrt(17)] / 4. sqrt(17) ≈ 4.12. The solutions are x ≈ (–5 + 4.12) / 4 = –0.22 and x ≈ (–5 – 4.12) / 4 = –2.28. The largest solution is approximately –0.22.",
+    "explanation": "Using the quadratic formula, x = [–5 ± √(5² – 421)] / (2*2) = [–5 ± √(25 – 8)] / 4 = [–5 ± √(17)] / 4. √(17) ≈ 4.12. The solutions are x ≈ (–5 + 4.12) / 4 = –0.22 and x ≈ (–5 – 4.12) / 4 = –2.28. The largest solution is approximately –0.22.",
     "avg_seconds": 65,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -274981,7 +274981,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "5x² + 12x – 1 = 0 Which of the following values is a solution to the equation above?",
-    "explanation": "Since this doesn't factor easily, use the quadratic formula x = [–b ± sqrt(b² – 4ac)] / 2a. Here, a=5, b=12, c=–1. x = [–12 ± sqrt(12² – 45(–1))] / (2*5) = [–12 ± sqrt(144 + 20)] / 10 = [–12 ± sqrt(164)] / 10. Using a calculator, sqrt(164) ≈ 12.8. So, x ≈ (–12 + 12.8) / 10 = 0.08 and x ≈ (–12 – 12.8) / 10 = –2.48.",
+    "explanation": "Since this doesn't factor easily, use the quadratic formula x = [–b ± √(b² – 4ac)] / 2a. Here, a=5, b=12, c=–1. x = [–12 ± √(12² – 45(–1))] / (2*5) = [–12 ± √(144 + 20)] / 10 = [–12 ± √(164)] / 10. Using a calculator, √(164) ≈ 12.8. So, x ≈ (–12 + 12.8) / 10 = 0.08 and x ≈ (–12 – 12.8) / 10 = –2.48.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -275178,8 +275178,8 @@
     "question_type": "multiple_choice",
     "skill_tag": "roots",
     "passage": null,
-    "stem": "x² – 2x + c = 0 If one root of the equation is x = 1 + sqrt(5), what is the value of c?",
-    "explanation": "If the coefficients are rational, irrational roots come in conjugate pairs. If one root is 1 + sqrt(5), the other must be 1 – sqrt(5). The product of the roots is c/a = c. So, c = (1 + sqrt(5))(1 – sqrt(5)) = 1² – (sqrt(5))² = 1 – 5 = –4.",
+    "stem": "x² – 2x + c = 0 If one root of the equation is x = 1 + √(5), what is the value of c?",
+    "explanation": "If the coefficients are rational, irrational roots come in conjugate pairs. If one root is 1 + √(5), the other must be 1 – √(5). The product of the roots is c/a = c. So, c = (1 + √(5))(1 – √(5)) = 1² – (√(5))² = 1 – 5 = –4.",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -275443,7 +275443,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "10x² + x – 21 = 0 What is the positive solution to the equation?",
-    "explanation": "Using the quadratic formula, x = [–1 ± sqrt(1² – 410(–21))] / (2*10) = [–1 ± sqrt(1 + 840)] / 20 = [–1 ± sqrt(841)] / 20. sqrt(841) = 29. So, x = (–1 + 29) / 20 = 28/20 = 1.4 and x = (–1 – 29) / 20 = –30/20 = –1.5. The positive solution is 1.4.",
+    "explanation": "Using the quadratic formula, x = [–1 ± √(1² – 410(–21))] / (2*10) = [–1 ± √(1 + 840)] / 20 = [–1 ± √(841)] / 20. √(841) = 29. So, x = (–1 + 29) / 20 = 28/20 = 1.4 and x = (–1 – 29) / 20 = –30/20 = –1.5. The positive solution is 1.4.",
     "avg_seconds": 70,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -275905,7 +275905,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "4x² – 20 = 0 What is the positive solution?",
-    "explanation": "The equation simplifies to 4x² = 20, so x² = 5. Taking the square root gives x = ±sqrt(5). The positive solution is sqrt(5).",
+    "explanation": "The equation simplifies to 4x² = 20, so x² = 5. Taking the square root gives x = ±√(5). The positive solution is √(5).",
     "avg_seconds": 35,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -275925,7 +275925,7 @@
       },
       {
         "key": "D",
-        "text": "sqrt(5)"
+        "text": "√(5)"
       }
     ],
     "correct_choice": "D"
@@ -276202,7 +276202,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "x² + 6x + 2 = 0 Which of the following expressions gives the solutions to the equation?",
-    "explanation": "Use the quadratic formula x = [–b ± sqrt(b² – 4ac)] / 2a. x = [–6 ± sqrt(6² – 412)] / 2 = [–6 ± sqrt(36 – 8)] / 2 = [–6 ± sqrt(28)] / 2 = [–6 ± 2sqrt(7)] / 2 = –3 ± sqrt(7).",
+    "explanation": "Use the quadratic formula x = [–b ± √(b² – 4ac)] / 2a. x = [–6 ± √(6² – 412)] / 2 = [–6 ± √(36 – 8)] / 2 = [–6 ± √(28)] / 2 = [–6 ± 2√(7)] / 2 = –3 ± √(7).",
     "avg_seconds": 60,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -276210,19 +276210,19 @@
     "choices": [
       {
         "key": "A",
-        "text": "–6 ± sqrt(28)"
+        "text": "–6 ± √(28)"
       },
       {
         "key": "B",
-        "text": "–3 ± sqrt(11)"
+        "text": "–3 ± √(11)"
       },
       {
         "key": "C",
-        "text": "–6 ± sqrt(44)"
+        "text": "–6 ± √(44)"
       },
       {
         "key": "D",
-        "text": "–3 ± sqrt(7)"
+        "text": "–3 ± √(7)"
       }
     ],
     "correct_choice": "D"
@@ -276564,8 +276564,8 @@
     "question_type": "multiple_choice",
     "skill_tag": "roots",
     "passage": null,
-    "stem": "The roots of a quadratic equation are x = 2 + sqrt(3) and x = 2 – sqrt(3). Which of the following could be the equation?",
-    "explanation": "The sum of the roots is (2 + sqrt(3)) + (2 – sqrt(3)) = 4. The product of the roots is (2 + sqrt(3))(2 – sqrt(3)) = 4 – 3 = 1. The equation is x² – (sum)x + (product) = 0, which is x² – 4x + 1 = 0.",
+    "stem": "The roots of a quadratic equation are x = 2 + √(3) and x = 2 – √(3). Which of the following could be the equation?",
+    "explanation": "The sum of the roots is (2 + √(3)) + (2 – √(3)) = 4. The product of the roots is (2 + √(3))(2 – √(3)) = 4 – 3 = 1. The equation is x² – (sum)x + (product) = 0, which is x² – 4x + 1 = 0.",
     "avg_seconds": 70,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -276598,7 +276598,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "3x² + 11x + 5 = 0 Let the two solutions be r and s. What is the distance between r and s on the number line?",
-    "explanation": "The distance between the roots is |r – s|. The roots are given by [–b ± sqrt(b² – 4ac)] / 2a. The distance is (sqrt(b² – 4ac)) / |a|. Here, a=3, b=11, c=5. The discriminant is 11² – 4(3)(5) = 121 – 60 = 61. The distance is sqrt(61) / 3.",
+    "explanation": "The distance between the roots is |r – s|. The roots are given by [–b ± √(b² – 4ac)] / 2a. The distance is (√(b² – 4ac)) / |a|. Here, a=3, b=11, c=5. The discriminant is 11² – 4(3)(5) = 121 – 60 = 61. The distance is √(61) / 3.",
     "avg_seconds": 80,
     "calculator_allowed": true,
     "passage_underline_start": null,
@@ -276610,7 +276610,7 @@
       },
       {
         "key": "B",
-        "text": "sqrt(181)/3"
+        "text": "√(181)/3"
       },
       {
         "key": "C",
@@ -276618,7 +276618,7 @@
       },
       {
         "key": "D",
-        "text": "sqrt(61)/3"
+        "text": "√(61)/3"
       }
     ],
     "correct_choice": "D"
@@ -278314,7 +278314,7 @@
     "skill_tag": "roots",
     "passage": null,
     "stem": "16x² = 1 What is the positive solution for x?",
-    "explanation": "The equation x² = 1/16 has positive solution x = sqrt(1/16) = 1/4.",
+    "explanation": "The equation x² = 1/16 has positive solution x = √(1/16) = 1/4.",
     "avg_seconds": 30,
     "calculator_allowed": false,
     "passage_underline_start": null,
