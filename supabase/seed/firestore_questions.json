@@ -10,8 +10,8 @@
     "explanation": "The proposed addition clarifies why the hall is silent and desolate, providing essential background information about the estate's decline due to the mistress's passing. This strengthens the logical connection between the current scene and its underlying cause.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 150,
+    "passage_underline_end": 244,
     "choices": [
       {
         "key": "A",
@@ -43,8 +43,8 @@
     "explanation": "The sentence about the rose garden deviates from the paragraph's focus on Lady Eleanor's precise communication style and the impact of her words. Removing it improves the cohesion by maintaining a consistent topic throughout the paragraph.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 220,
+    "passage_underline_end": 282,
     "choices": [
       {
         "key": "A",
@@ -76,8 +76,8 @@
     "explanation": "The sentence, while seemingly a detail, logically explains how Julian navigates his limited circumstances and maintains his connection to literature despite financial constraints. It deepens the reader's understanding of his character and coping mechanisms within the context of his unfulfilled aspirations.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 253,
+    "passage_underline_end": 325,
     "choices": [
       {
         "key": "A",
@@ -109,8 +109,8 @@
     "explanation": "The revision effectively transitions from the description of the quiet estate to its psychological impact on Lady Beatrice. It strengthens the paragraph's coherence by explicitly connecting the external environment (\"isolation\") to her internal emotional struggle (\"deepening despair\"), providing a logical development of her character's predicament.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 279,
+    "passage_underline_end": 377,
     "choices": [
       {
         "key": "A",
@@ -142,8 +142,8 @@
     "explanation": "The addition provides a specific reason for Mr. Rochester's enigmatic nature, explaining his ownership of Thornfield and enhancing the mystery around him. This detail strengthens the logical connection between his circumstances and the \"shroud of secrecy\" mentioned later.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 222,
+    "passage_underline_end": 316,
     "choices": [
       {
         "key": "A",
@@ -175,8 +175,8 @@
     "explanation": "The sentence about the silver cutlery is a minor, disconnected detail that does not contribute to the atmosphere of opulence or the underlying tension the paragraph aims to establish. Its removal improves the paragraph's focus and logical flow by keeping the description concentrated on elements that build toward the thematic conclusion.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 225,
+    "passage_underline_end": 286,
     "choices": [
       {
         "key": "A",
@@ -208,8 +208,8 @@
     "explanation": "The revision significantly enhances the logical flow by transitioning from a mere descriptive detail (overgrown gardens) to a thematic interpretation of the house's decay, directly linking it to Miss Havisham's enduring grief. This elevates the passage by providing deeper insight into the symbolism of the setting.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 246,
+    "passage_underline_end": 290,
     "choices": [
       {
         "key": "A",
@@ -241,8 +241,8 @@
     "explanation": "The addition logically places Utterson's internal struggle within a characteristic setting, emphasizing his contemplative and solitary nature as he grapples with the mystery. This detail grounds his mental process in a specific atmosphere, strengthening the passage's overall sense of his thoughtful approach.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 326,
+    "passage_underline_end": 394,
     "choices": [
       {
         "key": "A",
@@ -274,8 +274,8 @@
     "explanation": "The sentence about the single lamp burning late directly reinforces the themes of solitude and longing introduced earlier in the paragraph. It provides a visual cue that logically leads to the concluding thought about the \"enduring vigil\" and yearning, thus enhancing the overall coherence and emotional depth of the passage.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 253,
+    "passage_underline_end": 308,
     "choices": [
       {
         "key": "A",
@@ -307,8 +307,8 @@
     "explanation": "The original sentence provides a direct and logical consequence of the described class disparity, maintaining the paragraph's critical social commentary. The revision, while true, shifts the focus from the social reality to a literary observation, weakening the paragraph's direct thematic statement and flow.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 247,
+    "passage_underline_end": 334,
     "choices": [
       {
         "key": "A",
@@ -340,8 +340,8 @@
     "explanation": "The addition logically connects the protagonist's love for books to the development of her \"rebellious intellect\" and desire for freedom. It serves as a strong transitional sentence, showing the direct consequence of her reading on her character's development and reinforcing the central theme of yearning for emancipation.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 264,
+    "passage_underline_end": 367,
     "choices": [
       {
         "key": "A",
@@ -373,8 +373,8 @@
     "explanation": "The sentence about solid oak ships, while a factual detail, is extraneous to the paragraph's primary focus on the vibrant, diverse, and bustling atmosphere of the London docks as a representation of global commerce. Removing it improves the cohesion by maintaining a consistent focus on the sensory and thematic description of the docks.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 277,
+    "passage_underline_end": 318,
     "choices": [
       {
         "key": "A",
@@ -406,8 +406,8 @@
     "explanation": "The original sentence provides an interpretation of Mr. Darcy's character, which aligns with the sophisticated tone of 19th-century literary fiction. The proposed revision, while concrete, offers a less profound insight and therefore weakens the overall literary quality and thematic development of the paragraph.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 267,
+    "passage_underline_end": 367,
     "choices": [
       {
         "key": "A",
@@ -439,8 +439,8 @@
     "explanation": "The revision logically deepens the portrayal of the protagonist's plight by revealing how his internal characteristic (pride) contributes to his external problems (debt). This moves beyond simply stating his dire circumstances to providing a more complex and coherent understanding of his struggles, aligning with typical character development in 19th-century fiction.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 194,
+    "passage_underline_end": 274,
     "choices": [
       {
         "key": "A",
@@ -472,8 +472,8 @@
     "explanation": "The addition directly illustrates the \"steep human cost\" mentioned in the concluding sentence, providing a concrete example of the negative impact of industrialization. This strengthens the logical argument of the paragraph by connecting the general statement to a specific, poignant detail, enhancing the overall social commentary.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 240,
+    "passage_underline_end": 302,
     "choices": [
       {
         "key": "A",
@@ -505,8 +505,8 @@
     "explanation": "The sentence about the oak tree's planter, while a minor historical detail, disrupts the paragraph's focus on Eleanor's use of the garden as an emotional refuge and a place for her imagination to thrive. Removing it maintains a consistent focus on her inner world and the garden's symbolic significance to her.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 308,
+    "passage_underline_end": 357,
     "choices": [
       {
         "key": "A",
@@ -538,8 +538,8 @@
     "explanation": "The revision broadens the scope of the governess's competence from just teaching subjects to her general meticulousness across all duties. This logically reinforces the opening statement about her \"unwavering diligence\" and enhances the overall cohesion of the paragraph by providing a more encompassing statement about her work ethic.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 313,
+    "passage_underline_end": 368,
     "choices": [
       {
         "key": "A",
@@ -571,8 +571,8 @@
     "explanation": "The addition creates a powerful logical contrast between Lady Beatrice's past vibrant social life and her current isolation. This contrast directly explains why her solitude has become a torment, enhancing the psychological depth and coherence of the paragraph.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 279,
+    "passage_underline_end": 342,
     "choices": [
       {
         "key": "A",
@@ -604,8 +604,8 @@
     "explanation": "The sentence stating the village population is a precise, numerical detail that breaks the flow of the paragraph's thematic focus on the doctor's personal and ideological struggles within the rigid social structure. Its removal maintains the logical consistency of the narrative centered on his conflict with the local gentry.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 300,
+    "passage_underline_end": 365,
     "choices": [
       {
         "key": "A",
@@ -637,8 +637,8 @@
     "explanation": "The revision effectively summarizes and interprets the heroine's audacious plan, transitioning from her physical preparations to her internal emotional state. This logical progression enhances the dramatic tension and deepens the reader's understanding of her motivations and feelings about her impending departure.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 215,
+    "passage_underline_end": 283,
     "choices": [
       {
         "key": "A",
@@ -670,8 +670,8 @@
     "explanation": "The proposed addition, while a factual detail about social customs, interrupts the paragraph's focus on the subtle, underlying tensions and judgments within the drawing-room. It is a mundane detail that does not contribute to the central theme of masked animosity, thus weakening the logical development of the atmosphere.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 274,
+    "passage_underline_end": 325,
     "choices": [
       {
         "key": "A",
@@ -703,8 +703,8 @@
     "explanation": "The sentence about steam engines, while true, is an overly technical and self-evident detail that does not enhance the paragraph's focus on the human and atmospheric aspects of the railway station. Its removal maintains the poetic and thematic coherence of the passage, which emphasizes the \"dynamic tapestry of human endeavor.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 292,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -736,8 +736,8 @@
     "explanation": "The proposed addition deepens the sense of mystery and foreboding established by the preceding sentences. It aligns perfectly with the gothic tone common in 19th-century fiction, enriching the atmosphere of the passage.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 265,
+    "passage_underline_end": 349,
     "choices": [
       {
         "key": "A",
@@ -769,8 +769,8 @@
     "explanation": "The addition logically extends the discussion of social disparity by introducing its potential consequence: revolutionary sentiment. This transition provides a deeper, more analytical understanding of the Victorian social landscape, effectively setting up the concluding sentence about the stretched social fabric.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 247,
+    "passage_underline_end": 334,
     "choices": [
       {
         "key": "A",
@@ -802,8 +802,8 @@
     "explanation": "The sentence about hikers, while a factual detail, breaks the immersive description of the lane's tranquil and romantic atmosphere, which culminates in its use by lovers. Removing it maintains the logical consistency of the passage's idyllic and evocative tone, focusing solely on elements that contribute to the sense of peaceful seclusion and romantic potential.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 322,
+    "passage_underline_end": 362,
     "choices": [
       {
         "key": "A",
@@ -835,8 +835,8 @@
     "explanation": "The sentence about Evelyn's gowns, while a detail, distracts from the paragraph's central theme of her inner resolve and resilience in facing financial hardship. Deleting it maintains a tighter focus on her character and mental state.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 233,
+    "passage_underline_end": 275,
     "choices": [
       {
         "key": "A",
@@ -868,8 +868,8 @@
     "explanation": "The revision introduces a dynamic shift from the deepening quiet to the sounds of human activity, creating a more engaging and nuanced depiction of the transition to evening. This logical contrast enhances the paragraph's descriptive power by adding an element of life to the otherwise serene scene.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -901,8 +901,8 @@
     "explanation": "The addition logically links the detailed description of the library to its primary occupant and his scholarly pursuits. This connection strengthens the paragraph's cohesion by showing the library's role as a reflection of His Lordship's character, which is then further elaborated upon.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 242,
+    "passage_underline_end": 313,
     "choices": [
       {
         "key": "A",
@@ -934,8 +934,8 @@
     "explanation": "The sentence describing the journey, while factual, disrupts the paragraph's focus on Miss Eliza's emotional state and internal conflict upon arriving at Thornfield Hall. Removing it maintains the logical flow of her trepidation and resolution.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 228,
+    "passage_underline_end": 309,
     "choices": [
       {
         "key": "A",
@@ -967,8 +967,8 @@
     "explanation": "The revision directly addresses the \"ill-fated engagement\" mentioned earlier by providing the specific reason for their separation. This improves the logical coherence of the passage by explaining a key plot point, connecting past events to Anne's current emotional state.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 238,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -1000,8 +1000,8 @@
     "explanation": "The proposed addition intensifies the description of London's impact on Fanny by engaging her sense of smell. This logically contributes to her \"profound sense of bewilderment\" by illustrating the overwhelming nature of the new environment through sensory detail.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 256,
+    "passage_underline_end": 352,
     "choices": [
       {
         "key": "A",
@@ -1066,8 +1066,8 @@
     "explanation": "The paragraph is focused on the multiple strategic purposes of Hadrian's Wall. The emperor's personal interests and hobbies are completely unrelated to this topic and serve only to distract from the functional analysis of the structure.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 319,
+    "passage_underline_end": 418,
     "choices": [
       {
         "key": "A",
@@ -1099,8 +1099,8 @@
     "explanation": "Many readers are familiar with the shape of a true Roman arch. By contrasting the corbel arch with this more widely known structure, the underlined sentence provides a crucial point of reference that clarifies the corbel arch's unique construction and inherent limitations. This distinction is key to a full architectural understanding.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 252,
+    "passage_underline_end": 352,
     "choices": [
       {
         "key": "A",
@@ -1198,8 +1198,8 @@
     "explanation": "The paragraph is focused exclusively on the urban planning and astronomical alignment of Teotihuacan. The sentence about the Olmecs introduces an unrelated fact about a different culture, disrupting the paragraph's tight focus and logical flow.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 363,
     "choices": [
       {
         "key": "A",
@@ -1231,8 +1231,8 @@
     "explanation": "The sentence \"...columns, which supported a massive roof\" already states the function of the columns. The underlined sentence, \"The roof was held up by these columns,\" repeats the exact same information in slightly different words. It is completely redundant and should be deleted for conciseness.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 231,
+    "passage_underline_end": 269,
     "choices": [
       {
         "key": "A",
@@ -1264,8 +1264,8 @@
     "explanation": "The paragraph's main idea is that Roman baths were \"far more than places to get clean.\" The underlined sentence explicitly states the varied social functions (socializing, business, leisure) that made them so important. It synthesizes the list of amenities from the previous sentence into a clear statement of purpose, which is essential to the overall argument.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 243,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -1363,8 +1363,8 @@
     "explanation": "The paragraph is tightly focused on the visual and symbolic architectural features of the Ishtar Gate (glazed bricks, colors, animal reliefs). The general fact about the Mesopotamian writing system is a non sequitur that adds no information about the gate itself and disrupts the descriptive flow.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 390,
     "choices": [
       {
         "key": "A",
@@ -1495,8 +1495,8 @@
     "explanation": "The final sentence explains the function of the clerestory lighting. The underlined sentence provides the crucial structural prerequisite for this feature—the fact that the central columns are taller. Without this sentence, the explanation of the clerestory would lack its architectural basis.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 195,
+    "passage_underline_end": 243,
     "choices": [
       {
         "key": "A",
@@ -1528,8 +1528,8 @@
     "explanation": "The previous sentence mentions a \"temple at the top.\" The primary function of a temple is to host religious rituals, so the underlined sentence is redundant. It adds no new information and clutters the paragraph's explanation of the pyramid's overall purpose.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 274,
+    "passage_underline_end": 339,
     "choices": [
       {
         "key": "A",
@@ -1594,8 +1594,8 @@
     "explanation": "The paragraph focuses on the architectural features of ancient Petra and what they reveal about the Nabatean Kingdom. The city's location in modern-day Jordan is a piece of geographic trivia that does not contribute to the analysis of its architecture and disrupts the paragraph's historical focus.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 354,
+    "passage_underline_end": 392,
     "choices": [
       {
         "key": "A",
@@ -1627,8 +1627,8 @@
     "explanation": "The original sentence is too vague. Option C provides the best transition because it specifies why the design was practical, using the words \"functional and spacious layout.\" This directly connects the architectural description (nave, aisles) to the reason for its later adoption by Christians (its suitability for large gatherings), creating a smooth logical link between the two parts of the paragraph.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 255,
+    "passage_underline_end": 300,
     "choices": [
       {
         "key": "A",
@@ -1693,8 +1693,8 @@
     "explanation": "The paragraph is a factual description of the architectural features of Knossos (courtyard, plumbing, frescoes, openness). The sentence about the myth of the Minotaur is a cultural-historical tangent that, while related, distracts from the direct analysis of the building's physical structure and what it implies.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 304,
+    "passage_underline_end": 391,
     "choices": [
       {
         "key": "A",
@@ -1858,8 +1858,8 @@
     "explanation": "The paragraph already explains that concrete could be \"poured into molds to form... arches and domes,\" which clearly demonstrates its versatility. The underlined sentence merely states this fact in a less detailed way, making it repetitive and unnecessary for the overall coherence of the passage.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 352,
+    "passage_underline_end": 410,
     "choices": [
       {
         "key": "A",
@@ -1924,8 +1924,8 @@
     "explanation": "The preceding sentence states that the masonry technique provided stability. The underlined sentence explains the environmental reason—earthquakes—that made this stability so vital. This connection between architectural method and geographic necessity is essential to a full understanding of Incan engineering.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 318,
+    "passage_underline_end": 430,
     "choices": [
       {
         "key": "A",
@@ -2056,8 +2056,8 @@
     "explanation": "The paragraph's main idea is that Mohenjo-Daro was a well-planned city. The underlined sentence offers a second, powerful example of this planning (the water system), complementing the first example (the grid layout). This detail is essential evidence for the concluding statement about hygiene and organization.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 215,
+    "passage_underline_end": 317,
     "choices": [
       {
         "key": "A",
@@ -2089,8 +2089,8 @@
     "explanation": "The addition logically elaborates on the social cost of gentrification, providing a crucial counterpoint to the initial mention of economic vitality. This enhances the passage's balanced sociological analysis by explicitly detailing the impact on existing communities, improving overall clarity and depth.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 396,
+    "passage_underline_end": 516,
     "choices": [
       {
         "key": "A",
@@ -2122,8 +2122,8 @@
     "explanation": "The sentence merely states an obvious fact about public spaces being used for recreation, which is already implied by the context of fostering social interaction and community cohesion. Deleting it improves the conciseness and logical flow of the argument, maintaining a focus on the sociological significance of public spaces rather than their basic utility.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 338,
+    "passage_underline_end": 401,
     "choices": [
       {
         "key": "A",
@@ -2155,8 +2155,8 @@
     "explanation": "The sentence about governmental struggles, while relevant, focuses on a policy challenge rather than directly contributing to the sociological description of informal settlements or their residents' experiences, which is the paragraph's core focus. Removing it maintains a tighter, more coherent focus on the nature and challenges of informal settlements themselves, aligning with the style of a sociological study.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 391,
+    "passage_underline_end": 492,
     "choices": [
       {
         "key": "A",
@@ -2188,8 +2188,8 @@
     "explanation": "The revision transforms a historical attribution (to Lefebvre) into a more profound and comprehensive statement about the philosophical and practical implications of the \"right to the city.\" This strengthens the logical flow by emphasizing the concept's deeper meaning and purpose—transforming urban life for justice and well-being—aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 351,
+    "passage_underline_end": 411,
     "choices": [
       {
         "key": "A",
@@ -2221,8 +2221,8 @@
     "explanation": "The addition logically provides practical context by highlighting the current trend of cities adopting mixed-use zoning. This strengthens the passage's relevance by showing how the theoretical concept is being implemented in practice, improving its practical applicability for urban planners.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 325,
+    "passage_underline_end": 415,
     "choices": [
       {
         "key": "A",
@@ -2254,8 +2254,8 @@
     "explanation": "The sentence about traffic congestion, while a true problem, is a general statement about urban issues and not directly focused on the sociological impact of transportation infrastructure choices, which is the paragraph's central theme. Removing it maintains a tighter focus on the complex social consequences of infrastructure decisions, improving conciseness and logical coherence.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 431,
+    "passage_underline_end": 490,
     "choices": [
       {
         "key": "A",
@@ -2287,8 +2287,8 @@
     "explanation": "The revision transforms a specific detail about community initiatives into a formal and powerful statement about the systemic nature of food deserts and their implications for \"urban geography and socio-economic vulnerability.\" This strengthens the logical conclusion by elevating the discussion to a broader sociological analysis, aligning with the academic tone of the passage.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 419,
     "choices": [
       {
         "key": "A",
@@ -2320,8 +2320,8 @@
     "explanation": "The addition logically provides a concrete example of how placemaking involves community engagement, illustrating the practical application of the concept. This strengthens the passage's explanatory power by showing a key method, improving clarity for understanding the process.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 337,
+    "passage_underline_end": 423,
     "choices": [
       {
         "key": "A",
@@ -2353,8 +2353,8 @@
     "explanation": "The sentence describing solutions (green roofs, reflective surfaces) shifts the focus from explaining the phenomenon of urban heat islands and its causes/impacts to specific mitigation strategies. Removing it maintains a tighter focus on the sociological and environmental challenges presented by heat islands, improving conciseness and logical coherence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 397,
+    "passage_underline_end": 478,
     "choices": [
       {
         "key": "A",
@@ -2386,8 +2386,8 @@
     "explanation": "The revision transforms a specific concern about property taxes into a formal and comprehensive statement about the policy solutions for achieving balanced revitalization. This strengthens the logical conclusion by articulating the essential planning strategies—safeguarding affordable housing and inclusive participation—aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 438,
     "choices": [
       {
         "key": "A",
@@ -2419,8 +2419,8 @@
     "explanation": "The addition logically provides a concrete, contemporary example of social exclusion (lack of internet access) that clarifies how the phenomenon manifests in urban settings. This strengthens the passage's explanatory power by making the abstract concept more tangible and relatable.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 384,
+    "passage_underline_end": 466,
     "choices": [
       {
         "key": "A",
@@ -2452,8 +2452,8 @@
     "explanation": "The sentence \"Citizen input is crucial for developing successful urban projects\" is a self-evident truth about participatory planning, which has already been elaborated upon by statements like \"genuinely reflect community needs\" and \"enhances civic engagement.\" Deleting it improves conciseness and maintains a tighter focus on the detailed explanation of participatory planning itself and its challenges.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 389,
+    "passage_underline_end": 455,
     "choices": [
       {
         "key": "A",
@@ -2485,8 +2485,8 @@
     "explanation": "The revision transforms a single causative factor (automobiles) into a more comprehensive sociological analysis, encompassing \"economic incentives, policy decisions, and evolving transportation patterns.\" This strengthens the logical depth by providing a more nuanced understanding of urban sprawl's origins, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 432,
     "choices": [
       {
         "key": "A",
@@ -2518,8 +2518,8 @@
     "explanation": "The revision transforms a superficial detail about technology (apps) into a formal and comprehensive statement about the sociological and policy implications of the sharing economy (\"innovative regulatory frameworks,\" \"re-evaluation of urban resource allocation,\" \"mitigate adverse social impacts\"). This strengthens the logical conclusion by focusing on the deeper planning challenges, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 408,
+    "passage_underline_end": 460,
     "choices": [
       {
         "key": "A",
@@ -2551,8 +2551,8 @@
     "explanation": "The addition logically provides a fundamental clarification about the core components of green infrastructure (trees and plants). This strengthens the passage's foundational definition and understanding, improving the clarity of the subsequent discussion on its benefits.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 333,
+    "passage_underline_end": 399,
     "choices": [
       {
         "key": "A",
@@ -2584,8 +2584,8 @@
     "explanation": "The sentence about lack of social security, while an accurate aspect of informal economies, focuses on a specific vulnerability of participants rather than the function or characteristics of the informal economy itself. Removing it maintains a tighter focus on the overall role and resilience of these economies in urban settings, improving conciseness and logical coherence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 405,
+    "passage_underline_end": 498,
     "choices": [
       {
         "key": "A",
@@ -2617,8 +2617,8 @@
     "explanation": "The revision transforms a general observation about new environmental threats into a formal and comprehensive statement about the profound importance of urban resilience for \"safeguarding urban populations and ensuring long-term systemic stability.\" This strengthens the logical conclusion by articulating the overarching rationale for this planning imperative, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 394,
+    "passage_underline_end": 460,
     "choices": [
       {
         "key": "A",
@@ -2650,8 +2650,8 @@
     "explanation": "The addition logically provides relevant historical attribution by naming the sociologist who coined the term \"third place.\" This enhances the academic context and credibility of the concept, improving the passage's overall scholarly presentation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 395,
+    "passage_underline_end": 455,
     "choices": [
       {
         "key": "A",
@@ -2683,8 +2683,8 @@
     "explanation": "The sentence \"Many cities have affluent and low-income neighborhoods\" is a general and obvious observation that is redundant given the preceding explicit definition of \"spatial inequality\" as the unequal distribution of resources and opportunities. Deleting it improves conciseness and maintains a tighter focus on the analytical explanation of spatial inequality itself.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 348,
+    "passage_underline_end": 403,
     "choices": [
       {
         "key": "A",
@@ -2716,8 +2716,8 @@
     "explanation": "The revision transforms a technical detail (metrics) into a formal and powerful statement about the sociological benefits of walkability (\"vibrant public realm,\" \"spontaneous social encounters,\" \"diminishing reliance on automobiles\"). This strengthens the logical conclusion by articulating the profound societal impact of walkability, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 352,
+    "passage_underline_end": 409,
     "choices": [
       {
         "key": "A",
@@ -2749,8 +2749,8 @@
     "explanation": "The addition logically provides a concrete example of how cultural heritage is protected in urban planning (historic preservation districts). This strengthens the passage's practical relevance by illustrating a key policy tool, improving clarity on the implementation of cultural heritage integration.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 382,
+    "passage_underline_end": 467,
     "choices": [
       {
         "key": "A",
@@ -2782,8 +2782,8 @@
     "explanation": "The sentence stating that \"Some highly dense cities are very livable, while others struggle\" is a general observation that is already implied by the preceding discussion of density's \"complex sociological implications\" and its potential for both positive and negative outcomes. Deleting it improves conciseness and maintains a tighter focus on the analytical explanation of urban density's varied effects.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 371,
+    "passage_underline_end": 436,
     "choices": [
       {
         "key": "A",
@@ -2815,8 +2815,8 @@
     "explanation": "The revision transforms a specific action (protesting zoning laws) into a formal and comprehensive statement about the foundational ethical principles of the \"just cities\" concept (\"distributive and procedural justice,\" \"serves all inhabitants equitably\"). This strengthens the logical conclusion by elevating the discussion to its core philosophical and practical implications for urban development, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 386,
+    "passage_underline_end": 461,
     "choices": [
       {
         "key": "A",
@@ -2848,8 +2848,8 @@
     "explanation": "The addition logically introduces essential sociological and ethical considerations (privacy, bias, digital divides) that are crucial for a comprehensive understanding of smart cities. This provides a balanced perspective, acknowledging both the benefits and potential drawbacks, thereby strengthening the passage's analytical depth and coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 478,
     "choices": [
       {
         "key": "A",
@@ -2881,8 +2881,8 @@
     "explanation": "The addition logically provides crucial structural detail about CLT governance (resident, community, public representatives). This strengthens the understanding of how CLTs are designed to be community-oriented and equitable, reinforcing their role in preserving affordable housing and fostering stability.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 387,
+    "passage_underline_end": 497,
     "choices": [
       {
         "key": "A",
@@ -2914,8 +2914,8 @@
     "explanation": "The sentence about smartphone use is a general, self-evident observation that is not central to the sociological discussion of the implications of urban digitalization or the \"digital divide.\" Deleting it improves conciseness and maintains a tighter focus on the core issues of equity and access in smart cities.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 421,
     "choices": [
       {
         "key": "A",
@@ -2947,8 +2947,8 @@
     "explanation": "The sentence describing the physical actions of demolishing and constructing buildings is largely self-evident within the concept of \"urban renewal\" and not central to the sociological outcomes being discussed. Deleting it improves conciseness and maintains a tighter focus on the social impacts, aligning with the passage's sociological theme.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 407,
+    "passage_underline_end": 494,
     "choices": [
       {
         "key": "A",
@@ -2980,8 +2980,8 @@
     "explanation": "The revision elevates the description of challenges from general \"concerns\" to a more formal and analytical statement (\"socio-economic and logistical hurdles\") that emphasizes the need for equitable implementation. This strengthens the logical depth by framing the challenges within a broader sociological context, aligning with the tone of a formal study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 382,
+    "passage_underline_end": 527,
     "choices": [
       {
         "key": "A",
@@ -3013,8 +3013,8 @@
     "explanation": "The addition logically provides a specific social problem (lack of access to fresh produce) that community gardens directly ameliorate, thereby strengthening the argument for their importance in urban planning. This enhances the passage's practical relevance and explanatory power by detailing a key benefit.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 342,
+    "passage_underline_end": 401,
     "choices": [
       {
         "key": "A",
@@ -3046,8 +3046,8 @@
     "explanation": "The sentence introduces a critique of the theory's application rather than contributing to its initial sociological explanation or mechanisms. Removing it maintains a tighter focus on defining and explaining the \"broken windows\" theory itself, improving the paragraph's conciseness and logical coherence.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 355,
+    "passage_underline_end": 442,
     "choices": [
       {
         "key": "A",
@@ -3079,8 +3079,8 @@
     "explanation": "The revision transforms a logistical challenge (funding) into a more formal and powerful statement about the sociological impact of social infrastructure on \"social well-being and life chances.\" This strengthens the logical argument by emphasizing the fundamental importance of these assets for urban residents, aligning with the analytical tone of a sociological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 368,
+    "passage_underline_end": 454,
     "choices": [
       {
         "key": "A",
@@ -3112,8 +3112,8 @@
     "explanation": "The addition logically provides a specific challenge (outdated infrastructure in older cities) that highlights the practical difficulties in achieving sustainable urban development. This enhances the passage's real-world relevance and provides a concrete example of the issues urban planners must address, improving overall coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 363,
+    "passage_underline_end": 456,
     "choices": [
       {
         "key": "A",
@@ -3145,8 +3145,8 @@
     "explanation": "The paragraph describes the process of finding a new nest site during swarming. The underlined sentence is essential because it explains how the scout bees communicate their findings and make a collective decision. Without this sentence, the reader would be left wondering how the swarm moves from searching to reaching a consensus.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 255,
+    "passage_underline_end": 400,
     "choices": [
       {
         "key": "A",
@@ -3178,8 +3178,8 @@
     "explanation": "The paragraph's topic is the function of trophallaxis as a method of communication and distribution. The specific anatomical detail about the honey stomach, while related, is an extraneous fact that interrupts the flow between the description of the act and the explanation of its consequences.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 401,
     "choices": [
       {
         "key": "A",
@@ -3277,8 +3277,8 @@
     "explanation": "The paragraph describes the process of the retinue picking up and sharing the queen's pheromone. The underlined sentence provides the crucial concluding analysis, explaining the purpose and result of this entire process—the efficient distribution of the signal. Deleting it would leave the description of the behavior without a clear statement of its function.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 433,
     "choices": [
       {
         "key": "A",
@@ -3343,8 +3343,8 @@
     "explanation": "The paragraph introduces the idea of vibrational signals. The underlined sentence is essential because it explains the unique advantage of this channel: it allows bees that are not touching the dancer to still receive the information. This key detail supports the final sentence's conclusion about the importance of vibrations in a crowded hive.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 237,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -3442,8 +3442,8 @@
     "explanation": "The paragraph describes two functions of footprint pheromones. The underlined sentence is essential for understanding the second function; it explains the specific action (detecting the scent on a flower) that allows a bee to make a decision. Without it, the final sentence's conclusion would lack its premise.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 259,
+    "passage_underline_end": 370,
     "choices": [
       {
         "key": "A",
@@ -3541,8 +3541,8 @@
     "explanation": "The paragraph begins by describing the sun compass, a navigational tool. The underlined sentence is vital because it explicitly connects this navigational ability to its communicative function in the waggle dance. Without this sentence, the paragraph would be a description of navigation, not communication.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 213,
+    "passage_underline_end": 258,
     "choices": [
       {
         "key": "A",
@@ -3640,8 +3640,8 @@
     "explanation": "The paragraph begins by describing begging as a way to get food. The underlined sentence is the pivotal point, transforming the reader's understanding by explaining that the act is also a way to gather information. This reframing is essential for the logic of the final sentence, which explains what that information means.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 277,
+    "passage_underline_end": 394,
     "choices": [
       {
         "key": "A",
@@ -3904,8 +3904,8 @@
     "explanation": "The paragraph makes the abstract claim that the dance is \"symbolic.\" The underlined sentence provides the two core examples of this symbolism in a clear, parallel structure. This specific summary is essential for cementing the reader's understanding of the abstract concept and serves as powerful evidence for the main claim.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 237,
+    "passage_underline_end": 364,
     "choices": [
       {
         "key": "A",
@@ -3970,8 +3970,8 @@
     "explanation": "The paragraph has already explained the relationship between the waggle duration and distance twice. The underlined sentence merely repeats this concept in the simplest possible terms, adding no new information and making the paragraph feel repetitive.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 318,
+    "passage_underline_end": 375,
     "choices": [
       {
         "key": "A",
@@ -4036,8 +4036,8 @@
     "explanation": "The original sentence is a bit cliché. Option B is superior because it uses precise, scientific language (\"potent volatile compound,\" \"immediate alert\") that matches the formal tone of the passage. It effectively links the chemical (isopentyl acetate) to its function (alerting other bees), providing a smooth transition to the next sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 193,
+    "passage_underline_end": 247,
     "choices": [
       {
         "key": "A",
@@ -4135,8 +4135,8 @@
     "explanation": "The preceding sentence describes the action of regurgitating nectar. The underlined sentence explains the function of this action—allowing other bees to taste and smell the sample. This link between action and purpose is essential to understanding how this part of the communication process works.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 276,
     "choices": [
       {
         "key": "A",
@@ -4168,8 +4168,8 @@
     "explanation": "The paragraph describes the stop signal and when it is used. The underlined sentence provides the crucial \"so what,\" explaining the overall benefit of this behavior for the colony. This conclusion is vital for understanding the signal's function within the hive's collective intelligence.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 327,
+    "passage_underline_end": 448,
     "choices": [
       {
         "key": "A",
@@ -4201,8 +4201,8 @@
     "explanation": "The addition logically reinforces the profound and inherent nature of \"unalienable Rights\" by explicitly stating their independence from human laws or transient opinions. This amplifies the philosophical weight of the passage and improves its persuasive force by emphasizing the absolute foundation upon which the subsequent arguments for self-governance are built.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 479,
+    "passage_underline_end": 571,
     "choices": [
       {
         "key": "A",
@@ -4234,8 +4234,8 @@
     "explanation": "The sentence merely restates what is already strongly implied by the phrase \"long train of abuses and usurpations\" and the subsequent \"patient sufferance of these Colonies.\" Deleting it improves the conciseness and logical flow of the philosophical argument, allowing the passage to move directly from the general principle of revolution to its specific application.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 522,
+    "passage_underline_end": 587,
     "choices": [
       {
         "key": "A",
@@ -4267,8 +4267,8 @@
     "explanation": "The sentence about signatories risking their lives is redundant, as the preceding phrase \"mutually pledge to each other our Lives, our Fortunes and our sacred Honor\" already powerfully conveys the immense personal sacrifice involved. Deleting it improves conciseness and maintains the elevated, formal tone of the conclusion without losing essential meaning.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 390,
+    "passage_underline_end": 449,
     "choices": [
       {
         "key": "A",
@@ -4300,8 +4300,8 @@
     "explanation": "The revision transforms a specific historical critique (of the Articles of Confederation) into a forward-looking, definitive statement about the purpose and enduring impact of the Constitution itself. This strengthens the logical flow by emphasizing the positive and foundational role of the new document, rather than merely contrasting it with the past.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 496,
+    "passage_underline_end": 584,
     "choices": [
       {
         "key": "A",
@@ -4333,8 +4333,8 @@
     "explanation": "The addition logically explains the underlying purpose of the qualifications (age, citizenship, inhabitancy) for Representatives, connecting them to the principles of accountability, maturity, and loyalty. This clarifies why these specific rules are in place, improving the coherence and explanatory power of the constitutional text.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 515,
+    "passage_underline_end": 631,
     "choices": [
       {
         "key": "A",
@@ -4366,8 +4366,8 @@
     "explanation": "The sentence explicitly explains the reason for the staggered Senate terms, namely to ensure \"continuity and stability.\" This logical explanation is crucial for understanding the constitutional design and should be retained as it clarifies the legislative intent behind the structural rule.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 532,
+    "passage_underline_end": 611,
     "choices": [
       {
         "key": "A",
@@ -4399,8 +4399,8 @@
     "explanation": "The revision enhances the formality and precision of the explanation, replacing a simpler description with language more consistent with a founding document. It clearly articulates the intent behind the Electoral College (\"deliberate compromise,\" \"equitable representation\"), thereby strengthening the logical justification of this specific constitutional design.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 441,
+    "passage_underline_end": 539,
     "choices": [
       {
         "key": "A",
@@ -4432,8 +4432,8 @@
     "explanation": "The addition logically explains the fundamental reason for judicial tenure \"during good Behaviour\" and protected compensation: to guarantee the judiciary's independence. This clarifies the constitutional intent, improving the coherence and explanatory power of the text by revealing the underlying principle.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 406,
+    "passage_underline_end": 503,
     "choices": [
       {
         "key": "A",
@@ -4465,8 +4465,8 @@
     "explanation": "The sentence merely explains the obvious consequence and intent of the \"Full Faith and Credit\" clause, which is already clearly stated by the clause itself. Deleting it improves the conciseness and directness of the constitutional text without losing essential meaning or clarity.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 383,
+    "passage_underline_end": 456,
     "choices": [
       {
         "key": "A",
@@ -4498,8 +4498,8 @@
     "explanation": "The revision employs more formal and precise language (\"deliberately arduous process,\" \"broad and enduring consensus\") to articulate the profound purpose behind the Constitution's amendment process. This strengthens the logical justification by emphasizing the desire for stability and widespread agreement for fundamental changes, aligning perfectly with the tone of a founding document.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 544,
+    "passage_underline_end": 631,
     "choices": [
       {
         "key": "A",
@@ -4531,8 +4531,8 @@
     "explanation": "The addition provides a clear and concise summary of the overarching purpose of the proposed amendments (which became the Bill of Rights): to protect citizen rights and limit federal power. This logical clarification enhances the coherence of the passage by stating the explicit intent behind these crucial constitutional additions.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 654,
+    "passage_underline_end": 758,
     "choices": [
       {
         "key": "A",
@@ -4564,8 +4564,8 @@
     "explanation": "The sentence about Enlightenment inspiration, while historically accurate, shifts focus away from the direct enumeration and immediate significance of the constitutional rights themselves. Deleting it maintains a tighter focus on the rights as stated in the document and their direct implications for citizens, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 417,
+    "passage_underline_end": 478,
     "choices": [
       {
         "key": "A",
@@ -4597,8 +4597,8 @@
     "explanation": "The revision synthesizes the preceding specific grievances (refusal of assent, neglect of laws) into a broader statement about the \"pattern of obstruction\" and its purpose (\"undermine self-governance\"). This improves the logical flow by providing a thematic link between the detailed complaints and the overarching accusation against the King's tyrannical intent, strengthening the coherence of the indictment.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 541,
+    "passage_underline_end": 622,
     "choices": [
       {
         "key": "A",
@@ -4630,8 +4630,8 @@
     "explanation": "The revision transforms a descriptive statement about historical debates into a profound philosophical summation of the Second Amendment's purpose. This strengthens the logical flow by articulating the overarching principle—balancing liberty and civic responsibility—that the Framers sought to enshrine, thereby enhancing the coherence and depth of the explanation.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 378,
+    "passage_underline_end": 432,
     "choices": [
       {
         "key": "A",
@@ -4663,8 +4663,8 @@
     "explanation": "The addition logically provides essential historical context by directly linking the Third Amendment's prohibition on quartering soldiers to a specific grievance from the colonial era. This strengthens the explanation by revealing the experiential basis for this constitutional safeguard, improving its clarity and historical coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 354,
+    "passage_underline_end": 440,
     "choices": [
       {
         "key": "A",
@@ -4696,8 +4696,8 @@
     "explanation": "While the historical context of general warrants is relevant, this paragraph's immediate focus is on explaining the principles and protections enshrined in the Fourth Amendment itself. Including the specific historical example, without further elaboration, slightly interrupts this direct explanation. Deleting it maintains a tighter focus on the constitutional text and its direct implications.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 500,
+    "passage_underline_end": 563,
     "choices": [
       {
         "key": "A",
@@ -4729,8 +4729,8 @@
     "explanation": "The revision offers a more encompassing and formal summary of the Fifth Amendment's multifaceted protections, linking them to a broader principle of guarding against \"governmental overreach\" and providing a \"robust shield for the accused.\" This strengthens the logical conclusion of the paragraph by elevating the description of these fundamental rights to a more powerful and comprehensive statement of their collective purpose.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 590,
+    "passage_underline_end": 666,
     "choices": [
       {
         "key": "A",
@@ -4762,8 +4762,8 @@
     "explanation": "The addition functions as an effective logical summary, immediately clarifying the broad purpose of the extensive list of rights in the Sixth Amendment: to ensure a \"fair judicial process.\" This provides a useful thematic anchor for the detailed enumeration that follows, enhancing the overall clarity and coherence of the passage.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 479,
+    "passage_underline_end": 533,
     "choices": [
       {
         "key": "A",
@@ -4795,8 +4795,8 @@
     "explanation": "The sentence about the debate over \"cruel and unusual\" punishment introduces a specific interpretive detail that slightly deviates from the paragraph's direct explanation of the purpose and effect of the Eighth Amendment's provisions. Deleting it maintains a tighter focus on the inherent principles enshrined in the amendment itself, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 294,
+    "passage_underline_end": 371,
     "choices": [
       {
         "key": "A",
@@ -4828,8 +4828,8 @@
     "explanation": "The revision elevates the explanation from merely listing examples of unenumerated rights to providing a powerful philosophical summation of the Ninth Amendment's overarching purpose. This strengthens the logical flow by emphasizing its \"comprehensive safeguard\" role and its affirmation that liberties are not limited to explicit textual guarantees, aligning with the document's formal style.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 342,
+    "passage_underline_end": 429,
     "choices": [
       {
         "key": "A",
@@ -4861,8 +4861,8 @@
     "explanation": "The addition logically provides crucial historical context for the Tenth Amendment, linking it directly to the concerns of the Anti-Federalists during ratification. This strengthens the explanation by revealing the deliberative process behind this safeguard of federalism, improving its historical and constitutional coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 406,
+    "passage_underline_end": 502,
     "choices": [
       {
         "key": "A",
@@ -4894,8 +4894,8 @@
     "explanation": "The sentence simply restates the inherent outcome of the preceding constitutional language, which explicitly defines representation based on \"respective Numbers\" (population). Deleting it improves the conciseness and directness of the constitutional text without losing any essential information or clarity.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 501,
+    "passage_underline_end": 579,
     "choices": [
       {
         "key": "A",
@@ -4927,8 +4927,8 @@
     "explanation": "The revision transforms a specific procedural detail (where impeachment begins) into a powerful, philosophical statement about the fundamental purpose of the impeachment clause: protecting the Republic from abuse of power and upholding the rule of law. This strengthens the logical conclusion by articulating the profound significance of this constitutional provision, consistent with the tone of a founding document.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 396,
+    "passage_underline_end": 462,
     "choices": [
       {
         "key": "A",
@@ -4960,8 +4960,8 @@
     "explanation": "The addition serves as a powerful logical summation, drawing a direct conclusion from the preceding list of specific grievances (new offices, standing armies, military superiority) to the overarching accusation of tyranny. This strengthens the coherence of the passage by clarifying the cumulative intent behind the King's actions, preparing the reader for subsequent complaints.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 315,
+    "passage_underline_end": 417,
     "choices": [
       {
         "key": "A",
@@ -4993,8 +4993,8 @@
     "explanation": "The addition provides a concise logical summary for the initial group of prohibitions on states (\"Treaty, Alliance, or Confederation\"), clarifying the overarching intent to centralize foreign policy at the federal level. This enhances the clarity and coherence of the enumerated restrictions, improving the overall understanding of federalism.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 494,
+    "passage_underline_end": 555,
     "choices": [
       {
         "key": "A",
@@ -5026,8 +5026,8 @@
     "explanation": "The sentence stating that \"Treason is considered a very serious crime\" is an obvious value judgment that adds no substantive legal or procedural information to the explicit definition of treason. Deleting it maintains the formal, precise, and objective tone of the constitutional text, improving conciseness and logical adherence to the document's purpose.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 392,
     "choices": [
       {
         "key": "A",
@@ -5059,8 +5059,8 @@
     "explanation": "The sentence stating colonial opposition to taxes is self-evident given the context of grievances against taxation without consent. Deleting it maintains the consistent focus on the King's actions as enumerated abuses, improving the conciseness and directness of the indictment without losing essential information.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 332,
     "choices": [
       {
         "key": "A",
@@ -5092,8 +5092,8 @@
     "explanation": "The revision employs more potent and formal language (\"flagrant usurpation,\" \"inherent rights and established liberties\") to describe the King's actions. This strengthens the logical argument by emphasizing the egregious nature of each offense, aligning the phrasing more closely with the solemn and declarative tone of the document.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 457,
+    "passage_underline_end": 516,
     "choices": [
       {
         "key": "A",
@@ -5125,8 +5125,8 @@
     "explanation": "The addition logically reinforces the gravity of the King's actions by highlighting the specific outrage caused by using foreign mercenaries, which was seen as a profound betrayal. This strengthens the indictment by emphasizing a particularly \"perfidious\" act, thereby enhancing the passage's persuasive power.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 428,
+    "passage_underline_end": 495,
     "choices": [
       {
         "key": "A",
@@ -5158,8 +5158,8 @@
     "explanation": "The sentence about sending many petitions is entirely redundant, as the preceding sentence explicitly states, \"Our repeated Petitions have been answered only by repeated injury.\" Deleting it improves the conciseness and directness of the passage without losing any information, maintaining the rapid flow of the indictment.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 528,
+    "passage_underline_end": 578,
     "choices": [
       {
         "key": "A",
@@ -5191,8 +5191,8 @@
     "explanation": "The revision uses more impactful language (\"earnest appeals,\" \"regrettably met with indifference,\" \"tacit endorsement of tyranny\") to emphasize the failure of the colonists' efforts to persuade their British brethren. This strengthens the logical transition by clearly and forcefully attributing blame, thereby justifying the final break with Great Britain.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 484,
+    "passage_underline_end": 590,
     "choices": [
       {
         "key": "A",
@@ -5224,8 +5224,8 @@
     "explanation": "The addition functions as a strong logical summary, distilling the essence of the declaration's immediate effect: the definitive break from British rule and the emergence of an independent sovereign nation. This reinforces the declarative power of the passage, providing a clear articulation of its central purpose and outcome.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 434,
+    "passage_underline_end": 544,
     "choices": [
       {
         "key": "A",
@@ -5257,8 +5257,8 @@
     "explanation": "The proposed addition provides a crucial logical link between the abstract discussion of human rights and their practical implementation within a governmental framework. It strengthens the argument by explaining why respecting these rights is a fundamental duty of the state, thus improving the paragraph's overall coherence and persuasive power.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 429,
     "choices": [
       {
         "key": "A",
@@ -5290,8 +5290,8 @@
     "explanation": "The sentence describing historical school curricula, while factual, disrupts the paragraph's philosophical argument about the ideal purpose of education (cultivating reason and virtue). Removing it maintains a consistent focus on the abstract principles of intellectual liberation and societal progress, improving the paragraph's thematic cohesion.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 265,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -5323,8 +5323,8 @@
     "explanation": "While The Liberator was important, this paragraph broadly discusses the movement's strategies and overall impact. Inserting a specific individual and publication, without further elaboration, interrupts this general flow. Removing it maintains a consistent focus on the collective efforts and broader consequences of the abolitionist movement.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 309,
+    "passage_underline_end": 401,
     "choices": [
       {
         "key": "A",
@@ -5356,8 +5356,8 @@
     "explanation": "The revision provides a direct logical consequence of the natural rights philosophy—namely, how it delegitimized oppressive regimes. This strengthens the paragraph's coherence by explicitly linking the theoretical concept to its practical implications for revolutionary thought, which is the main subject of the passage.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 372,
+    "passage_underline_end": 457,
     "choices": [
       {
         "key": "A",
@@ -5389,8 +5389,8 @@
     "explanation": "The addition of Germany and Italy as examples concretely illustrates the impact of nationalism on political unification, strengthening the explanation of \"movements for self-determination.\" This improves clarity by providing specific instances of the phenomenon being described, before the passage shifts to discussing negative consequences.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 310,
+    "passage_underline_end": 357,
     "choices": [
       {
         "key": "A",
@@ -5422,8 +5422,8 @@
     "explanation": "The sentence specifying the nationality of many philosophers, while true, does not directly contribute to the paragraph's main focus on the ideas of the Enlightenment and their impact. Removing it maintains a clearer, more coherent flow focused on the philosophical tenets and their historical significance.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 238,
+    "passage_underline_end": 277,
     "choices": [
       {
         "key": "A",
@@ -5455,8 +5455,8 @@
     "explanation": "The revision synthesizes the previous points about the shift in power into a broader statement about the \"profound transformation\" of governance. This logically concludes the paragraph by emphasizing the overarching significance and impact of democratic ideals, providing a more coherent and impactful historical analysis.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 299,
+    "passage_underline_end": 356,
     "choices": [
       {
         "key": "A",
@@ -5488,8 +5488,8 @@
     "explanation": "The addition logically reinforces the idea of \"tireless efforts\" by illustrating the adversity suffragists encountered. This provides important context for understanding the difficulty and dedication involved in their struggle, enhancing the historical explanation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 361,
+    "passage_underline_end": 424,
     "choices": [
       {
         "key": "A",
@@ -5521,8 +5521,8 @@
     "explanation": "The sentence about the French Declaration, while a significant historical document, provides a specific example that slightly disrupts the paragraph's broader philosophical discussion of the concept of universal human rights and its general impact. Removing it maintains a more coherent focus on the abstract idea and its widespread influence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 312,
+    "passage_underline_end": 394,
     "choices": [
       {
         "key": "A",
@@ -5554,8 +5554,8 @@
     "explanation": "The revision moves from a specific economic counter-argument to a powerful summary of how the abolitionists' moral and natural law arguments provided the \"irrefutable foundation\" for their demands. This strengthens the logical flow by explicitly connecting the philosophical basis of abolitionism to its ultimate objective, enhancing the paragraph's persuasive force.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 290,
+    "passage_underline_end": 396,
     "choices": [
       {
         "key": "A",
@@ -5587,8 +5587,8 @@
     "explanation": "The addition provides a crucial chronological context for the rise of self-determination movements, logically connecting the concept to the specific historical period of decolonization. This improves the clarity of the historical explanation by situating the phenomenon within its appropriate timeframe.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 348,
+    "passage_underline_end": 407,
     "choices": [
       {
         "key": "A",
@@ -5620,8 +5620,8 @@
     "explanation": "The sentence about Newton and the Scientific Revolution, while historically accurate, refers to a period preceding the Enlightenment, which is the primary focus here. Including it slightly disrupts the logical flow of explaining Enlightenment-specific scientific advancements. Removing it maintains a tighter focus on the paragraph's stated topic.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 275,
+    "passage_underline_end": 366,
     "choices": [
       {
         "key": "A",
@@ -5653,8 +5653,8 @@
     "explanation": "The revision transforms a specific example of inequality (voting rights) into a powerful, generalized statement about the injustice of such limitations. This elevates the argument from a particular grievance to a broader philosophical principle, enhancing the paragraph's logical and rhetorical force in advocating for women's inherent worth.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 327,
+    "passage_underline_end": 386,
     "choices": [
       {
         "key": "A",
@@ -5686,8 +5686,8 @@
     "explanation": "The revision logically synthesizes the preceding points about \"varying emphases\" and \"diversity of interpretation\" into a more encompassing statement about the \"dynamic nature of human rights discourse.\" This improves coherence by providing a broader, more analytical conclusion that reflects the core argument of the paragraph.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 347,
+    "passage_underline_end": 424,
     "choices": [
       {
         "key": "A",
@@ -5719,8 +5719,8 @@
     "explanation": "The addition logically clarifies who drove these reform movements, providing insight into their organizational structure and the role of individuals and groups. This strengthens the explanation by adding a dimension of agency, making the historical account more complete and coherent.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 296,
+    "passage_underline_end": 382,
     "choices": [
       {
         "key": "A",
@@ -5752,8 +5752,8 @@
     "explanation": "The sentence about \"general will,\" while related to Rousseau, introduces a specific and distinct philosophical concept that is not directly elaborated upon within this paragraph's focused explanation of the social contract itself. Removing it maintains a clearer, more coherent explanation of the core social contract theory and its broad impact.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 352,
+    "passage_underline_end": 407,
     "choices": [
       {
         "key": "A",
@@ -5785,8 +5785,8 @@
     "explanation": "The revision logically synthesizes the preceding points about the shift in power and constitutional reforms into a broader statement about the driving forces behind democratic expansion (\"demand for popular representation and accountability\"). This enhances the paragraph's analytical depth and coherence by explaining the underlying significance of the historical trend, rather than simply stating a specific historical fact.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 322,
+    "passage_underline_end": 376,
     "choices": [
       {
         "key": "A",
@@ -5818,8 +5818,8 @@
     "explanation": "The addition logically demonstrates the widespread impact of the \"noble savage\" concept by showing its incorporation into popular culture (novels). This strengthens the explanation of its influence by providing a concrete example of its pervasiveness, thereby enhancing the paragraph's coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 279,
+    "passage_underline_end": 357,
     "choices": [
       {
         "key": "A",
@@ -5851,8 +5851,8 @@
     "explanation": "The sentence describing the vastness of the Roman Empire, while true, does not directly contribute to the explanation of the process of Christianity's spread. It's a general geographic detail that slightly disrupts the focus on the mechanisms and key moments of religious dissemination. Removing it maintains a tighter, more coherent explanation.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 350,
+    "passage_underline_end": 418,
     "choices": [
       {
         "key": "A",
@@ -5884,8 +5884,8 @@
     "explanation": "The revision logically elevates the discussion from a specific grievance (Stamp Act) to a profound philosophical statement about the American Revolution as a principled assertion of human dignity. This strengthens the paragraph by providing a more encompassing and coherent interpretation of the revolution's deeper meaning, linking it directly to the Enlightenment's influence on universal principles.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -5917,8 +5917,8 @@
     "explanation": "The addition logically illustrates the practical actions (\"volunteered to assist wounded soldiers\") that characterized early humanitarian efforts, providing a concrete example of the impulses that led to the formation of organizations like the Red Cross. This enhances the clarity and coherence of the historical explanation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 346,
+    "passage_underline_end": 418,
     "choices": [
       {
         "key": "A",
@@ -5950,8 +5950,8 @@
     "explanation": "While interesting, the sentence about serial publication, though related to readership, is a detail about the mechanism of publishing rather than the impact of the novel's content or its literary form. Removing it maintains a clearer, more coherent focus on the novel's role in social discourse and its psychological exploration, which is the primary theme of the paragraph.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 342,
+    "passage_underline_end": 412,
     "choices": [
       {
         "key": "A",
@@ -5983,8 +5983,8 @@
     "explanation": "The revision effectively summarizes the profound impact of individual autonomy, directly linking the philosophical concept to its concrete historical consequences (movements for political and personal freedom). This strengthens the paragraph's coherence by providing a clear and powerful statement of cause and effect, enhancing the historical analysis.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 362,
+    "passage_underline_end": 421,
     "choices": [
       {
         "key": "A",
@@ -6016,8 +6016,8 @@
     "explanation": "The addition logically reinforces the paragraph's central theme of principled leadership by elaborating on the ultimate criterion for a statesman's success—rectitude over popularity. This strengthens the argument for unwavering commitment to justice, providing a coherent and forceful statement on the nature of true leadership.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 306,
+    "passage_underline_end": 427,
     "choices": [
       {
         "key": "A",
@@ -6049,8 +6049,8 @@
     "explanation": "The addition provides specific examples of the methods (\"rallies,\" \"investigative reports\") used by activists to achieve \"legislative action and public awareness.\" This clarifies and strengthens the explanation of their campaigning strategies, making the historical account more vivid and coherent.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 351,
     "choices": [
       {
         "key": "A",
@@ -6082,8 +6082,8 @@
     "explanation": "While ethnic conflicts are a real issue, the paragraph focuses on specific colonial legacies (borders, economic imbalances, institutions) as the source of post-independence challenges. Mentioning ethnic conflicts directly, without explaining their specific link to these legacies, introduces a new, distinct challenge that slightly disrupts the direct causal flow of the paragraph. Removing it keeps the focus tightly on the defined colonial legacies.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 306,
+    "passage_underline_end": 364,
     "choices": [
       {
         "key": "A",
@@ -6115,8 +6115,8 @@
     "explanation": "The sentence about factory location is largely redundant, as the preceding discussion of urban centers swelling with laborers already implies industrial growth in cities. Removing it improves conciseness and maintains a sharper focus on the paragraph's central theme of social inequity and the need for reform during the Industrial Revolution.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 316,
+    "passage_underline_end": 361,
     "choices": [
       {
         "key": "A",
@@ -6148,8 +6148,8 @@
     "explanation": "The revision generalizes the concept of specific actions like hunger strikes to the broader \"principled resistance,\" and then logically articulates its \"potent moral force.\" This strengthens the paragraph's philosophical explanation of nonviolent civil disobedience by focusing on its inherent power, rather than just listing an example.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 305,
+    "passage_underline_end": 351,
     "choices": [
       {
         "key": "A",
@@ -6181,8 +6181,8 @@
     "explanation": "The addition logically clarifies the nature of salons, a key mechanism for the dissemination of Enlightenment ideas, by providing a specific and relevant cultural detail. This enhances the paragraph's explanation of how these revolutionary concepts spread, improving coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 271,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -6214,8 +6214,8 @@
     "explanation": "The sentence about trading networks is largely redundant; the concept of \"resources flowing\" and \"economic subjugation\" already implies such networks. Removing it improves conciseness and maintains a sharper focus on the impact and legacy of colonialism's exploitative structures, enhancing the logical flow of the argument.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 385,
     "choices": [
       {
         "key": "A",
@@ -6247,8 +6247,8 @@
     "explanation": "The revision moves from a single event (Gettysburg Address) to a powerful summary of the war's overarching \"cataclysmic conclusion\" and its profound impact (\"reshaped the social and political landscape\"). This logically precedes and sets the stage for the specific outcomes of the war (abolition of slavery, indivisibility), enhancing the paragraph's argumentative flow and coherence.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 336,
+    "passage_underline_end": 393,
     "choices": [
       {
         "key": "A",
@@ -6280,8 +6280,8 @@
     "explanation": "The addition provides a specific, vivid example of the \"peaceful demonstrations\" used by suffrage advocates, thereby strengthening the description of their campaigning methods. This concrete detail enhances the clarity and impact of the historical explanation, making the abstract concept of advocacy more tangible.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 381,
     "choices": [
       {
         "key": "A",
@@ -6478,8 +6478,8 @@
     "explanation": "The paragraph's goal is to define and illustrate fast mapping. The underlined sentence is a very general comment about the state of research that doesn't add to the definition or the example. It feels like an afterthought and detracts from the clear, descriptive purpose of the passage.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 381,
     "choices": [
       {
         "key": "A",
@@ -6577,8 +6577,8 @@
     "explanation": "The paragraph is written in a formal, descriptive style, reporting on research findings about the \"word gap.\" The final sentence shifts into an instructional or advisory tone (\"It is crucial... for parents to...\"), which is inconsistent with the rest of the passage. While the advice is logical, it disrupts the academic tone.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 328,
+    "passage_underline_end": 412,
     "choices": [
       {
         "key": "A",
@@ -6676,8 +6676,8 @@
     "explanation": "The paragraph is specifically about how code-switching functions in bilingual children and how the perception of this behavior has changed. While the underlined statement is true, it distracts from the paragraph's focus on child language development, making the scope of the passage less clear.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 364,
+    "passage_underline_end": 425,
     "choices": [
       {
         "key": "A",
@@ -6874,8 +6874,8 @@
     "explanation": "The first sentence defines metalinguistic awareness as \"the ability to think and talk about language.\" The final sentence, \"they begin to treat language as an object of thought,\" is essentially a rephrasing of this same idea. It is redundant and does not add new information or clarity to the paragraph.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 381,
     "choices": [
       {
         "key": "A",
@@ -7039,8 +7039,8 @@
     "explanation": "The first two sentences describe what happens when a child hears a passive sentence. The final underlined sentence provides the interpretation, explaining the cognitive reason behind the error. Deleting it would remove the analytical conclusion that gives the paragraph its purpose.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 319,
+    "passage_underline_end": 396,
     "choices": [
       {
         "key": "A",
@@ -7303,8 +7303,8 @@
     "explanation": "The paragraph explains semantic development by discussing common errors. The concepts of underextension and overextension are two sides of the same coin; presenting both examples provides a more complete picture of how children refine word meanings.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 216,
+    "passage_underline_end": 301,
     "choices": [
       {
         "key": "A",
@@ -7402,8 +7402,8 @@
     "explanation": "The paragraph's argument is that the benefits of napping are nuanced. The underlined sentence is essential because it provides the other side of the story, contrasting the benefits of short naps with the different benefits of long naps. This contrast is the key evidence for the final sentence's conclusion that the nap's duration matters.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 165,
+    "passage_underline_end": 332,
     "choices": [
       {
         "key": "A",
@@ -7666,8 +7666,8 @@
     "explanation": "The paragraph explains that sleep deprivation impairs the hippocampus. The \"dry sponge\" analogy provides a powerful and intuitive metaphor for what this impairment means in practical terms—an inability to absorb new information. This analogy makes the scientific point more memorable and easier to understand.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 239,
+    "passage_underline_end": 329,
     "choices": [
       {
         "key": "A",
@@ -7765,8 +7765,8 @@
     "explanation": "The paragraph's main point is that sleep stabilizes motor memories. The underlined sentence is essential because it explains the practical benefit of this stabilization—making the memory \"more resistant to interference.\" This provides the direct scientific rationale for the specific example about the musician that follows.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 176,
+    "passage_underline_end": 293,
     "choices": [
       {
         "key": "A",
@@ -7897,8 +7897,8 @@
     "explanation": "The underlined sentence is essential because it provides the direct causal link between the \"replay\" of neural activity and the strengthening of memories. Deleting it would create a logical gap, leaving the reader to wonder how the replay actually achieves consolidation.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 316,
+    "passage_underline_end": 395,
     "choices": [
       {
         "key": "A",
@@ -7963,8 +7963,8 @@
     "explanation": "The first sentence makes an observation about the timing of sleep. The underlined sentence provides the theoretical explanation for this observation—the existence of a \"critical window.\" This analytical step is essential for understanding why a nap taken soon after learning is so effective.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 215,
+    "passage_underline_end": 356,
     "choices": [
       {
         "key": "A",
@@ -8194,8 +8194,8 @@
     "explanation": "The preceding sentence describes the process of extracting the \"gist.\" The underlined sentence explains the purpose or result of this process—achieving a deeper understanding. This is essential for setting up the specific example of the math problem that follows.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 279,
     "choices": [
       {
         "key": "A",
@@ -8260,8 +8260,8 @@
     "explanation": "The paragraph describes a two-part experimental process: pairing a cue with information during learning, and then re-presenting that cue during sleep. The underlined sentence describes the second part of this process. Deleting it would make the final sentence, which describes the outcome, completely nonsensical.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 222,
+    "passage_underline_end": 314,
     "choices": [
       {
         "key": "A",
@@ -8359,8 +8359,8 @@
     "explanation": "The concept of stripping emotion from a memory can be abstract. The underlined sentence, by using the familiar analogy of \"overnight therapy,\" provides a powerful and intuitive way for the reader to grasp the beneficial, restorative function being described.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 235,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -8392,8 +8392,8 @@
     "explanation": "The first sentence states that some memories are \"prioritized\" during sleep. The underlined sentence, \"the brain does not simply consolidate all recent experiences indiscriminately,\" is essentially a rephrasing of this same idea. It is redundant and can be removed for conciseness without losing any meaning.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 189,
+    "passage_underline_end": 286,
     "choices": [
       {
         "key": "A",
@@ -8425,8 +8425,8 @@
     "explanation": "The preceding sentence makes the general claim that curators \"vary the pace\" of an exhibition. The underlined sentence is essential because it provides specific, tangible examples of what this strategy looks like in practice. These examples are crucial for the reader's understanding of this key curatorial concept.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 394,
     "choices": [
       {
         "key": "A",
@@ -8491,8 +8491,8 @@
     "explanation": "The paragraph is tightly focused on defining the process and ethics of deaccessioning. The final sentence abruptly introduces a different concept, repatriation, without explaining what it is or how it relates, other than to say it's different. This creates a confusing and unhelpful conclusion to the paragraph.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 456,
+    "passage_underline_end": 500,
     "choices": [
       {
         "key": "A",
@@ -8557,8 +8557,8 @@
     "explanation": "The paragraph clearly states that a functional object is \"transformed\" when placed in a museum. The underlined sentence merely repeats this idea in the most basic possible terms (\"no longer just a pot\"). It adds no new information and weakens the paragraph's sophisticated argument.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 184,
+    "passage_underline_end": 222,
     "choices": [
       {
         "key": "A",
@@ -8656,8 +8656,8 @@
     "explanation": "The paragraph's central point is that curators are not neutral. The underlined sentence, while using the nice analogy of an \"author,\" essentially repeats this same idea. The paragraph is more concise and impactful by moving directly from \"The curator is not... neutral\" to the conclusion about the \"authorial role,\" as the latter implies the former.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 235,
+    "passage_underline_end": 324,
     "choices": [
       {
         "key": "A",
@@ -8722,8 +8722,8 @@
     "explanation": "The paragraph argues that a solo retrospective is a \"powerful act of canonization.\" The underlined sentence provides a specific and significant consequence of this act—the solidification of reputation and an increase in market value. This detail is essential for illustrating the tangible power that a curatorial decision of this kind holds.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 357,
     "choices": [
       {
         "key": "A",
@@ -8986,8 +8986,8 @@
     "explanation": "The paragraph establishes the importance of provenance. The underlined sentence is essential because it explains the inverse situation—the problem with a lack of provenance. This contrast is key to a full understanding of why provenance is so highly valued by curators.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 243,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -9052,8 +9052,8 @@
     "explanation": "The underlined sentence establishes the idea of a \"linear path.\" The following sentence then contrasts this with \"free-form exploration.\" The underlined sentence is necessary to set up this crucial contrast, which illustrates the different philosophical approaches to guiding the visitor's journey.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 281,
+    "passage_underline_end": 338,
     "choices": [
       {
         "key": "A",
@@ -9250,8 +9250,8 @@
     "explanation": "The paragraph is focused on the collaborative process of displaying culturally sensitive objects. The underlined sentence abruptly shifts the topic to repatriation—the return of objects. While related, this is a distinct issue that distracts from the paragraph's specific focus on curatorial choices for exhibition.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 406,
+    "passage_underline_end": 467,
     "choices": [
       {
         "key": "A",
@@ -9316,8 +9316,8 @@
     "explanation": "The paragraph describes the characteristics of a good wall label. The underlined sentence is essential because it explains the goal of these characteristics—to spark curiosity and open up interpretation, not shut it down. This distinction is key to a sophisticated understanding of a curator's approach to text.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 299,
+    "passage_underline_end": 416,
     "choices": [
       {
         "key": "A",
@@ -9448,8 +9448,8 @@
     "explanation": "The preceding sentence introduces the idea of a \"delicate balance.\" The underlined sentence is crucial because it defines the two sides of that balance: creating a popular experience versus maintaining scholarly standards. Deleting it would leave the central concept of the paragraph vague and unexplained.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 341,
+    "passage_underline_end": 499,
     "choices": [
       {
         "key": "A",
@@ -9646,8 +9646,8 @@
     "explanation": "The paragraph is dedicated to explaining how the density of penguin feathers provides insulation. Bringing in a comparison to a completely different bird from a different environment serves no purpose and interrupts the logical flow of the explanation.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 180,
+    "passage_underline_end": 256,
     "choices": [
       {
         "key": "A",
@@ -9745,8 +9745,8 @@
     "explanation": "The paragraph's topic is the insulating function of blubber. The sentence about diet, while related, is a tangent that interrupts the logical progression from what blubber is, how it works, and how effective it is.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 229,
+    "passage_underline_end": 320,
     "choices": [
       {
         "key": "A",
@@ -9811,8 +9811,8 @@
     "explanation": "The paragraph's focus is on what peripheral vasoconstriction does for heat conservation. The specific detail about the autonomic nervous system is an extraneous piece of information that does not add to the reader's understanding of the heat-saving function itself.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 334,
+    "passage_underline_end": 405,
     "choices": [
       {
         "key": "A",
@@ -9844,8 +9844,8 @@
     "explanation": "The paragraph describes the rotation within the huddle. The underlined sentence is critical because it explains the movement of penguins out from the center, which is the necessary counterpart to the movement of penguins in from the edge. Deleting it would present an incomplete picture of the rotation.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 192,
+    "passage_underline_end": 284,
     "choices": [
       {
         "key": "A",
@@ -9976,8 +9976,8 @@
     "explanation": "The paragraph has already stated that penguins \"can generate heat through shivering.\" The underlined sentence merely rephrases this basic fact in simpler terms, adding no new information and making the paragraph repetitive.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 378,
+    "passage_underline_end": 438,
     "choices": [
       {
         "key": "A",
@@ -10042,8 +10042,8 @@
     "explanation": "The paragraph is about the insulating (and non-waterproof) function of a chick's natal down. The visual description of the chick's color and fluffiness does not add any information about these thermal properties and thus distracts from the paragraph's specific scientific point.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 334,
+    "passage_underline_end": 400,
     "choices": [
       {
         "key": "A",
@@ -10075,8 +10075,8 @@
     "explanation": "The previous sentence makes the general claim that penguins must \"actively dissipate excess heat.\" The underlined sentence is essential because it provides a specific example of this behavior, making the abstract claim concrete and understandable for the reader.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 387,
     "choices": [
       {
         "key": "A",
@@ -10207,8 +10207,8 @@
     "explanation": "The paragraph is specifically about the thermoregulatory role of the penguin's coloration. Introducing the primary function of countershading (camouflage) distracts from this narrow focus and disrupts the logical flow of the argument about passive solar gain.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 240,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -10240,8 +10240,8 @@
     "explanation": "The paragraph's purpose is to summarize and synthesize the various adaptations discussed, framing them as an integrated system. The statement about evolution, while true, shifts the focus from how the system works to how it originated, making it a slight but unnecessary thematic detour in an otherwise focused concluding paragraph.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 338,
     "choices": [
       {
         "key": "A",
@@ -10339,8 +10339,8 @@
     "explanation": "The previous sentence describes the physical structure of the downy plumes. The underlined sentence is essential because it explains the direct consequence of that structure—its ability to trap air. Without this sentence, the paragraph would fail to connect the anatomical detail to its purpose in heat conservation.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 225,
+    "passage_underline_end": 339,
     "choices": [
       {
         "key": "A",
@@ -10372,8 +10372,8 @@
     "explanation": "Option D is the most effective revision because it uses sophisticated and precise language (\"thermal protection,\" \"long-term sustenance\") to synthesize the two functions of blubber discussed. It provides a concise and formal conclusion that elegantly summarizes the paragraph's main point about the adaptation's dual role.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 316,
+    "passage_underline_end": 379,
     "choices": [
       {
         "key": "A",
@@ -10438,8 +10438,8 @@
     "explanation": "The concept of \"overlapping\" is made much clearer and more memorable by the analogy to roof shingles. This comparison helps the reader visualize the structure and immediately understand its function as a protective, impenetrable layer, thereby strengthening the paragraph's explanation.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 147,
+    "passage_underline_end": 248,
     "choices": [
       {
         "key": "A",
@@ -10570,8 +10570,8 @@
     "explanation": "The paragraph lists several specific phenomena that plate tectonics explained. The underlined sentence provides a crucial synthesis of these points, summarizing the theory's conceptual shift—viewing the Earth as a single, interconnected system. This concluding statement is essential for capturing the full significance of the scientific revolution.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 351,
+    "passage_underline_end": 441,
     "choices": [
       {
         "key": "A",
@@ -10603,8 +10603,8 @@
     "explanation": "The paragraph presents specific evidence (matching rock layers) and then draws a conclusion (the continents were connected). The underlined sentence is an unnecessary and informal interjection. The logical link between the evidence and conclusion is stronger and more professional without it.",
     "avg_seconds": 35,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 297,
+    "passage_underline_end": 323,
     "choices": [
       {
         "key": "A",
@@ -10669,8 +10669,8 @@
     "explanation": "The paragraph uses the example of an ice sheet to explain isostasy. The underlined sentence provides the crucial second half of this example, showing what happens when the weight is removed. This illustrates the dynamic, \"floating\" equilibrium described in the topic sentence and is essential for a complete understanding of the principle.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 355,
+    "passage_underline_end": 437,
     "choices": [
       {
         "key": "A",
@@ -10768,8 +10768,8 @@
     "explanation": "The paragraph's main point is the \"balance between creation and destruction.\" The underlined sentence powerfully reinforces this point by explaining the logical consequence if one half of that balance (destruction via subduction) did not exist. This thought experiment is essential for understanding why subduction is a necessary component of the system.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 209,
+    "passage_underline_end": 319,
     "choices": [
       {
         "key": "A",
@@ -10834,8 +10834,8 @@
     "explanation": "The paragraph presents evidence of ancient glaciers in certain locations. The underlined sentence is vital because it highlights the central paradox: these locations are now warm. This apparent contradiction is the key problem that the theory of continental drift is then used to explain.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 252,
+    "passage_underline_end": 316,
     "choices": [
       {
         "key": "A",
@@ -11065,8 +11065,8 @@
     "explanation": "The first sentence already establishes that the theory explains the \"large-scale motions\" of the lithosphere. The underlined sentence merely repeats this core idea in simpler terms (\"constant, slow motion\"), making it redundant and unnecessary for the paragraph's logical development.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 251,
+    "passage_underline_end": 293,
     "choices": [
       {
         "key": "A",
@@ -11560,8 +11560,8 @@
     "explanation": "The paragraph describes the process of a plate moving over a stationary hotspot to form a chain of volcanoes. The Hawaiian Islands are the textbook example of this phenomenon. Including this sentence provides a concrete and easily visualized illustration of the abstract geological process described.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 312,
+    "passage_underline_end": 396,
     "choices": [
       {
         "key": "A",
@@ -11626,8 +11626,8 @@
     "explanation": "The paragraph is focused on the historical function and evolution of stamp cancellations in the 19th century. The underlined sentence abruptly shifts the topic to modern-day collecting, which is a tangential point that disrupts the historical narrative.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 397,
     "choices": [
       {
         "key": "A",
@@ -11659,8 +11659,8 @@
     "explanation": "The paragraph makes the strong claim that fast mail trains were given \"priority over all other rail traffic.\" The underlined sentence provides a striking and specific example of this prioritization—picking up mail without stopping. This detail is essential evidence that supports and illustrates the paragraph's central argument.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 241,
+    "passage_underline_end": 352,
     "choices": [
       {
         "key": "A",
@@ -11725,8 +11725,8 @@
     "explanation": "The final sentence makes the claim that the new buildings \"reflected the growing importance\" of the postal service. The underlined sentence provides the key evidence for this claim by specifying that the buildings were constructed in \"grand\" styles. This detail is essential to support the paragraph's concluding analysis.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 341,
+    "passage_underline_end": 447,
     "choices": [
       {
         "key": "A",
@@ -11791,8 +11791,8 @@
     "explanation": "The paragraph claims that mail subsidies were a \"key tool of... economic development.\" The underlined sentence provides the crucial mechanism for this, explaining how the guaranteed income from mail contracts led to innovation and better service. Without this sentence, the paragraph's main claim would lack its central supporting argument.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 411,
     "choices": [
       {
         "key": "A",
@@ -11824,8 +11824,8 @@
     "explanation": "The paragraph makes several claims about the postal service's impact (collapsing distances, facilitating commerce). The underlined sentence synthesizes these points into a single, powerful argument about the institution's central role in the lives of citizens. It acts as a strong concluding thought that encapsulates the paragraph's main theme.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 417,
     "choices": [
       {
         "key": "A",
@@ -11890,8 +11890,8 @@
     "explanation": "The paragraph describes the shift from folded letters to envelopes. The underlined sentence is essential because it explains the economic motivation behind the old method—high postage costs based on the number of sheets. This provides the necessary context for understanding why the reforms, which changed the pricing structure, led to the adoption of envelopes.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 212,
+    "passage_underline_end": 362,
     "choices": [
       {
         "key": "A",
@@ -12022,8 +12022,8 @@
     "explanation": "The paragraph is focused on the technical aspects of stamps that prevented forgery (intricate designs, watermarks, intaglio printing). The specific subject of the portrait on the Penny Black is a piece of trivia that does not contribute to this technical explanation of security features.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 181,
+    "passage_underline_end": 235,
     "choices": [
       {
         "key": "A",
@@ -12088,8 +12088,8 @@
     "explanation": "The paragraph is entirely focused on the system of multiple daily mail deliveries and its impact on commerce. The final sentence abruptly introduces the telephone, a different subject, which disrupts the paragraph's unity and focus. While historically relevant, it's a non sequitur in this specific context.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 320,
+    "passage_underline_end": 411,
     "choices": [
       {
         "key": "A",
@@ -12121,8 +12121,8 @@
     "explanation": "The underlined sentence serves as the paragraph's main argument, explaining the broad impact of the Penny Black. The surrounding sentences provide the details of the reform and the prior system, all of which support this central claim about making communication more accessible.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 299,
+    "passage_underline_end": 409,
     "choices": [
       {
         "key": "A",
@@ -12187,8 +12187,8 @@
     "explanation": "The original sentence is a bit generic. Option B is superior because it specifically identifies the two main weaknesses of the old system (\"inefficient for postal clerks\" and \"unpredictable for the public\"). This creates a perfect logical bridge to the next sentence, which explains how stamps solved these very problems.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 214,
+    "passage_underline_end": 262,
     "choices": [
       {
         "key": "A",
@@ -12220,8 +12220,8 @@
     "explanation": "The paragraph presents a claim (stamps project identity), offers evidence (portraits of presidents), and then needs analysis. The underlined sentence provides this essential analysis, explaining what the choice of portraits signified. Without it, the link between the evidence and the main claim would be much weaker.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 363,
     "choices": [
       {
         "key": "A",
@@ -12352,8 +12352,8 @@
     "explanation": "While the printing of stamps is relevant, the inclusion of \"currency\" in the same sentence introduces a topic (monetary systems) that falls outside the scope of a paragraph about postal challenges during the war. This makes the sentence as a whole distracting and slightly off-topic.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 294,
+    "passage_underline_end": 351,
     "choices": [
       {
         "key": "A",
@@ -12418,8 +12418,8 @@
     "explanation": "The paragraph's primary focus is on the logistical innovation of the RMS and how it increased the speed of mail delivery. The sentence about the dangers faced by clerks, while a valid historical point, is a tangent that interrupts the explanation of the service's efficiency.",
     "avg_seconds": 40,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 289,
+    "passage_underline_end": 379,
     "choices": [
       {
         "key": "A",
@@ -12484,8 +12484,8 @@
     "explanation": "The previous sentence states that the UPU \"standardized international postage rates.\" The underlined sentence translates this abstract concept into a concrete and powerful result: a single stamp for international mail. This clarifies the real-world impact of the reform and is essential for a full understanding.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 369,
+    "passage_underline_end": 451,
     "choices": [
       {
         "key": "A",
@@ -12649,8 +12649,8 @@
     "explanation": "The addition logically clarifies the context where cognitive load theory is most relevant: during the acquisition of new and complex skills. This provides a more specific and practical application of the theory, strengthening the passage's explanatory power and coherence.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 312,
+    "passage_underline_end": 418,
     "choices": [
       {
         "key": "A",
@@ -12682,8 +12682,8 @@
     "explanation": "The sentence about student preferences for cramming, while a common observation, is extraneous to the scientific explanation of how spaced repetition works and why it is effective. Removing it maintains a consistent focus on the neurological and practical benefits of the learning method, improving the paragraph's scientific coherence.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 397,
+    "passage_underline_end": 475,
     "choices": [
       {
         "key": "A",
@@ -12715,8 +12715,8 @@
     "explanation": "The sentence about educational systems relying on grades, while illustrating a point about extrinsic motivation, is an example of practice rather than a direct part of the psychological explanation of motivation itself. Removing it maintains a tighter focus on the theoretical concepts of intrinsic and extrinsic motivation, improving the paragraph's scientific coherence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 376,
+    "passage_underline_end": 466,
     "choices": [
       {
         "key": "A",
@@ -12748,8 +12748,8 @@
     "explanation": "The revision transforms a specific attribution (to Carol Dweck) into a broader, more impactful statement about the consequences of mindset on academic resilience and learning outcomes. This strengthens the logical flow by elevating the discussion from historical context to the direct implications of the theory for learning behavior, which is the paragraph's central theme.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 366,
+    "passage_underline_end": 410,
     "choices": [
       {
         "key": "A",
@@ -12781,8 +12781,8 @@
     "explanation": "The addition logically summarizes the core practical takeaway of distributed practice, stating that \"regular short study sessions are more effective than infrequent long ones.\" This reinforces the passage's explanation by explicitly articulating the behavioral consequence of the spacing effect, improving clarity and application.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 309,
+    "passage_underline_end": 383,
     "choices": [
       {
         "key": "A",
@@ -12814,8 +12814,8 @@
     "explanation": "The sentence attributing the concept to Bandura, while historically accurate, is not essential for explaining what self-efficacy is or how it impacts learning behavior, which is the paragraph's core focus. Removing it maintains a tighter, more coherent focus on the concept itself and its psychological implications, aligning with the style of a study on learning behavior.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 402,
     "choices": [
       {
         "key": "A",
@@ -12847,8 +12847,8 @@
     "explanation": "The revision transforms a simple observation about perceived difficulty into a formal explanation of why that difficulty is beneficial, focusing on the underlying \"cognitive challenge\" and its positive impact on \"memory retrieval and discriminative learning.\" This strengthens the logical flow by explicitly linking the initial challenge of interleaving to its long-term learning advantages, aligning with the scientific tone of the passage.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 380,
+    "passage_underline_end": 462,
     "choices": [
       {
         "key": "A",
@@ -12880,8 +12880,8 @@
     "explanation": "The addition logically provides insight into the scientific investigation of elaborative interrogation by mentioning research methods like fMRI. This contextualizes the discussion of the learning strategy within the broader field of cognitive psychology, enhancing the passage's academic credibility and coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 336,
+    "passage_underline_end": 428,
     "choices": [
       {
         "key": "A",
@@ -12913,8 +12913,8 @@
     "explanation": "The revision transforms a specific example into a powerful, overarching statement about the fundamental principle behind desirable difficulties: the necessity of \"effortful cognitive engagement\" for \"durable and transferable knowledge.\" This strengthens the logical flow by elevating the discussion to the core pedagogical implication, aligning with the analytical tone of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 455,
     "choices": [
       {
         "key": "A",
@@ -12946,8 +12946,8 @@
     "explanation": "The addition logically provides empirical evidence for the importance of prior knowledge by stating its effect on the speed and effectiveness of new concept acquisition. This strengthens the argument by demonstrating a direct and measurable benefit, enhancing the passage's persuasive force.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 443,
     "choices": [
       {
         "key": "A",
@@ -12979,8 +12979,8 @@
     "explanation": "The specific numerical range for working memory capacity, while accurate, is a detailed fact that slightly interrupts the paragraph's broader explanation of how working memory functions and why its limitations impact learning efficiency. Removing it maintains a tighter focus on the conceptual explanation and its implications for instructional design, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 256,
+    "passage_underline_end": 334,
     "choices": [
       {
         "key": "A",
@@ -13012,8 +13012,8 @@
     "explanation": "The revision transforms a general observation about student difficulty into a formal and active statement emphasizing the positive impact of metacognitive self-monitoring. This strengthens the logical flow by highlighting the purpose and outcome of developing such skills, aligning with the academic tone of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 326,
+    "passage_underline_end": 406,
     "choices": [
       {
         "key": "A",
@@ -13045,8 +13045,8 @@
     "explanation": "The revision moves from a specific caveat (about feedback) to a powerful, formal statement about the cognitive mechanisms and benefits of retrieval practice itself. This strengthens the logical flow by elaborating on the core principle of how active recall enhances learning, providing a deeper and more scientific explanation consistent with a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 272,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -13078,8 +13078,8 @@
     "explanation": "The addition logically provides broader theoretical context by connecting the ZPD to Vygotsky's emphasis on culture. This enriches the understanding of the ZPD's origins within a larger framework of cognitive development, improving the coherence of the discussion about instructional effectiveness.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 366,
+    "passage_underline_end": 447,
     "choices": [
       {
         "key": "A",
@@ -13111,8 +13111,8 @@
     "explanation": "The sentence about sleep, while relevant to memory, introduces a specific external factor influencing inhibition rather than directly elaborating on the types or mechanisms of inhibition itself, which is the paragraph's core focus. Removing it maintains a tighter, more coherent explanation of the cognitive process of inhibition, aligning with the style of a psychological study.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 365,
+    "passage_underline_end": 449,
     "choices": [
       {
         "key": "A",
@@ -13144,8 +13144,8 @@
     "explanation": "The revision transforms a specific outcome (\"lifelong learning\") into a more profound and comprehensive statement about the broader impact of intrinsic motivation on \"intellectual curiosity and autonomous cognitive growth.\" This strengthens the logical conclusion by articulating the deeper, more holistic benefits of intrinsic drive, fitting the academic tone of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 327,
+    "passage_underline_end": 412,
     "choices": [
       {
         "key": "A",
@@ -13177,8 +13177,8 @@
     "explanation": "The addition logically provides concrete, relatable examples of individuals (athletes, artists) who experience flow, illustrating its manifestation beyond academic learning. This broadens the understanding of the concept and strengthens its real-world relevance, improving the passage's explanatory power.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 416,
     "choices": [
       {
         "key": "A",
@@ -13210,8 +13210,8 @@
     "explanation": "The sentence describing schemas' general function of making sense of the world, while true, is less directly focused on their specific role in the learning process (encoding, retrieval of new information). Removing it maintains a tighter focus on how schemas facilitate learning, improving conciseness and logical coherence within the context of a learning behavior study.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 356,
     "choices": [
       {
         "key": "A",
@@ -13243,8 +13243,8 @@
     "explanation": "The revision transforms a specific methodological detail (studies using meditation) into a comprehensive and formal statement about the cognitive and emotional benefits of mindfulness on learning capacity. This strengthens the logical conclusion by articulating the deeper, underlying mechanisms through which mindfulness optimizes learning, consistent with the academic tone of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 363,
+    "passage_underline_end": 442,
     "choices": [
       {
         "key": "A",
@@ -13276,8 +13276,8 @@
     "explanation": "The addition logically provides insight into the scientific investigation of emotional states in learning by mentioning research methods like biofeedback. This contextualizes the discussion within the broader field of educational psychology, enhancing the passage's academic credibility and coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 367,
+    "passage_underline_end": 465,
     "choices": [
       {
         "key": "A",
@@ -13309,8 +13309,8 @@
     "explanation": "The sentence about avoiding difficult subjects is a specific behavioral manifestation that is already strongly implied by the description of a fixed mindset's characteristics (avoidance of challenge, fear of failure). Deleting it improves conciseness and maintains a tighter focus on the conceptual definition and broad implications of the fixed mindset, aligning with the style of a psychological study.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 313,
+    "passage_underline_end": 389,
     "choices": [
       {
         "key": "A",
@@ -13342,8 +13342,8 @@
     "explanation": "The revision transforms a specific example into a powerful, overarching statement about the fundamental scientific principle behind desirable difficulties and its implications for instructional design. This strengthens the logical flow by elevating the discussion to the core pedagogical and cognitive implications, fitting the academic rigor of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 392,
+    "passage_underline_end": 482,
     "choices": [
       {
         "key": "A",
@@ -13375,8 +13375,8 @@
     "explanation": "The addition logically introduces a critical condition for scaffolding's success: the need for careful assessment. This nuance is vital for a comprehensive understanding of the concept, strengthening the passage's instructional relevance by emphasizing the necessary precision in its application.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 328,
+    "passage_underline_end": 480,
     "choices": [
       {
         "key": "A",
@@ -13408,8 +13408,8 @@
     "explanation": "The addition logically clarifies a common counterintuitive aspect of interleaving: its initial difficulty versus long-term benefits. This nuance is crucial for instructors and learners, as it addresses a potential barrier to adoption, thereby strengthening the passage's practical guidance and overall coherence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 336,
+    "passage_underline_end": 434,
     "choices": [
       {
         "key": "A",
@@ -13441,8 +13441,8 @@
     "explanation": "The sentence about regular quizzing, while a valid application, is a specific practical example rather than a direct part of the scientific explanation of how the testing effect works. Removing it maintains a tighter focus on the conceptual definition and underlying mechanisms of the testing effect, improving conciseness and logical coherence within a psychological study.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 391,
+    "passage_underline_end": 460,
     "choices": [
       {
         "key": "A",
@@ -13474,8 +13474,8 @@
     "explanation": "The sentence about athletes, while an accurate example, is not central to the definition or mechanisms of deliberate practice itself. Removing it maintains a tighter focus on the conceptual explanation and its universal principles, improving the paragraph's academic conciseness and logical coherence.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 397,
     "choices": [
       {
         "key": "A",
@@ -13507,8 +13507,8 @@
     "explanation": "The revision transforms a specific observation about variability into a formal and comprehensive statement about the implications of the Yerkes-Dodson Law for creating optimal learning environments. This strengthens the logical flow by transitioning from a detail to a broader, more impactful conclusion, fitting the academic tone of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 451,
     "choices": [
       {
         "key": "A",
@@ -13540,8 +13540,8 @@
     "explanation": "The addition logically provides empirical support for the effectiveness of active recall by stating that students using it perform better on exams. This strengthens the argument for its pedagogical value by providing direct evidence of its positive impact, enhancing the passage's persuasive force.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 331,
+    "passage_underline_end": 404,
     "choices": [
       {
         "key": "A",
@@ -13573,8 +13573,8 @@
     "explanation": "The sentence, while factual, is an observation about the relative difficulty of transfer types rather than a direct explanation of the concept of transfer itself or its significance for expertise. Removing it maintains a tighter focus on the definition of transfer and its role in deep understanding, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 393,
     "choices": [
       {
         "key": "A",
@@ -13606,8 +13606,8 @@
     "explanation": "The revision elevates the explanation from merely stating an observed outcome to providing a more formal and precise description of the underlying cognitive mechanisms of elaboration (forging conceptual networks, enhancing encoding/retrieval). This strengthens the logical flow by explaining how elaboration works at a deeper level, fitting the academic rigor of a psychological study.",
     "avg_seconds": 90,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 292,
+    "passage_underline_end": 375,
     "choices": [
       {
         "key": "A",
@@ -13639,8 +13639,8 @@
     "explanation": "The addition logically introduces a crucial nuance: that feedback's effectiveness is contingent upon its design and delivery. This provides a more balanced and comprehensive understanding of the role of feedback, strengthening the passage's practical implications for instructional design.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 293,
+    "passage_underline_end": 362,
     "choices": [
       {
         "key": "A",
@@ -13672,8 +13672,8 @@
     "explanation": "The addition logically connects the absorption of light energy to its conversion into chemical energy (glucose), which is the primary purpose of photosynthesis. This clarifies the energy transformation process, improving the coherence of the scientific explanation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 175,
+    "passage_underline_end": 249,
     "choices": [
       {
         "key": "A",
@@ -13705,8 +13705,8 @@
     "explanation": "The sentence about volcano locations, while true, diverts from the paragraph's focused explanation of how volcanic eruptions occur (the mechanics of pressure buildup and magma release). Removing it maintains the logical flow and clarity of the scientific process being described.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 249,
+    "passage_underline_end": 300,
     "choices": [
       {
         "key": "A",
@@ -13738,8 +13738,8 @@
     "explanation": "The sentence about rock composition is a general, almost self-evident fact that does not specifically contribute to the explanation of chemical weathering itself. Removing it maintains a tighter focus on the chemical reactions and agents involved, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 261,
+    "passage_underline_end": 314,
     "choices": [
       {
         "key": "A",
@@ -13771,8 +13771,8 @@
     "explanation": "The revision logically synthesizes the previous details about navigational cues into a concise statement about \"innate navigational ability.\" This directly links the how (cues) to the what (precise seasonal movements) of migration, enhancing the overall clarity and coherence of the scientific explanation.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 347,
+    "passage_underline_end": 409,
     "choices": [
       {
         "key": "A",
@@ -13804,8 +13804,8 @@
     "explanation": "The addition provides the crucial logical step between the charged particles colliding with atoms and the resulting emission of light. This clarifies the mechanism by which the aurora is formed, improving the precision and coherence of the scientific explanation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 319,
+    "passage_underline_end": 411,
     "choices": [
       {
         "key": "A",
@@ -13837,8 +13837,8 @@
     "explanation": "The sentence about osmosis's vitality is a general statement that is then immediately elaborated upon by the following, more specific examples (cell turgor, nutrient absorption). Removing it prevents redundancy and allows the paragraph to flow more directly into the supporting details that exemplify its importance, improving conciseness and logical progression.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 287,
+    "passage_underline_end": 349,
     "choices": [
       {
         "key": "A",
@@ -13870,8 +13870,8 @@
     "explanation": "The revision logically connects the scientific concept of half-life to its practical application in dating. This enhances the clarity and relevance of the explanation by showing why the consistency of the decay rate is significant, moving beyond a mere listing of uses.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 388,
     "choices": [
       {
         "key": "A",
@@ -13903,8 +13903,8 @@
     "explanation": "The addition logically explains the predictability of eclipses, connecting it to the \"consistent orbits of celestial bodies.\" This enhances the scientific explanation by providing a deeper insight into the underlying astronomical principles that govern these events.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 392,
     "choices": [
       {
         "key": "A",
@@ -13936,8 +13936,8 @@
     "explanation": "The sentence defining glaciers as \"massive bodies of ice\" is a very basic, almost self-evident statement in the context of explaining glaciation. Removing it streamlines the paragraph's focus on the process of glacier formation and movement, improving conciseness and logical flow.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 219,
+    "passage_underline_end": 254,
     "choices": [
       {
         "key": "A",
@@ -13969,8 +13969,8 @@
     "explanation": "The revision replaces a slightly more colloquial phrase with precise scientific terminology (\"cyclical movement,\" \"efficient redistribution of thermal energy\"). This enhances the logical clarity and scientific rigor of the explanation, aligning it more closely with the formal style of a scientific text.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 262,
+    "passage_underline_end": 340,
     "choices": [
       {
         "key": "A",
@@ -14002,8 +14002,8 @@
     "explanation": "The addition logically bridges the gap between diamond formation in the mantle and their eventual accessibility near the surface. It introduces the geological mechanism (\"kimberlite pipes\") by which they are transported, making the entire process more coherent and complete.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -14035,8 +14035,8 @@
     "explanation": "The sentence about water's boiling point, while a related concept, is not essential to the explanation of the general process of evaporation, which occurs at temperatures below boiling. Removing it maintains the paragraph's focus on the mechanics and influencing factors of evaporation, improving its logical coherence.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 324,
     "choices": [
       {
         "key": "A",
@@ -14068,8 +14068,8 @@
     "explanation": "The revision replaces a simple factual statement with a more precise scientific description of how the snowflake's unique shape develops. This enhances the logical flow by explaining why the shape is intricate, aligning with the \"scientific explanation\" objective of the passage.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 378,
     "choices": [
       {
         "key": "A",
@@ -14101,8 +14101,8 @@
     "explanation": "The revision improves logical flow by summarizing the purpose and consequence of cellular respiration (energy conversion for vital functions), directly linking back to the opening sentence about ATP as energy currency. This provides a coherent overarching statement for the detailed process described.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 388,
     "choices": [
       {
         "key": "A",
@@ -14134,8 +14134,8 @@
     "explanation": "The addition logically provides crucial context for the initiation of germination by listing the necessary external conditions. This improves the completeness of the scientific explanation by addressing both the internal (enzyme activation) and external factors required for the process.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 219,
+    "passage_underline_end": 306,
     "choices": [
       {
         "key": "A",
@@ -14167,8 +14167,8 @@
     "explanation": "While factually accurate, the term \"supercell thunderstorms\" is a more specific meteorological classification that is not defined or elaborated upon in this general explanation of tornado formation. Removing it maintains a clearer, more accessible explanation without introducing an undefined specialized term, thus improving logical flow for a general audience.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 261,
+    "passage_underline_end": 321,
     "choices": [
       {
         "key": "A",
@@ -14200,8 +14200,8 @@
     "explanation": "The revision improves logical flow by explicitly linking sound's dependence on a medium (stated earlier) to the resulting variation in its speed across different substances. This connection provides a more complete and scientifically precise explanation of the phenomenon, enhancing clarity.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 224,
+    "passage_underline_end": 304,
     "choices": [
       {
         "key": "A",
@@ -14233,8 +14233,8 @@
     "explanation": "The addition provides essential information about how cellular differentiation is controlled, introducing the concept of genetic regulation. This deepens the scientific explanation by moving beyond mere description to an underlying mechanism, enhancing the overall understanding of the process.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 250,
+    "passage_underline_end": 306,
     "choices": [
       {
         "key": "A",
@@ -14266,8 +14266,8 @@
     "explanation": "The sentence about volcanoes and mountain ranges jumps ahead to the results of plate tectonics before the paragraph fully explains the mechanisms of plate movement and how they lead to these phenomena. Removing it ensures a more logical progression from mechanism to consequence, improving coherence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 267,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -14299,8 +14299,8 @@
     "explanation": "The revision provides a more scientific and precise explanation for why crystals have specific forms, linking it directly to their \"ordered arrangement.\" This strengthens the logical flow by explaining the cause-and-effect relationship in a more formal and informative manner, consistent with a scientific explanation.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 346,
+    "passage_underline_end": 419,
     "choices": [
       {
         "key": "A",
@@ -14332,8 +14332,8 @@
     "explanation": "The addition logically provides a broad historical context for the application of fermentation, setting up the subsequent discussion of industrial uses. This enhances the paragraph's overall relevance by demonstrating the long-standing significance of this natural phenomenon beyond its biochemical mechanism.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 243,
+    "passage_underline_end": 339,
     "choices": [
       {
         "key": "A",
@@ -14365,8 +14365,8 @@
     "explanation": "The sentence about deep-sea creatures and prey attraction provides a specific example of a function, which is then generalized in the very next sentence (communication, camouflage, predation). Removing this specific example here allows the paragraph to maintain a more logical structure, moving from the mechanism of light production directly to its various general functions, improving coherence.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 378,
     "choices": [
       {
         "key": "A",
@@ -14398,8 +14398,8 @@
     "explanation": "The revision transforms a simple factual statement into a more dynamic and comprehensive summary of erosion's long-term impact on Earth's surface. This logically concludes the paragraph by providing a broader perspective on the phenomenon's significance, enhancing the scientific explanation's scope and clarity.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 289,
+    "passage_underline_end": 349,
     "choices": [
       {
         "key": "A",
@@ -14431,8 +14431,8 @@
     "explanation": "The addition logically reinforces the importance of the natural greenhouse effect by explaining its fundamental role in making Earth habitable. This strengthens the transition to the discussion of human-induced intensification by providing context for the natural process's beneficial aspects.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 215,
+    "passage_underline_end": 354,
     "choices": [
       {
         "key": "A",
@@ -14464,8 +14464,8 @@
     "explanation": "The addition of the Meissner effect, another defining property of superconductors, logically enhances the explanation by providing additional scientific detail relevant to their overall utility. This broadens the understanding of their unique characteristics that enable advanced applications.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 282,
+    "passage_underline_end": 358,
     "choices": [
       {
         "key": "A",
@@ -14497,8 +14497,8 @@
     "explanation": "The sentence listing specific types of metamorphic rocks interrupts the paragraph's focused explanation of the process of metamorphism (how rocks are altered). Removing it maintains a clearer, more coherent flow describing the mechanisms and resulting changes in rock properties, rather than diving into specific classifications.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 247,
+    "passage_underline_end": 318,
     "choices": [
       {
         "key": "A",
@@ -14530,8 +14530,8 @@
     "explanation": "While factually correct, the sentence about full moons introduces a specific detail (\"highest tides\") without explaining why this occurs (the alignment of the Moon and Sun). This disrupts the paragraph's focus on the general mechanism of tidal bulges. Deleting it maintains a clear explanation of basic tidal formation.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 300,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -14563,8 +14563,8 @@
     "explanation": "The revision logically explains the implication of electromagnetic waves' ability to travel through a vacuum, linking it to their capacity to cover vast cosmic distances. This improves the coherence by providing the scientific significance of the preceding statement, rather than just stating a numerical fact.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 250,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -14596,8 +14596,8 @@
     "explanation": "The addition of a common example like fireflies helps to ground the scientific explanation of bioluminescence, making it more relatable and understandable to the reader. This improves clarity by providing a concrete instance of the abstract concept being explained.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 377,
     "choices": [
       {
         "key": "A",
@@ -14629,8 +14629,8 @@
     "explanation": "While the definition of tectonic plates is accurate, this paragraph's main focus is on the mechanism of earthquakes (energy release along fault lines). The sentence about plate definition slightly breaks the flow of the causal explanation. Deleting it tightens the focus on the earthquake mechanism.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 258,
+    "passage_underline_end": 316,
     "choices": [
       {
         "key": "A",
@@ -14662,8 +14662,8 @@
     "explanation": "The revision more clearly connects the physical process of light refraction to the resulting \"optical illusion\" and its effect on human perception. This strengthens the logical transition by emphasizing the visual consequence of the light bending, thus improving the overall explanation of how mirages work.",
     "avg_seconds": 85,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 262,
+    "passage_underline_end": 342,
     "choices": [
       {
         "key": "A",
@@ -14695,8 +14695,8 @@
     "explanation": "The addition provides a crucial logical link in the water cycle, explaining how rising water vapor leads to cloud formation before precipitation. This clarifies the sequence of events, making the overall explanation more complete and coherent.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 253,
+    "passage_underline_end": 320,
     "choices": [
       {
         "key": "A",
@@ -240187,8 +240187,8 @@
     "explanation": "The noun \"town\" is singular, and the \"folk\" belong to the town. The possessive form requires an apostrophe before the 's' (town's). This tests apostrophes for singular possession.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 266,
     "choices": [
       {
         "key": "A",
@@ -240352,8 +240352,8 @@
     "explanation": "The \"fury\" belongs to a singular \"gale.\" Therefore, the possessive form requires an apostrophe before the 's' (gale's). This tests apostrophes for singular possession.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 206,
+    "passage_underline_end": 220,
     "choices": [
       {
         "key": "A",
@@ -240484,8 +240484,8 @@
     "explanation": "\"Children\" is an irregular plural noun. To show possession, an apostrophe followed by an 's' is needed (children's). This tests apostrophes with irregular plural nouns.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 189,
+    "passage_underline_end": 211,
     "choices": [
       {
         "key": "A",
@@ -240880,8 +240880,8 @@
     "explanation": "The \"jewels\" belong to a singular \"countess.\" Therefore, the possessive form requires an apostrophe before the 's' (countess's). This tests apostrophes for singular possession.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 173,
+    "passage_underline_end": 194,
     "choices": [
       {
         "key": "A",
@@ -241705,8 +241705,8 @@
     "explanation": "The noun \"historian\" is singular, and it possesses the \"analysis.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 224,
+    "passage_underline_end": 244,
     "choices": [
       {
         "key": "A",
@@ -241804,8 +241804,8 @@
     "explanation": "An introductory phrase like \"For example\" should be followed by a comma to separate it from the independent clause. No change is needed. This tests commas with introductory phrases.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 200,
+    "passage_underline_end": 212,
     "choices": [
       {
         "key": "A",
@@ -242101,8 +242101,8 @@
     "explanation": "An introductory phrase like \"For instance\" should be followed by a comma to separate it from the independent clause. No change is needed. This tests commas with introductory phrases.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 234,
+    "passage_underline_end": 247,
     "choices": [
       {
         "key": "A",
@@ -242992,8 +242992,8 @@
     "explanation": "The noun \"shoe\" is singular, and it possesses the \"development.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 170,
+    "passage_underline_end": 188,
     "choices": [
       {
         "key": "A",
@@ -243355,8 +243355,8 @@
     "explanation": "A colon is used to introduce a list that follows a complete independent clause. The clause \"This direct assessment helps the colony prioritize foraging efforts for optimal resource collection, including\" is complete before the list begins. This tests colons.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 297,
+    "passage_underline_end": 345,
     "choices": [
       {
         "key": "A",
@@ -243784,8 +243784,8 @@
     "explanation": "The noun \"predator\" is singular, and it possesses the \"confusion.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 190,
+    "passage_underline_end": 210,
     "choices": [
       {
         "key": "A",
@@ -243850,8 +243850,8 @@
     "explanation": "A colon is used to introduce a list that follows a complete independent clause. The clause \"This crucial information ensures the colony's hydration needs are met, especially in hot conditions, providing essential resources like\" is complete before the list begins. This tests colons.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 348,
     "choices": [
       {
         "key": "A",
@@ -243883,8 +243883,8 @@
     "explanation": "An introductory phrase like \"For example\" should be followed by a comma to separate it from the independent clause. No change is needed. This tests commas with introductory phrases.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 242,
+    "passage_underline_end": 254,
     "choices": [
       {
         "key": "A",
@@ -243949,8 +243949,8 @@
     "explanation": "The noun \"queen\" is singular, and it possesses the \"presence.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 201,
+    "passage_underline_end": 217,
     "choices": [
       {
         "key": "A",
@@ -244180,8 +244180,8 @@
     "explanation": "An introductory phrase like \"For instance\" should be followed by a comma to separate it from the independent clause. No change is needed. This tests commas with introductory phrases.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 187,
+    "passage_underline_end": 200,
     "choices": [
       {
         "key": "A",
@@ -246787,8 +246787,8 @@
     "explanation": "The noun \"teacher\" is singular, and it possesses the \"guidance.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 217,
+    "passage_underline_end": 235,
     "choices": [
       {
         "key": "A",
@@ -247018,8 +247018,8 @@
     "explanation": "A colon is used to introduce a list that follows a complete independent clause. The clause \"This includes factors such as\" is complete before the list begins. This tests colons.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 181,
+    "passage_underline_end": 256,
     "choices": [
       {
         "key": "A",
@@ -247447,8 +247447,8 @@
     "explanation": "A conjunctive adverb like \"Furthermore\" at the beginning of a sentence should be followed by a comma. No change is needed.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 190,
+    "passage_underline_end": 202,
     "choices": [
       {
         "key": "A",
@@ -247645,8 +247645,8 @@
     "explanation": "The noun \"person\" is singular, and it possesses the \"emotional state.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 190,
+    "passage_underline_end": 214,
     "choices": [
       {
         "key": "A",
@@ -247744,8 +247744,8 @@
     "explanation": "The noun \"brain\" is singular, and it possesses the \"nightly efforts.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 186,
+    "passage_underline_end": 209,
     "choices": [
       {
         "key": "A",
@@ -247843,8 +247843,8 @@
     "explanation": "The noun \"student\" is singular, and it possesses the \"practice.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 217,
     "choices": [
       {
         "key": "A",
@@ -248008,8 +248008,8 @@
     "explanation": "The noun \"memory\" is singular, and it possesses the \"emotional valence.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 218,
+    "passage_underline_end": 244,
     "choices": [
       {
         "key": "A",
@@ -248107,8 +248107,8 @@
     "explanation": "The noun \"brain\" is singular, and it possesses the \"efficiency.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 175,
+    "passage_underline_end": 193,
     "choices": [
       {
         "key": "A",
@@ -249064,8 +249064,8 @@
     "explanation": "The noun \"community\" is singular, and it possesses the \"input.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 227,
+    "passage_underline_end": 244,
     "choices": [
       {
         "key": "A",
@@ -249130,8 +249130,8 @@
     "explanation": "A colon is used to introduce a list that follows a complete independent clause. The clause \"Common categories include\" is complete before the list begins. This tests colons.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 180,
+    "passage_underline_end": 280,
     "choices": [
       {
         "key": "A",
@@ -250549,8 +250549,8 @@
     "explanation": "The noun \"plate\" is singular, and it possesses the \"rapid movement.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 242,
+    "passage_underline_end": 264,
     "choices": [
       {
         "key": "A",
@@ -250714,8 +250714,8 @@
     "explanation": "The noun \"continent\" is singular, and it possesses the \"collision.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 169,
+    "passage_underline_end": 190,
     "choices": [
       {
         "key": "A",
@@ -250879,8 +250879,8 @@
     "explanation": "The noun \"continent\" is singular, and it possesses the \"position.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 221,
+    "passage_underline_end": 241,
     "choices": [
       {
         "key": "A",
@@ -250978,8 +250978,8 @@
     "explanation": "The noun \"planet\" is singular, and it possesses the \"internal heat.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 176,
+    "passage_underline_end": 198,
     "choices": [
       {
         "key": "A",
@@ -251209,8 +251209,8 @@
     "explanation": "The noun \"carriers\" is plural, and it possesses the \"arduous journeys.\" The apostrophe after the 's' correctly indicates plural possession. This tests apostrophes for plural possession.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 186,
+    "passage_underline_end": 212,
     "choices": [
       {
         "key": "A",
@@ -251638,8 +251638,8 @@
     "explanation": "The noun \"citizen\" is singular, and it possesses the \"reliance.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 235,
+    "passage_underline_end": 253,
     "choices": [
       {
         "key": "A",
@@ -251737,8 +251737,8 @@
     "explanation": "The noun \"postmen\" is an irregular plural, and it possesses the \"dedication.\" The apostrophe before the 's' correctly indicates plural possession for irregular plurals. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 219,
+    "passage_underline_end": 239,
     "choices": [
       {
         "key": "A",
@@ -251836,8 +251836,8 @@
     "explanation": "The noun \"data\" is a plural noun (though often treated as singular in common usage, formally it's plural) that possesses the \"analysis.\" In this context, \"data's\" is used correctly as a possessive, indicating the analysis of the data. No change is needed.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 181,
+    "passage_underline_end": 196,
     "choices": [
       {
         "key": "A",
@@ -252430,8 +252430,8 @@
     "explanation": "The noun \"student\" is singular, and it possesses the \"ability.\" The apostrophe before the 's' correctly indicates singular possession. No change is needed. This tests apostrophes for singular possession.",
     "avg_seconds": 45,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 180,
+    "passage_underline_end": 197,
     "choices": [
       {
         "key": "A",
@@ -253321,8 +253321,8 @@
     "explanation": "A colon is used to introduce a list that follows an independent clause. The clause \"Common elements included\" is complete before the list begins. This tests colons.",
     "avg_seconds": 50,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 181,
+    "passage_underline_end": 285,
     "choices": [
       {
         "key": "A",
@@ -281440,8 +281440,8 @@
     "explanation": "The underlined portion is a sentence fragment, missing a verb to complete the thought. Adding \"was\" turns it into a complete sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 172,
+    "passage_underline_end": 231,
     "choices": [
       {
         "key": "A",
@@ -287908,8 +287908,8 @@
     "explanation": "The original is a run-on sentence. Adding a coordinating conjunction (\"and\") after the comma correctly connects the two independent clauses, forming a compound sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 0,
+    "passage_underline_end": 195,
     "choices": [
       {
         "key": "A",
@@ -288370,8 +288370,8 @@
     "explanation": "The underlined portion is a sentence fragment, a relative clause. It should be appended to the preceding independent clause with a comma, or the relative pronoun removed if it acts as an appositive.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 89,
+    "passage_underline_end": 157,
     "choices": [
       {
         "key": "A",
@@ -295003,8 +295003,8 @@
     "explanation": "The underlined portion is a sentence fragment, a participial phrase missing a subject and a verb. Adding \"These rocks are\" creates a complete sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 168,
+    "passage_underline_end": 217,
     "choices": [
       {
         "key": "A",
@@ -295465,8 +295465,8 @@
     "explanation": "The underlined portion is a sentence fragment, a descriptive phrase. Adding \"This shield is\" creates a complete sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 182,
+    "passage_underline_end": 243,
     "choices": [
       {
         "key": "A",
@@ -295696,8 +295696,8 @@
     "explanation": "The underlined portion is a sentence fragment, a descriptive phrase missing a subject and a verb. Adding \"It is\" creates a complete sentence.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 211,
+    "passage_underline_end": 265,
     "choices": [
       {
         "key": "A",
@@ -295795,8 +295795,8 @@
     "explanation": "The underlined portion is a sentence fragment, a descriptive phrase. Adding \"which are\" and connecting it with a comma to the preceding independent clause correctly incorporates the information.",
     "avg_seconds": 55,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 201,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
