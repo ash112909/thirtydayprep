@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
+import { useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { updateStudyGoals } from "@/api/profile";
@@ -23,6 +24,7 @@ function daysUntil(dateStr: string | null): number | null {
 }
 
 export default function ProfileScreen() {
+  const router = useRouter();
   const { session, profile, refreshProfile, signOut } = useAuth();
   const { refresh: refreshPetCompanion } = usePetCompanion();
   const { mode, toggleTheme } = useTheme();
@@ -328,6 +330,14 @@ export default function ProfileScreen() {
             </View>
           );
         })}
+      </View>
+
+      <View style={styles.editButtonSpacer}>
+        <PrimaryButton
+          title="Question bank (QA)"
+          variant="secondary"
+          onPress={() => router.push("/question-browser")}
+        />
       </View>
 
       <View style={styles.logoutSpacer}>

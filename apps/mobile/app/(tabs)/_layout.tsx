@@ -27,6 +27,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="wrapped" options={{ href: null }} />
       <Tabs.Screen name="mock-test-run" options={{ href: null }} />
       <Tabs.Screen name="mock-test-results" options={{ href: null }} />
+      <Tabs.Screen name="question-browser" options={{ href: null }} />
     </Tabs>
   );
 }
