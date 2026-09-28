@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { useThemedStyles } from "@/hooks/useThemedStyles";
+import { containsMarkdownTable, parseTextWithTables } from "@/lib/markdownTable";
+import { MarkdownTable } from "@/components/MarkdownTable";
 
 interface Props {
   passage: string;
@@ -73,6 +75,31 @@ function buildSegments(passage: string, underlineStart: number | null, underline
   return segments;
 }
 
+// Same idea as buildSegments, but scoped to one prose chunk that sits
+// alongside an embedded table (see below) rather than the whole passage —
+// underline spans never land on a table-bearing passage in practice, so
+// this path skips that part and just keeps sentence tap-to-highlight
+// working, with a running sentence-index offset so highlight state stays
+// consistent across chunks.
+function buildLocalSegments(text: string, sentenceIndexBase: number): { segments: Segment[]; nextBase: number } {
+  const sentences = splitSentences(text);
+  const breakpoints = new Set<number>([0, text.length]);
+  for (const s of sentences) {
+    breakpoints.add(s.start);
+    breakpoints.add(s.end);
+  }
+  const sorted = [...breakpoints].sort((a, b) => a - b);
+  const segments: Segment[] = [];
+  for (let i = 0; i < sorted.length - 1; i++) {
+    const start = sorted[i];
+    const end = sorted[i + 1];
+    if (start === end) continue;
+    const sentenceIndex = sentences.findIndex((s) => start >= s.start && end <= s.end);
+    segments.push({ start, end, sentenceIndex: sentenceIndexBase + (sentenceIndex === -1 ? 0 : sentenceIndex), underlined: false });
+  }
+  return { segments, nextBase: sentenceIndexBase + sentences.length };
+}
+
 export function PassageText({ passage, underlineStart, underlineEnd }: Props) {
   const { styles } = useThemedStyles((colors) => ({
     box: {
@@ -101,10 +128,26 @@ export function PassageText({ passage, underlineStart, underlineEnd }: Props) {
     setHighlighted(new Set());
   }, [passage]);
 
+  const hasTable = useMemo(() => containsMarkdownTable(passage), [passage]);
+
   const segments = useMemo(
-    () => buildSegments(passage, underlineStart ?? null, underlineEnd ?? null),
-    [passage, underlineStart, underlineEnd],
+    () => (hasTable ? [] : buildSegments(passage, underlineStart ?? null, underlineEnd ?? null)),
+    [passage, underlineStart, underlineEnd, hasTable],
   );
+
+  // Only computed for the (rare) table-bearing case: the passage split
+  // into its prose/table chunks, with each prose chunk pre-tokenized into
+  // its own tappable sentence segments.
+  const tableRenderPlan = useMemo(() => {
+    if (!hasTable) return null;
+    let base = 0;
+    return parseTextWithTables(passage).map((seg) => {
+      if (seg.type === "table") return { type: "table" as const, table: seg };
+      const { segments: local, nextBase } = buildLocalSegments(seg.content, base);
+      base = nextBase;
+      return { type: "text" as const, content: seg.content, segments: local };
+    });
+  }, [passage, hasTable]);
 
   function toggleSentence(sentenceIndex: number) {
     setHighlighted((prev) => {
@@ -125,17 +168,37 @@ export function PassageText({ passage, underlineStart, underlineEnd }: Props) {
           </Pressable>
         )}
       </View>
-      <Text style={styles.text}>
-        {segments.map((seg, i) => (
-          <Text
-            key={i}
-            onPress={() => toggleSentence(seg.sentenceIndex)}
-            style={[seg.underlined && styles.underlined, highlighted.has(seg.sentenceIndex) && styles.highlighted]}
-          >
-            {passage.slice(seg.start, seg.end)}
-          </Text>
-        ))}
-      </Text>
+      {tableRenderPlan ? (
+        tableRenderPlan.map((part, i) =>
+          part.type === "table" ? (
+            <MarkdownTable key={i} table={part.table} />
+          ) : (
+            <Text key={i} style={styles.text}>
+              {part.segments.map((seg, j) => (
+                <Text
+                  key={j}
+                  onPress={() => toggleSentence(seg.sentenceIndex)}
+                  style={[highlighted.has(seg.sentenceIndex) && styles.highlighted]}
+                >
+                  {part.content.slice(seg.start, seg.end)}
+                </Text>
+              ))}
+            </Text>
+          ),
+        )
+      ) : (
+        <Text style={styles.text}>
+          {segments.map((seg, i) => (
+            <Text
+              key={i}
+              onPress={() => toggleSentence(seg.sentenceIndex)}
+              style={[seg.underlined && styles.underlined, highlighted.has(seg.sentenceIndex) && styles.highlighted]}
+            >
+              {passage.slice(seg.start, seg.end)}
+            </Text>
+          ))}
+        </Text>
+      )}
     </View>
   );
 }
