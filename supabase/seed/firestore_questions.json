@@ -117420,7 +117420,7 @@
     "question_type": "multiple_choice",
     "skill_tag": "quantitative-information",
     "passage": null,
-    "stem": "Duration of major pyramid construction projects: Pyramid Years to Complete Pyramid A 20 Pyramid B 25 Claim: Pyramid B took 25% longer than Pyramid",
+    "stem": "Duration of major pyramid construction projects:\n\n| Pyramid | Years to Complete |\n| :---: | :---: |\n| Pyramid A | 20 |\n| Pyramid B | 25 |\n\nClaim: Pyramid B took 25% longer than Pyramid A.",
     "explanation": "(25−20) ÷ 20 = 25%.",
     "avg_seconds": 35,
     "calculator_allowed": false,
