@@ -1,11 +1,19 @@
+import type { ComponentProps } from "react";
 import { Pressable, View } from "react-native";
-import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import type { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { StudyPet } from "@/components/StudyPet";
 import { useTheme } from "@/hooks/useTheme";
 
 type IconName = keyof typeof Ionicons.glyphMap;
+
+// Derived straight from Tabs' own `tabBar` prop rather than imported from
+// @react-navigation/bottom-tabs — expo-router vendors its own (structurally
+// similar but nominally distinct) copy of that type internally and no
+// longer depends on the separate package, so importing from it directly
+// would fight the type the Tabs component actually passes at runtime.
+type FloatingTabBarProps = Parameters<NonNullable<ComponentProps<typeof Tabs>["tabBar"]>>[0];
 
 const SIDE_ICONS: Record<string, { focused: IconName; unfocused: IconName; label: string }> = {
   plan: { focused: "calendar", unfocused: "calendar-outline", label: "Plan" },
@@ -25,7 +33,7 @@ const WRAP_HEIGHT = BAR_HEIGHT + BUTTON_SIZE / 2;
 // IS the study buddy's own avatar (not a generic icon), so "go home" reads
 // as "go see your buddy" rather than a plain nav destination. Home is
 // intentionally left out of the side-icon set: it's the button, not a row item.
-export function FloatingTabBar({ state, navigation, insets }: BottomTabBarProps) {
+export function FloatingTabBar({ state, navigation, insets }: FloatingTabBarProps) {
   const { colors } = useTheme();
   const { pet, energy, growthStage } = usePetCompanion();
 
