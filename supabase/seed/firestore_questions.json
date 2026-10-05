@@ -215620,8 +215620,8 @@
     "explanation": "\"Agreeable\" more precisely conveys a pleasant and pleasing quality in a social context, capturing Miss Eleanor's positive impact on those around her.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 180,
+    "passage_underline_end": 184,
     "choices": [
       {
         "key": "A",
@@ -215653,8 +215653,8 @@
     "explanation": "\"Powerful\" accurately describes a forceful and commanding manner of walking, fitting Darcy's imposing presence. The other options refer more to size or impressiveness in a general sense.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 82,
+    "passage_underline_end": 85,
     "choices": [
       {
         "key": "A",
@@ -215686,8 +215686,8 @@
     "explanation": "\"Resigned\" more precisely conveys the doctor's acceptance of an unfavorable outcome, reflecting his professional gravity and the gravity of the situation, rather than just the volume of the sigh.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 248,
+    "passage_underline_end": 253,
     "choices": [
       {
         "key": "A",
@@ -215719,8 +215719,8 @@
     "explanation": "\"Confounding\" more precisely suggests that the truth is not merely unusual but actively perplexing and difficult to comprehend, aligning with the sense of unraveling mystery.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 210,
+    "passage_underline_end": 217,
     "choices": [
       {
         "key": "A",
@@ -215752,8 +215752,8 @@
     "explanation": "\"Dire\" more precisely conveys extreme severity and desperation, fitting the harsh and life-threatening conditions often faced by orphans in such settings, which \"bad\" only vaguely suggests.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 228,
+    "passage_underline_end": 231,
     "choices": [
       {
         "key": "A",
@@ -215785,8 +215785,8 @@
     "explanation": "\"Pronouncements\" most accurately conveys a formal, authoritative, and often emphatic statement, fitting Lady Catherine's character and the context of expressing strong disapproval.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 144,
+    "passage_underline_end": 149,
     "choices": [
       {
         "key": "A",
@@ -215818,8 +215818,8 @@
     "explanation": "\"Peril\" more precisely conveys extreme danger or risk, fitting the sinister and disorienting atmosphere of the dense London fog in 19th-century fiction, which often implied hidden threats beyond simple \"difficulty.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 177,
+    "passage_underline_end": 183,
     "choices": [
       {
         "key": "A",
@@ -215851,8 +215851,8 @@
     "explanation": "\"Profound\" most accurately describes a deep, intense, or far-reaching quality, fitting the complex and weighty ethical implications of Dr. Jekyll's experiments. \"Great\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 216,
+    "passage_underline_end": 221,
     "choices": [
       {
         "key": "A",
@@ -215884,8 +215884,8 @@
     "explanation": "\"Fascination\" more precisely conveys a powerful attraction or engrossment, indicating that his tales held his audience spellbound, which \"interest\" only vaguely suggests.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 197,
+    "passage_underline_end": 205,
     "choices": [
       {
         "key": "A",
@@ -215917,8 +215917,8 @@
     "explanation": "\"Mystery\" most precisely defines the nature of what is to be unraveled in a crime-solving context, emphasizing the enigma that Holmes seeks to solve.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 192,
+    "passage_underline_end": 196,
     "choices": [
       {
         "key": "A",
@@ -215983,8 +215983,8 @@
     "explanation": "\"Fortune\" more precisely captures the hope for improved circumstances, well-being, and perhaps a more prosperous or happier fate, which is what the orphans would yearn for beyond just a general \"life.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 177,
+    "passage_underline_end": 181,
     "choices": [
       {
         "key": "A",
@@ -216016,8 +216016,8 @@
     "explanation": "\"Transformed\" conveys a complete and fundamental alteration, suggesting a drastic shift in the world's nature, which aligns with the melancholic and bygone atmosphere of the manor.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 200,
+    "passage_underline_end": 207,
     "choices": [
       {
         "key": "A",
@@ -216049,8 +216049,8 @@
     "explanation": "\"Paramount\" most precisely conveys the idea of supreme importance or superiority, fitting Lord Henry's extreme and singular prioritization of pleasure and beauty. \"Important\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 218,
+    "passage_underline_end": 227,
     "choices": [
       {
         "key": "A",
@@ -216082,8 +216082,8 @@
     "explanation": "\"Vision\" more precisely captures the comprehensive and often imaginative understanding or mental picture of what the author wishes to convey, which is more powerful than a simple \"idea.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 210,
+    "passage_underline_end": 214,
     "choices": [
       {
         "key": "A",
@@ -216115,8 +216115,8 @@
     "explanation": "\"Nascent\" accurately suggests that the fury is just beginning to develop or emerge, fitting the surprising and uncharacteristic nature of Evelyn's anger, making it more precise than other options implying simply quietness or suppression.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 172,
+    "passage_underline_end": 177,
     "choices": [
       {
         "key": "A",
@@ -216148,8 +216148,8 @@
     "explanation": "\"Succor\" specifically means assistance and support in times of hardship and distress, precisely capturing the desperate need for comfort and relief from suffering that the urchin yearns for.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 208,
+    "passage_underline_end": 212,
     "choices": [
       {
         "key": "A",
@@ -216181,8 +216181,8 @@
     "explanation": "\"Undisturbed\" precisely suggests that the secrets are better left uninvestigated or not interfered with, implying a desire for them to remain concealed and unrevealed, which aligns with the air of mystery.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 196,
+    "passage_underline_end": 201,
     "choices": [
       {
         "key": "A",
@@ -216214,8 +216214,8 @@
     "explanation": "\"Undertaking\" more formally and precisely describes a large or important task or enterprise, fitting the doctor's professional challenge in treating patients amidst superstition, which is more specific than \"task.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 204,
+    "passage_underline_end": 208,
     "choices": [
       {
         "key": "A",
@@ -216247,8 +216247,8 @@
     "explanation": "\"Undone\" precisely captures the idea of being brought to ruin or destruction, particularly in a metaphorical sense, indicating her complete emotional and psychological devastation by heartbreak. The other options are too informal or imply physical damage.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 227,
+    "passage_underline_end": 236,
     "choices": [
       {
         "key": "A",
@@ -216280,8 +216280,8 @@
     "explanation": "\"Exertion\" more precisely refers to the physical or mental effort expended, fitting the context of the heat making even simple movements difficult, rather than a general \"effort.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 215,
+    "passage_underline_end": 221,
     "choices": [
       {
         "key": "A",
@@ -216313,8 +216313,8 @@
     "explanation": "\"Struggle\" more precisely conveys the ongoing, arduous effort and challenge involved in artistic creation, fitting the context of a passionate artist wrestling with his craft, which \"problem\" only vaguely suggests.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 257,
+    "passage_underline_end": 264,
     "choices": [
       {
         "key": "A",
@@ -216346,8 +216346,8 @@
     "explanation": "\"Dread\" most precisely conveys a strong feeling of fear or apprehension about something impending, fitting the pervasive and ongoing sense of fear instilled by Heathcliff's unpredictable nature, which is stronger than \"apprehension\" but more nuanced than \"terror.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 258,
     "choices": [
       {
         "key": "A",
@@ -216412,8 +216412,8 @@
     "explanation": "\"Dexterity\" most precisely refers to skill in performing tasks, especially with the hands, which perfectly describes the agility and finesse of a pickpocket. \"Skill\" is too general here.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 244,
+    "passage_underline_end": 247,
     "choices": [
       {
         "key": "A",
@@ -216445,8 +216445,8 @@
     "explanation": "\"Formidable\" more precisely conveys a sense of being inspiring fear or respect through being impressively large, powerful, intense, or capable, fitting nature's overwhelming presence and indifference to human weakness. \"Strong\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 195,
+    "passage_underline_end": 201,
     "choices": [
       {
         "key": "A",
@@ -216511,8 +216511,8 @@
     "explanation": "\"Aberrant\" most precisely describes behavior that deviates from what is normal, typical, or morally right, fitting the increasingly disturbing and unsettling nature of Jekyll's actions from Utterson's perspective.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 232,
+    "passage_underline_end": 237,
     "choices": [
       {
         "key": "A",
@@ -216544,8 +216544,8 @@
     "explanation": "\"Complications\" more precisely refers to intricate and difficult circumstances or factors, fitting the complex and often deceptive challenges within high society. \"Problems\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 240,
+    "passage_underline_end": 248,
     "choices": [
       {
         "key": "A",
@@ -216577,8 +216577,8 @@
     "explanation": "\"Frivolity\" more precisely conveys a lack of seriousness or a focus on trivial matters, accurately reflecting the spinster's disdain for the fashionable young ladies' perceived superficiality, rather than just general \"silliness.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 209,
+    "passage_underline_end": 218,
     "choices": [
       {
         "key": "A",
@@ -216610,8 +216610,8 @@
     "explanation": "\"Serenity\" most precisely suggests a state of calm and peacefulness, often implying inner tranquility and freedom from disturbance, which aligns with the protagonist's profound search for solace from his troubled past.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 204,
     "choices": [
       {
         "key": "A",
@@ -216643,8 +216643,8 @@
     "explanation": "\"Melancholy\" more precisely conveys a pensive sadness, often without an obvious cause, fitting the profound and pervasive sense of sorrow described in the context of isolation and bleakness, rather than just general \"gloominess.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 250,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -216676,8 +216676,8 @@
     "explanation": "\"Faculty\" refers to an inherent mental or physical power, precisely fitting the context of intellectual capability used for demanding studies. \"Capacity\" is too broad.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 252,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -216709,8 +216709,8 @@
     "explanation": "\"Consternation\" precisely conveys a feeling of anxiety or dismay, typically at something unexpected, fitting the sudden and unsettling nature of the rumors and their impact on the villagers.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 198,
+    "passage_underline_end": 203,
     "choices": [
       {
         "key": "A",
@@ -216742,8 +216742,8 @@
     "explanation": "\"Resonant\" accurately describes a voice that is deep, full, and carries well, fitting the Duchess's imposing delivery, rather than just being high in volume.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 126,
+    "passage_underline_end": 130,
     "choices": [
       {
         "key": "A",
@@ -216775,8 +216775,8 @@
     "explanation": "\"Eerie\" more precisely describes something strange and frightening, suggesting a supernatural or mysterious quality that instills fear, aligning with the gothic atmosphere of the asylum, which is stronger and more specific than \"spooky.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 253,
+    "passage_underline_end": 259,
     "choices": [
       {
         "key": "A",
@@ -216808,8 +216808,8 @@
     "explanation": "\"Independence\" more precisely captures the idea of self-governance and freedom from external control or influence, which is the specific kind of freedom the protagonist seeks from societal expectations.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 221,
+    "passage_underline_end": 228,
     "choices": [
       {
         "key": "A",
@@ -216841,8 +216841,8 @@
     "explanation": "\"Continuity\" more precisely refers to the unbroken existence or operation of something over time, fitting the context of traditions being passed down through generations and maintaining an uninterrupted link to the past.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 265,
+    "passage_underline_end": 275,
     "choices": [
       {
         "key": "A",
@@ -216874,8 +216874,8 @@
     "explanation": "\"Remarkable\" more precisely conveys something worthy of attention due to being unusual or striking, fitting the awe-inspiring nature of the vast collection to the young scholar, which is more formal and precise than \"amazing.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 217,
+    "passage_underline_end": 224,
     "choices": [
       {
         "key": "A",
@@ -216907,8 +216907,8 @@
     "explanation": "\"Dynamics\" more precisely refers to the forces or properties that stimulate growth, development, or change within a system, accurately capturing the intricate and often manipulative interplay of social forces at the ball, which is more precise than generic \"activity.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 260,
+    "passage_underline_end": 268,
     "choices": [
       {
         "key": "A",
@@ -216940,8 +216940,8 @@
     "explanation": "\"Existence\" most precisely refers to the state of being real or alive, fitting the continuous, undeniable presence of the ocean that offers him companionship. \"Being\" is too vague here.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 234,
+    "passage_underline_end": 239,
     "choices": [
       {
         "key": "A",
@@ -216973,8 +216973,8 @@
     "explanation": "\"Pathos\" specifically refers to a quality that evokes pity or sadness, precisely capturing the emotional depth and tragic aspect of human struggle that the artist sought to depict, which is more specific than general \"feeling.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 200,
+    "passage_underline_end": 207,
     "choices": [
       {
         "key": "A",
@@ -217006,8 +217006,8 @@
     "explanation": "\"Incident\" more precisely refers to an event or occurrence, especially one that is significant, unusual, or unpleasant, fitting the secretive and potentially problematic nature of the stranger's past. \"Event\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 200,
+    "passage_underline_end": 205,
     "choices": [
       {
         "key": "A",
@@ -217072,8 +217072,8 @@
     "explanation": "\"Insight\" more precisely conveys a deep and intuitive understanding of a situation or problem, fitting the scholar's pursuit of profound knowledge beyond surface comprehension. \"Understanding\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 226,
+    "passage_underline_end": 239,
     "choices": [
       {
         "key": "A",
@@ -217105,8 +217105,8 @@
     "explanation": "\"Hurried\" more precisely conveys the speed and purpose of the figure's movement, suggesting urgency or a desire to avoid observation, aligning with the mysterious atmosphere.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 166,
+    "passage_underline_end": 170,
     "choices": [
       {
         "key": "A",
@@ -217138,8 +217138,8 @@
     "explanation": "\"Allure\" more precisely refers to the quality of being powerfully and mysteriously attractive or fascinating, fitting the enduring and captivating draw of alchemy despite its impracticality, which is stronger than general \"attraction.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 222,
+    "passage_underline_end": 232,
     "choices": [
       {
         "key": "A",
@@ -217171,8 +217171,8 @@
     "explanation": "\"Humanity\" more precisely refers to the human race or human nature collectively, capturing the specific source of the cruel indifference experienced by the child in the bustling city, rather than the general \"world.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 217,
+    "passage_underline_end": 222,
     "choices": [
       {
         "key": "A",
@@ -217204,8 +217204,8 @@
     "explanation": "\"Conduct\" more precisely refers to the manner in which a person behaves, especially on a particular occasion or in a particular context, fitting the debutante's expected social behavior. \"Performance\" is too theatrical.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 221,
+    "passage_underline_end": 232,
     "choices": [
       {
         "key": "A",
@@ -217237,8 +217237,8 @@
     "explanation": "\"Resolve\" more precisely refers to firm determination to do something, fitting the adventurer's unwavering commitment in the face of daunting challenges, which is stronger than general \"will.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 225,
+    "passage_underline_end": 229,
     "choices": [
       {
         "key": "A",
@@ -217303,8 +217303,8 @@
     "explanation": "\"Disquieting\" more precisely conveys a sense of causing uneasiness or anxiety, fitting the subtle, unsettling atmosphere of a mysterious 19th-century street scene, which is more formal and precise than \"creepy.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 233,
+    "passage_underline_end": 239,
     "choices": [
       {
         "key": "A",
@@ -217336,8 +217336,8 @@
     "explanation": "\"Authority\" more precisely denotes the power or right to give orders, make decisions, and enforce obedience, which aligns with the governess's role in enforcing rules and maintaining order, rather than just general \"control.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 207,
+    "passage_underline_end": 214,
     "choices": [
       {
         "key": "A",
@@ -217402,8 +217402,8 @@
     "explanation": "\"Works\" most precisely refers to literary compositions or artistic creations, fitting the context of a library filled with books and narratives. \"Stuff\" is overly informal and vague.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 233,
+    "passage_underline_end": 238,
     "choices": [
       {
         "key": "A",
@@ -217435,8 +217435,8 @@
     "explanation": "\"Fabric\" metaphorically refers to the underlying structure or interconnected elements of something, precisely conveying the complex and interwoven nature of Victorian society's social customs and norms, which is far more precise than \"way things are.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 219,
+    "passage_underline_end": 233,
     "choices": [
       {
         "key": "A",
@@ -217468,8 +217468,8 @@
     "explanation": "\"Multitude\" emphasizes the sheer number and overwhelming nature of the rules, which is more precise than the general \"amount\" when referring to abstract concepts like rules.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 96,
+    "passage_underline_end": 102,
     "choices": [
       {
         "key": "A",
@@ -217501,8 +217501,8 @@
     "explanation": "\"Imposing\" precisely describes something that is very impressive because of its size, appearance, or dignity, fitting the grandeur and solemnity of the cliffs standing as sentinels, which is more specific than \"impressive.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 218,
+    "passage_underline_end": 228,
     "choices": [
       {
         "key": "A",
@@ -217534,8 +217534,8 @@
     "explanation": "\"Gravity\" precisely conveys serious and solemn importance, fitting the profound and weighty nature of a strong moral foundation as viewed by the virtuous governess. \"Importance\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 209,
     "choices": [
       {
         "key": "A",
@@ -217567,8 +217567,8 @@
     "explanation": "\"Duration\" more precisely refers to the length of time that something continues, fitting the constant and ongoing reminder of time's ceaseless flow, which is more specific than the general \"time.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 214,
+    "passage_underline_end": 218,
     "choices": [
       {
         "key": "A",
@@ -217666,8 +217666,8 @@
     "explanation": "\"Threat\" precisely captures the nature of Mrs. Bennet's anxieties, implying something menacing or dangerous that she seeks to ward off, rather than a generic \"thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 202,
+    "passage_underline_end": 207,
     "choices": [
       {
         "key": "A",
@@ -217699,8 +217699,8 @@
     "explanation": "Given the reference to \"London\" and \"bustling intellectual salons,\" \"capital\" is the most precise term, specifically referring to the preeminent city of the nation with its cultural and intellectual hubs.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 223,
+    "passage_underline_end": 227,
     "choices": [
       {
         "key": "A",
@@ -217732,8 +217732,8 @@
     "explanation": "\"Extensive forethought\" precisely conveys a deep and comprehensive consideration of future actions and needs, aligning with the meticulous planning required for such monumental and astronomically aligned constructions.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 383,
+    "passage_underline_end": 407,
     "choices": [
       {
         "key": "A",
@@ -217798,8 +217798,8 @@
     "explanation": "\"Colossal undertaking\" precisely conveys an extremely large, ambitious, or difficult task or project, accurately reflecting the immense scale and complexity of building Angkor Wat. \"Big achievement\" is less formal and precise.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 355,
+    "passage_underline_end": 370,
     "choices": [
       {
         "key": "A",
@@ -217831,8 +217831,8 @@
     "explanation": "\"Vision\" precisely conveys a mental image of what the future will or could be like, accurately reflecting the overarching, long-term plan and guiding purpose behind Teotihuacan's development. \"Idea\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 334,
     "choices": [
       {
         "key": "A",
@@ -217864,8 +217864,8 @@
     "explanation": "\"Technique\" precisely refers to a skillful or efficient way of doing or achieving something, accurately describing the specific, specialized construction approach of carving directly from rock. \"Method\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 316,
+    "passage_underline_end": 322,
     "choices": [
       {
         "key": "A",
@@ -217930,8 +217930,8 @@
     "explanation": "\"Structure\" precisely refers to the arrangement of and relations between the parts or elements of something complex, or a building or other object constructed from several parts, accurately describing the Pantheon's integrated architectural form. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 317,
+    "passage_underline_end": 322,
     "choices": [
       {
         "key": "A",
@@ -217963,8 +217963,8 @@
     "explanation": "\"Craftsmanship\" precisely refers to the quality of design and work shown in something made by hand, accurately reflecting the mastery of stone carving and construction techniques. \"Skill\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 358,
+    "passage_underline_end": 363,
     "choices": [
       {
         "key": "A",
@@ -217996,8 +217996,8 @@
     "explanation": "\"Technique\" precisely refers to a skillful or efficient way of doing or achieving something, accurately describing the specific method of dry-stone masonry. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 295,
+    "passage_underline_end": 300,
     "choices": [
       {
         "key": "A",
@@ -218029,8 +218029,8 @@
     "explanation": "\"Strategic asset\" precisely identifies something valuable or useful in terms of planning and carrying out military operations, accurately reflecting the defensive utility of the underground cities. \"Advantage\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 340,
+    "passage_underline_end": 349,
     "choices": [
       {
         "key": "A",
@@ -218062,8 +218062,8 @@
     "explanation": "\"Infrastructure\" precisely refers to the basic physical and organizational structures and facilities (e.g., buildings, roads, power supplies) needed for the operation of a society or enterprise, accurately describing the foundational systems of the city. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 375,
+    "passage_underline_end": 380,
     "choices": [
       {
         "key": "A",
@@ -218095,8 +218095,8 @@
     "explanation": "\"Immense scale\" precisely conveys the enormous extent or degree of the coordination required, accurately reflecting the vastness of the pyramid construction project. \"Big amount\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 320,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -218161,8 +218161,8 @@
     "explanation": "\"Features\" precisely refers to a distinctive attribute or aspect of something, accurately describing the specific architectural elements like columned halls and relief sculptures. \"Things\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 205,
+    "passage_underline_end": 211,
     "choices": [
       {
         "key": "A",
@@ -218194,8 +218194,8 @@
     "explanation": "\"Crucial\" precisely conveys extreme importance; vital, accurately reflecting the indispensable role of the road network in sustaining and expanding the Roman Empire. \"Big\" is too informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 333,
     "choices": [
       {
         "key": "A",
@@ -218227,8 +218227,8 @@
     "explanation": "\"Resources\" precisely refers to a stock or supply of money, materials, staff, and other assets that can be drawn on by a person or organization in order to function effectively, accurately reflecting the availability of mud as a local building material. \"Environment\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 358,
+    "passage_underline_end": 369,
     "choices": [
       {
         "key": "A",
@@ -218260,8 +218260,8 @@
     "explanation": "\"Technique\" precisely refers to a skillful or efficient way of doing or achieving something, accurately describing the specialized method of carving structures directly from rock. \"Process\" is too general given the specific nature of the activity.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 311,
+    "passage_underline_end": 318,
     "choices": [
       {
         "key": "A",
@@ -218359,8 +218359,8 @@
     "explanation": "\"Undertaking\" precisely refers to a task that is taken on, especially one that is large or requires a lot of effort, accurately reflecting the massive and complex nature of building the emperor's tomb. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 387,
+    "passage_underline_end": 392,
     "choices": [
       {
         "key": "A",
@@ -218425,8 +218425,8 @@
     "explanation": "\"Layout\" precisely refers to the way in which the parts of something are arranged or laid out, accurately describing the spatial organization of the city's features. \"Design\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 289,
+    "passage_underline_end": 295,
     "choices": [
       {
         "key": "A",
@@ -218491,8 +218491,8 @@
     "explanation": "\"Composition\" precisely refers to the way in which something is put together or arranged, accurately describing the thoughtful and harmonious arrangement of elements in the Parthenon's architecture. \"Design\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 366,
     "choices": [
       {
         "key": "A",
@@ -218590,8 +218590,8 @@
     "explanation": "\"Colossal fortification\" precisely conveys an extremely large defensive wall or structure, accurately reflecting the immense scale and military purpose of the Great Wall. \"Big barrier\" is informal and imprecise.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 368,
+    "passage_underline_end": 379,
     "choices": [
       {
         "key": "A",
@@ -218623,8 +218623,8 @@
     "explanation": "\"Craftsmanship\" precisely refers to the quality of design and work shown in something made by hand; artistry, accurately reflecting the skill and precision involved in carving the Treasury from stone. \"Art\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 362,
+    "passage_underline_end": 365,
     "choices": [
       {
         "key": "A",
@@ -218656,8 +218656,8 @@
     "explanation": "\"Edifice\" precisely refers to a building, especially a large, imposing one, accurately reflecting the grandeur and scale of the Colosseum. \"Building\" is too generic for such an iconic structure.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 262,
+    "passage_underline_end": 270,
     "choices": [
       {
         "key": "A",
@@ -218689,8 +218689,8 @@
     "explanation": "\"Grandeur\" precisely conveys splendor and impressiveness, especially of appearance or style, accurately reflecting the intention behind the elaborate and imposing architecture of Persepolis to display the empire's majesty. \"Power\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 367,
+    "passage_underline_end": 372,
     "choices": [
       {
         "key": "A",
@@ -218722,8 +218722,8 @@
     "explanation": "\"Significance\" precisely conveys the quality of being worthy of attention; importance, accurately reflecting the deep cultural and religious meaning attributed to ziggurats in Mesopotamian society. \"Role\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 311,
+    "passage_underline_end": 315,
     "choices": [
       {
         "key": "A",
@@ -218755,8 +218755,8 @@
     "explanation": "\"Principles\" precisely refers to fundamental truths or propositions that serve as the foundation for a system of belief or behavior, accurately describing the underlying rules of classical Greek architecture. \"Things\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 309,
+    "passage_underline_end": 315,
     "choices": [
       {
         "key": "A",
@@ -218788,8 +218788,8 @@
     "explanation": "\"Techniques\" precisely refers to the specific methods and skills involved in ballet choreography, accurately reflecting the evolving artistic demands of the form. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 256,
+    "passage_underline_end": 261,
     "choices": [
       {
         "key": "A",
@@ -218821,8 +218821,8 @@
     "explanation": "\"Synthesis\" precisely conveys the combination of components or elements to form a connected whole, accurately describing the integration of dance and dramatic narrative into a unified artistic form. \"Connection\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 375,
+    "passage_underline_end": 385,
     "choices": [
       {
         "key": "A",
@@ -218887,8 +218887,8 @@
     "explanation": "\"Model\" precisely refers to a system or thing used as an example to follow or imitate, accurately describing the innovative framework for artistic production adopted by the Ballets Russes, which is more specific than a general \"way.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 327,
     "choices": [
       {
         "key": "A",
@@ -218920,8 +218920,8 @@
     "explanation": "\"Milestone\" precisely refers to a significant stage or event in the development of something, accurately reflecting the pivotal importance of male dancers gaining prominence in ballet history, which is more impactful than a general \"development.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 311,
+    "passage_underline_end": 322,
     "choices": [
       {
         "key": "A",
@@ -218953,8 +218953,8 @@
     "explanation": "\"Significant\" precisely conveys sufficiently great or important to be worthy of attention; noteworthy, accurately reflecting the considerable impact of theatrical innovations on the audience's experience, which is more formal than a general \"big\" role.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 297,
+    "passage_underline_end": 300,
     "choices": [
       {
         "key": "A",
@@ -218986,8 +218986,8 @@
     "explanation": "\"Departure\" precisely conveys the action of deviating from an accepted, prescribed, or traditional course of action, accurately reflecting neoclassical ballet's conscious move away from classical conventions. \"Change\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 366,
     "choices": [
       {
         "key": "A",
@@ -219019,8 +219019,8 @@
     "explanation": "\"Fusion\" precisely refers to the process or result of joining two or more things together to form a single entity, accurately describing the integration of distinct cultural dance forms into ballet, which is more formal and specific than general \"mixing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 272,
+    "passage_underline_end": 278,
     "choices": [
       {
         "key": "A",
@@ -219052,8 +219052,8 @@
     "explanation": "\"Mechanisms\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the structured ways in which ballet companies have been funded, which is more specific than vague \"stuff.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 255,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -219085,8 +219085,8 @@
     "explanation": "\"Modes\" precisely refers to a way or manner in which something occurs or is experienced, expressed, or done, accurately describing the different forms and styles of communication employed in ballet, which is more formal and specific than a general \"ways.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 305,
+    "passage_underline_end": 309,
     "choices": [
       {
         "key": "A",
@@ -219118,8 +219118,8 @@
     "explanation": "\"Beneficial development\" precisely conveys a positive progression or advance that brings advantage, accurately reflecting the constructive impact of technology on ballet, which is more specific than a generic \"good thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 257,
+    "passage_underline_end": 267,
     "choices": [
       {
         "key": "A",
@@ -219151,8 +219151,8 @@
     "explanation": "\"Infrastructure\" precisely refers to the basic physical and organizational structures and facilities needed for the operation of a society or enterprise, accurately describing the foundational network of schools and academies that supports ballet's global presence. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 307,
     "choices": [
       {
         "key": "A",
@@ -219184,8 +219184,8 @@
     "explanation": "\"Aesthetic\" precisely refers to a set of principles concerned with the nature and appreciation of beauty, especially in art, accurately describing the characteristic visual and thematic qualities that defined Romantic Ballet. \"Look\" is too informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 363,
+    "passage_underline_end": 367,
     "choices": [
       {
         "key": "A",
@@ -219217,8 +219217,8 @@
     "explanation": "\"Innovations\" precisely refers to new methods, ideas, or products, accurately describing the groundbreaking artistic developments introduced by influential choreographers that transformed ballet. \"Contributions\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 250,
+    "passage_underline_end": 263,
     "choices": [
       {
         "key": "A",
@@ -219250,8 +219250,8 @@
     "explanation": "\"Synergy\" precisely conveys the interaction or cooperation of two or more organizations, substances, or other agents to produce a combined effect greater than the sum of their separate effects, accurately describing the mutually enhancing relationship between ballet and music. \"Partnership\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 313,
     "choices": [
       {
         "key": "A",
@@ -219283,8 +219283,8 @@
     "explanation": "\"Productions\" precisely refers to the action of producing a play, film, or other artistic work, accurately describing the elaborate theatrical presentations that require highly trained dancers, which is more specific than general \"performances.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 341,
     "choices": [
       {
         "key": "A",
@@ -219316,8 +219316,8 @@
     "explanation": "\"Shifts\" precisely conveys a slight change in position, direction, or tendency, accurately describing the noticeable reorientations in costume design over time that were influenced by and, in turn, influenced the dance. \"Changes\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 283,
     "choices": [
       {
         "key": "A",
@@ -219349,8 +219349,8 @@
     "explanation": "\"Diffusion\" precisely refers to the spreading of something more widely, accurately capturing the widespread dissemination and blending of ballet styles and influences across different cultures. \"Exchange\" is too broad.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 267,
+    "passage_underline_end": 275,
     "choices": [
       {
         "key": "A",
@@ -219382,8 +219382,8 @@
     "explanation": "\"Element\" precisely refers to a part or aspect of something, especially one that is essential or characteristic, accurately describing set design as a crucial, integral part of a ballet production. \"Contribution\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 298,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -219415,8 +219415,8 @@
     "explanation": "\"Physicality\" precisely refers to the quality of being physical or having a strong physical presence, accurately capturing the robust, athletic demands placed on dancers and the outward manifestation of their bodily capabilities. \"Movement\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 320,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -219448,8 +219448,8 @@
     "explanation": "\"Crucial\" precisely conveys extreme importance; vital, accurately reflecting the indispensable role of star dancers in ballet's commercial viability and broad appeal. \"Big\" is too informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 333,
     "choices": [
       {
         "key": "A",
@@ -219481,8 +219481,8 @@
     "explanation": "\"Innovation\" precisely refers to a new method, idea, or product, accurately describing the groundbreaking nature of specialized footwear in ballet, which enabled new artistic and technical possibilities. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 288,
+    "passage_underline_end": 293,
     "choices": [
       {
         "key": "A",
@@ -219514,8 +219514,8 @@
     "explanation": "\"Plane\" precisely refers to a level of existence or thought, accurately describing the specific artistic and sensory dimension on which audiences are invited to experience abstract ballet, which is more specific than a general \"level.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 405,
+    "passage_underline_end": 410,
     "choices": [
       {
         "key": "A",
@@ -219547,8 +219547,8 @@
     "explanation": "\"Composition\" precisely refers to the way in which something is put together or arranged, accurately describing the formal and structured nature of classical ballet choreography, which is more specific than a general \"arrangement.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 317,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -219580,8 +219580,8 @@
     "explanation": "\"Appeal\" precisely conveys attractiveness or interest, accurately reflecting the enduring quality that draws and engages new audiences to the art form, which is more specific than a general \"power.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 326,
     "choices": [
       {
         "key": "A",
@@ -219613,8 +219613,8 @@
     "explanation": "\"Motif\" precisely refers to a distinctive feature or dominant idea in an artistic or literary composition, accurately describing the recurring and defining visual theme of the white ballets in the Romantic era. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 307,
     "choices": [
       {
         "key": "A",
@@ -219646,8 +219646,8 @@
     "explanation": "\"Profound impact\" precisely conveys a deep and far-reaching influence, aligning with the revolutionary and widespread effects of the Ballets Russes on the performing arts and beyond. \"Big effect\" is too informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 323,
+    "passage_underline_end": 333,
     "choices": [
       {
         "key": "A",
@@ -219679,8 +219679,8 @@
     "explanation": "\"Idiom\" precisely refers to a distinctive mode of expression in art or music, accurately describing the unique movement vocabulary and artistic characteristics developed by modern ballet choreographers. \"Style\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 389,
+    "passage_underline_end": 394,
     "choices": [
       {
         "key": "A",
@@ -219712,8 +219712,8 @@
     "explanation": "\"Genre\" precisely refers to a category of artistic composition, accurately classifying Contemporary Ballet as a distinct type of dance that has evolved through eclectic blending. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 378,
+    "passage_underline_end": 383,
     "choices": [
       {
         "key": "A",
@@ -219745,8 +219745,8 @@
     "explanation": "\"Portrayal\" precisely refers to the way in which someone or something is presented, accurately capturing the artistic presentation and characterization of the ballerina on stage, which is more specific than a general \"role.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 355,
+    "passage_underline_end": 359,
     "choices": [
       {
         "key": "A",
@@ -219778,8 +219778,8 @@
     "explanation": "\"Milestone\" precisely refers to a significant stage or event in the development of something, accurately reflecting the critical importance of codification in ballet's artistic progression. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 350,
+    "passage_underline_end": 355,
     "choices": [
       {
         "key": "A",
@@ -219811,8 +219811,8 @@
     "explanation": "\"Revolution\" precisely conveys a dramatic and wide-ranging change in the way something works or is organized, accurately reflecting the fundamental and widespread impact of electric lighting on ballet stagecraft. \"Change\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -219844,8 +219844,8 @@
     "explanation": "\"Structure\" precisely refers to the arrangement of and relations between the parts or elements of something complex, accurately describing the hierarchical and functional organization within a bee colony. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 273,
     "choices": [
       {
         "key": "A",
@@ -219877,8 +219877,8 @@
     "explanation": "\"Means\" precisely refers to a method, course of action, or instrument by which something can be accomplished, accurately describing the waggle dance as the specific instrument of information transfer. \"Way\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 304,
+    "passage_underline_end": 307,
     "choices": [
       {
         "key": "A",
@@ -219910,8 +219910,8 @@
     "explanation": "\"Training\" precisely conveys the action of teaching a person or animal a particular skill or type of behavior, accurately reflecting the purposeful learning process involved in orientation flights. \"Practice\" is less formal and specific.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 290,
+    "passage_underline_end": 298,
     "choices": [
       {
         "key": "A",
@@ -219943,8 +219943,8 @@
     "explanation": "\"Interaction\" precisely refers to reciprocal action or influence, accurately describing the two-way communicative exchange during food begging. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 281,
     "choices": [
       {
         "key": "A",
@@ -219976,8 +219976,8 @@
     "explanation": "\"Task\" precisely refers to a piece of work to be done or undertaken, accurately describing the specific duty of fanning for temperature regulation. \"Effort\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 241,
+    "passage_underline_end": 247,
     "choices": [
       {
         "key": "A",
@@ -220009,8 +220009,8 @@
     "explanation": "\"Strategy\" precisely refers to a plan of action or policy designed to achieve a major or overall aim, accurately reflecting the deliberate collective behavior for temperature control. \"Action\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 296,
+    "passage_underline_end": 302,
     "choices": [
       {
         "key": "A",
@@ -220042,8 +220042,8 @@
     "explanation": "\"System\" precisely refers to a set of principles or procedures according to which something is done; an organized scheme or method, accurately describing the interconnected set of dances used for various resource needs. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 296,
     "choices": [
       {
         "key": "A",
@@ -220075,8 +220075,8 @@
     "explanation": "\"Practice\" precisely conveys a customary or habitual procedure, accurately describing the regular and routine nature of grooming within the colony. \"Activity\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 271,
+    "passage_underline_end": 279,
     "choices": [
       {
         "key": "A",
@@ -220108,8 +220108,8 @@
     "explanation": "\"Beacon\" precisely conveys a light or other visible object serving as a signal, warning, or guide, accurately reflecting the Nasonov pheromone's role in guiding bees to a specific location. \"Signal\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 261,
+    "passage_underline_end": 267,
     "choices": [
       {
         "key": "A",
@@ -220174,8 +220174,8 @@
     "explanation": "\"Solicitation\" precisely conveys the act of asking for or trying to obtain something from someone, accurately describing the specific nature of the grooming invitation. \"Request\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 273,
+    "passage_underline_end": 280,
     "choices": [
       {
         "key": "A",
@@ -220207,8 +220207,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific operational system of recruitment. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 255,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -220240,8 +220240,8 @@
     "explanation": "\"Warning\" precisely conveys a statement or event that indicates a possible or impending danger, problem, or other unpleasant thing, accurately describing the specific function of the alarm pheromone. \"Signal\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 243,
+    "passage_underline_end": 249,
     "choices": [
       {
         "key": "A",
@@ -220306,8 +220306,8 @@
     "explanation": "\"System\" precisely refers to a set of principles or procedures according to which something is done; an organized scheme or method, accurately describing the integrated suite of behaviors for temperature control. \"Process\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 298,
+    "passage_underline_end": 305,
     "choices": [
       {
         "key": "A",
@@ -220339,8 +220339,8 @@
     "explanation": "\"Competence\" precisely refers to the ability to do something successfully or efficiently, accurately describing the developed mastery of navigation. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 294,
+    "passage_underline_end": 299,
     "choices": [
       {
         "key": "A",
@@ -220372,8 +220372,8 @@
     "explanation": "\"Ritual\" precisely conveys a prescribed or established procedure for a religious or other rite, or a solemn ceremony, accurately reflecting the formalized and purposeful nature of the grooming dance within the colony's social interactions. \"Behavior\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 260,
+    "passage_underline_end": 268,
     "choices": [
       {
         "key": "A",
@@ -220405,8 +220405,8 @@
     "explanation": "\"Cue\" precisely refers to a signal for action; a hint or indication, accurately describing the specific function of the piping sound in eliciting responses from other bees. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 237,
+    "passage_underline_end": 242,
     "choices": [
       {
         "key": "A",
@@ -220438,8 +220438,8 @@
     "explanation": "\"Channel\" precisely refers to a means of communication or expression, accurately describing the antennae as the specific route for sensory information transfer. \"Interface\" is too broad.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 293,
+    "passage_underline_end": 302,
     "choices": [
       {
         "key": "A",
@@ -220471,8 +220471,8 @@
     "explanation": "\"Dimension\" precisely refers to an aspect or feature of a situation, problem, or thing, accurately capturing the time-based characteristic that is crucial for communication effectiveness. \"Aspect\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 242,
+    "passage_underline_end": 248,
     "choices": [
       {
         "key": "A",
@@ -220537,8 +220537,8 @@
     "explanation": "\"Stimulus\" precisely conveys a thing or event that evokes a specific functional reaction in an organ or tissue, accurately describing the specific trigger for nursing behavior. \"Cue\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 281,
+    "passage_underline_end": 284,
     "choices": [
       {
         "key": "A",
@@ -220570,8 +220570,8 @@
     "explanation": "\"Process\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the systematic building and repair of the hive. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 293,
+    "passage_underline_end": 298,
     "choices": [
       {
         "key": "A",
@@ -220603,8 +220603,8 @@
     "explanation": "\"Deliberation\" precisely refers to long and careful consideration or discussion, accurately reflecting the collective decision-making process involved in choosing a new nest site. \"Process\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 270,
+    "passage_underline_end": 277,
     "choices": [
       {
         "key": "A",
@@ -220669,8 +220669,8 @@
     "explanation": "\"Process\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the sequential and coordinated steps involved in choosing a new nest site. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 306,
+    "passage_underline_end": 311,
     "choices": [
       {
         "key": "A",
@@ -220702,8 +220702,8 @@
     "explanation": "\"Efficient mechanism\" precisely describes a system or process that achieves a desired result with minimal waste, accurately conveying the effectiveness of trophallaxis in resource and information distribution. \"Good way\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -220735,8 +220735,8 @@
     "explanation": "\"Factor\" precisely describes an element contributing to a particular result or situation, accurately capturing its role in colony health and reproduction. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 269,
+    "passage_underline_end": 274,
     "choices": [
       {
         "key": "A",
@@ -220768,8 +220768,8 @@
     "explanation": "\"Directive\" precisely conveys an official or authoritative instruction, accurately reflecting the explicit call for more foragers to engage in nectar processing. \"Signal\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 292,
     "choices": [
       {
         "key": "A",
@@ -220801,8 +220801,8 @@
     "explanation": "\"Intervention\" precisely describes the action of interfering in an event or course of affairs so as to prevent or modify a result, accurately reflecting the deliberate disruption of a dance to change colony behavior. \"Communication\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 225,
+    "passage_underline_end": 238,
     "choices": [
       {
         "key": "A",
@@ -220834,8 +220834,8 @@
     "explanation": "\"Signals\" precisely refers to a gesture, sound, or action that conveys information or an instruction, accurately describing the communicative function of bee sounds. \"Things\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 274,
+    "passage_underline_end": 280,
     "choices": [
       {
         "key": "A",
@@ -220867,8 +220867,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific physiological and behavioral operation of the shaking dance. \"Way\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 252,
+    "passage_underline_end": 255,
     "choices": [
       {
         "key": "A",
@@ -223012,8 +223012,8 @@
     "explanation": "\"Predisposition\" precisely conveys an inherent inclination or tendency, accurately reflecting the biological readiness for language acquisition, which is more specific than a vague \"thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 311,
+    "passage_underline_end": 316,
     "choices": [
       {
         "key": "A",
@@ -223045,8 +223045,8 @@
     "explanation": "\"Leap\" precisely conveys a dramatic and sudden advance, accurately reflecting the significant and rapid development in expressive language during this stage, which is more impactful than a general \"jump.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 315,
+    "passage_underline_end": 319,
     "choices": [
       {
         "key": "A",
@@ -223078,8 +223078,8 @@
     "explanation": "\"Competence\" precisely refers to the ability to do something successfully or efficiently, accurately describing the child's developing mastery of grammatical rules. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 287,
+    "passage_underline_end": 292,
     "choices": [
       {
         "key": "A",
@@ -223111,8 +223111,8 @@
     "explanation": "\"Process\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the continuous and systematic cognitive activity involved in word-concept mapping. \"Work\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 346,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -223144,8 +223144,8 @@
     "explanation": "\"Deficits\" precisely refers to a disadvantage or impairment, accurately describing the specific shortcomings in language abilities, which is more precise in a scientific context than general \"problems.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 362,
+    "passage_underline_end": 370,
     "choices": [
       {
         "key": "A",
@@ -223210,8 +223210,8 @@
     "explanation": "\"Crucial\" precisely conveys extreme importance; vital, accurately reflecting the indispensable role of Theory of Mind in social cognitive development. \"Big\" is too informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 343,
+    "passage_underline_end": 346,
     "choices": [
       {
         "key": "A",
@@ -223243,8 +223243,8 @@
     "explanation": "\"Factors\" precisely describes circumstances, facts, or influences that contribute to a result, accurately reflecting the various environmental inputs that contribute to language learning, which is more specific than vague \"stuff.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 371,
+    "passage_underline_end": 376,
     "choices": [
       {
         "key": "A",
@@ -223276,8 +223276,8 @@
     "explanation": "\"Competence\" precisely refers to the ability to do something successfully or efficiently, accurately describing the mastery of narrative construction, which is more specific than a general \"ability.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 283,
+    "passage_underline_end": 290,
     "choices": [
       {
         "key": "A",
@@ -223309,8 +223309,8 @@
     "explanation": "\"Dynamic\" precisely refers to a process or system characterized by constant change, activity, or progress, accurately describing the reciprocal and evolving nature of responsive communication between caregiver and infant, which is more specific than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 216,
+    "passage_underline_end": 221,
     "choices": [
       {
         "key": "A",
@@ -223375,8 +223375,8 @@
     "explanation": "\"Association\" precisely refers to a mental connection between ideas or things, accurately describing the cognitive linkage formed between a new word and its concept. \"Connection\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 337,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -223408,8 +223408,8 @@
     "explanation": "\"Proficiency\" precisely conveys a high degree of skill; expertise, accurately reflecting the advanced level of language ability developed through rich linguistic exposure. \"Skills\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 368,
+    "passage_underline_end": 374,
     "choices": [
       {
         "key": "A",
@@ -223474,8 +223474,8 @@
     "explanation": "\"Dynamics\" precisely refers to the forces or properties that stimulate growth, development, or change within a system, accurately capturing the active and evolving nature of social communication that is affected by pragmatic deficits, which is more specific than a general \"interactions.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 342,
     "choices": [
       {
         "key": "A",
@@ -223507,8 +223507,8 @@
     "explanation": "\"Adaptability\" precisely conveys the quality of being able to adjust to new conditions, accurately reflecting the brain's flexible nature in acquiring and managing multiple languages simultaneously. \"Ability\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 427,
+    "passage_underline_end": 434,
     "choices": [
       {
         "key": "A",
@@ -223540,8 +223540,8 @@
     "explanation": "\"Framework\" precisely refers to a basic structure underlying a system, concept, or text, accurately describing the comprehensive theoretical structure that guides the social interactionist view of language acquisition. \"Approach\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 333,
+    "passage_underline_end": 341,
     "choices": [
       {
         "key": "A",
@@ -223573,8 +223573,8 @@
     "explanation": "\"Beneficial\" precisely conveys something resulting in good or advantageous results, accurately reflecting the positive and advantageous impact of selective attention training on language development. \"Good\" is too general and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 306,
     "choices": [
       {
         "key": "A",
@@ -223606,8 +223606,8 @@
     "explanation": "\"Impediment\" precisely refers to a hindrance or obstruction in doing something, accurately capturing how the word gap actively obstructs educational equity and future opportunities, which is more specific than a general \"challenge.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 315,
+    "passage_underline_end": 324,
     "choices": [
       {
         "key": "A",
@@ -223672,8 +223672,8 @@
     "explanation": "\"Effective\" precisely conveys success in producing a desired or intended result, accurately describing the positive and productive nature of the mutual exclusivity bias in facilitating word learning. \"Useful\" is too general.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 328,
+    "passage_underline_end": 334,
     "choices": [
       {
         "key": "A",
@@ -223771,8 +223771,8 @@
     "explanation": "\"Phenomena\" precisely refers to facts or situations that are observed to exist or happen, especially ones whose cause or explanation is in question, accurately describing these observable linguistic behaviors. \"Parts\" is too vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 323,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -223837,8 +223837,8 @@
     "explanation": "\"Stage\" precisely refers to a point, period, or step in a process or development, accurately describing overregularization as a distinct and temporary phase in grammatical acquisition. \"Part\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 344,
+    "passage_underline_end": 348,
     "choices": [
       {
         "key": "A",
@@ -223870,8 +223870,8 @@
     "explanation": "\"Criticality\" precisely conveys the state or quality of being of crucial importance or indispensability, fitting the context of a developmental period that is essential for achieving native-like language proficiency. \"Importance\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 347,
+    "passage_underline_end": 357,
     "choices": [
       {
         "key": "A",
@@ -223969,8 +223969,8 @@
     "explanation": "\"Form\" precisely refers to a particular way in which a thing exists or appears, accurately describing the specific structural characteristics of child-directed speech, which is more specific than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 348,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -224035,8 +224035,8 @@
     "explanation": "\"Milestone\" precisely refers to a significant stage or event in the development of something, accurately reflecting the critical importance of this transition in a child's linguistic journey. \"Leap\" is too informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 267,
+    "passage_underline_end": 271,
     "choices": [
       {
         "key": "A",
@@ -224101,8 +224101,8 @@
     "explanation": "\"Proficiencies\" precisely conveys a high degree of skill or expertise, accurately reflecting the improved mastery of motor tasks after REM sleep. \"Skills\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 331,
+    "passage_underline_end": 337,
     "choices": [
       {
         "key": "A",
@@ -224134,8 +224134,8 @@
     "explanation": "\"Oscillations\" precisely refers to a periodic motion or fluctuation between two points or states, accurately describing the rhythmic bursts of brain activity. \"Patterns\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 263,
+    "passage_underline_end": 271,
     "choices": [
       {
         "key": "A",
@@ -224167,8 +224167,8 @@
     "explanation": "\"Process\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the systematic cognitive operation of pattern extraction. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 264,
+    "passage_underline_end": 269,
     "choices": [
       {
         "key": "A",
@@ -224200,8 +224200,8 @@
     "explanation": "\"Regimens\" precisely refers to a prescribed course of medical treatment, diet, or exercise for the promotion or restoration of health, or a regular pattern of activity, accurately describing a structured and consistent approach to sleep. \"Habits\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 283,
+    "passage_underline_end": 289,
     "choices": [
       {
         "key": "A",
@@ -224233,8 +224233,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific biological operation of synaptic downscaling. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 291,
     "choices": [
       {
         "key": "A",
@@ -224299,8 +224299,8 @@
     "explanation": "\"Impairments\" precisely refers to the state of being damaged, weakened, or diminished, accurately describing the specific cognitive deficits in memory. \"Problems\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -224332,8 +224332,8 @@
     "explanation": "\"Function\" precisely refers to the natural purpose of something, or the way something works or operates, accurately describing the specific part each sleep stage plays. \"Role\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 280,
+    "passage_underline_end": 284,
     "choices": [
       {
         "key": "A",
@@ -224365,8 +224365,8 @@
     "explanation": "\"Condition\" precisely refers to a state of being with respect to circumstances, or a prerequisite, accurately describing sleep as a necessary prerequisite for optimal encoding. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 245,
+    "passage_underline_end": 250,
     "choices": [
       {
         "key": "A",
@@ -224398,8 +224398,8 @@
     "explanation": "\"Regulation\" precisely refers to the action or process of controlling or maintaining something, accurately describing the brain's management and modulation of emotional memories during sleep. \"Processing\" is too general in this context.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 295,
+    "passage_underline_end": 305,
     "choices": [
       {
         "key": "A",
@@ -224431,8 +224431,8 @@
     "explanation": "\"Function\" precisely refers to the natural purpose or role of a person or thing, or the way something works or operates, accurately describing the specific protective role of sleep. \"Effect\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 201,
+    "passage_underline_end": 207,
     "choices": [
       {
         "key": "A",
@@ -224464,8 +224464,8 @@
     "explanation": "\"Detrimental impact\" precisely conveys a harmful or damaging effect, accurately reflecting the negative consequences of sleep deprivation on cognitive functions. \"Big effect\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 262,
+    "passage_underline_end": 272,
     "choices": [
       {
         "key": "A",
@@ -224530,8 +224530,8 @@
     "explanation": "\"Correlation\" precisely conveys a mutual relationship or connection between two or more things, accurately reflecting the statistical link between sleep changes and memory decline. \"Connection\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 221,
+    "passage_underline_end": 231,
     "choices": [
       {
         "key": "A",
@@ -224563,8 +224563,8 @@
     "explanation": "\"Conditions\" precisely refers to the circumstances or factors affecting the way people live or work, or a state of being, accurately describing specific medical or physiological states that impair sleep. \"Problems\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 213,
+    "passage_underline_end": 221,
     "choices": [
       {
         "key": "A",
@@ -224596,8 +224596,8 @@
     "explanation": "\"Dimension\" precisely refers to an aspect or feature of a situation, problem, or thing, accurately capturing the time-based characteristic that is crucial for memory consolidation. \"Aspect\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 224,
+    "passage_underline_end": 230,
     "choices": [
       {
         "key": "A",
@@ -224662,8 +224662,8 @@
     "explanation": "\"Retrieval\" precisely refers to the process of getting something back from somewhere, accurately describing the specific cognitive process of accessing stored memories. \"Recall\" is often used similarly but \"retrieval\" is more precise in a neurological context.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 311,
+    "passage_underline_end": 317,
     "choices": [
       {
         "key": "A",
@@ -224695,8 +224695,8 @@
     "explanation": "\"Synchronizations\" precisely refers to the operation or coordination of things that occur at the same time, accurately describing the coordinated timing of activity between brain regions. \"Interactions\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 307,
+    "passage_underline_end": 319,
     "choices": [
       {
         "key": "A",
@@ -224794,8 +224794,8 @@
     "explanation": "\"Processes\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the systematic biochemical operations within cells. \"Events\" is too general for continuous biological activity.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 155,
+    "passage_underline_end": 161,
     "choices": [
       {
         "key": "A",
@@ -224827,8 +224827,8 @@
     "explanation": "\"Adaptations\" precisely conveys the process of change by which an organism or species becomes better suited to its environment, or a modification or alteration designed for a particular use or purpose, accurately describing the specific neurobiological adjustments that strengthen memories. \"Changes\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 344,
+    "passage_underline_end": 351,
     "choices": [
       {
         "key": "A",
@@ -224860,8 +224860,8 @@
     "explanation": "\"Variability\" precisely conveys the quality or state of being variable or diverse, accurately describing the differences in sleep patterns and their effects on memory among individuals. \"Nature\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 293,
+    "passage_underline_end": 299,
     "choices": [
       {
         "key": "A",
@@ -224893,8 +224893,8 @@
     "explanation": "\"Junctions\" precisely refers to a point where two or more things are joined, accurately describing the specific points of communication between neurons. \"Connections\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 336,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -224992,8 +224992,8 @@
     "explanation": "\"Content\" precisely refers to the subject matter or substance of a written work, speech, or thought, accurately describing the specific narrative elements within dreams. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 273,
+    "passage_underline_end": 278,
     "choices": [
       {
         "key": "A",
@@ -225025,8 +225025,8 @@
     "explanation": "\"Criticality\" precisely conveys the state or quality of being of crucial importance or indispensability, accurately reflecting the absolute necessity of consistent sleep for cognitive function. \"Importance\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 264,
     "choices": [
       {
         "key": "A",
@@ -225058,8 +225058,8 @@
     "explanation": "\"Intervention\" precisely conveys the action or process of interfering in a situation so as to alter the outcome, accurately describing TMR as a deliberate manipulation to enhance memory. \"Technique\" is too general for its scientific application.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 319,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -225091,8 +225091,8 @@
     "explanation": "\"Exhibit strategy\" precisely describes the planned course of action for the entire exhibit, encompassing the curator's overall vision and methods. \"Curation choice\" is too informal and vague for a professional context.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 395,
+    "passage_underline_end": 410,
     "choices": [
       {
         "key": "A",
@@ -225124,8 +225124,8 @@
     "explanation": "\"Exegesis\" precisely refers to a critical explanation or interpretation of a text, especially of scripture, but in this context, it refers to a detailed scholarly interpretation of the art. This is more precise than \"interpretation\" in an academic setting.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 461,
+    "passage_underline_end": 475,
     "choices": [
       {
         "key": "A",
@@ -225157,8 +225157,8 @@
     "explanation": "\"Fellowship\" precisely conveys a friendly association, especially with people who share one's interests, accurately reflecting the deep bond and shared experience among sailors. \"Camaraderie\" is too general, while \"fellowship\" emphasizes shared purpose and circumstances.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 475,
+    "passage_underline_end": 486,
     "choices": [
       {
         "key": "A",
@@ -225190,8 +225190,8 @@
     "explanation": "\"Understanding\" precisely conveys the ability to understand something; comprehension, accurately reflecting the desired cognitive outcome for visitors to grasp the complexities of cultural exchange. \"Experience\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 533,
+    "passage_underline_end": 543,
     "choices": [
       {
         "key": "A",
@@ -225223,8 +225223,8 @@
     "explanation": "\"Stylistic\" precisely refers to a particular procedure or way of doing something, especially a literary or artistic one, accurately conveying the specific design characteristics of the furniture. \"Aesthetic\" is too general and is already in the sentence.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 460,
+    "passage_underline_end": 469,
     "choices": [
       {
         "key": "A",
@@ -225289,8 +225289,8 @@
     "explanation": "\"Fundamentals\" precisely refers to a basic principle or rule or an essential part, accurately describing the core concepts of sound science that children would learn. \"Principles\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 535,
+    "passage_underline_end": 545,
     "choices": [
       {
         "key": "A",
@@ -225322,8 +225322,8 @@
     "explanation": "\"Complexity\" precisely conveys the state or quality of being intricate or complicated, accurately reflecting the curator's desire for visitors to grasp the many intricate aspects of globalization. \"Nature\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 545,
+    "passage_underline_end": 551,
     "choices": [
       {
         "key": "A",
@@ -225355,8 +225355,8 @@
     "explanation": "\"Lineages\" precisely refers to a sequence of species each of which is descended from its predecessors, accurately describing the specific evolutionary progression. \"Links\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 442,
+    "passage_underline_end": 447,
     "choices": [
       {
         "key": "A",
@@ -225421,8 +225421,8 @@
     "explanation": "\"Endeavors\" precisely conveys an attempt to achieve a goal, accurately reflecting the purposeful activities and achievements of women in Roman society. \"Contributions\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 528,
+    "passage_underline_end": 541,
     "choices": [
       {
         "key": "A",
@@ -225454,8 +225454,8 @@
     "explanation": "\"Intricacy\" precisely conveys the quality of being intricate, accurately reflecting the complex and detailed nature of African artistic traditions. \"Sophistication\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 590,
+    "passage_underline_end": 604,
     "choices": [
       {
         "key": "A",
@@ -225487,8 +225487,8 @@
     "explanation": "\"Fascination\" precisely conveys the state of being extremely interested in something, accurately reflecting the desired deep engagement with the exhibit's content. \"Wonder\" is a good option, but \"fascination\" implies a more sustained and profound engagement, fitting the goal of an immersive experience.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 490,
+    "passage_underline_end": 496,
     "choices": [
       {
         "key": "A",
@@ -225520,8 +225520,8 @@
     "explanation": "\"Vulnerability\" precisely conveys the state of being exposed to the possibility of being attacked or harmed, either physically or emotionally, accurately reflecting the susceptibility of rainforests to environmental damage. \"Fragility\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 498,
+    "passage_underline_end": 507,
     "choices": [
       {
         "key": "A",
@@ -225586,8 +225586,8 @@
     "explanation": "\"Trajectories\" precisely conveys a path or course taken by a moving object or person, or a line of development, accurately reflecting the path of technological advancement. \"Trends\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 435,
+    "passage_underline_end": 441,
     "choices": [
       {
         "key": "A",
@@ -225619,8 +225619,8 @@
     "explanation": "\"Milieu\" precisely refers to a person's social environment, accurately reflecting the specific cultural and social setting in which the instruments were used. \"Context\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 520,
+    "passage_underline_end": 527,
     "choices": [
       {
         "key": "A",
@@ -225685,8 +225685,8 @@
     "explanation": "\"Inner lives\" precisely conveys the private thoughts and feelings of a person, accurately reflecting the curator's aim to reveal the personal and emotional aspects of the soldiers' existence beyond their military role. \"Humanity\" is too broad.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 510,
+    "passage_underline_end": 518,
     "choices": [
       {
         "key": "A",
@@ -225718,8 +225718,8 @@
     "explanation": "\"Simulations\" precisely refers to the imitation of the operation of a real-world process or system over time, accurately describing the interactive flight simulators used to recreate flight experiences. \"Experiences\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 444,
+    "passage_underline_end": 455,
     "choices": [
       {
         "key": "A",
@@ -225817,8 +225817,8 @@
     "explanation": "\"Conventions\" precisely refers to a way in which something is usually done, especially within a particular area or activity, accurately describing the generally accepted social rules and behaviors of the time. \"Norms\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 405,
+    "passage_underline_end": 410,
     "choices": [
       {
         "key": "A",
@@ -225850,8 +225850,8 @@
     "explanation": "\"Palpable\" precisely conveys a feeling or atmosphere so intense as to be almost touched or felt, accurately reflecting the curator's desire for visitors to deeply experience and feel the history. \"Present\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 665,
+    "passage_underline_end": 672,
     "choices": [
       {
         "key": "A",
@@ -225883,8 +225883,8 @@
     "explanation": "\"Productivity\" precisely conveys the rate at which a company or country produces goods, or the amount of something produced, accurately reflecting the increased agricultural output resulting from irrigation. \"Abundance\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 435,
+    "passage_underline_end": 444,
     "choices": [
       {
         "key": "A",
@@ -225949,8 +225949,8 @@
     "explanation": "\"Strata\" precisely refers to a level or class to which people are assigned according to their social status or standing, accurately conveying the distinct social divisions within ancient Egyptian society. \"Levels\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 614,
+    "passage_underline_end": 620,
     "choices": [
       {
         "key": "A",
@@ -225982,8 +225982,8 @@
     "explanation": "\"Ecosystems\" precisely refers to a biological community of interacting organisms and their physical environment, accurately describing the complex natural habitats of dinosaurs. \"Systems\" is too vague.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 481,
+    "passage_underline_end": 488,
     "choices": [
       {
         "key": "A",
@@ -226015,8 +226015,8 @@
     "explanation": "\"Sonic backdrops\" precisely conveys the idea of a background sound environment, accurately describing the specific type of audio intended to complement the visual experience. \"Soundscapes\" can be used but \"sonic backdrops\" is more precise in this context.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 375,
+    "passage_underline_end": 386,
     "choices": [
       {
         "key": "A",
@@ -226048,8 +226048,8 @@
     "explanation": "\"Assiduousness\" precisely conveys constant or close attention to what one is doing, accurately reflecting the meticulous and persistent effort of the artisans. \"Dedication\" is too general.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 479,
+    "passage_underline_end": 489,
     "choices": [
       {
         "key": "A",
@@ -226147,8 +226147,8 @@
     "explanation": "\"Vital mechanism\" precisely describes a critical process or system by which a biological function is achieved, accurately conveying the scientific importance of blubber for thermoregulation.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 276,
+    "passage_underline_end": 284,
     "choices": [
       {
         "key": "A",
@@ -226180,8 +226180,8 @@
     "explanation": "\"Adaptation\" precisely refers to a feature or trait that has become common in a population because it provides a survival advantage, accurately describing the evolved feather structure for thermal regulation. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 288,
+    "passage_underline_end": 293,
     "choices": [
       {
         "key": "A",
@@ -226213,8 +226213,8 @@
     "explanation": "\"Architecture\" precisely refers to the complex or carefully designed structure of something, accurately describing the intricate and functional organization of penguin feathers. \"Setup\" is too informal and general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 292,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -226279,8 +226279,8 @@
     "explanation": "\"Investment\" precisely conveys the action of devoting time, effort, or energy to a particular undertaking with the expectation of a worthwhile result, accurately reflecting the significant commitment for reproductive success. \"Effort\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 281,
+    "passage_underline_end": 287,
     "choices": [
       {
         "key": "A",
@@ -226312,8 +226312,8 @@
     "explanation": "\"Optimal morphology\" precisely refers to the form or structure of an organism that is best suited for its function in a particular environment, accurately describing the highly adapted physical characteristics of penguin limbs. \"Good design\" is informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 327,
+    "passage_underline_end": 338,
     "choices": [
       {
         "key": "A",
@@ -226345,8 +226345,8 @@
     "explanation": "\"Contribution\" precisely conveys the part played by something in bringing about a result, accurately reflecting its small but measurable role in heat absorption. \"Effect\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 303,
+    "passage_underline_end": 309,
     "choices": [
       {
         "key": "A",
@@ -226444,8 +226444,8 @@
     "explanation": "\"Adjustments\" precisely refers to small alterations or movements made to achieve a desired result, accurately describing the fine-tuning of posture for thermoregulation. \"Things\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 274,
+    "passage_underline_end": 280,
     "choices": [
       {
         "key": "A",
@@ -226477,8 +226477,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific physiological operation of salt excretion. \"Process\" is too general here given the more specific options.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 259,
+    "passage_underline_end": 266,
     "choices": [
       {
         "key": "A",
@@ -226510,8 +226510,8 @@
     "explanation": "\"Property\" precisely refers to an attribute, quality, or characteristic of something, accurately describing the specific water-repelling capability of the feathers. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 300,
+    "passage_underline_end": 305,
     "choices": [
       {
         "key": "A",
@@ -226543,8 +226543,8 @@
     "explanation": "\"Large efflux of heat\" precisely conveys a substantial outward flow of thermal energy, accurately reflecting the scientific process of heat escaping from the body. \"Lot of heat\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 347,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -226576,8 +226576,8 @@
     "explanation": "\"Redirection\" precisely refers to the action of directing something to a different place or purpose, accurately describing the specific change in blood flow pathways. \"Adjustment\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 312,
     "choices": [
       {
         "key": "A",
@@ -226609,8 +226609,8 @@
     "explanation": "\"Means\" precisely refers to a method, course of action, or instrument by which something can be accomplished, accurately describing sun-basking as a supplemental route for heat gain. \"Way\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 344,
+    "passage_underline_end": 347,
     "choices": [
       {
         "key": "A",
@@ -226642,8 +226642,8 @@
     "explanation": "\"Efficient physiological trait\" precisely describes a functional, inherited characteristic that minimizes heat loss, accurately conveying the specific biological advantage of their foot structure. \"Good adaptation\" is vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 295,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -226675,8 +226675,8 @@
     "explanation": "\"Efflux\" precisely refers to the flow of something out of a particular region or thing, accurately describing the outgoing heat. \"Amount\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 320,
     "choices": [
       {
         "key": "A",
@@ -226741,8 +226741,8 @@
     "explanation": "\"Stage\" precisely refers to a distinct period in a process of change or development, accurately describing the specific phase of development for chicks' thermoregulatory capacity. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 292,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -226774,8 +226774,8 @@
     "explanation": "\"Constituent\" precisely refers to a component part of something, accurately describing the specific material (trapped air) that makes up the insulating layer. \"Component\" is also good, but \"constituent\" specifically highlights it as the primary material.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 318,
+    "passage_underline_end": 327,
     "choices": [
       {
         "key": "A",
@@ -226840,8 +226840,8 @@
     "explanation": "\"Regulation\" precisely refers to the act of controlling or maintaining something, accurately describing the deliberate actions penguins take to maintain their body temperature. \"Management\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 268,
+    "passage_underline_end": 278,
     "choices": [
       {
         "key": "A",
@@ -226873,8 +226873,8 @@
     "explanation": "\"Gain\" precisely refers to an increase or improvement, accurately reflecting the specific acquisition of heat from solar radiation. \"Advantage\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 338,
     "choices": [
       {
         "key": "A",
@@ -226906,8 +226906,8 @@
     "explanation": "\"Efficient mechanism\" precisely describes a system or process that achieves a desired result with minimal waste of effort or resources, accurately reflecting how huddling conserves heat effectively. \"Good way\" is informal and vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 331,
+    "passage_underline_end": 339,
     "choices": [
       {
         "key": "A",
@@ -226939,8 +226939,8 @@
     "explanation": "\"Morphology\" precisely refers to the form and structure of an organism or any of its parts, accurately describing the specific anatomical makeup of the penguin's body. \"Design\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 343,
+    "passage_underline_end": 349,
     "choices": [
       {
         "key": "A",
@@ -226972,8 +226972,8 @@
     "explanation": "\"Challenge\" precisely conveys a demanding or stimulating task or situation, accurately reflecting the ongoing difficulty penguins face due to water's heat-conducting properties. \"Situation\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 364,
+    "passage_underline_end": 373,
     "choices": [
       {
         "key": "A",
@@ -227005,8 +227005,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific physiological operation of shivering. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 332,
+    "passage_underline_end": 337,
     "choices": [
       {
         "key": "A",
@@ -227038,8 +227038,8 @@
     "explanation": "\"Practice\" precisely conveys a customary or habitual procedure, accurately describing the regular and repetitive nature of preening in penguins. \"Action\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 304,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -227071,8 +227071,8 @@
     "explanation": "\"Adjustment\" precisely refers to a small alteration or movement made to achieve a desired fit, appearance, or result, accurately describing the immediate regulatory action of controlling blood flow. \"Change\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 289,
+    "passage_underline_end": 295,
     "choices": [
       {
         "key": "A",
@@ -227104,8 +227104,8 @@
     "explanation": "\"Factor\" precisely describes an element contributing to a particular result or situation, accurately capturing its role in maintaining warmth. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 323,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -227137,8 +227137,8 @@
     "explanation": "\"Regulation\" precisely refers to the act of controlling or maintaining something, accurately describing the active control over physiological processes to manage body temperature. \"Adjustment\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 335,
+    "passage_underline_end": 345,
     "choices": [
       {
         "key": "A",
@@ -227170,8 +227170,8 @@
     "explanation": "\"Major determinant\" precisely conveys a principal factor that establishes or decides something, accurately reflecting the causal relationship between body size and heat retention. \"Big factor\" is informal and less precise.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 298,
+    "passage_underline_end": 308,
     "choices": [
       {
         "key": "A",
@@ -227203,8 +227203,8 @@
     "explanation": "\"Features\" precisely refers to a distinctive attribute or aspect of something, accurately describing specific geological elements like mountains or trenches. \"Things\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 337,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -227236,8 +227236,8 @@
     "explanation": "\"Expansion\" precisely conveys the action of becoming larger or more extensive, accurately reflecting the widening of ocean basins due to seafloor spreading. \"Increase\" is less precise for spatial change.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 257,
+    "passage_underline_end": 265,
     "choices": [
       {
         "key": "A",
@@ -227269,8 +227269,8 @@
     "explanation": "\"Phenomena\" precisely refers to facts or situations that are observed to exist or happen, accurately describing observable geological processes like earthquakes and volcanic eruptions. \"Activity\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 322,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -227302,8 +227302,8 @@
     "explanation": "\"Lithosphere\" precisely refers to the rigid outer part of the earth, consisting of the crust and upper mantle, accurately describing the entire structural layer being formed. \"Crust\" is a part of it, but \"lithosphere\" is more comprehensive in the context of plate creation.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 330,
+    "passage_underline_end": 335,
     "choices": [
       {
         "key": "A",
@@ -227401,8 +227401,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific physical operation of mantle convection. \"Process\" is too general in this context.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 256,
+    "passage_underline_end": 263,
     "choices": [
       {
         "key": "A",
@@ -227434,8 +227434,8 @@
     "explanation": "\"Phenomena\" precisely refers to facts or situations that are observed to exist or happen, accurately describing earthquakes as observable geological occurrences. \"Things\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 259,
+    "passage_underline_end": 265,
     "choices": [
       {
         "key": "A",
@@ -227467,8 +227467,8 @@
     "explanation": "\"Corroboration\" precisely refers to evidence that confirms or gives support to a statement, theory, or finding, accurately reflecting how the age distribution strengthens the plate tectonic theory. \"Evidence\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 329,
     "choices": [
       {
         "key": "A",
@@ -227533,8 +227533,8 @@
     "explanation": "\"Features\" precisely refers to a distinctive attribute or aspect of something, accurately describing oceanic trenches as recognizable geological characteristics. \"Things\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 262,
+    "passage_underline_end": 268,
     "choices": [
       {
         "key": "A",
@@ -227566,8 +227566,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the specific physical principle (gravitational sliding) driving plate motion. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 277,
+    "passage_underline_end": 282,
     "choices": [
       {
         "key": "A",
@@ -227599,8 +227599,8 @@
     "explanation": "\"Phenomena\" precisely refers to facts or situations that are observed to exist or happen, accurately describing observable geological processes like earthquakes and volcanic eruptions. \"Activity\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 353,
+    "passage_underline_end": 361,
     "choices": [
       {
         "key": "A",
@@ -227698,8 +227698,8 @@
     "explanation": "\"Correlation\" precisely conveys a mutual relationship or connection between two or more things, accurately reflecting the statistical and causal link between volcano locations and plate boundaries. \"Relationship\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 257,
+    "passage_underline_end": 269,
     "choices": [
       {
         "key": "A",
@@ -227731,8 +227731,8 @@
     "explanation": "\"Velocity\" precisely refers to the speed of something in a given direction, accurately reflecting the specific rate and direction of plate motion. \"Movement\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 266,
+    "passage_underline_end": 274,
     "choices": [
       {
         "key": "A",
@@ -227764,8 +227764,8 @@
     "explanation": "\"Dynamics\" precisely refers to the forces or properties that stimulate growth, development, or change within a system or process, accurately describing the active and influential thermal forces. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 260,
+    "passage_underline_end": 265,
     "choices": [
       {
         "key": "A",
@@ -227830,8 +227830,8 @@
     "explanation": "\"Progression\" precisely conveys a movement or development toward a more advanced state or stage, accurately reflecting the sequential aging of the islands along the chain. \"Pattern\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 253,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -227863,8 +227863,8 @@
     "explanation": "\"Transformation\" precisely conveys a dramatic change in form or appearance, accurately reflecting the profound reshaping of Earth's surface and climate. \"Event\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 298,
+    "passage_underline_end": 303,
     "choices": [
       {
         "key": "A",
@@ -227929,8 +227929,8 @@
     "explanation": "\"Ruptures\" precisely refers to a break or burst, accurately describing the sudden release of built-up stress along a fault line as earthquakes. \"Events\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 379,
+    "passage_underline_end": 385,
     "choices": [
       {
         "key": "A",
@@ -227995,8 +227995,8 @@
     "explanation": "\"Displacements\" precisely refers to the action of moving something from its proper or usual position, or the state of being moved, accurately describing the vertical changes in position of the Earth's surface. \"Movements\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 358,
     "choices": [
       {
         "key": "A",
@@ -228028,8 +228028,8 @@
     "explanation": "\"Crucial function\" precisely describes an essential purpose or role, accurately conveying the vital contribution of subduction zones to the Earth's geological processes. \"Big part\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 338,
+    "passage_underline_end": 346,
     "choices": [
       {
         "key": "A",
@@ -228094,8 +228094,8 @@
     "explanation": "\"Formations\" precisely refers to the action of forming or the process of being formed, or a structure or arrangement, accurately describing the geological structures created by volcanic activity. \"Things\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 260,
     "choices": [
       {
         "key": "A",
@@ -228127,8 +228127,8 @@
     "explanation": "\"Signature\" precisely conveys a distinctive characteristic or indication of the presence or identity of something, accurately describing the unique magnetic record imprinted on the seafloor. \"Pattern\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 306,
+    "passage_underline_end": 313,
     "choices": [
       {
         "key": "A",
@@ -228160,8 +228160,8 @@
     "explanation": "\"Pressures\" precisely refers to the continuous physical force exerted on or against an object by something in contact with it, accurately describing the compressive forces at play in mountain building. \"Forces\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 322,
+    "passage_underline_end": 328,
     "choices": [
       {
         "key": "A",
@@ -228193,8 +228193,8 @@
     "explanation": "\"Phenomenon\" precisely refers to a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question, accurately describing hotspots as an observable geological event. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 296,
     "choices": [
       {
         "key": "A",
@@ -228226,8 +228226,8 @@
     "explanation": "\"Inefficient\" precisely conveys a lack of effective organization, time, or energy in doing something, accurately describing the operational shortcomings of fragmented postal systems. \"Bad\" is too vague and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 327,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -228292,8 +228292,8 @@
     "explanation": "\"Framework\" precisely refers to a basic structure underlying a system, concept, or text, accurately describing the foundational agreements that enabled global postal services. \"Thing\" is overly vague.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 244,
+    "passage_underline_end": 249,
     "choices": [
       {
         "key": "A",
@@ -228325,8 +228325,8 @@
     "explanation": "\"Innovation\" precisely refers to a new method, idea, or product, accurately describing the introduction of mail sorting machines as a novel technological advancement. \"Change\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 292,
     "choices": [
       {
         "key": "A",
@@ -228358,8 +228358,8 @@
     "explanation": "\"Credibility\" precisely conveys the quality of being trusted and believed in, accurately reflecting the public's confidence in the postal system's ability to deliver mail. \"Reliability\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 328,
+    "passage_underline_end": 339,
     "choices": [
       {
         "key": "A",
@@ -228391,8 +228391,8 @@
     "explanation": "\"Crucial component\" precisely identifies an indispensable part, accurately reflecting the vital role of military mail in supporting troop morale and national unity during conflicts. \"Good thing\" is informal and imprecise.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 324,
     "choices": [
       {
         "key": "A",
@@ -228424,8 +228424,8 @@
     "explanation": "\"Exchanges\" precisely refers to the act of giving something and receiving something in return, accurately describing the reciprocal nature of communication facilitated by postcards. \"Messages\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 343,
+    "passage_underline_end": 351,
     "choices": [
       {
         "key": "A",
@@ -228523,8 +228523,8 @@
     "explanation": "\"Component\" precisely refers to a part or element of a larger whole, accurately describing postmarks as an integral part of the overall postal operation. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 286,
+    "passage_underline_end": 291,
     "choices": [
       {
         "key": "A",
@@ -228556,8 +228556,8 @@
     "explanation": "\"Channel\" precisely refers to a means of communication or expression, accurately describing the postal system as a medium for transmitting funds. \"Way\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 327,
     "choices": [
       {
         "key": "A",
@@ -228589,8 +228589,8 @@
     "explanation": "\"Vehicle\" precisely refers to a thing used for conveying something, accurately describing the postal system's role as a medium for transmitting printed materials. \"Tool\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 322,
+    "passage_underline_end": 326,
     "choices": [
       {
         "key": "A",
@@ -228622,8 +228622,8 @@
     "explanation": "\"Perils\" precisely conveys serious and immediate danger, accurately reflecting the severe and life-threatening nature of the challenges faced by mail coaches. \"Dangers\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 324,
+    "passage_underline_end": 331,
     "choices": [
       {
         "key": "A",
@@ -228655,8 +228655,8 @@
     "explanation": "\"Functions\" precisely refers to the natural purpose or role of a person or thing, or the way something works, accurately describing the specific purposes served by telegrams versus letters. \"Tasks\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 317,
+    "passage_underline_end": 322,
     "choices": [
       {
         "key": "A",
@@ -228688,8 +228688,8 @@
     "explanation": "\"Profound influence\" precisely conveys a deep and far-reaching impact, accurately reflecting the significant and widespread social changes brought about by postal reform. \"Big effect\" is informal and imprecise.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 277,
+    "passage_underline_end": 287,
     "choices": [
       {
         "key": "A",
@@ -228721,8 +228721,8 @@
     "explanation": "\"Accountability\" precisely conveys the fact or condition of being accountable; responsibility, accurately reflecting the shift where the sender became answerable for ensuring proper postage. \"Responsibility\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 350,
+    "passage_underline_end": 364,
     "choices": [
       {
         "key": "A",
@@ -228754,8 +228754,8 @@
     "explanation": "\"Demand\" precisely conveys a strong request or requirement, accurately reflecting the heavy expectations and needs placed on the postal system by growing urban populations. \"Pressure\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 319,
+    "passage_underline_end": 327,
     "choices": [
       {
         "key": "A",
@@ -228787,8 +228787,8 @@
     "explanation": "\"Crucial factor\" precisely identifies an indispensable element contributing to a result, accurately reflecting the vital role of postal inspectors in ensuring the system's security. \"Good thing\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 266,
+    "passage_underline_end": 276,
     "choices": [
       {
         "key": "A",
@@ -228820,8 +228820,8 @@
     "explanation": "\"Infrastructure\" precisely refers to the basic physical and organizational structures and facilities needed for the operation of a society or enterprise, accurately describing the foundational elements supporting postal operations. \"Stuff\" is overly vague and informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 239,
+    "passage_underline_end": 244,
     "choices": [
       {
         "key": "A",
@@ -228853,8 +228853,8 @@
     "explanation": "\"Means\" precisely refers to a method, course of action, or instrument by which something can be accomplished, accurately describing the uniform as a tool to achieve professionalization and trust. \"Way\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 284,
+    "passage_underline_end": 287,
     "choices": [
       {
         "key": "A",
@@ -228886,8 +228886,8 @@
     "explanation": "\"Divergences\" precisely conveys a difference in opinion, a deviation from a common point, or a separation, accurately reflecting the differing viewpoints on postal policy. \"Differences\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 285,
+    "passage_underline_end": 296,
     "choices": [
       {
         "key": "A",
@@ -228919,8 +228919,8 @@
     "explanation": "\"Device\" precisely refers to a thing made or adapted for a particular purpose, accurately describing the envelope as a practical tool for securing correspondence. \"Thing\" is overly vague and informal.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 326,
     "choices": [
       {
         "key": "A",
@@ -228952,8 +228952,8 @@
     "explanation": "\"Transactions\" precisely refers to an instance of buying or selling something; a business deal, accurately reflecting the specific commercial exchanges facilitated by mail advertising. \"Things\" is overly vague and informal.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 266,
+    "passage_underline_end": 272,
     "choices": [
       {
         "key": "A",
@@ -228985,8 +228985,8 @@
     "explanation": "\"Institution\" precisely refers to an established law, practice, or custom, or a long-standing and respected organization, accurately describing the formal governmental body. \"System\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 297,
+    "passage_underline_end": 303,
     "choices": [
       {
         "key": "A",
@@ -229051,8 +229051,8 @@
     "explanation": "\"Agency\" precisely refers to a government bureau or independent organization responsible for specific administrative functions, accurately describing the formal nature of the postal service. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 348,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -229084,8 +229084,8 @@
     "explanation": "\"Immense leap\" precisely conveys a dramatic and sudden advance, accurately reflecting the revolutionary speed and efficiency brought by integrating railways into the postal system. \"Big step\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 295,
+    "passage_underline_end": 303,
     "choices": [
       {
         "key": "A",
@@ -229117,8 +229117,8 @@
     "explanation": "\"Factor\" precisely describes an element contributing to a particular result or situation, accurately capturing its role in the success of mail-order businesses. \"Thing\" is overly vague.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 321,
+    "passage_underline_end": 326,
     "choices": [
       {
         "key": "A",
@@ -229150,8 +229150,8 @@
     "explanation": "\"System\" precisely refers to a set of principles or procedures according to which something is done; an organized scheme or method, accurately describing the integrated network of riders, horses, and stations. \"Method\" is too general.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 301,
+    "passage_underline_end": 307,
     "choices": [
       {
         "key": "A",
@@ -229183,8 +229183,8 @@
     "explanation": "\"Function\" precisely refers to the natural purpose of something, or the way something works or operates, accurately describing the various duties and uses of the post office beyond simple mail delivery. \"Role\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 296,
+    "passage_underline_end": 300,
     "choices": [
       {
         "key": "A",
@@ -229216,8 +229216,8 @@
     "explanation": "\"Strategic initiative\" precisely conveys a carefully planned and important new action or movement, accurately reflecting the deliberate and impactful policy decision of implementing RFD. \"Good move\" is informal and imprecise.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 326,
+    "passage_underline_end": 335,
     "choices": [
       {
         "key": "A",
@@ -229249,8 +229249,8 @@
     "explanation": "\"Readership\" precisely refers to the readers of a particular newspaper, magazine, or book, accurately describing the specific group benefiting from expanded newspaper distribution. \"Public\" is too general.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 360,
+    "passage_underline_end": 366,
     "choices": [
       {
         "key": "A",
@@ -229282,8 +229282,8 @@
     "explanation": "\"Profound effect\" more precisely conveys a deep and far-reaching impact on recall, aligning with the scientific significance of the findings in memory research.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 353,
+    "passage_underline_end": 363,
     "choices": [
       {
         "key": "A",
@@ -229315,8 +229315,8 @@
     "explanation": "\"Reorganization\" specifically refers to the process of arranging or structuring something in a new or different way, precisely describing the brain's dynamic adaptation in response to learning, which is more accurate than a general \"change.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 326,
+    "passage_underline_end": 332,
     "choices": [
       {
         "key": "A",
@@ -229348,8 +229348,8 @@
     "explanation": "\"Comprehension\" precisely refers to the ability to understand something, fitting the context of fully grasping concepts, which is a more formal and accurate term for deep learning than \"understanding\" as a standalone noun.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 367,
+    "passage_underline_end": 380,
     "choices": [
       {
         "key": "A",
@@ -229381,8 +229381,8 @@
     "explanation": "\"Dimension\" precisely refers to an aspect or feature of a situation, problem, or thing, accurately capturing the social facet of human learning that mirror neurons underscore, which is more specific than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 375,
+    "passage_underline_end": 380,
     "choices": [
       {
         "key": "A",
@@ -229414,8 +229414,8 @@
     "explanation": "\"Strategy\" precisely refers to a plan of action or policy designed to achieve a major or overall aim, fitting the intentional and systematic application of testing oneself for improved learning, which is more encompassing than a general \"way.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 372,
+    "passage_underline_end": 375,
     "choices": [
       {
         "key": "A",
@@ -229447,8 +229447,8 @@
     "explanation": "\"Intervention\" precisely describes the act or fact of interfering with an event or course of affairs so as to prevent or modify a result, fitting the context of actively assisting a victim in an emergency, which is more specific than a general \"action.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 344,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -229546,8 +229546,8 @@
     "explanation": "\"Barrier\" precisely refers to an obstacle that prevents movement or progress, accurately capturing how the curse of knowledge obstructs effective communication and understanding between experts and novices, which is more specific than a general \"problem.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 312,
+    "passage_underline_end": 319,
     "choices": [
       {
         "key": "A",
@@ -229579,8 +229579,8 @@
     "explanation": "\"Phenomenon\" precisely refers to a fact or situation that is observed to exist or happen, especially one whose cause or explanation is in question, accurately describing the observable psychological effect of mere exposure, which is more formal and specific than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 270,
+    "passage_underline_end": 275,
     "choices": [
       {
         "key": "A",
@@ -229612,8 +229612,8 @@
     "explanation": "\"Effective\" precisely conveys success in producing a desired or intended result, accurately describing the capacity of intermittent schedules to maintain behavior, which is more specific than a generic \"good\" effect.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -229645,8 +229645,8 @@
     "explanation": "\"Achievements\" precisely refers to things done successfully, typically by effort, courage, or skill, accurately reflecting the positive results in academic pursuits and personal development driven by self-efficacy, which is more specific than vague \"things.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 363,
+    "passage_underline_end": 369,
     "choices": [
       {
         "key": "A",
@@ -229678,8 +229678,8 @@
     "explanation": "\"Factor\" precisely describes an element contributing to a particular result or situation, accurately capturing its role in influencing learning outcomes, which is more specific than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 332,
+    "passage_underline_end": 337,
     "choices": [
       {
         "key": "A",
@@ -229744,8 +229744,8 @@
     "explanation": "\"Interactions\" precisely refers to reciprocal actions or influences, accurately capturing the dynamic social exchanges where the halo effect manifests, which is more specific than a general \"situations.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 333,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -229777,8 +229777,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the underlying functional operation of how associations are formed in conditioning, which is more specific than a general \"process.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 256,
+    "passage_underline_end": 263,
     "choices": [
       {
         "key": "A",
@@ -229810,8 +229810,8 @@
     "explanation": "\"Engagements\" precisely refers to the act of being involved in an activity, accurately reflecting the active participation and absorption characteristic of a flow state, which is more specific than general \"experiences.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 342,
+    "passage_underline_end": 353,
     "choices": [
       {
         "key": "A",
@@ -229843,8 +229843,8 @@
     "explanation": "\"Strategy\" precisely refers to a plan of action or policy designed to achieve a major or overall aim, fitting the intentional and systematic application of spaced learning for optimal educational outcomes, which is more encompassing than a general \"approach.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 300,
+    "passage_underline_end": 308,
     "choices": [
       {
         "key": "A",
@@ -229876,8 +229876,8 @@
     "explanation": "\"Impediment\" precisely refers to a hindrance or obstruction in doing something, accurately capturing how this cognitive bias actively hinders learning and improvement, which is more specific than a general \"problem.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 341,
+    "passage_underline_end": 348,
     "choices": [
       {
         "key": "A",
@@ -229909,8 +229909,8 @@
     "explanation": "\"Cognition\" precisely refers to the mental action or process of acquiring knowledge and understanding through thought, experience, and the senses, which is the specific scientific term for human thinking and aligns with the field of cognitive neuroscience, making it more accurate than general \"thinking.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 316,
+    "passage_underline_end": 324,
     "choices": [
       {
         "key": "A",
@@ -229942,8 +229942,8 @@
     "explanation": "\"Effective\" precisely conveys success in producing a desired or intended result, accurately describing the utility of the Zeigarnik effect in enhancing motivation and completion, which is more specific than a generic \"good\" way.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 298,
+    "passage_underline_end": 302,
     "choices": [
       {
         "key": "A",
@@ -229975,8 +229975,8 @@
     "explanation": "\"Technique\" precisely refers to a skillful or efficient way of doing or achieving something, fitting the specific pedagogical practice of providing and gradually removing support in learning, which is more specific than a vague \"thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 290,
+    "passage_underline_end": 295,
     "choices": [
       {
         "key": "A",
@@ -230008,8 +230008,8 @@
     "explanation": "\"Consolidation\" precisely refers to the neurological process by which a temporary memory is transformed into a more stable, long-lasting form, which is the specific scientific term for the transfer of memories from hippocampus to neocortex.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 302,
+    "passage_underline_end": 310,
     "choices": [
       {
         "key": "A",
@@ -230041,8 +230041,8 @@
     "explanation": "\"Achievement\" more precisely refers to a thing done successfully, typically by effort, courage, or skill, fitting the context of improved academic results and the successful completion of tasks, which is more specific than a general \"performance.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 359,
+    "passage_underline_end": 370,
     "choices": [
       {
         "key": "A",
@@ -230074,8 +230074,8 @@
     "explanation": "\"Equilibrium\" precisely describes a state of balance, especially between opposing forces or influences, accurately reflecting the desired stable and balanced emotional state after therapy, which is more specific than general \"states.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 358,
+    "passage_underline_end": 364,
     "choices": [
       {
         "key": "A",
@@ -230107,8 +230107,8 @@
     "explanation": "\"Principle\" precisely refers to a fundamental truth or proposition that serves as the foundation for a system of belief or behavior, accurately describing the underlying rule or theory behind spaced learning, which is more fundamental and precise than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 315,
+    "passage_underline_end": 320,
     "choices": [
       {
         "key": "A",
@@ -230140,8 +230140,8 @@
     "explanation": "\"Adaptations\" precisely refers to the process of change by which an organism or species becomes better suited to its environment, fitting the context of learned behavioral adjustments in response to stimuli, which is more specific than general \"changes.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 314,
+    "passage_underline_end": 321,
     "choices": [
       {
         "key": "A",
@@ -230173,8 +230173,8 @@
     "explanation": "\"Input\" precisely describes information that is put into a system or process, accurately reflecting the specific data provided to the learner, which is more formal and specific than a vague \"thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 230,
+    "passage_underline_end": 235,
     "choices": [
       {
         "key": "A",
@@ -230206,8 +230206,8 @@
     "explanation": "\"Information\" precisely refers to facts provided or learned about something or someone, accurately describing the specific type of content that overloads working memory, which is more formal and specific than a vague \"stuff.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 309,
+    "passage_underline_end": 314,
     "choices": [
       {
         "key": "A",
@@ -230272,8 +230272,8 @@
     "explanation": "\"Mastery\" precisely refers to comprehensive knowledge or skill in a subject or accomplishment, aligning with the goal of flexible and robust understanding achieved through interleaving, which is more specific than general \"learning.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 428,
+    "passage_underline_end": 436,
     "choices": [
       {
         "key": "A",
@@ -230305,8 +230305,8 @@
     "explanation": "\"Functions\" precisely refers to the natural purpose of something or the way something works or operates, accurately describing the specific mental operations related to cognitive performance, which is more specific than vague \"stuff.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 351,
+    "passage_underline_end": 356,
     "choices": [
       {
         "key": "A",
@@ -230338,8 +230338,8 @@
     "explanation": "\"Vital mechanism\" precisely describes a critical process essential for maintaining life-supporting conditions, more accurately conveying its scientific importance than a vague phrase like \"big thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 263,
     "choices": [
       {
         "key": "A",
@@ -230371,8 +230371,8 @@
     "explanation": "\"Products\" accurately identifies glucose and oxygen as the results of the biochemical reactions, providing a precise scientific term for their role in the process.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 277,
+    "passage_underline_end": 283,
     "choices": [
       {
         "key": "A",
@@ -230470,8 +230470,8 @@
     "explanation": "\"Promising\" more precisely conveys that the applications have a high potential for success or future benefit in a scientific context, rather than just being vaguely \"interesting.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 281,
+    "passage_underline_end": 292,
     "choices": [
       {
         "key": "A",
@@ -230503,8 +230503,8 @@
     "explanation": "\"Existence\" precisely refers to the state of being real or alive, accurately conveying that the magnetic field facilitates the very presence of life on Earth. The other options imply a quality of life, not the basic fact of being alive.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 266,
+    "passage_underline_end": 272,
     "choices": [
       {
         "key": "A",
@@ -230536,8 +230536,8 @@
     "explanation": "\"Distortion\" precisely conveys a change in the shape or visual appearance of something, which is the specific optical consequence of light bending due to refraction, rather than a general \"effect.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 248,
+    "passage_underline_end": 254,
     "choices": [
       {
         "key": "A",
@@ -230602,8 +230602,8 @@
     "explanation": "\"System\" precisely describes a set of interacting or interdependent components forming an integrated whole, accurately capturing the interconnected and self-sustaining nature of the water cycle, rather than a vague \"thing.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 240,
+    "passage_underline_end": 245,
     "choices": [
       {
         "key": "A",
@@ -230635,8 +230635,8 @@
     "explanation": "\"Insight\" more precisely conveys a deep understanding or clear perception of a complex situation, fitting the profound knowledge gained about the early universe through this phenomenon, which is more specific than a general \"look.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 334,
+    "passage_underline_end": 338,
     "choices": [
       {
         "key": "A",
@@ -230668,8 +230668,8 @@
     "explanation": "\"Prodigious\" means impressively great in extent, size, or degree, accurately describing the enormous scale of energy released in nuclear fusion. The other options are too general or don't fit the context as well.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 241,
+    "passage_underline_end": 245,
     "choices": [
       {
         "key": "A",
@@ -230701,8 +230701,8 @@
     "explanation": "\"Process\" precisely refers to a series of actions or steps taken in order to achieve a particular end, accurately describing the sequence of geological conditions and atomic arrangements that lead to diamond formation, which is more specific than a generic \"happening.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 231,
+    "passage_underline_end": 240,
     "choices": [
       {
         "key": "A",
@@ -230767,8 +230767,8 @@
     "explanation": "\"Processes\" accurately refers to a series of natural or biochemical changes, fitting the context of fundamental biological mechanisms like osmosis, which is more precise than a vague word like \"things.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 358,
+    "passage_underline_end": 364,
     "choices": [
       {
         "key": "A",
@@ -230800,8 +230800,8 @@
     "explanation": "\"Fundamental\" most precisely conveys that natural selection is a basic and necessary part of the theory, forming its very foundation, which is more precise than simply \"important.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 290,
+    "passage_underline_end": 299,
     "choices": [
       {
         "key": "A",
@@ -230833,8 +230833,8 @@
     "explanation": "\"Striking\" precisely describes something impressive or attractive, especially by being unusual or prominent, which accurately conveys the distinct and notable visual quality of a rainbow, rather than a subjective and informal term like \"cool.\"",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 287,
+    "passage_underline_end": 291,
     "choices": [
       {
         "key": "A",
@@ -230899,8 +230899,8 @@
     "explanation": "\"Spectacular\" precisely conveys something that is beautiful in a dramatic and eye-catching way, fitting the awe-inspiring and visually stunning nature of the aurora, which is more specific than a generic \"great\" show.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 312,
+    "passage_underline_end": 317,
     "choices": [
       {
         "key": "A",
@@ -230932,8 +230932,8 @@
     "explanation": "\"Phenomena\" precisely refers to facts or situations that are observed to exist or happen, especially ones whose cause or explanation is in question, accurately describing the observable quantum mechanical effects at extremely low temperatures, which is more specific than \"stuff.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 345,
+    "passage_underline_end": 350,
     "choices": [
       {
         "key": "A",
@@ -230965,8 +230965,8 @@
     "explanation": "\"Compounds\" precisely identifies ATP and NADPH as chemical substances formed from two or more elements, which is their accurate scientific classification, rather than a vague term like \"things.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 272,
+    "passage_underline_end": 278,
     "choices": [
       {
         "key": "A",
@@ -230998,8 +230998,8 @@
     "explanation": "\"Pivotal\" most precisely conveys that the characteristic is of crucial importance in relation to the development or success of something else (energy transmission and applications), making it more accurate than a general \"important.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 297,
+    "passage_underline_end": 306,
     "choices": [
       {
         "key": "A",
@@ -231031,8 +231031,8 @@
     "explanation": "\"Modifications\" precisely refers to the act or process of changing something, typically in order to improve it or make it more acceptable, accurately describing the specific ways in which erosion alters the landscape, which is more precise than generic \"changes.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 278,
+    "passage_underline_end": 285,
     "choices": [
       {
         "key": "A",
@@ -231064,8 +231064,8 @@
     "explanation": "\"Perceive objects\" more precisely describes the cognitive act of interpreting visual information to understand the presence and nature of things in the environment, which is the direct result of the visual process, rather than the informal \"see things.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 264,
     "choices": [
       {
         "key": "A",
@@ -231097,8 +231097,8 @@
     "explanation": "\"Transform\" conveys a fundamental and complete change in form or nature, accurately describing the profound and large-scale alterations to the Earth's surface due to plate tectonics.",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 199,
+    "passage_underline_end": 205,
     "choices": [
       {
         "key": "A",
@@ -231130,8 +231130,8 @@
     "explanation": "\"Photon emission\" precisely refers to the release of light in discrete packets of energy (photons), which is the fundamental physical process of light generation, making it more accurate in a scientific context than general \"light output.\"",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 254,
+    "passage_underline_end": 266,
     "choices": [
       {
         "key": "A",
@@ -231163,8 +231163,8 @@
     "explanation": "\"Landforms\" specifically refers to natural features of the Earth's surface, accurately describing the visible geological formations left behind by glacial activity, which is more precise than a general \"features.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 299,
+    "passage_underline_end": 307,
     "choices": [
       {
         "key": "A",
@@ -231196,8 +231196,8 @@
     "explanation": "\"Circulation\" specifically refers to the movement of something in a regular or generally circular course, precisely describing the predictable patterns of winds and ocean currents influenced by the Coriolis effect.",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 224,
+    "passage_underline_end": 232,
     "choices": [
       {
         "key": "A",
@@ -231262,8 +231262,8 @@
     "explanation": "\"Oscillations\" precisely describes a repetitive variation, as in the regular, cyclical rising and falling of sea level due to tidal forces, making it more accurate than general \"changes.\"",
     "avg_seconds": 75,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 270,
+    "passage_underline_end": 277,
     "choices": [
       {
         "key": "A",
@@ -231361,8 +231361,8 @@
     "explanation": "\"Resource\" more precisely refers to a source of supply, support, or aid, specifically fitting the context of a natural means available for power generation, which is more accurate than just a generic \"source.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 356,
+    "passage_underline_end": 362,
     "choices": [
       {
         "key": "A",
@@ -231394,8 +231394,8 @@
     "explanation": "\"Strategy\" precisely refers to a plan of action designed to achieve a major aim, fitting the intentional and comprehensive nature of urban planning decisions, which is more encompassing than a general \"approach.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 337,
     "choices": [
       {
         "key": "A",
@@ -231427,8 +231427,8 @@
     "explanation": "\"Vitality\" precisely conveys the state of being strong and active; energy, accurately reflecting the dynamic and flourishing nature of a socially robust neighborhood, which is more specific than general \"health.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 337,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -231526,8 +231526,8 @@
     "explanation": "\"Objective\" precisely refers to a thing aimed at or sought; a goal, accurately reflecting a specific, measurable aim in urban planning for climate resilience, which is more formal and concrete than a general \"goal.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 362,
+    "passage_underline_end": 366,
     "choices": [
       {
         "key": "A",
@@ -231559,8 +231559,8 @@
     "explanation": "\"Impediments\" precisely refers to a hindrance or obstruction in doing something, accurately capturing how concerns about privacy and digital equity actively hinder the smooth and fair implementation of smart city initiatives, which is more specific than a general \"challenges.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 325,
+    "passage_underline_end": 335,
     "choices": [
       {
         "key": "A",
@@ -231592,8 +231592,8 @@
     "explanation": "\"Mechanism\" precisely refers to a natural or established process by which something takes place or is brought about, accurately describing the structured way community participation is integrated into planning, which is more specific than a vague \"thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 325,
+    "passage_underline_end": 330,
     "choices": [
       {
         "key": "A",
@@ -231625,8 +231625,8 @@
     "explanation": "\"Distinctiveness\" precisely conveys the quality of being different or unique, accurately reflecting how placemaking fosters a unique and recognizable local character, which is more specific than a general \"identity.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 336,
+    "passage_underline_end": 344,
     "choices": [
       {
         "key": "A",
@@ -231658,8 +231658,8 @@
     "explanation": "\"Planning\" precisely refers to the process of making plans for something, accurately describing the intentional design and management of transportation infrastructure, which is more specific than vague \"stuff.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 357,
+    "passage_underline_end": 362,
     "choices": [
       {
         "key": "A",
@@ -231691,8 +231691,8 @@
     "explanation": "\"Initiatives\" precisely refers to actions that are taken or a set of actions designed to achieve something, accurately describing planned interventions to address food deserts, which is more specific than vague \"things.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 381,
+    "passage_underline_end": 387,
     "choices": [
       {
         "key": "A",
@@ -231724,8 +231724,8 @@
     "explanation": "\"Beneficial strategy\" precisely conveys an advantageous plan of action, fitting the intentional and positive impact of integrating green spaces into urban planning, which is more specific than a generic \"good way.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 258,
+    "passage_underline_end": 266,
     "choices": [
       {
         "key": "A",
@@ -231757,8 +231757,8 @@
     "explanation": "\"Undertaking\" more precisely refers to a task that is taken on, often implying a significant or extensive project with considerable effort, fitting the multifaceted challenges of revitalizing shrinking cities, which is more formal than a general \"task.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 394,
+    "passage_underline_end": 398,
     "choices": [
       {
         "key": "A",
@@ -231790,8 +231790,8 @@
     "explanation": "\"Dilemma\" precisely describes a situation in which a difficult choice has to be made between two or more alternatives, accurately reflecting the conflicting outcomes and difficult policy choices inherent in gentrification, which is more specific than a general \"problem.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 341,
+    "passage_underline_end": 348,
     "choices": [
       {
         "key": "A",
@@ -231823,8 +231823,8 @@
     "explanation": "\"Pillar\" precisely conveys a fundamental, essential, or main part of something, accurately reflecting the foundational importance of public transportation in sustainable urban planning, which is more impactful than a general \"aspect.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 337,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -231856,8 +231856,8 @@
     "explanation": "\"Dynamic\" precisely refers to a force or set of forces that cause something to change or develop, accurately capturing the active and evolving nature of social inequity resulting from gentrification, which is more specific than a general \"situation.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 352,
+    "passage_underline_end": 361,
     "choices": [
       {
         "key": "A",
@@ -231889,8 +231889,8 @@
     "explanation": "\"Sound policy\" precisely conveys a policy that is based on good judgment and reasoning, fitting the well-considered and impactful nature of complete streets implementation, which is more specific than a generic \"good way.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 315,
+    "passage_underline_end": 323,
     "choices": [
       {
         "key": "A",
@@ -231922,8 +231922,8 @@
     "explanation": "\"Assets\" precisely refers to a useful or valuable thing, person, or quality, accurately reflecting the intrinsic worth and benefit of urban green spaces to residents, which is more specific than vague \"things.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 363,
+    "passage_underline_end": 369,
     "choices": [
       {
         "key": "A",
@@ -231955,8 +231955,8 @@
     "explanation": "\"Revitalization\" precisely means the action of imbuing something with new life and vitality, accurately describing the process of breathing new life into urban areas through strategic interventions, which is more specific than a general \"improvement.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 349,
+    "passage_underline_end": 360,
     "choices": [
       {
         "key": "A",
@@ -231988,8 +231988,8 @@
     "explanation": "\"Conclusions\" precisely refers to a judgment or decision reached by reasoning, fitting the context of research outcomes derived from sociological studies, which is more specific than general \"findings.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 385,
+    "passage_underline_end": 393,
     "choices": [
       {
         "key": "A",
@@ -232054,8 +232054,8 @@
     "explanation": "\"Systems\" precisely refers to a set of principles or procedures according to which something is done; an organized scheme or method, accurately describing the interconnected networks (e.g., infrastructure, social networks) that comprise a city, which is more precise than general \"parts.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 383,
+    "passage_underline_end": 388,
     "choices": [
       {
         "key": "A",
@@ -232087,8 +232087,8 @@
     "explanation": "\"Valuable\" precisely conveys having great worth or usefulness, accurately reflecting the significant benefits and long-term returns of urban greening initiatives, which is more specific than a generic \"good\" investment.",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 310,
+    "passage_underline_end": 314,
     "choices": [
       {
         "key": "A",
@@ -232120,8 +232120,8 @@
     "explanation": "\"Undertaking\" more precisely refers to a formal promise or agreement to do something, or a task that is taken on, often implying a significant and extensive project with considerable effort, fitting the multifaceted and long-term nature of addressing systemic social exclusion, which is more formal than a general \"task.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 381,
+    "passage_underline_end": 385,
     "choices": [
       {
         "key": "A",
@@ -232153,8 +232153,8 @@
     "explanation": "\"Valuable asset\" precisely identifies green infrastructure as a resource that provides advantage or worth, accurately reflecting its intrinsic value to urban sustainability and resilience, which is more specific than a generic \"good thing.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 296,
+    "passage_underline_end": 306,
     "choices": [
       {
         "key": "A",
@@ -232186,8 +232186,8 @@
     "explanation": "\"Measure\" precisely refers to a plan or course of action taken to achieve a particular purpose, accurately reflecting the deliberate and strategic implementation in urban planning, which is more formal and specific than a generic \"move.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 339,
+    "passage_underline_end": 343,
     "choices": [
       {
         "key": "A",
@@ -232219,8 +232219,8 @@
     "explanation": "\"Principle\" precisely refers to a fundamental truth or proposition that serves as the foundation for a system of belief or behavior, accurately describing the core tenet guiding equitable urban development, which is more fundamental and precise than a vague \"thing.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 578,
+    "passage_underline_end": 583,
     "choices": [
       {
         "key": "A",
@@ -232318,8 +232318,8 @@
     "explanation": "\"Detrimental\" precisely conveys something tending to cause harm, accurately reflecting the damaging effects on social cohesion and civic life, which is more formal and specific than a general \"bad\" impact.",
     "avg_seconds": 60,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 239,
+    "passage_underline_end": 242,
     "choices": [
       {
         "key": "A",
@@ -232351,8 +232351,8 @@
     "explanation": "\"Undertaking\" more precisely refers to a formal promise or agreement to do something, or a task that is taken on, often implying a significant or extensive project, fitting the long-term and multifaceted nature of urban resilience building, which is more formal than a general \"effort.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 329,
+    "passage_underline_end": 335,
     "choices": [
       {
         "key": "A",
@@ -232384,8 +232384,8 @@
     "explanation": "\"Shift\" precisely conveys a slight change in position, direction, or tendency, accurately describing a notable but not necessarily complete reorientation in urban design philosophy, which is more precise than a general \"change.\"",
     "avg_seconds": 65,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 291,
+    "passage_underline_end": 297,
     "choices": [
       {
         "key": "A",
@@ -232417,8 +232417,8 @@
     "explanation": "\"Strategic imperative\" precisely conveys a necessary and important course of action to achieve a significant objective, fitting the context of urban planning goals for sustainability and equity, which is more formal and specific than a generic \"good move.\"",
     "avg_seconds": 70,
     "calculator_allowed": false,
-    "passage_underline_start": null,
-    "passage_underline_end": null,
+    "passage_underline_start": 307,
+    "passage_underline_end": 316,
     "choices": [
       {
         "key": "A",
