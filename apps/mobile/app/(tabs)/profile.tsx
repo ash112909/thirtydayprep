@@ -1,7 +1,6 @@
 import { useCallback, useState } from "react";
 import { Alert, Pressable, ScrollView, Text, TextInput, View } from "react-native";
-import { useFocusEffect } from "@react-navigation/native";
-import { useRouter } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { usePetCompanion } from "@/hooks/usePetCompanion";
 import { updateStudyGoals } from "@/api/profile";

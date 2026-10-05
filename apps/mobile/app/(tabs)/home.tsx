@@ -1,8 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { ActivityIndicator, Dimensions, Modal, Pressable, RefreshControl, ScrollView, Text, TextInput, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
-import { useRouter } from "expo-router";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useRouter } from "expo-router";
 import { getTodaySession } from "@/api/studyFunctions";
 import { fetchActivePlan, fetchPlanDays, fetchSkillStats, fetchSubcategories } from "@/api/progress";
 import { createPet, fetchInventory, fetchPet, setItemQuantity, setPetPoints, updatePetName, updatePetSpecies, updatePetTheme } from "@/api/pet";

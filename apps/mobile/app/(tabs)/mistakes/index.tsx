@@ -1,7 +1,6 @@
 import { useCallback, useState } from "react";
 import { ActivityIndicator, FlatList, Pressable, Text, View } from "react-native";
-import { useRouter } from "expo-router";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchMistakes, type MistakeQuestion } from "@/api/mistakes";
 import { fetchSubcategories } from "@/api/progress";

@@ -1,7 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import { ActivityIndicator, FlatList, Pressable, ScrollView, Text, View } from "react-native";
-import { useRouter } from "expo-router";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useRouter } from "expo-router";
 import { useAuth } from "@/hooks/useAuth";
 import { fetchActivePlan, fetchCategories, fetchPlanDayResults, fetchPlanDays, fetchSubcategories } from "@/api/progress";
 import { computeStreak } from "@/lib/planStats";
